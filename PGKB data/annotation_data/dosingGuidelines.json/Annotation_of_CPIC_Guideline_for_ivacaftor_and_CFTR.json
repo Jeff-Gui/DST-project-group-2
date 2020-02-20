@@ -1,0 +1,978 @@
+{
+  "citations" : [ {
+    "@id" : "https://pharmgkb.org/literature/15071319",
+    "@context" : "https://api.pharmgkb.org/jsonld/literature.jsonld",
+    "id" : 15071319,
+    "resourceId" : "24598717",
+    "title" : "Clinical Pharmacogenetics Implementation Consortium (CPIC) guidelines for ivacaftor therapy in the context of CFTR genotype.",
+    "_sameAs" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4026598",
+    "authors" : [ "Clancy J P", "Johnson S G", "Yee S W", "McDonagh E M", "Caudle K E", "Klein T E", "Cannavo M", "Giacomini K M", "Clinical Pharmacogenetics Implementation Consortium" ],
+    "hasKeyword" : true,
+    "journal" : "Clinical pharmacology and therapeutics",
+    "meshDiseases" : [ "PA443829" ],
+    "meshTerms" : [ "Aminophenols", "Cystic Fibrosis", "Cystic Fibrosis Transmembrane Conductance Regulator", "Genetic Testing", "Humans", "Pharmacogenetics", "Quinolones", "Risk Assessment" ],
+    "month" : 6,
+    "nonHuman" : false,
+    "objCls" : "Literature",
+    "page" : "592-7",
+    "pgkbPublication" : true,
+    "pubDate" : "2014-06-01T00:00:00-07:00",
+    "summary" : "Cystic fibrosis (CF) is a life-shortening disease arising as a consequence of mutations within the CFTR gene. Novel therapeutics for CF are emerging that target CF transmembrane conductance regulator protein (CFTR) defects resulting from specific CFTR variants. Ivacaftor is a drug that potentiates CFTR gating function and is specifically indicated for CF patients with a particular CFTR variant, G551D-CFTR (rs75527207). Here, we provide therapeutic recommendations for ivacaftor based on preemptive CFTR genotype results.",
+    "type" : "Article",
+    "version" : 5,
+    "volume" : "95",
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/pmc/PMC4026598","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449279797,"resource":"PubMed Central","resourceId":"PMC4026598","_url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4026598"}, {"@id":"https://pharmgkb.org/crossReference/pubMed/24598717","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449279796,"resource":"PubMed","resourceId":"24598717","_url":"https://www.ncbi.nlm.nih.gov/pubmed/24598717"}, {"@id":"https://pharmgkb.org/crossReference/doi/10.1038/clpt.2014.54","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449279798,"resource":"DOI","resourceId":"10.1038/clpt.2014.54","_url":"http://dx.doi.org/10.1038%2Fclpt.2014.54"} ],
+    "year" : 2014
+  } ],
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166114461",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166114461",
+    "name" : "Annotation of CPIC Guideline for ivacaftor and CFTR",
+    "cancerGenome" : false,
+    "descriptiveVideoId" : "Ru50LgwdTPw",
+    "guidelineGenes" : [ {
+      "id" : 1449561722,
+      "alleles" : [ {
+        "id" : 1449561723,
+        "_label" : "F508del(CTT)",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117963",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117963",
+          "symbol" : "CFTRF508del(CTT)",
+          "name" : "F508del(CTT)",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561724,
+        "_label" : "Other",
+        "allele" : "Other",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558512",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558512,
+          "description" : "for amitriptyline guideline to enter only one CYP gene while the second CYP is set \"Unknown\"",
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Unknown",
+          "termId" : "haplotypeTags:1445558512",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561725,
+        "_label" : "F508del(TCT)",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117964",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117964",
+          "symbol" : "CFTRF508del(TCT)",
+          "name" : "F508del(TCT)",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561726,
+        "_label" : "G551D",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558330",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558330,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Loss of function",
+          "termId" : "haplotypeTags:1445558330",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117965",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117965",
+          "symbol" : "CFTRG551D",
+          "name" : "G551D",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561727,
+        "_label" : "G1244E",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117966",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117966",
+          "symbol" : "CFTRG1244E",
+          "name" : "G1244E",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561728,
+        "_label" : "G1349D",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117967",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117967",
+          "symbol" : "CFTRG1349D",
+          "name" : "G1349D",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561729,
+        "_label" : "G178R",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117968",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117968",
+          "symbol" : "CFTRG178R",
+          "name" : "G178R",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561730,
+        "_label" : "G551S",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117969",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117969",
+          "symbol" : "CFTRG551S",
+          "name" : "G551S",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561731,
+        "_label" : "S1251N",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117970",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117970",
+          "symbol" : "CFTRS1251N",
+          "name" : "S1251N",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561732,
+        "_label" : "S1255P",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117971",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117971",
+          "symbol" : "CFTRS1255P",
+          "name" : "S1255P",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561733,
+        "_label" : "S549N",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117972",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117972",
+          "symbol" : "CFTRS549N",
+          "name" : "S549N",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561734,
+        "_label" : "S549R(A>C)",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117973",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117973",
+          "symbol" : "CFTRS549R(A>C)",
+          "name" : "S549R(A>C)",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561735,
+        "_label" : "S549R(T>G)",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166117974",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166117974",
+          "symbol" : "CFTRS549R(T>G)",
+          "name" : "S549R(T>G)",
+          "version" : 5
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561736,
+        "_label" : "R117H",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1446765952",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1446765952,
+          "description" : "WHO classification used for G6PD alleles for grouping in the guidelines",
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Class IV",
+          "termId" : "haplotypeTags:1446765952",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166153136",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166153136",
+          "symbol" : "CFTRR117H",
+          "name" : "R117H",
+          "version" : 2
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561737,
+        "_label" : "R347H",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164960",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164960",
+          "symbol" : "CFTRR347H",
+          "name" : "R347H",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561738,
+        "_label" : "A455E",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166162727",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166162727",
+          "symbol" : "CFTRA455E",
+          "name" : "A455E",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561739,
+        "_label" : "E56K",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164961",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164961",
+          "symbol" : "CFTRE56K",
+          "name" : "E56K",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561740,
+        "_label" : "P67L",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164962",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164962",
+          "symbol" : "CFTRP67L",
+          "name" : "P67L",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561741,
+        "_label" : "R74W",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164963",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164963",
+          "symbol" : "CFTRR74W",
+          "name" : "R74W",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561742,
+        "_label" : "D110E",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164964",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164964",
+          "symbol" : "CFTRD110E",
+          "name" : "D110E",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561743,
+        "_label" : "D110H",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164965",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164965",
+          "symbol" : "CFTRD110H",
+          "name" : "D110H",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561744,
+        "_label" : "R117C",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164966",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164966",
+          "symbol" : "CFTRR117C",
+          "name" : "R117C",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561745,
+        "_label" : "E193K",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164967",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164967",
+          "symbol" : "CFTRE193K",
+          "name" : "E193K",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561746,
+        "_label" : "L206W",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164968",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164968",
+          "symbol" : "CFTRL206W",
+          "name" : "L206W",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561747,
+        "_label" : "R352Q",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164969",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164969",
+          "symbol" : "CFTRR352Q",
+          "name" : "R352Q",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561748,
+        "_label" : "D579G",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164970",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164970",
+          "symbol" : "CFTRD579G",
+          "name" : "D579G",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561749,
+        "_label" : "S945L",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164971",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164971",
+          "symbol" : "CFTRS945L",
+          "name" : "S945L",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561750,
+        "_label" : "S977F",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164972",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164972",
+          "symbol" : "CFTRS977F",
+          "name" : "S977F",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561751,
+        "_label" : "F1052V",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164973",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164973",
+          "symbol" : "CFTRF1052V",
+          "name" : "F1052V",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561752,
+        "_label" : "K1060T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164974",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164974",
+          "symbol" : "CFTRK1060T",
+          "name" : "K1060T",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561753,
+        "_label" : "A1067T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164975",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164975",
+          "symbol" : "CFTRA1067T",
+          "name" : "A1067T",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561754,
+        "_label" : "G1069R",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164976",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164976",
+          "symbol" : "CFTRG1069R",
+          "name" : "G1069R",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561755,
+        "_label" : "R1070Q",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164977",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164977",
+          "symbol" : "CFTRR1070Q",
+          "name" : "R1070Q",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561756,
+        "_label" : "R1070W",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164978",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164978",
+          "symbol" : "CFTRR1070W",
+          "name" : "R1070W",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561757,
+        "_label" : "F1074L",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164979",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164979",
+          "symbol" : "CFTRF1074L",
+          "name" : "F1074L",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561758,
+        "_label" : "D1152H",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164980",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164980",
+          "symbol" : "CFTRD1152H",
+          "name" : "D1152H",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449561759,
+        "_label" : "D1270N",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558333",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558333,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Presence",
+          "termId" : "haplotypeTags:1445558333",
+          "version" : 0
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166164981",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166164981",
+          "symbol" : "CFTRD1270N",
+          "name" : "D1270N",
+          "version" : 0
+        },
+        "version" : 0
+      } ],
+      "gene" : {
+        "@id" : "https://pharmgkb.org/gene/PA109",
+        "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+        "objCls" : "Gene",
+        "id" : "PA109",
+        "symbol" : "CFTR",
+        "name" : "cystic fibrosis transmembrane conductance regulator",
+        "version" : 18
+      },
+      "version" : 0
+    } ],
+    "history" : [ {
+      "id" : 1183848388,
+      "date" : "2014-03-05T00:00:00-08:00",
+      "type" : "Create",
+      "version" : 0
+    }, {
+      "id" : 1183960130,
+      "date" : "2014-03-17T00:00:00-07:00",
+      "description" : "Addition of other variants.",
+      "type" : "Update",
+      "version" : 1
+    }, {
+      "id" : 1184214951,
+      "date" : "2014-05-06T00:00:00-07:00",
+      "description" : "Formatting and content changes",
+      "type" : "Update",
+      "version" : 0
+    }, {
+      "id" : 1447986336,
+      "date" : "2016-05-10T14:57:16.865-07:00",
+      "description" : "Guideline on PharmGKB updated due to changes to the FDA-approved label for ivacaftor",
+      "type" : "Update",
+      "version" : 0
+    }, {
+      "id" : 1448624943,
+      "date" : "2017-06-02T11:19:44.411-07:00",
+      "description" : "FDA expanded approved use of ivacaftor to treat an additional 23 CFTR mutations.",
+      "type" : "Update",
+      "version" : 0
+    }, {
+      "id" : 1449564550,
+      "date" : "2018-06-14T00:00:00-07:00",
+      "description" : "Added guideline video.",
+      "type" : "Update",
+      "version" : 0
+    }, {
+      "id" : 1449717117,
+      "date" : "2018-08-23T16:13:37.866-07:00",
+      "description" : "Updated video link",
+      "type" : "Update",
+      "version" : 0
+    }, {
+      "id" : 1450824213,
+      "date" : "2019-10-21T10:33:27.258-07:00",
+      "description" : "Added new variants based on ivacaftor drug label and approved by CPIC authors in May 2019",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15071319","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15071319,"resourceId":"24598717","title":"Clinical Pharmacogenetics Implementation Consortium (CPIC) guidelines for ivacaftor therapy in the context of CFTR genotype.","_sameAs":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4026598","objCls":"Literature","type":"Article","xrefs":[{"@id":"https://pharmgkb.org/crossReference/pmc/PMC4026598","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449279797,"resource":"PubMed Central","resourceId":"PMC4026598","_url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4026598"},{"@id":"https://pharmgkb.org/crossReference/pubMed/24598717","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449279796,"resource":"PubMed","resourceId":"24598717","_url":"https://www.ncbi.nlm.nih.gov/pubmed/24598717"},{"@id":"https://pharmgkb.org/crossReference/doi/10.1038/clpt.2014.54","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449279798,"resource":"DOI","resourceId":"10.1038/clpt.2014.54","_url":"http://dx.doi.org/10.1038%2Fclpt.2014.54"}]}, {"@id":"https://pharmgkb.org/literature/15100910","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15100910,"resourceId":"https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/","title":"CPIC® Guideline for Ivacaftor and CFTR – CPIC","_sameAs":"https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1447983498,"resource":"URL","resourceId":"https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/","_url":"https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA165950341",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA165950341",
+      "name" : "ivacaftor",
+      "version" : 5
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA109",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA109",
+      "symbol" : "CFTR",
+      "name" : "cystic fibrosis transmembrane conductance regulator",
+      "version" : 18
+    } ],
+    "source" : "Clinical Pharmacogenetics Implementation Consortium",
+    "summaryMarkdown" : {
+      "id" : 1447981606,
+      "html" : "<p>Ivacaftor treatment is recommended only in cystic fibrosis (CF) patients that are either homozygous or heterozygous for certain <em>CFTR</em> variants.  See full guideline for disclaimers, further details and supporting evidence.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ {"@id":"https://pharmgkb.org/ontologyTerm/cpicStatus/cpicStatus:1183847844","@context":"https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld","id":1183847844,"resource":"CPIC Status","term":"A","termId":"cpicStatus:1183847844"} ],
+    "textMarkdown" : {
+      "id" : 1447981605,
+      "html" : "<p>This annotation is based on the <a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/\" target=\"_blank\">CPIC&reg; guideline for ivacaftor and CFTR</a>.</p>\n<h3 id=\"may-2019-update-on-pharmgkb\">May 2019 Update on PharmGKB</h3>\n<ul>\n<li>Since the most recent update to the CPIC ivacaftor dosing guideline in April 2014, and the most recent update on PharmGKB in June 2017, the <a href=\"/label/PA166104890\">FDA-approved drug label</a> has been updated again to include 5 additional CFTR variants that are approved for KALYDECO use, bringing the total number of indicated variants to 38: 2789+5G-&gt;A (<a href=\"/variant/PA166162698\">rs80224560</a>), 3272-26A-&gt;G (<a href=\"/variant/PA166184909\">rs76151804</a>), 3849+10kbC-&gt;T (<a href=\"/variant/PA166157514\">rs75039782</a>), 711+1G-&gt;T (<a href=\"/variant/PA166162707\">rs77188391</a>) and E831X (<a href=\"/variant/PA166157519\">rs78655421</a>). Table 1, below, has been updated.</li>\n</ul>\n<h3 id=\"june-2017-update-on-pharmgkb\">June 2017 Update on PharmGKB</h3>\n<ul>\n<li>Since the most recent update to the CPIC ivacaftor dosing guideline in April 2014, and the most recent update on PharmGKB in May 2016, the <a href=\"/label/PA166104890\">FDA-approved drug label</a> has been updated again to include 23 additional CFTR variants that are approved for KALYDECO use, bringing the total number of indicated variants to 33. Please see the <a rel=\"noopener noreferrer\" href=\"https://www.fda.gov/NewsEvents/Newsroom/PressAnnouncements/ucm559212.htm\" target=\"_blank\">FDA News Release</a> from May 17th, 2017 for more information. In light of this change, the CPIC guideline annotation on this PharmGKB webpage has been update to include these additional CFTR variants (see Table 1, below). These variants were not discussed in the 2014 guideline publication. These variants are as follows: E56K (<a href=\"/variant/PA166164939\">rs397508256</a>), P67L (<a href=\"/variant/PA166164940\">rs368505753</a>), R74W (<a href=\"/variant/PA166164941\">rs115545701</a>), D110E (<a href=\"/variant/PA166164942\">rs397508537</a>), D110H (<a href=\"/variant/PA166164943\">rs113993958</a>), R117C (<a href=\"/variant/PA166164944\">rs77834169</a>), E193K (<a href=\"/variant/PA166164945\">rs397508759</a>), L206W (<a href=\"/variant/PA166164946\">rs121908752</a>), R347H (<a href=\"/variant/PA166161186\">rs77932196</a>), R352Q (<a href=\"/variant/PA166164947\">rs121908753</a>), A455E (<a href=\"/variant/PA166162705\">rs74551128</a>), D579G (<a href=\"/variant/PA166164948\">rs397508288</a>), S945L (<a href=\"/variant/PA166164949\">rs397508442</a>), S977F (<a href=\"/variant/PA166164950\">rs141033578</a>), F1052V (<a href=\"/variant/PA166164951\">rs150212784</a>), K1060T (<a href=\"/variant/PA166164952\">rs397508513</a>), A1067T (<a href=\"/variant/PA166164953\">rs121909020</a>), G1069R (<a href=\"/variant/PA166164954\">rs200321110</a>), R1070Q (<a href=\"/variant/PA166164955\">rs78769542</a>), R1070W (<a href=\"/variant/PA166164956\">rs202179988</a>), F1074L (<a href=\"/variant/PA166164957\">rs186045772</a>), D1152H (<a href=\"/variant/PA166164958\">rs75541969</a>), D1270N (<a href=\"/variant/PA166164959\">rs11971167</a>).</li>\n</ul>\n<h3 id=\"may-2016-update-on-pharmgkb\">May 2016 Update on PharmGKB</h3>\n<ul>\n<li>Since the most recent update to the CPIC ivacaftor dosing guideline in April 2014, the <a href=\"/label/PA166104890\">FDA-approved drug label</a> has been updated again to include the variant R117H (<a href=\"/variant/PA166157519\">rs78655421</a>). In light of this change, the CPIC guideline annotation on this PharmGKB webpage has been updated to include this additional <em>CFTR</em> variant (see Table 1 and Figure 1, below). This variant is not discussed in the 2014 guideline publication. Additionally, the updated drug label indicates ivacaftor use for patients 2 years and older; previously it was indicated only for patients 6 years and older.</li>\n</ul>\n<h3 id=\"april-2014-update-on-pharmgkb\">April 2014 Update on PharmGKB</h3>\n<ul>\n<li>After the submission and review of the CPIC guideline manuscript, the <a href=\"/label/PA166104890\">FDA-approved drug label</a> for ivacaftor was updated to include additional variants. In light of these changes, the CPIC guideline annotation on this PharmGKB webpage has been updated to include additional <em>CFTR</em> variants, specifically G1244E (<a href=\"/variant/PA166157537\">rs267606723</a>), G1349D (<a href=\"/variant/PA166157534\">rs193922525</a>), G178R (<a href=\"/variant/PA166157521\">rs80282562</a>), G551S (<a href=\"/variant/PA166157532\">rs121909013</a>), S1251N (<a href=\"/variant/PA166157511\">rs74503330</a>), S1255P (<a href=\"/variant/PA166157533\">rs121909041</a>), S549N (<a href=\"/variant/PA166157529\">rs121908755</a>) and S549R (<a href=\"/variant/PA166157530\">rs121908757</a> and <a href=\"/variant/PA166157531\">rs121909005</a>) (see Table 1 and Figure 1, below).  These variants are not discussed in the 2014 guideline publication.</li>\n</ul>\n<h3 id=\"march-2014\">March 2014</h3>\n<p><em>Accepted article preview online March 2014; Advance online publication March 2014.</em></p>\n<ul>\n<li>Guidelines regarding the use of pharmacogenomic tests in determining whether ivacaftor treatment should be undertaken have been published in Clinical Pharmacology and Therapeutics by the Clinical Pharmacogenetics Implementation Consortium <a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/\" target=\"_blank\">(CPIC)</a>.</li>\n<li>These guidelines are applicable to\n<ul>\n<li>cystic fibrosis patients</li>\n<li>pediatrics, 6 years and older</li>\n<li>adults</li>\n</ul>\n</li>\n<li>Download and read:\n<ul>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/ivacaftor/2014/24598717.pdf\" target=\"_blank\">Clinical Pharmacogenetics Implementation Consortium (CPIC) Guidelines for Ivacaftor Therapy in the Context of CFTR Genotype</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/ivacaftor/2014/24598717-supplement.pdf\" target=\"_blank\">2014 supplement</a> (2019 update)</li>\n</ul>\n</li>\n</ul>\n<h3 id=\"table-1-recommended-therapeutic-use-of-ivacaftor-based-on-cftr-genotype\">Table 1: Recommended therapeutic use of ivacaftor based on <em>CFTR</em> genotype</h3>\n<p><em>Adapted from Table 2 of the 2014 guideline manuscript (June 2017 Update on PharmGKB).  Variants have been added to the table below that are not in the published 2014 guideline or supplement; specifically, variants other than G551D and F508del.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>CFTR Genotype</th><th>Examples of diplotypes</th><th>Implications for ivacaftor effects</th><th>Recommendations for ivacaftor therapy</th><th>Classification of recommendation for ivacaftor therapy<sup>c</sup></th></tr>\n</thead>\n<tbody>\n<tr><td>Homozygous or Heterozygous G551D-CFTR, <a href=\"/variant/PA166157516\">rs75527207</a> genotype AA or AG</td><td>G551D/ F508del, G551D/ G551D</td><td>Significant improvement in lung function, weight, risk of pulmonary exacerbation, patient reported outcomes, and reduction in sweat chloride concentrations through enhanced CFTR channel activity (increase probability of open channel).</td><td>Use ivacaftor according to the product label</td><td>Strong</td></tr>\n<tr><td>Homozygous for F508del-CFTR, <a href=\"/variant/PA166157525\">rs113993960</a> or <a href=\"/variant/PA166157536\">rs199826652</a> genotype del/del</td><td>F508del/F508del</td><td>No significant reduction in sweat chloride concentrations; no changes in other clinical measurements including spirometric measurements, pulmonary exacerbations, or body weight<sup>b</sup>. Unlikely to respond to treatment.</td><td>Ivacaftor is not recommended<sup>a</sup></td><td>Moderate<sup>b</sup></td></tr>\n<tr><td>Homozygous or heterozygous for one of the following CFTR variants: E56K, P67L, R74W, D110E, D110H, R117C, R117H, G178R, E193K, L206W, R347H, R352Q, A455E, S549N, S549R, G551D, G551S, D579G, S945L, S997F, F1052V, K1060T, A1067T, G1069R, R1070Q, R1070W, F1074L, D1152H, G1244E, S1251N, S1255P, D1270N, G1349D, 2789+5G-&gt;A, 3272-26A-&gt;G, 3849+10kbC-&gt;T, 711+1G-&gt;T and E831X<sup>d</sup></td><td>F508del/S549N</td><td>Significantly enhanced channel open probability <em>in vitro</em> [Article:<a href=\"/pmid/22293084\">22293084</a>]. <em>In vitro</em> assays with CFBEo- cells expressing S549N-CFTR showed ivacaftor potentiated chloride channel function [Article:<a href=\"/pmid/23027855\">23027855</a>], and a case study showed improved lung function after ivacaftor treatment in a 12-year-old girl with CF with a copy of the S549N variant [Article:<a href=\"/pmid/24081349\">24081349</a>]. Improvement in sweat chloride and CFQ-R respiratory domain scores in patients with the R117H variant [Article:<a href=\"/pmid/26070913\">26070913</a>]. Or, variant was listed in the <a href=\"https://www.pharmgkb.org/label/PA166104890\">FDA-approved drug label</a> as being responsive to ivacaftor.</td><td>Use ivacaftor according to the product label</td><td>Moderate</td></tr>\n</tbody>\n</table>\n<p><sup>a</sup> These recommendations are based on treatment of CF patients with ivacaftor alone and current evidence. Clinical trials are currently underway to investigate ivacaftor alone or in combination with other drugs to treat CF patients with CFTR variants other than G551D, therefore there is potential that ivacaftor may be effective in these patients. See the 2014 guidelines for further details.</p>\n<p><sup>b</sup> The recommendation for patients with the F508del/F508del genotype is based on ivacaftor mechanism of action and clinical observational data. The clinical study however was a safety study and was not powered to detect a difference in efficacy [Article:<a href=\"/pmid/22383668\">22383668</a>].</p>\n<p><sup>c</sup> Rating scheme described in the 2014 supplement.</p>\n<p><sup>d</sup> Variants listed in this table include those added to the updated <a href=\"/label/PA166104890\">drug label for ivacaftor</a>. The modifications to this table were made after the acceptance of publication of the 2014 CPIC Ivacaftor-CFTR guideline [Article:<a href=\"/pmid/24598717\">24598717</a>] and are not reflected in the PDFs of the CPIC guideline main manuscript or supplement.</p>\n<h3 id=\"figure-1-treatment-algorithm-for-clinical-use-of-ivacaftor-for-cystic-fibrosis-patients-based-on-cftr-genotype\">Figure 1: Treatment algorithm for clinical use of Ivacaftor for cystic fibrosis patients based on <em>CFTR</em> genotype.</h3>\n<p><em>Adapted from Figure 1 of the 2014 guideline manuscript (June 2017 Update on PharmGKB).  Variants have been added to this figure that are not in the published 2014 guideline or supplement; specifically, variants other than G551D and F508del. Additionally, the age has been updated to 2 years old or older from 6 years and older, due to an update in the FDA-approved drug label for ivacaftor.</em></p>\n<p><img src=\"https://s3.pgkb.org/attachment/Ivacaftor_Figure_1_Update_June_2017.png\" alt=\"Adapted diagram from Figure 1\" /></p>\n<p><sup>e</sup> Ivacaftor is not recommended for CF patients with other CFTR variants or in patients homozygous for the F508del variant (see 2014 guideline for further details, supporting evidence and disclaimers). Future clinical trials for other CFTR variants are ongoing.</p>\n",
+      "version" : 19
+    },
+    "userId" : "68efc88f702342198eb4abf8d780c6e9",
+    "version" : 55,
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/url/https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1447983498,"resource":"URL","resourceId":"https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/","_url":"https://cpicpgx.org/guidelines/guideline-for-ivacaftor-and-cftr/"} ]
+  }
+}

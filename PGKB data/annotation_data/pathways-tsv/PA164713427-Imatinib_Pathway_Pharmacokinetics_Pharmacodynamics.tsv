@@ -1,0 +1,14 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+imatinib	imatinib (pyridine)-n-oxide	Biochemical Reaction	CYP3A4, FMO3			18188833, 16122278		imatinib	
+imatinib	hydroxyimatinib metabolites	Biochemical Reaction	CYP1A1, CYP3A4			18188833		imatinib	
+imatinib	AFN911	Biochemical Reaction	CYP1A1, CYP1B1, CYP3A4, CYP4F3			18188833, 16006570		imatinib	
+imatinib	imatinib (piperidine)-n-oxide	Biochemical Reaction	CYP3A4, FMO3			18188833, 16122278		imatinib	
+imatinib	desmethylimatinib	Biochemical Reaction	CYP1A1, CYP2C8, CYP3A4, CYP3A5, CYP4F2			29223619, 20977456, 18188833, 16122278		imatinib	
+imatinib	KIT	Inhibition				17385949, 16122278, 11870247	KIT	imatinib	
+desmethylimatinib	BCR-ABL	Inhibition				16122278			
+imatinib	BCR-ABL	Inhibition				16122278, 13679030, 12755554, 11287972		imatinib	
+imatinib	imatinib	Transport	SLC22A1			28762371		imatinib	
+imatinib	imatinib	Transport	ABCB1, ABCG2			18449471, 19111841, 16122278, 15828850		imatinib	
+imatinib	imatinib	Transport	SLC22A1			30262695, 29427770, 28762371		imatinib	
+imatinib	imatinib	Transport	SLC22A1			29427770, 28762371		imatinib	
+imatinib	imatinib	Transport	ABCB1, ABCG2			18449471, 19111841, 16122278, 15828850		imatinib	

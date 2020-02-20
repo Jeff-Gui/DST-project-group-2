@@ -1,0 +1,58 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166184526",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166184526",
+    "name" : "Annotation of DPWG Guideline for amitriptyline and CYP2C19",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1450820764,
+      "date" : "2019-10-06T00:00:00-07:00",
+      "type" : "Create",
+      "version" : 0
+    }, {
+      "id" : 1450820765,
+      "date" : "2019-10-06T00:00:00-07:00",
+      "description" : "August 2019 guideline",
+      "type" : "Create",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]} ],
+    "recommendation" : false,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA448385",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA448385",
+      "name" : "amitriptyline",
+      "version" : 6
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA124",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA124",
+      "symbol" : "CYP2C19",
+      "name" : "cytochrome P450 family 2 subfamily C member 19",
+      "version" : 7208
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1450820762,
+      "html" : "<p>There are currently no dosing recommendations for amitriptyline based on CYP2C19 genotype.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450820763,
+      "html" : "<h3 id=\"august-2019-guideline\">August 2019 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group has evaluated therapeutic dose recommendations for amitriptyline based on CYP2C19 genotype. They conclude that NO action is required for this gene-drug interaction, (see the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf\" target=\"_blank\">Dutch guidelines</a>).</p>\n<p>For CYP2C19 IM and PM, the gene variation has an effect on the exposure to amitriptyline, but not on the exposure to amitriptyline + the active metabolite nortriptyline, which determines the effect and side effects. For CYP2C19 UM, the gene variation decreases the exposure to amitriptyline and increases the exposure to the active metabolite nortriptyline, but there is no evidence to indicate that this results in an increase in side effects or a decrease in efficacy. A higher dose is required to achieve the therapeutic range of amitriptyline+nortriptyline, but the therapeutic range of nortriptyline is achieved at the lower dose.</p>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0007026.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n",
+      "version" : 0
+    },
+    "userId" : "katrin",
+    "version" : 0,
+    "xrefs" : [ ]
+  }
+}

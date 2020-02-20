@@ -1,0 +1,7 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+ifosfamide	3-dechloroethyl ifosfamide, chloroacetaldehyde	Biochemical Reaction				10534317, 10101149		ifosfamide	
+ifosfamide	2-dechloroethyl ifosfamide, chloroacetaldehyde	Biochemical Reaction	CYP2B6, CYP3A4, CYP3A5			14970873, 10692561, 10534317, 10348794, 10101149, 8161344		ifosfamide	
+4-hydroxyifosfamide	aldoifosfamide	Biochemical Reaction				16393888, 9137530			
+aldoifosfamide	carboxyifosfamide	Biochemical Reaction	ALDH1A1			16393888			
+ifosfamide	4-hydroxyifosfamide	Biochemical Reaction	CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP3A4, CYP3A5			14970873, 10534317, 10348794, 8161344, 8242617		ifosfamide	
+aldoifosfamide	acrolein, isophosphoramide mustard	Biochemical Reaction				16393888			

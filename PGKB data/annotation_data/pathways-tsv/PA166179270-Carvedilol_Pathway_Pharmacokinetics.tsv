@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+carvedilol	4'-hydroxyphenyl carvedilol	Biochemical Reaction	CYP2D6, CYP3A4			9280405, 1823868		carvedilol	
+carvedilol	5'-hydroxyphenyl carvedilol	Biochemical Reaction	CYP2D6, CYP2E1			9280405, 1823868		carvedilol	
+carvedilol	o-desmethyl carvedilol	Biochemical Reaction	CYP1A2, CYP2C9, CYP2D6, CYP2E1			25476996, 9280405		carvedilol	
+carvedilol	carvedilol glucuronide	Biochemical Reaction	UGT1A1, UGT2B4, UGT2B7			22814440, 16849011, 1823868		carvedilol	
+carvedilol	8-hydroxycarvedilol	Biochemical Reaction	CYP1A2, CYP3A4			9280405		carvedilol	
+carvedilol	SLCO1A2	Inhibition				25563901	SLCO1A2	carvedilol	
+carvedilol	carvedilol	Transport	ABCB1, ABCC2			15001973		carvedilol	

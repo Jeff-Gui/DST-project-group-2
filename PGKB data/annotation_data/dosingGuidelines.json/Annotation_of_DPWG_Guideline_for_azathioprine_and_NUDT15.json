@@ -1,0 +1,53 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166184614",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166184614",
+    "name" : "Annotation of DPWG Guideline for azathioprine and NUDT15",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1450821378,
+      "date" : "2019-10-08T22:28:24.883-07:00",
+      "description" : "August 2019 guidelines",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA448515",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA448515",
+      "name" : "azathioprine",
+      "version" : 24
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA134963132",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA134963132",
+      "symbol" : "NUDT15",
+      "name" : "nudix hydrolase 15",
+      "version" : 7
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1450821375,
+      "html" : "<p>Select an alternative drug or reduce the initial dose of azathioprine for patients that are NUDT15 poor metabolizers and reduce initial dose for patients that are NUDT15 intermediate metabolizers.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450821376,
+      "html" : "<h3 id=\"august-2019-guideline\">August 2019 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group has evaluated therapeutic dose recommendations for thioguanine based on NUDT15 genotype.  They recommend reducing the initial dose for patients that are intermediate metabolizers and selecting an alternative drug or reducing the initial dose for patients that are poor metabolizers. They updated the wording for the intermediate metabolizer recommendation, reflected in the table below.</p>\n<p><em>Wording in table taken from the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf\" target=\"_blank\">Dutch guidelines</a>.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description</th><th>Recommendation</th></tr>\n</thead>\n<tbody>\n<tr><td>NUDT15 IM</td><td>thioguanine</td><td>Grade = 2 leukopaenia occurs in 42% of these patients with standard therapy. The genetic variation increases the concentration of the fully activated metabolite of azathioprine and mercaptopurine.</td><td>- IMMUNOSUPPRESSION:start with 50% of the standard dose. Adjustment of the initial dose should be performed based on toxicity (monitoring of the blood counts) and efficacy. Monitoring should be performed at an increased frequency.<br/>Note: The percentage of 50% is based on the analogy with TPMT, for which the gene variants have a comparable effect on toxicity to those of NUDT15. A percentage of &lt; 70% was calculated for NUDT15, but there were insufficient data available to calculate the exact percentage.<br/>Note: Dose adjustment based on the total of 6-TGN metabolites is not possible for these patients, as they develop toxicity within the therapeutic range that applies for patients without gene variants.<br/>- LEUKAEMIA: start at 50% of the standard mercaptopurine dose, or start with the standard dose and reduce to 50% if side effects necessitate a dose reduction. It is not known whether dose reduction in advance results in the same efficacy as dose reduction based on toxicity. Adjustment of the initial dose should be performed based on toxicity (monitoring of the blood counts) and efficacy. Monitoring should be performed at an increased frequency.<br/>Note: The percentage of 50% is based on the analogy with TPMT, for which the gene variants have a comparable effect on toxicity to those of NUDT15. A percentage of &lt; 70% was calculated for NUDT15, but there were insufficient data available to calculate the exact percentage.<br/>Note: Dose adjustment based on the total of 6-TGN metabolites is not possible for these patients, as they develop toxicity within the therapeutic range that applies for patients without gene variants.<br/>Note: more stringent dose reductions are necessary if the patient is also TPMT IM.</td></tr>\n<tr><td>NUDT15 PM</td><td>thioguanine</td><td>Grade = 2 leukopaenia occurs in 96% of these patients with standard therapy. The genetic variation increases the concentration of the fully activated metabolite of azathioprine and mercaptopurine.</td><td>- avoid azathioprine and mercaptopurine.  If it is not possible to avoid azathioprine and mercaptopurine: use 10% of the standard dose and advise patients to seek medical attention when symptoms of myelosuppression (such as severe sore throat in combination with fever, regular nosebleeds and tendency to bruising) occur. Any adjustment of the initial dose should be guided by toxicity (monitoring of blood counts) and efficacy. Monitoring should be performed at an increased frequency.<br/>Note: The percentage of 10% is based on the analogy with TPMT, for which the gene variants have a comparable effect on toxicity to those of NUDT15. A percentage of &lt; 20% was calculated for NUDT15 PM, but there were insufficient data available to calculate the exact percentage.<br/>Note: Dose adjustment based on the total of 6-TGN metabolites is not possible for these patients, as they develop toxicity within the therapeutic range that applies for patients without gene variants.</td></tr>\n</tbody>\n</table>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0007035.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n",
+      "version" : 0
+    },
+    "userId" : "carrillo",
+    "version" : 0,
+    "xrefs" : [ ]
+  }
+}

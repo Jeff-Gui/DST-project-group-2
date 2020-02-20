@@ -1,0 +1,21 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+PDZK1	SLC22A12	Activation				22359229, 19503597, 18600508	SLC22A12, PDZK1		
+sulfinpyrazone	SLC22A12	Inhibition				23318701, 12024214, 1948784, 668783	SLC22A12	sulfinpyrazone	
+benzbromarone	SLC2A9	Inhibition				22945592	SLC2A9	benzbromarone	
+tranilast	SLC2A9	Inhibition				23318701	SLC2A9	tranilast	
+benzbromarone	SLC22A12	Inhibition				23318701, 22945592, 21272127, 12024214	SLC22A12	benzbromarone	
+probenecid	SLC22A12	Inhibition				23318701, 22945592, 21272127, 12024214	SLC22A12	probenecid	
+losartan	SLC22A12	Inhibition				22945592, 18670416, 12024214, 8743498	SLC22A12	losartan	
+tranilast	SLC22A12	Inhibition				23318701	SLC22A12	tranilast	
+vitamin c	SLC22A12	Inhibition				23253231	SLC22A12	vitamin c	
+indomethacin	SLC22A12	Inhibition				21272127, 12024214	SLC22A12	indomethacin	
+salicyclic acid	SLC22A12	Inhibition				21272127, 12024214	SLC22A12	salicylic acid	
+probenecid	SLC22A11	Inhibition				23318701	SLC22A11	probenecid	
+probenecid	SLC22A13	Inhibition				18411268	SLC22A13	probenecid	
+probenecid	SLC22A6	Inhibition				12472777	SLC22A6	probenecid	
+benzbromarone	SLC22A6	Inhibition				12472777	SLC22A6	benzbromarone	
+uric acid	Uric Acid-Lowering Drugs Pathway, Pharmacodynamics	Leads To				22945592			
+uric acid	uric acid	Transport	SLC22A11, SLC22A12, SLC22A13, SLC2A9			23318701, 23253231, 22945592, 22359229, 21272127, 20613716, 18670416, 18842065, 18411268, 18636784, 12024214, 8743498, 1948784, 668783			
+uric acid	uric acid	Transport	LGALS9, SLC2A9			23318701, 22945592, 22359229, 20613716, 18842065			
+uric acid	uric acid	Transport	ABCC4, ABCG2, LGALS9, SLC17A1, SLC17A3, SLC2A9			23318701, 22945592, 22359229, 20613716, 18842065			
+uric acid	uric acid	Transport	SLC22A6, SLC22A8			23318701, 22945592, 22359229, 12472777			

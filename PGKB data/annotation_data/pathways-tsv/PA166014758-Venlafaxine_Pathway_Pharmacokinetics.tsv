@@ -1,0 +1,16 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+n-desmethyl venlafaxine	n,o-didesmethyl venlafaxine	Biochemical Reaction	CYP2C19, CYP2D6			21099743			
+n,o-didesmethyl venlafaxine	n,o-didesmethyl venlafaxine glucuronide	Biochemical Reaction				8337893			
+venlafaxine	desvenlafaxine	Biochemical Reaction	CYP2C19, CYP2D6			10774634, 10192828, 8838442		venlafaxine	
+desvenlafaxine	o-desmethyl venlafaxine glucuronide	Biochemical Reaction				8337893			
+n,o-didesmethyl venlafaxine	n,n,o-tridesmethyl venlafaxine	Biochemical Reaction				8337893			
+desvenlafaxine	n,o-didesmethyl venlafaxine	Biochemical Reaction	CYP2C19, CYP3A4			21099743, 19142106			
+venlafaxine	n-desmethyl venlafaxine	Biochemical Reaction	CYP2C19, CYP3A4			10877013, 10192828		venlafaxine	
+venlafaxine	SLC6A2	Inhibition				11098412, 7729333	SLC6A2	venlafaxine	
+o-desmethyl venlafaxine glucuronide	ABCB1	Inhibition				19629022	ABCB1		
+venlafaxine	ABCB1	Inhibition				19629022	ABCB1	venlafaxine	
+venlafaxine	SLC6A4	Inhibition				11098412, 7729333	SLC6A4	venlafaxine	
+o-desmethyl venlafaxine glucuronide	SLC6A2	Inhibition				11098412, 7729333	SLC6A2		
+o-desmethyl venlafaxine glucuronide	SLC6A4	Inhibition				11098412, 7729333	SLC6A4		
+o-desmethyl venlafaxine glucuronide	o-desmethyl venlafaxine glucuronide	Transport				21446053			
+venlafaxine	venlafaxine	Transport	ABCB1			21446053, 20466523, 14550684		venlafaxine	

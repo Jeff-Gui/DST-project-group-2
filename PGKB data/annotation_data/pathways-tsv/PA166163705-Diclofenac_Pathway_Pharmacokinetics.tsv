@@ -1,0 +1,17 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+diclofenac	diclofenac acyl glucuronide	Biochemical Reaction	UGT2B7			17241877		diclofenac	gastrointestinal toxicity,Toxic liver disease
+5-hydroxydiclofenac	4',5-dihydroxydiclofenac	Biochemical Reaction	CYP2C9			10449188			gastrointestinal toxicity,Toxic liver disease
+diclofenac	4'-hydroxydiclofenac	Biochemical Reaction	CYP2C9			20814155, 18548238, 17241877		diclofenac	gastrointestinal toxicity,Toxic liver disease
+5-hydroxydiclofenac	5-hydroxy diclofenac benzoquinone	Biochemical Reaction				17241877			gastrointestinal toxicity,Toxic liver disease
+diclofenac	5-hydroxydiclofenac	Biochemical Reaction	CYP2B6, CYP2C18, CYP2C19, CYP2C8, CYP3A4			18548238, 17241877, 10449188		diclofenac	gastrointestinal toxicity,Toxic liver disease
+diclofenac	3'-hydroxydiclofenac	Biochemical Reaction	CYP2C9			18548238, 10449188		diclofenac	gastrointestinal toxicity,Toxic liver disease
+5-hydroxy diclofenac benzoquinone, glutathione	Detoxification	Conversion	GSTA1, GSTM1, GSTP1			27183920			gastrointestinal toxicity,Toxic liver disease
+5-hydroxy diclofenac benzoquinone	damage	Leads To				17241877			gastrointestinal toxicity,Toxic liver disease
+diclofenac acyl glucuronide	gastrointestinal toxicity	Leads To				26714763, 25897176, 9834275			gastrointestinal toxicity,Toxic liver disease
+diclofenac acyl glucuronide	damage	Leads To				17241877			gastrointestinal toxicity,Toxic liver disease
+damage	Toxic liver disease	Leads To				17241877			gastrointestinal toxicity,Toxic liver disease
+diclofenac	diclofenac	Transport	SLC22A7			26714763		diclofenac	gastrointestinal toxicity,Toxic liver disease
+diclofenac acyl glucuronide	diclofenac acyl glucuronide	Transport	SLCO1B1, SLCO2B1			26714763			gastrointestinal toxicity,Toxic liver disease
+diclofenac acyl glucuronide	diclofenac acyl glucuronide	Transport	SLC22A6, SLC22A7, SLC22A8			26714763			gastrointestinal toxicity,Toxic liver disease
+diclofenac acyl glucuronide	diclofenac acyl glucuronide	Transport	ABCC2, ABCC3, ABCG2			26714763, 17241877			gastrointestinal toxicity,Toxic liver disease
+diclofenac acyl glucuronide	diclofenac acyl glucuronide	Transport	ABCC2, ABCG2, SLC22A11			26714763			gastrointestinal toxicity,Toxic liver disease

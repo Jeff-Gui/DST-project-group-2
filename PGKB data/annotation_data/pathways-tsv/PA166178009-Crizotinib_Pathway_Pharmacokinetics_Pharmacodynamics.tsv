@@ -1,0 +1,31 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+ALK-NPM1	PLCgamma	Activation				27879258			
+ALK-NPM1	AP-1	Activation				24750504			
+AP-1	PDGFRB	Activation				24750504	PDGFRB		
+PLCgamma	inositol 1,4,5-trisphosphate	Activation				27879258, 21288922			
+ALK-EML4	PI3K	Activation				21288922			
+MTOR	RPS6KB1	Activation				21288922	RPS6KB1, MTOR		
+PI3K	AKT	Activation				27879258, 21288922			
+ALK-EML4	JAK3	Activation				21288922	JAK3		
+MET	Ras	Activation				24574860	MET		
+AKT	BAD	Activation				21288922	BAD		
+ALK-NPM1	PI3K	Activation				27879258			
+ALK-EML4	Ras	Activation				24574860, 21288922			
+ALK-EML4	PLCgamma	Activation				21288922			
+ALK-NPM1	JAK3	Activation				21288922	JAK3		
+ROS1	Ras	Activation				23814043	ROS1		
+JAK3	Stat3/5	Activation				21288922	JAK3		
+ALK-NPM1	Stat3/5	Activation				27879258			
+AKT	MTOR	Activation				27879258, 21288922	MTOR		
+MEK	ERK	Activation				21288922			
+Raf	MEK	Activation				21288922			
+Ras	Raf	Activation				21288922			
+crizotinib	crizotinib M10	Biochemical Reaction	AOX1, CYP3A4, CYP3A5			26381275, 25034009		crizotinib	
+crizotinib	MET	Inhibition				25264305, 24574860, 23064464	MET	crizotinib	
+crizotinib	ABCB1	Inhibition				22233293	ABCB1	crizotinib	
+crizotinib	ROS1	Inhibition				25264305	ROS1	crizotinib	
+crizotinib	ALK-NPM1	Inhibition				23064464		crizotinib	
+crizotinib	ALK-EML4	Inhibition				20979469		crizotinib	
+crizotinib	CYP3A4	Inhibition				23129213	CYP3A4	crizotinib	
+crizotinib	crizotinib	Transport	ABCB1			27270784, 24037730		crizotinib	
+crizotinib	crizotinib	Transport	SLCO1B1, SLCO1B3			23340295		crizotinib	

@@ -1,0 +1,14 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+serotonin	5-HT3 receptor	Activation	ondansetron			2076479, 13460238			
+serotonin	5-HT3 receptor	Activation				13460238			
+6-hydroxyondansetron	ondansetron 6-sulfate	Biochemical Reaction				2533904		6-hydroxyondansetron, ondansetron 6-sulfate	
+ondansetron	N-demethylondansetron	Biochemical Reaction				17701832, 8013282		ondansetron, N-demethylondansetron	
+7-hydroxyondansetron	ondansetron 7-sulfate	Biochemical Reaction				2533904		ondansetron 7-sulfate, 7-hydroxyondansetron	
+8-hydroxyondansetron	ondansetron 8-sulfate	Biochemical Reaction				2533904		ondansetron 8-sulfate, 8-hydroxyondansetron	
+6-hydroxyondansetron	ondansetron 6-glucuronide	Biochemical Reaction				2533904		6-hydroxyondansetron, ondansetron 6-glucuronide	
+ondansetron	6-hydroxyondansetron	Biochemical Reaction	CYP2D6			11114092, 8861656, 2533904		6-hydroxyondansetron, ondansetron	
+ondansetron	7-hydroxyondansetron	Biochemical Reaction	CYP1A1, CYP1A2, CYP2D6, CYP3A			17701832, 11114092, 8861656, 8591723, 2533904		ondansetron, 7-hydroxyondansetron	
+7-hydroxyondansetron	ondansetron 7-glucuronide	Biochemical Reaction				2533904		7-hydroxyondansetron, ondansetron 7-glucuronide	
+ondansetron	8-hydroxyondansetron	Biochemical Reaction	CYP1A1, CYP1A2, CYP2D6, CYP3A			17701832, 11114092, 8861656, 8591723, 2533904		ondansetron, 8-hydroxyondansetron	
+8-hydroxyondansetron	ondansetron 8-glucuronide	Biochemical Reaction				2533904		ondansetron 8-glucuronide, 8-hydroxyondansetron	
+ondansetron	ondansetron	Transport				27988869		ondansetron	

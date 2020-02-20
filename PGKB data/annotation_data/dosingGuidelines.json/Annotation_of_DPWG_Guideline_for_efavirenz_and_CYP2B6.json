@@ -1,0 +1,75 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166182846",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166182846",
+    "name" : "Annotation of DPWG Guideline for efavirenz and CYP2B6",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1450415253,
+      "date" : "2019-05-27T00:00:00-07:00",
+      "description" : "Annotation current with November 2018 DPWG Guideline release",
+      "type" : "Create",
+      "version" : 0
+    }, {
+      "id" : 1450820791,
+      "date" : "2019-10-06T23:09:58.171-07:00",
+      "description" : "No changes based on August 2019 guideline",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]}, {"@id":"https://pharmgkb.org/literature/15102465","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15102465,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines November 2018","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450415575,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ {
+      "@id" : "https://pharmgkb.org/haplotype/PA165818808",
+      "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+      "objCls" : "Haplotype",
+      "id" : "PA165818808",
+      "symbol" : "CYP2B6*18",
+      "name" : "*18",
+      "version" : 5
+    }, {
+      "@id" : "https://pharmgkb.org/haplotype/PA165818762",
+      "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+      "objCls" : "Haplotype",
+      "id" : "PA165818762",
+      "symbol" : "CYP2B6*6",
+      "name" : "*6",
+      "version" : 6
+    } ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA449441",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA449441",
+      "name" : "efavirenz",
+      "version" : 8
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA123",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA123",
+      "symbol" : "CYP2B6",
+      "name" : "cytochrome P450 family 2 subfamily B member 6",
+      "version" : 6787
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1450415251,
+      "html" : "<p>Adjust the initial efavirenz dose for patients with the CYP2B6 PM phenotype along with the consideration of age, weight and BMI and titrate the dose to plasma concentration if needed. For patients with CYP2B6 IM phenotype, determine the efavirenz plasma concentration if side effects occur and reduce the dose if needed.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450415252,
+      "html" : "<h3 id=\"november-2018-guideline\">November 2018 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group has evaluated therapeutic dose recommendations for efavirenz based on CYP2B6 genotype.  They recommend adjusting the initial efavirenz dose for patients with the CYP2B6 PM phenotype and titrate the dose to plasma concentration if needed. For patients with CYP2B6 IM phenotype, they recommend determining the efavirenz plasma concentration if side effects occur and reducing the dose if needed.</p>\n<p><em>Wording in table taken from the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf\" target=\"_blank\">Dutch guidelines</a></em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description</th><th>Recommendation</th></tr>\n</thead>\n<tbody>\n<tr><td>CYP2B6 IM</td><td>efavirenz</td><td>Genetic variations increase the efavirenz plasma concentration and therefore the risk of side effects. However, the efavirenz plasma concentration remains within the therapeutic range for the majority of patients.</td><td>1. Determine the efavirenz plasma concentration if side effects occur and reduce the dose if needed. In 14 IM adults, a dose reduction to 400 mg/day (2/3rd of the standard dose) was sufficient to achieve therapeutic plasma concentrations and to reduce or resolve side effects. The therapeutic range established for efavirenz is 1000-4000 ng/ml.</td></tr>\n<tr><td>CYP2B6 PM</td><td>efavirenz</td><td>Genetic variations increase the risk of side effects. The standard dose leads to an efavirenz concentration in the toxic range in the majority of patients with this genotype.</td><td>* Efavirenz in MONOpreparation, adults and children FROM 40 KG: Body mass index LESS THAN or EQUAL to 25: 1. The recommended initial dose is 400 mg/day and this dose should be titrated to plasma concentration if needed (further reduction to 200 mg/day or in rare cases an increase to 600 mg/day). The therapeutic range established for efavirenz is 1000-4000 ng/ml. Body mass index GREATER than 25: 1. The recommended initial dose is 600 mg/day and this dose should be titrated to plasma concentration if needed (reduction to 400 or 200 mg/day). The therapeutic range established for efavirenz is 1000-4000 ng/ml.<br/>*Efavirenz in MONOpreparation, children LIGHTER THAN 40 KG: 1. Start with the standard dose and titrate this dose to plasma concentration if needed. In adults, therapeutic plasma concentrations were achieved at either 2/3rd of the standard dose (1/3rd of the patients) or 1/3rd of the standard dose (2/3rd of the patients). In children younger than 3 years, therapeutic plasma concentrations were achieved at doses of approximately 10 mg/kg per day (as capsules) (100 mg/day for 7-14 kg and 150 mg/day for 14-17 kg; 50-75% of the standard dose). The therapeutic range established for efavirenz is 1000-4000 ng/ml.<br/>*Efavirenz in COMBINATION preparation: 1. Initiate the combination preparation and titrate the efavirenz dose to plasma concentration if needed (reduction to 400 or 200 mg/day) The therapeutic range established for efavirenz is 1000-4000 ng/ml.</td></tr>\n</tbody>\n</table>\n<p>&quot;Note: the dosing recommendations above are based on PM patients with the *6/*6 genotype. There is evidence that the *18/*18\ngenotype in PM patients (only present in negroid patients) may require greater dose reductions.\nConsiderations:\nDetailed justification for the recommendation is contained in the risk analysis. The considerations used for adults are also given below. The median or mean plasma concentrations or AUC in PM patients are above the therapeutic range, except in 3 studies with low efavirenz plasma concentrations in EM patients (2 of the 3 studies performed in Africa and 1 study in the United States and Italy). A recent study showed a similar virological response for efavirenz 400 and 600 mg/day in patients not selected on genotype. The risk of underdose is therefore very small if the initial dose is reduced to 400 mg/day. Two small studies showed that dose reductions did not reduce the efficacy (HIV remained undetectable), but side effects did reduce in 24 PM patients. Compliance improves with administration of a combination preparation and the absence of unnecessary side effects due to excessive plasma concentrations.\nConsideration to CYP2B6 inducers such as rifampicin is not needed in PM patients. The significantly low or absent metabolic capacity of CYP2B6 makes induction of little to no relevance. Moreover, the effects of enzyme induction by rifampicin and enzyme inhibition by isoniazid on efavirenz plasma concentrations seem to largely cancel each other out, independent of the CYP2B6 phenotype of the patient.&quot;</p>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0004755.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n",
+      "version" : 1
+    },
+    "userId" : "lgong",
+    "version" : 1,
+    "xrefs" : [ ]
+  }
+}

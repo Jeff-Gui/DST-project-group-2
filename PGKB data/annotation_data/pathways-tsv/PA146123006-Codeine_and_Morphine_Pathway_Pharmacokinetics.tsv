@@ -1,0 +1,11 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+codeine	morphine	Biochemical Reaction	CYP2D6			28243137, 15625333, 9143866, 1867957, 2049245		codeine, morphine	
+morphine	morphine-6-glucuronide	Biochemical Reaction	UGT1A1, UGT1A3, UGT1A8, UGT2B4, UGT2B7			18187562, 12920168, 12920162, 12811366, 12629580, 12185559, 9010622		morphine	
+codeine	norcodeine	Biochemical Reaction	CYP3A4			9143866		codeine	
+morphine	morphine-3-glucuronide	Biochemical Reaction	UGT1A1, UGT1A10, UGT1A3, UGT1A9, UGT2B15, UGT2B17, UGT2B4, UGT2B7			18187562, 12920168, 12811366, 12629580, 12185559, 9010622		morphine	
+codeine	codeine-6-glucuronide	Biochemical Reaction	UGT2B4, UGT2B7			12920168, 9010622		codeine	
+morphine	normorphine	Biochemical Reaction	CYP2C8, CYP3A4			12936704		morphine	
+morphine	morphine	Transport	SLC22A1			25155932		morphine	
+morphine	morphine	Transport	ABCB1, ABCC2			25155932		morphine	
+morphine-6-glucuronide	morphine-6-glucuronide	Transport	ABCB1, ABCC2, ABCC3			25155932, 15886284, 12185559			
+morphine-3-glucuronide	morphine-3-glucuronide	Transport	ABCB1, ABCC2, ABCC3			25155932, 15886284, 12492606			

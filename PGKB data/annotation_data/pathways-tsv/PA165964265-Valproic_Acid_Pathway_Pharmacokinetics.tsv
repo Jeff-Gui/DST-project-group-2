@@ -1,0 +1,26 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+2,4-diene valproic acid-coenzyme A	Toxic liver disease	Activation				19641884, 2979731, 2858383			Toxic liver disease
+4-ene valproic acid	Toxic liver disease	Activation				19641884			Toxic liver disease
+3-oxo-valproic acid-coenzyme A	Toxic liver disease	Activation				11879205			Toxic liver disease
+2-ene valproic acid-coenzyme A	3-ene valproic acid-coenzyme A	Biochemical Reaction				21544075, 2112956			Toxic liver disease
+2,4-diene valproic acid-coenzyme A, glutathione	thiol conjugates of valproic acid	Biochemical Reaction				10859157, 7905390, 1676665			Toxic liver disease
+4-ene valproic acid-coenzyme A	2,4-diene valproic acid-coenzyme A	Biochemical Reaction				11502730, 10859157			Toxic liver disease
+3-oh valproic acid-coenzyme A	3-oxo-valproic acid-coenzyme A	Biochemical Reaction	HSD17B10			21843514, 11879205, 1988037			Toxic liver disease
+4-ene valproic acid-coenzyme A, glutathione	thiol conjugates of valproic acid	Biochemical Reaction				7905390, 1676665			Toxic liver disease
+valproic acid	3-hydroxy valproic acid	Biochemical Reaction	CYP2A6			16945988		valproic acid	Toxic liver disease
+valproic acid	4-ene valproic acid	Biochemical Reaction	CYP2A6, CYP2B6, CYP2C9			16945988, 9353388		valproic acid	Toxic liver disease
+valproic acid	2-ene valproic acid	Biochemical Reaction				20602621		valproic acid	Toxic liver disease
+valproic acid	4-hydroxy valproic acid	Biochemical Reaction	CYP2A6, CYP2B6, CYP2C9			16945988, 14597963		valproic acid	Toxic liver disease
+valproic acid	valproate glucuronide	Biochemical Reaction				18838507, 17687269, 15761113, 12732356		valproic acid	Toxic liver disease
+valproic acid-coenzyme A	valproic acid-dephosphocoenzyme A	Biochemical Reaction				15483197			Toxic liver disease
+3-oxo-valproic acid-coenzyme A, glutathione	thiol conjugates of valproic acid	Biochemical Reaction				7905390			Toxic liver disease
+3-oh valproic acid-coenzyme A	c5-coenzyme A	Biochemical Reaction				11879205			Toxic liver disease
+3-ene valproic acid-coenzyme A	2,3-diene valproic acid-coenzyme A	Biochemical Reaction				21544075			Toxic liver disease
+4-ene valproic acid	4-ene valproic acid-coenzyme A	Biochemical Reaction	ACADSB			11502730, 7548749			Toxic liver disease
+valproic acid	5-hydroxy valproic acid	Biochemical Reaction	CYP2A6, CYP2B6, CYP2C9			16945988, 14597963		valproic acid	Toxic liver disease
+3-oh valproic acid-coenzyme A	c3-coenzyme A	Biochemical Reaction				11879205			Toxic liver disease
+2-ene valproic acid-coenzyme A	3-oh valproic acid-coenzyme A	Biochemical Reaction	ECH1			21843514			Toxic liver disease
+valproic acid	valproic acid-coenzyme A	Biochemical Reaction	ACSM			21843514		valproic acid	Toxic liver disease
+valproic acid-coenzyme A	2-ene valproic acid-coenzyme A	Biochemical Reaction	ACADSB, IVD			21430231, 2112956			Toxic liver disease
+2-ene valproic acid-coenzyme A	2,4-diene valproic acid-coenzyme A	Biochemical Reaction				21544075, 10859157			Toxic liver disease
+thiol conjugates of valproic acid	Detoxification	Leads To				9762695			Toxic liver disease

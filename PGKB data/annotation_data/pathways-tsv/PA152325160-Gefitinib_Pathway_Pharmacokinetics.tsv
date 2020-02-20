@@ -1,0 +1,19 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+gefitinib	gefitinib M537194	Biochemical Reaction	CYP1A1, CYP3A4, CYP3A5			17575239, 15801543		gefitinib	Diarrhea,Exanthema
+gefitinib	gefitinib M523595	Biochemical Reaction	CYP2D6, CYP3A4			27154635, 16719544, 15788367, 15801543		gefitinib	Diarrhea,Exanthema
+gefitinib	gefitinib M387783	Biochemical Reaction	CYP1A1, CYP3A4, CYP3A5			17575239, 15801543		gefitinib	Diarrhea,Exanthema
+gefitinib	UGT1A7	Inhibition				19850672	UGT1A7	gefitinib	Diarrhea,Exanthema
+gefitinib	UGT2B7	Inhibition				19850672	UGT2B7	gefitinib	Diarrhea,Exanthema
+gefitinib	UGT1A1	Inhibition				19850672	UGT1A1	gefitinib	Diarrhea,Exanthema
+gefitinib	UGT1A9	Inhibition				19850672	UGT1A9	gefitinib	Diarrhea,Exanthema
+gefitinib	ABCB1	Inhibition				28851502	ABCB1	gefitinib	Diarrhea,Exanthema
+gefitinib	EGFR	Inhibition				14676101	EGFR	gefitinib	Diarrhea,Exanthema
+gefitinib	CYP2D6	Inhibition				16176119	CYP2D6	gefitinib	Diarrhea,Exanthema
+gefitinib	ABCG2	Inhibition				28851502	ABCG2	gefitinib	Diarrhea,Exanthema
+gefitinib	Diarrhea	Leads To				27089937		gefitinib	Diarrhea,Exanthema
+gefitinib	Exanthema	Leads To				27089937		gefitinib	Diarrhea,Exanthema
+gefitinib	Exanthema	Leads To				27089937		gefitinib	Diarrhea,Exanthema
+gefitinib	Diarrhea	Leads To				27089937		gefitinib	Diarrhea,Exanthema
+EGFR	EGFR Inhibitors Pathway (PD)	Leads To				14676101	EGFR		Diarrhea,Exanthema
+gefitinib	gefitinib	Transport	ABCC10			30515095		gefitinib	Diarrhea,Exanthema
+gefitinib	gefitinib	Transport	ABCB1, ABCG2			27154635, 17312388, 16651435		gefitinib	Diarrhea,Exanthema

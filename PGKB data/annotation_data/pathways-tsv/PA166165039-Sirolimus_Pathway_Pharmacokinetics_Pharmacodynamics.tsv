@@ -1,0 +1,25 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+MTORC1	RPS6KB1	Activation				20812900, 12150925	RPS6KB1		
+YY1	HDAC1	Activation				19439614, 18599616, 17640524, 17206141	YY1, HDAC1		
+RPS6KB1	CDKs	Activation				20812900, 12150925	RPS6KB1		
+CDKs	Proliferation	Activation				20812900, 12150925			
+TCF7L2	Regulation of Wnt signaling pathway	Activation				19439614, 18599616, 17640524, 17206141	TCF7L2		
+sirolimus	12-hydroxy-sirolimus	Biochemical Reaction	CYP3A4, CYP3A5			18482220		sirolimus	
+sirolimus	hydroxylated sirolimus metabolites	Biochemical Reaction	CYP3A4, CYP3A5			18482220		sirolimus	
+sirolimus	demethylated sirolimus metabolites	Biochemical Reaction	CYP3A4, CYP3A5			18482220		sirolimus	
+MTORC1, YY1-PPARGC1A	YY1	Biochemical Reaction				18046414	YY1		
+sirolimus	39-o-desmethyl sirolimus	Biochemical Reaction	CYP3A4, CYP3A5			18482220		sirolimus	
+34-hydroxy-sirolimus	seco-sirolimus	Biochemical Reaction				15385825, 11907172, 10833025			
+seco-sirolimus	dihydro-sirolimus	Biochemical Reaction				15385825, 11907172, 10833025			
+sirolimus	piperidine-hydroxy-sirolimus	Biochemical Reaction	CYP2C8			18482220, 11266932		sirolimus	
+sirolimus	34-hydroxy-sirolimus	Biochemical Reaction				8937863		sirolimus	
+sirolimus-FKBP1A	MTORC1	Inhibition				8662507, 7539137			
+HDAC1	TCF7L2	Inhibition				19439614, 18599616, 17640524, 17206141	HDAC1		
+TCF7L2	TCF7L2	Template Reaction				17206141	TCF7L2		
+demethylated sirolimus metabolites	demethylated sirolimus metabolites	Transport	ABCB1			15385826, 14569063, 11907172			
+sirolimus	sirolimus	Transport	ABCB1			15385826, 14569063, 11907172		sirolimus	
+12-hydroxy-sirolimus	12-hydroxy-sirolimus	Transport	ABCB1			15385826, 14569063, 11907172			
+dihydro-sirolimus	dihydro-sirolimus	Transport	ABCB1			15385826, 14569063, 11907172			
+seco-sirolimus	seco-sirolimus	Transport	ABCB1			15385826, 14569063, 11907172			
+39-o-desmethyl sirolimus	39-o-desmethyl sirolimus	Transport	ABCB1			15385826, 14569063, 11907172			
+hydroxylated sirolimus metabolites	hydroxylated sirolimus metabolites	Transport	ABCB1			15385826, 14569063, 11907172			

@@ -1,0 +1,29 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+pazopanib	pazopanib M26	Biochemical Reaction	CYP1A2, CYP2C19, CYP2C9, CYP2D6, CYP3A4			23636448		pazopanib	Hyperbilirubinemia
+pazopanib	pazopanib M24	Biochemical Reaction	CYP1A2, CYP2C19, CYP2C9, CYP2D6, CYP3A4			23636448		pazopanib	Hyperbilirubinemia
+pazopanib	pazopanib M27	Biochemical Reaction	CYP1A2, CYP2D6, CYP3A4			23636448		pazopanib	Hyperbilirubinemia
+pazopanib	KIT	Inhibition				17620431	KIT	pazopanib	Hyperbilirubinemia
+pazopanib	ABCG2	Inhibition				27418107	ABCG2	pazopanib	Hyperbilirubinemia
+pazopanib	FLT4	Inhibition				17620431	FLT4	pazopanib	Hyperbilirubinemia
+pazopanib	PDGFRA	Inhibition				17620431	PDGFRA	pazopanib	Hyperbilirubinemia
+pazopanib	SLCO1B1	Inhibition				24807167	SLCO1B1	pazopanib	Hyperbilirubinemia
+pazopanib	CYP2D6	Inhibition				20881954	CYP2D6	pazopanib	Hyperbilirubinemia
+pazopanib	UGT1A1	Inhibition				24107802, 20389299	UGT1A1	pazopanib	Hyperbilirubinemia
+pazopanib	SLC47A1	Inhibition				27178732	SLC47A1	pazopanib	Hyperbilirubinemia
+pazopanib	CYP3A4	Inhibition				20881954	CYP3A4	pazopanib	Hyperbilirubinemia
+pazopanib	KDR	Inhibition				17620431	KDR	pazopanib	Hyperbilirubinemia
+pazopanib	PDGFRB	Inhibition				17620431	PDGFRB	pazopanib	Hyperbilirubinemia
+pazopanib	FLT1	Inhibition				17620431	FLT1	pazopanib	Hyperbilirubinemia
+pazopanib	ABCB1	Inhibition				27418107	ABCB1	pazopanib	Hyperbilirubinemia
+pazopanib	SLC47A2	Inhibition				27178732	SLC47A2	pazopanib	Hyperbilirubinemia
+pazopanib	SLC22A2	Inhibition				27178732	SLC22A2	pazopanib	Hyperbilirubinemia
+KDR	VEGF Signaling Pathway	Leads To				17620431	KDR		Hyperbilirubinemia
+pazopanib M26	VEGF Signaling Pathway	Leads To				21827214			Hyperbilirubinemia
+UGT1A1	Hyperbilirubinemia	Leads To				24107802, 20389299	UGT1A1		Hyperbilirubinemia
+FLT1	VEGF Signaling Pathway	Leads To				17620431	FLT1		Hyperbilirubinemia
+FLT4	VEGF Signaling Pathway	Leads To				17620431	FLT4		Hyperbilirubinemia
+PDGFRA	VEGF Signaling Pathway	Leads To				17620431	PDGFRA		Hyperbilirubinemia
+KIT	VEGF Signaling Pathway	Leads To				17620431	KIT		Hyperbilirubinemia
+PDGFRB	VEGF Signaling Pathway	Leads To				17620431	PDGFRB		Hyperbilirubinemia
+pazopanib	pazopanib	Transport	ABCB1, ABCG2			27418107, 22688250, 22918879		pazopanib	Hyperbilirubinemia
+pazopanib	pazopanib	Transport	SLCO1B1, SLCO1B3			27178732, 23340295		pazopanib	Hyperbilirubinemia

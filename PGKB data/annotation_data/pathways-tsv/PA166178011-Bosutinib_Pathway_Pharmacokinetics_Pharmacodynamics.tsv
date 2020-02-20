@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+bosutinib	desmethylbosutinib	Biochemical Reaction	CYP3A4			26402671, 25736937, 21148045		bosutinib	
+bosutinib	SRC	Inhibition				25736937, 17114238	SRC	bosutinib	
+bosutinib	BCR-ABL	Inhibition				23674887, 19039322, 17114238		bosutinib	
+ketoconazole	CYP3A4	Inhibition				21148045	CYP3A4	ketoconazole	
+bosutinib	bosutinib	Transport	ABCB1			24019750, 19785662		bosutinib	
+bosutinib	bosutinib	Transport				26402671, 19785662		bosutinib	
+bosutinib	bosutinib	Transport				26402671, 19785662		bosutinib	

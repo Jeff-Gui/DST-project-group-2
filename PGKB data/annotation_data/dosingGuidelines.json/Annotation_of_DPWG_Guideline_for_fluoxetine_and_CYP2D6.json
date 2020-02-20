@@ -1,0 +1,59 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166182852",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166182852",
+    "name" : "Annotation of DPWG Guideline for fluoxetine and CYP2D6",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1450415331,
+      "date" : "2019-05-28T00:00:00-07:00",
+      "description" : "Annotation current with November 2018 DPWG Guideline release",
+      "type" : "Create",
+      "version" : 0
+    }, {
+      "id" : 1450820648,
+      "date" : "2019-10-03T13:58:34.213-07:00",
+      "description" : "Changes based on August 2019 guideline",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]}, {"@id":"https://pharmgkb.org/literature/15102465","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15102465,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines November 2018","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450415575,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf"}]} ],
+    "recommendation" : false,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA449673",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA449673",
+      "name" : "fluoxetine",
+      "version" : 15
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA128",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA128",
+      "symbol" : "CYP2D6",
+      "name" : "cytochrome P450 family 2 subfamily D member 6",
+      "version" : 7888
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1450415329,
+      "html" : "<p>There are currently no dosing recommendations for fluoxetine based on CYP2D6 genotype.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450415330,
+      "html" : "<h3 id=\"august-2019-guideline\">August 2019 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group (DPWG) has evaluated therapeutic dose recommendations for fluoxetine based on CYP2D6 genotype. There are currently no dosing recommendations for fluoxetine based on CYP2D6 genotype.\n<em>Wording in table taken from the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf\" target=\"_blank\">Dutch guidelines August 2019 update</a>.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description</th><th>Recommendation</th></tr>\n</thead>\n<tbody>\n<tr><td>CYP2D6 UM</td><td>fluoxetine</td><td>The ratio of fluoxetine/norfluoxetine decreases as a result of the increased activity of CYP2D6. However, this does not affect the sum of the plasma concentrations of the active substances (fluoxetine and norfluoxetine). There is no effect on adverse events or response.</td><td>NO action is needed for this gene-drug interaction.</td></tr>\n<tr><td>CYP2D6 IM</td><td>fluoxetine</td><td>The ratio of fluoxetine/norfluoxetine increases as a result of the reduced activity of CYP2D6. However, this does not affect the sum of the plasma concentrations of the active substances (fluoxetine and norfluoxetine). There is no effect on adverse events or response.</td><td>NO action is needed for this gene-drug interaction.</td></tr>\n<tr><td>CYP2D6 PM</td><td>fluoxetine</td><td>The ratio of fluoxetine/norfluoxetine increases as a result of the reduced activity of CYP2D6. However, this does not affect the sum of the plasma concentrations of the active substances (fluoxetine and norfluoxetine). There is insufficient evidence to support an effect on adverse events or response.</td><td>NO action is needed for this gene-drug interaction.</td></tr>\n</tbody>\n</table>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0005996.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n<h3 id=\"november-2018-guideline\">November 2018 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group (DPWG) has evaluated therapeutic dose recommendations for fluoxetine based on CYP2D6 genotype. There are currently no dosing recommendations for fluoxetine based on CYP2D6 genotype.\n<em>Wording in table taken from the <a href=\"https://api.pharmgkb.org/v1/download/file/attachment/DPWG_November_2018.pdf\">Dutch guidelines November 2018 update</a>.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description</th><th>Recommendation</th></tr>\n</thead>\n<tbody>\n<tr><td>CYP2D6 IM</td><td>fluoxetine</td><td>The ratio of fluoxetine/norfluoxetine increases as a result of the reduced activity of CYP2D6. However, this does not affect the sum of the plasma concentrations of the active substances (fluoxetine and norfluoxetine). There is no effect on adverse events or response.</td><td>NO action is needed for this gene-drug interaction.</td></tr>\n<tr><td>CYP2D6 PM</td><td>fluoxetine</td><td>The ratio of fluoxetine/norfluoxetine increases as a result of the reduced activity of CYP2D6. However, this does not affect the sum of the plasma concentrations of the active substances (fluoxetine and norfluoxetine). There is insufficient evidence to support an effect on adverse events or response.</td><td>NO action is needed for this gene-drug interaction.</td></tr>\n</tbody>\n</table>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0005996.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n",
+      "version" : 1
+    },
+    "userId" : "lgong",
+    "version" : 1,
+    "xrefs" : [ ]
+  }
+}

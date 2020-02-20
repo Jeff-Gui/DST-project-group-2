@@ -1,0 +1,10 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+methylphenidate	ritalinic acid	Biochemical Reaction	CES1			2079507, 2395090, 4473537		methylphenidate	
+p-hydroxy-methylphenidate	p-hydroxy-ritalinic acid	Biochemical Reaction				4473537			
+p-hydroxy-ritalinic acid	p-hydroxy-ritalinic acid glucuoronide	Biochemical Reaction				4473537			
+methylphenidate	6-oxo-methylphenidate	Biochemical Reaction				4473537		methylphenidate	
+methylphenidate	p-hydroxy-methylphenidate	Biochemical Reaction				7328584, 4473537		methylphenidate	
+6-oxo-methylphenidate	6-oxo-ritalinic acid	Biochemical Reaction				4473537			
+ritalinic acid	elimination	Leads To				4473537			
+6-oxo-ritalinic acid	elimination	Leads To				4473537			
+p-hydroxy-ritalinic acid glucuoronide	elimination	Leads To				4473537			

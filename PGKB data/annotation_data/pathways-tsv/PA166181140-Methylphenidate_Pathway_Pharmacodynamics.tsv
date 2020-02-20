@@ -1,0 +1,34 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+dopamine	DRD2	Activation				25355228, 16220327, 11160455, 10490931	DRD2		
+dopamine	DRD2	Activation				14675797, 11044595	DRD2		
+norepinephrine	ADRA2A	Activation				11520889	ADRA2A		
+dopamine	DRD5	Activation				28341611, 26165920	DRD5		
+dopamine	DRD3	Activation				25740505, 19074531	DRD3		
+dopamine	DRD1	Activation				27186140, 16549270, 14713295	DRD1		
+serotonin	HTR1B	Activation				17201613	HTR1B		
+norepinephrine	ADRA2A	Activation				11520889	ADRA2A		
+serotonin	HTR1A	Activation				17201613	HTR1A		
+dopamine	DRD4	Activation				25740505, 19074531	DRD4		
+norepinephrine	normetanephrine	Biochemical Reaction	COMT			15317907			
+norepinephrine	3,4-dihydroxyphenylglycolaldehyde	Biochemical Reaction	MAO			15317907			
+l-tryptophan	serotonin	Biochemical Reaction	TPH2			12511643			
+dopamine	norepinephrine	Biochemical Reaction	DBH			3473965			
+dopamine	3-methoxytyramine	Biochemical Reaction	COMT			22966478			
+l-tyrosine	dopamine	Biochemical Reaction	TH			4399447			
+serotonin	5-hydroxyindole-3-acetic acid	Biochemical Reaction	MAO			28566493			
+dopamine	3,4-dihydroxyphenylacetaldehyde	Biochemical Reaction	MAO			15317907			
+methylphenidate	SLC6A4	Inhibition				16515684	SLC6A4	methylphenidate	
+methylphenidate	SLC6A2	Inhibition				20691429, 17264780, 17201613, 16515684, 12685517, 10793238, 10485970, 9766762, 8523123, 8786705, 7700252, 8197581, 2530094, 4031878, 39160, 33315, 5033010	SLC6A2	methylphenidate	
+methylphenidate	SLC6A3	Inhibition				20691429, 17264780, 17201613, 16515684, 12685517, 10793238, 10485970, 9766762, 8523123, 8786705, 7700252, 8197581, 2530094, 4031878, 39160, 33315, 5033010	SLC6A3	methylphenidate	
+synaptic vesicle exocytosis		Leads To				8221884			
+synaptic vesicle exocytosis		Leads To				8221884			
+synaptic vesicle exocytosis		Leads To				8221884			
+norepinephrine	norepinephrine	Transport	SLC6A2			12431845			
+norepinephrine	norepinephrine	Transport				8221884			
+norepinephrine	norepinephrine	Transport	SLC18A2			12351745, 1438304			
+serotonin	serotonin	Transport	SLC18A2			12351745, 1438304			
+dopamine	dopamine	Transport	SLC18A2			12351745, 1438304			
+serotonin	serotonin	Transport				8221884			
+dopamine	dopamine	Transport				8221884			
+dopamine	dopamine	Transport	SLC6A3			12431845			
+serotonin	serotonin	Transport	SLC6A4			12431845			

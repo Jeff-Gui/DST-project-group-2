@@ -1,0 +1,9 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+Tobacco Use Disorder	CYP1A2	Activation				11791895	CYP1A2		Tobacco Use Disorder
+fluvoxamine	88699-87-0	Biochemical Reaction				7988100		fluvoxamine	Tobacco Use Disorder
+fluvoxaminoalcohol	fluvoxamine acid	Biochemical Reaction	ADH1A, ADH1B, ADH1C			17484519, 11791895, 7988100			Tobacco Use Disorder
+fluvoxamine	1-pentanone,5-methoxy-1-[4-(trifluoromethyl)phenyl]-, oxime, (1e)-	Biochemical Reaction	CYP1A2			11791895, 8823236, 7988100		fluvoxamine	Tobacco Use Disorder
+fluvoxamine	fluvoxaminoalcohol	Biochemical Reaction	CYP2D6			17484519, 11791895, 8823236, 7988100		fluvoxamine	Tobacco Use Disorder
+fluvoxamine	CYP1A2	Inhibition				12695344, 11907488	CYP1A2	fluvoxamine	Tobacco Use Disorder
+fluvoxamine	CYP2C19	Inhibition				12695344, 11907488	CYP2C19	fluvoxamine	Tobacco Use Disorder
+fluvoxamine	CYP3A	Inhibition				11907488, 7782485	CYP3A	fluvoxamine	Tobacco Use Disorder

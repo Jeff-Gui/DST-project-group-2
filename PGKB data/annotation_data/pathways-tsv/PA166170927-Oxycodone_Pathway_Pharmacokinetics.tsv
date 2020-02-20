@@ -1,0 +1,14 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+oxycodone	noroxycodone	Biochemical Reaction	CYP3A			27692933, 24523296, 22291644, 16678548, 15039299, 1389934		noroxycodone, oxycodone	
+oxycodone	6beta-oxycodol hydrochloride	Biochemical Reaction				22291644, 16678548, 14516487		oxycodone, 6beta-oxycodol hydrochloride	
+oxymorphone	oxymorphone 3-glucuronide	Biochemical Reaction	UGT2B7			22511697, 9443856		oxymorphone 3-glucuronide, oxymorphone	
+noroxycodone	noroxymorphone	Biochemical Reaction	CYP2D6			16678548, 15039299, 14516487		noroxymorphone, noroxycodone	
+oxycodone	dihydrooxycodone	Biochemical Reaction				22291644, 16678548, 14516487		oxycodone, 6alpha-oxycodol	
+oxycodone	oxycodone-6-glucuronide	Biochemical Reaction	UGT2B4, UGT2B7			27692933, 14516487		oxycodone, oxycodone-6-glucuronide	
+noroxycodone	6-beta-noroxycodol	Biochemical Reaction				22291644, 16678548, 14516487		noroxycodone, 6-beta-noroxycodol	
+oxymorphone	6beta-oxymorphol	Biochemical Reaction				16678548		6beta-oxymorphol, oxymorphone	
+oxycodone	oxymorphone	Biochemical Reaction	CYP2D6			27692933, 16678548, 15039299, 8477556		oxycodone, oxymorphone	
+noroxycodone	noroxycodone-glucuronide	Biochemical Reaction				14516487		noroxycodone, noroxycodone-glucuronide	
+oxymorphone	6alpha-oxymorphol	Biochemical Reaction				16678548		oxymorphone, 6alpha-oxymorphol	
+noroxycodone	6-alpha-noroxycodol	Biochemical Reaction				22291644, 16678548, 14516487		noroxycodone, 6-alpha-noroxycodol	
+oxymorphone	noroxymorphone	Biochemical Reaction	CYP2D6, CYP3A4			16678548, 14516487		noroxymorphone, oxymorphone	

@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+Tobacco Use Disorder	CYP1A2	Activation				7895609	CYP1A2		Tobacco Use Disorder
+propranolol	n-desisopropylpropranolol	Biochemical Reaction	CYP1A2, CYP2D6			18936551, 7895609, 2776392, 2776391		propranolol	Tobacco Use Disorder
+propranolol	propranolol glucuronide	Biochemical Reaction	UGT1A10, UGT1A9, UGT2B4, UGT2B7			18936551, 16763014, 2776391		propranolol	Tobacco Use Disorder
+propranolol	4-hydroxypropranolol	Biochemical Reaction	CYP1A2, CYP2D6			18936551, 10945865, 7895609, 2776391		propranolol	Tobacco Use Disorder
+4-hydroxypropranolol	4-hydroxypropranolol glucuronide	Biochemical Reaction				2776391			Tobacco Use Disorder
+4-hydroxypropranolol	4-hydroxypropranolol sulfate	Biochemical Reaction	SULT1A3			15748705, 2776391			Tobacco Use Disorder
+n-desisopropylpropranolol	naphthoxylactic acid	Biochemical Reaction	ALDH2, MAOA			12269395, 9399616			Tobacco Use Disorder

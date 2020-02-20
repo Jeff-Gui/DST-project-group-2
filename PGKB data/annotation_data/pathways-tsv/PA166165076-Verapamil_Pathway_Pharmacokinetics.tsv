@@ -1,0 +1,27 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+verapamil	verapamil D-620	Biochemical Reaction	CYP3A4, CYP3A5			10336579		verapamil	
+(s)-norverapamil	verapamil D-620	Biochemical Reaction	CYP2C8, CYP3A4, CYP3A5			10336579			
+(s)-norverapamil	verapamil D-620	Biochemical Reaction	CYP2C8, CYP3A4, CYP3A5			10336579			
+verapamil	(s)-norverapamil	Biochemical Reaction	CYP1A2, CYP2C8, CYP2E1, CYP3A4, CYP3A5			10336579, 1516612		verapamil	
+verapamil	(s)-norverapamil	Biochemical Reaction	CYP1A2, CYP2C8, CYP2E1, CYP3A4, CYP3A5			20214408, 19761371, 10336579, 1516612		verapamil	
+(s)-norverapamil	verapamil PR-22	Biochemical Reaction	CYP2C8, CYP2D6			19761371, 10336579			
+verapamil	verapamil D-617	Biochemical Reaction	CYP1A2, CYP2C8, CYP3A4, CYP3A5			22226023, 10336579, 8750925		verapamil	
+(s)-norverapamil	verapamil PR-22	Biochemical Reaction	CYP2C8, CYP2D6			19761371, 10336579			
+verapamil D-617	verapamil PR-25	Biochemical Reaction				22226023, 10336579			
+verapamil	ABCB1	Inhibition				12897809, 10773005	ABCB1	verapamil	
+verapamil PR-22	ABCB1	Inhibition				12897809	ABCB1		
+(s)-norverapamil	ABCB1	Inhibition				12897809, 10773005	ABCB1		
+(s)-norverapamil	CYP3A4	Inhibition				14744949	CYP3A4		
+(s)-norverapamil	CYP3A4	Inhibition				14744949	CYP3A4		
+(s)-norverapamil	ABCB1	Inhibition				12897809, 10773005	ABCB1		
+furafylline	CYP1A2	Inhibition				1516612	CYP1A2	furafylline	
+verapamil	CYP1A2	Inhibition				1516612	CYP1A2	verapamil	
+grapefruit juice	CYP3A4	Inhibition				11956673	CYP3A4	grapefruit juice	
+verapamil D-617	CYP3A4	Inhibition				14744949	CYP3A4		
+verapamil	CYP3A4	Inhibition				20214408, 14744949	CYP3A4	verapamil	
+verapamil	CYP3A5	Leads To				8632764	CYP3A5	verapamil	
+verapamil	CYP3A4	Leads To				8632764	CYP3A4	verapamil	
+verapamil	ABCB1	Leads To				8632764	ABCB1	verapamil	
+verapamil D-620	verapamil D-620	Transport	ABCB1			10773005			
+verapamil	verapamil	Transport	ABCB1			28401570, 27531061		verapamil	
+verapamil D-617	verapamil D-617	Transport	ABCB1			10773005			

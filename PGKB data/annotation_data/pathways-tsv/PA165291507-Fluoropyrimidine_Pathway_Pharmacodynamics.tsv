@@ -1,0 +1,21 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+FPGS	Antimetabolite Pathway - Folate Cycle, Pharmacodynamics	Activation				18035049	FPGS		
+MTHFR	Antimetabolite Pathway - Folate Cycle, Pharmacodynamics	Activation				19465420, 19384296, 19144510, 18245544	MTHFR		
+DHFR	Antimetabolite Pathway - Folate Cycle, Pharmacodynamics	Activation				15814641	DHFR		
+GGH	Antimetabolite Pathway - Folate Cycle, Pharmacodynamics	Activation				19093176, 18414409, 18035049	GGH		
+leucovorin	TYMS	Activation				15638735, 12724731	TYMS	leucovorin	
+5,10-methenyltetrahydrofolate	dihydrofolic acid	Biochemical Reaction	TYMS			17549067, 12724731			
+deoxyuridine monophosphate	deoxythymidine monophosphate	Biochemical Reaction	TYMS			12724731			
+tegafur	fluorouracil	Biochemical Reaction				18172246		fluorouracil, tegafur	
+fluorouracil	fluorodeoxyuridine triphosphate	Biochemical Reaction	Fluoropyrimidine Pathway, Pharmacokinetics			12724731		fluorouracil	
+fluorouracil	fluorodeoxyuridine monophosphate	Biochemical Reaction	Fluoropyrimidine Pathway, Pharmacokinetics			12724731		fluorouracil	
+capecitabine	fluorouracil	Biochemical Reaction				9849491		capecitabine, fluorouracil	
+fluorouracil	fluorouridine triphosphate	Biochemical Reaction	Fluoropyrimidine Pathway, Pharmacokinetics			12724731		fluorouracil	
+fluorodeoxyuridine monophosphate	TYMS	Inhibition				15638735, 12724731	TYMS		
+fluorouridine triphosphate	damage	Leads To				12724731			
+dihydrofolic acid	Antimetabolite Pathway - Folate Cycle, Pharmacodynamics	Leads To				15814641			
+DNA damage [MESH:D004249]	apoptosis	Leads To				12724731			
+fluorodeoxyuridine triphosphate	DNA damage [MESH:D004249]	Leads To				12724731			
+damage	apoptosis	Leads To				19155291			
+TP53	apoptosis	Leads To				19155291, 18357466, 18498133	TP53		
+DNA damage [MESH:D004249]	DNA repair [MESH:D004260]	Leads To	ERCC2, SMUG1, TDG, XRCC3			19402749, 17549067, 18267032, 17283124			

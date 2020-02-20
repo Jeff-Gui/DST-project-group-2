@@ -1,0 +1,12 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+apple juice	SLC22A1	Inhibition				29124159	SLC22A1	apple juice	
+apple juice	SLCO2B1	Inhibition				22574741	SLCO2B1	apple juice	
+orange juice	SLCO1A2	Inhibition				21039758	SLCO1A2	orange juice	
+atenolol	SLC22A6	Inhibition				26374172	SLC22A6	atenolol	
+atenolol	SLC22A8	Inhibition				26374172	SLC22A8	atenolol	
+atenolol	atenolol	Transport	ABCB1			19067419		atenolol	
+atenolol	atenolol	Transport	SLC22A1, SLC22A2			26374172, 29124159		atenolol	
+atenolol	atenolol	Transport	SLC47A1, SLC47A2			26374172		atenolol	
+atenolol	atenolol	Transport	SLC22A1, SLCO1A2, SLCO2B1			29124159, 22574741, 21039758, 19067419		atenolol	
+atenolol	atenolol	Transport	SLC47A1, SLC47A2			26374172		atenolol	
+atenolol	atenolol	Transport	SLC22A1			26374172		atenolol	

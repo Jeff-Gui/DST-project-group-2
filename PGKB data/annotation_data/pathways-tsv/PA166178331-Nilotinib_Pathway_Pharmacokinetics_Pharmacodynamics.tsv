@@ -1,0 +1,15 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+nilotinib	nilotinib n-oxide	Biochemical Reaction	CYP3A4			21827214, 20702754		nilotinib	
+nilotinib	nilotinib carboxylic acid	Biochemical Reaction				21827214		nilotinib	
+nilotinib	ABCB1	Inhibition				18765523	ABCB1	nilotinib	
+nilotinib	PDGFRA	Inhibition				18765523	PDGFRA	nilotinib	
+nilotinib	CYP2C8	Inhibition				18765523	CYP2C8	nilotinib	
+nilotinib	PDGFRB	Inhibition				18765523	PDGFRB	nilotinib	
+nilotinib	BCR-ABL	Inhibition				18765523, 16000593, 15710326		nilotinib	
+nilotinib	KIT	Inhibition				18765523	KIT	nilotinib	
+nilotinib	CYP3A4	Inhibition				18765523	CYP3A4	nilotinib	
+nilotinib	CYP2D6	Inhibition				18765523	CYP2D6	nilotinib	
+nilotinib	UGT1A1	Inhibition				18765523	UGT1A1	nilotinib	
+nilotinib	CYP2C9	Inhibition				18765523	CYP2C9	nilotinib	
+nilotinib	nilotinib	Transport	ABCB1, ABCG2			19785662, 18765523		nilotinib	
+nilotinib	nilotinib	Transport				21827214		nilotinib	

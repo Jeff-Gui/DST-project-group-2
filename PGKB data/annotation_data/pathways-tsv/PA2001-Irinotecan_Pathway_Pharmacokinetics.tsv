@@ -1,0 +1,17 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+SN-38	sn-38 glucuronide	Biochemical Reaction	UGT1A1, UGT1A9			23386248, 18797458, 12960109, 12730278, 12181437, 11990381, 9466980		SN-38	Diarrhea,Neutropenia
+irinotecan	irinotecan M4	Biochemical Reaction	CYP3A4, CYP3A5			11602529, 10815927		irinotecan	Diarrhea,Neutropenia
+irinotecan	SN-38	Biochemical Reaction	CES1, CES2			20653675, 17640957, 12960109		SN-38, irinotecan	Diarrhea,Neutropenia
+irinotecan	SN-38	Biochemical Reaction	BCHE, CES1, CES2			20653675, 12960109, 10197614		SN-38, irinotecan	Diarrhea,Neutropenia
+irinotecan	apc	Biochemical Reaction	CYP3A4			11602529, 10815927		irinotecan	Diarrhea,Neutropenia
+irinotecan	npc	Biochemical Reaction	CYP3A4, CYP3A5			11602529, 10815927		irinotecan	Diarrhea,Neutropenia
+npc	SN-38	Biochemical Reaction	CES1, CES2			9655905		SN-38	Diarrhea,Neutropenia
+irinotecan	SN-38	Biochemical Reaction	CES1, CES2			20653675, 12960109		SN-38, irinotecan	Diarrhea,Neutropenia
+SN-38	sn-38 glucuronide	Biochemical Reaction	UGT1A1, UGT1A10, UGT1A6, UGT1A7			23963147, 23386248, 19696792, 12893990		SN-38	Diarrhea,Neutropenia
+SN-38	Diarrhea	Leads To				23963147, 23386248		SN-38	Diarrhea,Neutropenia
+SN-38	Neutropenia	Leads To				23386248, 18797458		SN-38	Diarrhea,Neutropenia
+SN-38	SN-38	Transport	SLCO1B1			15608127, 11489791		SN-38	Diarrhea,Neutropenia
+irinotecan	irinotecan	Transport	ABCB1, ABCC2			18418374, 14646693, 11489791		irinotecan	Diarrhea,Neutropenia
+SN-38	SN-38	Transport	ABCB1, ABCC2, ABCC5, ABCG2			26352872, 18418374, 12810652, 11489791		SN-38	Diarrhea,Neutropenia
+SN-38	SN-38	Transport	ABCC1, ABCG1			26352872, 11489791, 10220571		SN-38	Diarrhea,Neutropenia
+sn-38 glucuronide	sn-38 glucuronide	Transport	ABCC2			18418374, 11489791			Diarrhea,Neutropenia

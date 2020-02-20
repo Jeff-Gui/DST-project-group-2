@@ -1,0 +1,25 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+4-hydroxycyclophosphamide	aldophosphamide	Biochemical Reaction				10469895, 6708049			Neurotoxicity Syndromes
+phosphoramide mustard	chloroethyl aziridine	Biochemical Reaction				9484502			Neurotoxicity Syndromes
+acrolein, glutathione	thioether product	Biochemical Reaction				8887466			Neurotoxicity Syndromes
+acrolein	acrylic acid	Biochemical Reaction	ALDH1A1, ALDH3A1			8887466			Neurotoxicity Syndromes
+aldophosphamide	alcophosphamide	Biochemical Reaction	ADH, AKR1			9394035, 8216347			Neurotoxicity Syndromes
+aldophosphamide	carboxyphosphamide	Biochemical Reaction	ALDH1A1, ALDH3A1, ALDH5A1			10469894, 9394035, 7365745			Neurotoxicity Syndromes
+aldophosphamide	acrolein, phosphoramide mustard	Biochemical Reaction				10469895, 3815352, 3806624, 6708049			Neurotoxicity Syndromes
+4-hydroxycyclophosphamide	4-ketocyclophosphamide	Biochemical Reaction	ADH			10410955, 9884322, 1131393, 5446958			Neurotoxicity Syndromes
+chloroacetaldehyde	chloroacetic acid	Biochemical Reaction	ALDH2			9298599			Neurotoxicity Syndromes
+glutathione	detoxification	Leads To				9484502			Neurotoxicity Syndromes
+carboxyphosphamide	detoxification	Leads To				10469894			Neurotoxicity Syndromes
+phosphoramide mustard	detoxification	Leads To				9484502			Neurotoxicity Syndromes
+4-ketocyclophosphamide	detoxification	Leads To				9884322			Neurotoxicity Syndromes
+phosphoramide mustard	DNA damage [MESH:D004249]	Leads To				12972057			Neurotoxicity Syndromes
+acrolein	DNA damage [MESH:D004249]	Leads To				20158384, 10397244			Neurotoxicity Syndromes
+chloroethyl aziridine	DNA damage [MESH:D004249]	Leads To				9484502			Neurotoxicity Syndromes
+chloroacetaldehyde	Neurotoxicity Syndromes	Leads To				11461933, 8763899			Neurotoxicity Syndromes
+DNA adducts [MESH:D018736]	apoptosis	Leads To				20158384			Neurotoxicity Syndromes
+DNA adducts [MESH:D018736]	DNA repair [MESH:D004260]	Leads To	ERCC1, ERCC4, MGMT			20158384, 10397244, 8621235, 8765433			Neurotoxicity Syndromes
+Cyclophosphamide Pathway, Pharmacokinetics	chloroacetaldehyde	Leads To				21175440, 10692561			Neurotoxicity Syndromes
+Cyclophosphamide Pathway, Pharmacokinetics	aldophosphamide	Leads To				21175440, 10692561			Neurotoxicity Syndromes
+Cyclophosphamide Pathway, Pharmacokinetics	4-hydroxycyclophosphamide	Leads To				21175440, 10692561			Neurotoxicity Syndromes
+DNA damage [MESH:D004249]	DNA adducts [MESH:D018736]	Leads To				20158384, 9484502			Neurotoxicity Syndromes
+cyclophosphamide	Cyclophosphamide Pathway, Pharmacokinetics	Leads To				10692561		cyclophosphamide	Neurotoxicity Syndromes

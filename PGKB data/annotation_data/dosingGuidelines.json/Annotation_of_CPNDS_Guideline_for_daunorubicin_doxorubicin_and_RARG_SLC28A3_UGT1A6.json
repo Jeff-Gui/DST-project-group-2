@@ -1,0 +1,100 @@
+{
+  "citations" : [ {
+    "@id" : "https://pharmgkb.org/literature/15097536",
+    "@context" : "https://api.pharmgkb.org/jsonld/literature.jsonld",
+    "id" : 15097536,
+    "resourceId" : "27197003",
+    "title" : "Recommendations for genetic testing to reduce the incidence of anthracycline-induced cardiotoxicity.",
+    "_sameAs" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5338111",
+    "authors" : [ "Aminkeng Folefac", "Ross Colin J D", "Rassekh Shahrad R", "Hwang Soomi", "Rieder Michael J", "Bhavsar Amit P", "Smith Anne", "Sanatani Shubhayan", "Gelmon Karen A", "Bernstein Daniel", "Hayden Michael R", "Amstutz Ursula", "Carleton Bruce C", "CPNDS Clinical Practice Recommendations Group" ],
+    "hasKeyword" : true,
+    "journal" : "British journal of clinical pharmacology",
+    "meshDiseases" : [ "PA166128121", "PA446882" ],
+    "meshTerms" : [ "Anthracyclines", "Cardiotoxicity", "Evidence-Based Medicine", "Genetic Predisposition to Disease", "Genetic Testing", "Humans", "Risk Factors" ],
+    "month" : 9,
+    "nonHuman" : false,
+    "objCls" : "Literature",
+    "page" : "683-95",
+    "pgkbPublication" : false,
+    "pubDate" : "2016-09-01T00:00:00-07:00",
+    "summary" : ": Anthracycline-induced cardiotoxicity (ACT) occurs in 57% of treated patients and remains an important limitation of anthracycline-based chemotherapy. In various genetic association studies, potential genetic risk markers for ACT have been identified. Therefore, we developed evidence-based clinical practice recommendations for pharmacogenomic testing to further individualize therapy based on ACT risk.\n\n: We followed a standard guideline development process, including a systematic literature search, evidence synthesis and critical appraisal, and the development of clinical practice recommendations with an international expert group.\n\n: RARG rs2229774, SLC28A3 rs7853758 and UGT1A6 rs17863783 variants currently have the strongest and the most consistent evidence for association with ACT. Genetic variants in ABCC1, ABCC2, ABCC5, ABCB1, ABCB4, CBR3, RAC2, NCF4, CYBA, GSTP1, CAT, SULT2B1, POR, HAS3, SLC22A7, SCL22A17, HFE and NOS3 have also been associated with ACT, but require additional validation. We recommend pharmacogenomic testing for the RARG rs2229774 (S427L), SLC28A3 rs7853758 (L461L) and UGT1A6*4 rs17863783 (V209V) variants in childhood cancer patients with an indication for doxorubicin or daunorubicin therapy (Level B - moderate). Based on an overall risk stratification, taking into account genetic and clinical risk factors, we recommend a number of management options including increased frequency of echocardiogram monitoring, follow-up, as well as therapeutic options within the current standard of clinical practice.\n\n: Existing evidence demonstrates that genetic factors have the potential to improve the discrimination between individuals at higher and lower risk of ACT. Genetic testing may therefore support both patient care decisions and evidence development for an improved prevention of ACT.",
+    "type" : "Article",
+    "version" : 3,
+    "volume" : "82",
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/pmc/PMC5338111","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449288594,"resource":"PubMed Central","resourceId":"PMC5338111","_url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5338111"}, {"@id":"https://pharmgkb.org/crossReference/pubMed/27197003","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449288593,"resource":"PubMed","resourceId":"27197003","_url":"https://www.ncbi.nlm.nih.gov/pubmed/27197003"}, {"@id":"https://pharmgkb.org/crossReference/doi/10.1111/bcp.13008","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449288595,"resource":"DOI","resourceId":"10.1111/bcp.13008","_url":"http://dx.doi.org/10.1111%2Fbcp.13008"} ],
+    "year" : 2016
+  } ],
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166159180",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166159180",
+    "name" : "Annotation of CPNDS Guideline for daunorubicin,doxorubicin and RARG,SLC28A3,UGT1A6",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1448102965,
+      "date" : "2016-06-16T00:00:00-07:00",
+      "type" : "Create",
+      "version" : 1
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15097536","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15097536,"resourceId":"27197003","title":"Recommendations for genetic testing to reduce the incidence of anthracycline-induced cardiotoxicity.","_sameAs":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5338111","objCls":"Literature","type":"Article","xrefs":[{"@id":"https://pharmgkb.org/crossReference/pmc/PMC5338111","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449288594,"resource":"PubMed Central","resourceId":"PMC5338111","_url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5338111"},{"@id":"https://pharmgkb.org/crossReference/pubMed/27197003","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449288593,"resource":"PubMed","resourceId":"27197003","_url":"https://www.ncbi.nlm.nih.gov/pubmed/27197003"},{"@id":"https://pharmgkb.org/crossReference/doi/10.1111/bcp.13008","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449288595,"resource":"DOI","resourceId":"10.1111/bcp.13008","_url":"http://dx.doi.org/10.1111%2Fbcp.13008"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA449212",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA449212",
+      "name" : "daunorubicin",
+      "version" : 5
+    }, {
+      "@id" : "https://pharmgkb.org/chemical/PA449412",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA449412",
+      "name" : "doxorubicin",
+      "version" : 30
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA34227",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA34227",
+      "symbol" : "RARG",
+      "name" : "retinoic acid receptor gamma",
+      "version" : 16
+    }, {
+      "@id" : "https://pharmgkb.org/gene/PA426",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA426",
+      "symbol" : "SLC28A3",
+      "name" : "solute carrier family 28 member 3",
+      "version" : 53
+    }, {
+      "@id" : "https://pharmgkb.org/gene/PA37181",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA37181",
+      "symbol" : "UGT1A6",
+      "name" : "UDP glucuronosyltransferase 1 family, polypeptide A6",
+      "version" : 365
+    } ],
+    "source" : "Canadian Pharmacogenomics Network for Drug Safety",
+    "summaryMarkdown" : {
+      "id" : 1448102957,
+      "html" : "<p>The Canadian Pharmacogenomics Network for Drug Safety (CPNDS) clinical recommendation group has published guidelines for the use of <em>RARG</em> , <em>SLC28A3</em> , and <em>UGT1A6</em> when prescribing anthracyclines for pediatric cancer patients. They recommend that pharmacogenomic testing of <em>RARG</em> rs2229774, <em>SLC28A3</em> rs7853758, and <em>UGT1A6 *4</em> (rs17863783) should be performed in all pediatric cancer patients who are treated with daunorubicin or doxorubicin because the association of those genetic variants with anthracycline associated cardiotoxicity (ACT).</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1448102956,
+      "html" : "<p>The Canadian Pharmacogenomics Network for Drug Safety (CPNDS) clinical recommendation group has published genotype-based drug dosing guidelines for anthracyclines in the British Journal of Clinical Pharmacology. Excerpts from &quot;Recommendations for Genetic Testing to Reduce the Incidence of Anthracycline-induced Cardiotoxicity.&quot; [Article:<a href=\"/pmid/27197003\">27197003</a>] follow:</p>\n<blockquote class=\"blockquote\">\n<ul>\n<li>\n<p>All other patients should be considered at moderate genetic risk. Pharmacogenomic testing should be performed in all pediatric cancer patients who are treated with doxorubicin or daunorubicin for the following genetic variants <em>RARG</em> rs2229774, <em>SLC28A3</em> rs7853758, <em>UGT1A6*4</em> rs17863783. The rs2229774 A allele and the UGT1A6*4 s17863783 T allele are the high risk variants, whereas the rs7853758 A allele is a low-risk allele. For patients who carry the reduced risk allele without the high-risk alleles, classification into a lower cardiotoxicity risk should be considered ___(Level B - moderate recommendation)___.</p>\n</li>\n<li>\n<p>Genetic testing is not recommended for adults and pediatric patients receiving alternate anthracyclines ___(Level C - optional recommendation)___.</p>\n</li>\n</ul>\n</blockquote>\n<blockquote class=\"blockquote\">\n<p><strong>Management options based on ACT risk</strong></p>\n</blockquote>\n<blockquote class=\"blockquote\">\n<ul>\n<li>\n<p><em>Low risk patients - normal follow up</em> <strong><em>(Level A recommendation)</em></strong></p>\n</li>\n<li>\n<p><em>Moderate risk patients - increase frequency of monitoring</em> <strong><em>(Level A recommendation)</em></strong></p>\n</li>\n<li>\n<p><em>High risk patients - the following management options should be considered</em>:</p>\n<ul>\n<li>Increase frequency of monitoring with serial yearly echocardiographic monitoring an follow-up as recommended by COG guidelines <strong><em>(Level A recommendation)</em></strong></li>\n<li>Aggressive screening and management of cardiovascular risk factors including obesity, diabetes, hypertension, coronary artery idea, lipid disorders and peripheral vascular disease <strong><em>(Level A recommendation)</em></strong></li>\n<li>Prescribe dexrazoxane <strong><em>(Level B recommendation)</em></strong></li>\n<li>Use liposomal encapsulated anthracycline preparations <strong><em>(Level C recommendation)</em></strong></li>\n<li>Use of continuous inclusion or slower inclusion rates <strong><em>(Level C recommendation)</em></strong></li>\n<li>Use of less cardiotoxic types of anthracyclines <strong><em>(Level C recommendation)</em></strong></li>\n<li>Use of other cardioprotective agents <strong><em>(Level C recommendation)</em></strong></li>\n<li>Prescribe alternative chemotherapy regiments for certain tumor types where alternative regiments have been shown to be equally effective <strong><em>(Level C recommendation)</em></strong></li>\n</ul>\n</li>\n</ul>\n</blockquote>\n<p>See full guideline ([Article:<a href=\"/pmid/27197003\">27197003</a>]) for further details and grading scheme.</p>\n",
+      "version" : 10
+    },
+    "userId" : "mariealus",
+    "version" : 14,
+    "xrefs" : [ ]
+  }
+}

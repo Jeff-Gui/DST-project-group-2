@@ -1,0 +1,1346 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166180457",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166180457",
+    "name" : "Annotation of CPIC Guideline for desflurane,enflurane,halothane,isoflurane,methoxyflurane,sevoflurane,succinylcholine and CACNA1S,RYR1",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ {
+      "id" : 1449732882,
+      "alleles" : [ {
+        "id" : 1449732883,
+        "_label" : "c.520C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180430",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180430",
+          "symbol" : "CACNA1Sc.520C>T",
+          "name" : "c.520C>T",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732884,
+        "_label" : "c.3257G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180431",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180431",
+          "symbol" : "CACNA1Sc.3257G>A",
+          "name" : "c.3257G>A",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732934,
+        "_label" : "Unknown",
+        "allele" : "Unknown",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558512",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558512,
+          "description" : "for amitriptyline guideline to enter only one CYP gene while the second CYP is set \"Unknown\"",
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Unknown",
+          "termId" : "haplotypeTags:1445558512",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449733226,
+        "_label" : "negative for an EMHG - MHS causative CACNA1S variant",
+        "allele" : "negative for an EMHG - MHS causative CACNA1S variant",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448589712",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448589712,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Unknown function",
+          "termId" : "haplotypeTags:1448589712",
+          "version" : 1
+        },
+        "version" : 0
+      } ],
+      "gene" : {
+        "@id" : "https://pharmgkb.org/gene/PA85",
+        "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+        "objCls" : "Gene",
+        "id" : "PA85",
+        "symbol" : "CACNA1S",
+        "name" : "calcium voltage-gated channel subunit alpha1 S",
+        "version" : 19
+      },
+      "version" : 0
+    }, {
+      "id" : 1449732881,
+      "alleles" : [ {
+        "id" : 1449732885,
+        "_label" : "c.103T>C",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180378",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180378",
+          "symbol" : "RYR1c.103T>C",
+          "name" : "c.103T>C",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732886,
+        "_label" : "c.130C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180379",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180379",
+          "symbol" : "RYR1c.130C>T",
+          "name" : "c.130C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732887,
+        "_label" : "c.487C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180380",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180380",
+          "symbol" : "RYR1c.487C>T",
+          "name" : "c.487C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732888,
+        "_label" : "c.488G>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180381",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180381",
+          "symbol" : "RYR1c.488G>T",
+          "name" : "c.488G>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732889,
+        "_label" : "c.742G>C",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180382",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180382",
+          "symbol" : "RYR1c.742G>C",
+          "name" : "c.742G>C",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732890,
+        "_label" : "c.742G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180383",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180383",
+          "symbol" : "RYR1c.742G>A",
+          "name" : "c.742G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732891,
+        "_label" : "c.982C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180384",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180384",
+          "symbol" : "RYR1c.982C>T",
+          "name" : "c.982C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732892,
+        "_label" : "c.1021G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180385",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180385",
+          "symbol" : "RYR1c.1021G>A",
+          "name" : "c.1021G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732893,
+        "_label" : "c.1021G>C",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180386",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180386",
+          "symbol" : "RYR1c.1021G>C",
+          "name" : "c.1021G>C",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732894,
+        "_label" : "c.1201C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180387",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180387",
+          "symbol" : "RYR1c.1201C>T",
+          "name" : "c.1201C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732895,
+        "_label" : "c.1209C>G",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180388",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180388",
+          "symbol" : "RYR1c.1209C>G",
+          "name" : "c.1209C>G",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732896,
+        "_label" : "c.1565A>C",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180389",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180389",
+          "symbol" : "RYR1c.1565A>C",
+          "name" : "c.1565A>C",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732897,
+        "_label" : "c.1589G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180390",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180390",
+          "symbol" : "RYR1c.1589G>A",
+          "name" : "c.1589G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732898,
+        "_label" : "c.1597C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180391",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180391",
+          "symbol" : "RYR1c.1597C>T",
+          "name" : "c.1597C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732899,
+        "_label" : "c.1598G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180392",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180392",
+          "symbol" : "RYR1c.1598G>A",
+          "name" : "c.1598G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732900,
+        "_label" : "c.1654C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180393",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180393",
+          "symbol" : "RYR1c.1654C>T",
+          "name" : "c.1654C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732901,
+        "_label" : "c.1840C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180394",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180394",
+          "symbol" : "RYR1c.1840C>T",
+          "name" : "c.1840C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732902,
+        "_label" : "c.1841G>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180395",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180395",
+          "symbol" : "RYR1c.1841G>T",
+          "name" : "c.1841G>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732903,
+        "_label" : "c.6487C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180396",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180396",
+          "symbol" : "RYR1c.6487C>T",
+          "name" : "c.6487C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732904,
+        "_label" : "c.6488G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180397",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180397",
+          "symbol" : "RYR1c.6488G>A",
+          "name" : "c.6488G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732905,
+        "_label" : "c.6502G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180398",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180398",
+          "symbol" : "RYR1c.6502G>A",
+          "name" : "c.6502G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732906,
+        "_label" : "c.6617C>G",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180399",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180399",
+          "symbol" : "RYR1c.6617C>G",
+          "name" : "c.6617C>G",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732907,
+        "_label" : "c.6617C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180400",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180400",
+          "symbol" : "RYR1c.6617C>T",
+          "name" : "c.6617C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732908,
+        "_label" : "c.7007G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180401",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180401",
+          "symbol" : "RYR1c.7007G>A",
+          "name" : "c.7007G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732909,
+        "_label" : "c.7039_7041delGAG or c.7042_7044delGAG",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180402",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180402",
+          "symbol" : "RYR1c.7039_7041delGAG or c.7042_7044delGAG",
+          "name" : "c.7039_7041delGAG or c.7042_7044delGAG",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732910,
+        "_label" : "c.7048G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180403",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180403",
+          "symbol" : "RYR1c.7048G>A",
+          "name" : "c.7048G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732911,
+        "_label" : "c.7063C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180404",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180404",
+          "symbol" : "RYR1c.7063C>T",
+          "name" : "c.7063C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732912,
+        "_label" : "c.7124G>C",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180405",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180405",
+          "symbol" : "RYR1c.7124G>C",
+          "name" : "c.7124G>C",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732913,
+        "_label" : "c.7282G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180406",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180406",
+          "symbol" : "RYR1c.7282G>A",
+          "name" : "c.7282G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732914,
+        "_label" : "c.7300G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180407",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180407",
+          "symbol" : "RYR1c.7300G>A",
+          "name" : "c.7300G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732915,
+        "_label" : "c.7304G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180408",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180408",
+          "symbol" : "RYR1c.7304G>A",
+          "name" : "c.7304G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732916,
+        "_label" : "c.7354C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180409",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180409",
+          "symbol" : "RYR1c.7354C>T",
+          "name" : "c.7354C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732917,
+        "_label" : "c.7360C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180410",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180410",
+          "symbol" : "RYR1c.7360C>T",
+          "name" : "c.7360C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732918,
+        "_label" : "c.7361G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180411",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180411",
+          "symbol" : "RYR1c.7361G>A",
+          "name" : "c.7361G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732919,
+        "_label" : "c.7372C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180412",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180412",
+          "symbol" : "RYR1c.7372C>T",
+          "name" : "c.7372C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732920,
+        "_label" : "c.7373G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180413",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180413",
+          "symbol" : "RYR1c.7373G>A",
+          "name" : "c.7373G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732921,
+        "_label" : "c.7522C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180414",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180414",
+          "symbol" : "RYR1c.7522C>T",
+          "name" : "c.7522C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732922,
+        "_label" : "c.7522C>G",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180415",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180415",
+          "symbol" : "RYR1c.7522C>G",
+          "name" : "c.7522C>G",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732923,
+        "_label" : "c.7523G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180416",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180416",
+          "symbol" : "RYR1c.7523G>A",
+          "name" : "c.7523G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732924,
+        "_label" : "c.9310G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180417",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180417",
+          "symbol" : "RYR1c.9310G>A",
+          "name" : "c.9310G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732925,
+        "_label" : "c.11969G>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180418",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180418",
+          "symbol" : "RYR1c.11969G>T",
+          "name" : "c.11969G>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732926,
+        "_label" : "c.14387A>G",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180419",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180419",
+          "symbol" : "RYR1c.14387A>G",
+          "name" : "c.14387A>G",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732927,
+        "_label" : "c.14477C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180420",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180420",
+          "symbol" : "RYR1c.14477C>T",
+          "name" : "c.14477C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732928,
+        "_label" : "c.14497C>T",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180421",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180421",
+          "symbol" : "RYR1c.14497C>T",
+          "name" : "c.14497C>T",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732929,
+        "_label" : "c.14512C>G",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180422",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180422",
+          "symbol" : "RYR1c.14512C>G",
+          "name" : "c.14512C>G",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732930,
+        "_label" : "c.14545G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180423",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180423",
+          "symbol" : "RYR1c.14545G>A",
+          "name" : "c.14545G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732931,
+        "_label" : "c.14582G>A",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180424",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180424",
+          "symbol" : "RYR1c.14582G>A",
+          "name" : "c.14582G>A",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732932,
+        "_label" : "c.14693T>C",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166180425",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166180425",
+          "symbol" : "RYR1c.14693T>C",
+          "name" : "c.14693T>C",
+          "version" : 1
+        },
+        "version" : 0
+      }, {
+        "id" : 1449732936,
+        "_label" : "Unknown",
+        "allele" : "Unknown",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558512",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558512,
+          "description" : "for amitriptyline guideline to enter only one CYP gene while the second CYP is set \"Unknown\"",
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Unknown",
+          "termId" : "haplotypeTags:1445558512",
+          "version" : 0
+        },
+        "version" : 0
+      }, {
+        "id" : 1449733227,
+        "_label" : "negative for an EMHG - MHS causative RYR1 variant",
+        "allele" : "negative for an EMHG - MHS causative RYR1 variant",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448589712",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448589712,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Unknown function",
+          "termId" : "haplotypeTags:1448589712",
+          "version" : 1
+        },
+        "version" : 0
+      } ],
+      "gene" : {
+        "@id" : "https://pharmgkb.org/gene/PA34896",
+        "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+        "objCls" : "Gene",
+        "id" : "PA34896",
+        "symbol" : "RYR1",
+        "name" : "ryanodine receptor 1",
+        "version" : 131
+      },
+      "version" : 0
+    } ],
+    "history" : [ {
+      "id" : 1450072941,
+      "date" : "2018-12-05T00:00:00-08:00",
+      "type" : "Update",
+      "version" : 1
+    }, {
+      "id" : 1450820287,
+      "date" : "2019-10-01T00:07:54.234-07:00",
+      "description" : "corrected c.488G>A to c.488G>T",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15101548","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15101548,"resourceId":"30499100","title":"Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for the use of potent volatile anesthetic agents and succinylcholine in the context of RYR1 or CACNA1S genotypes.","_sameAs":"https://www.ncbi.nlm.nih.gov/pubmed/30499100","objCls":"Literature","type":"Article","xrefs":[{"@id":"https://pharmgkb.org/crossReference/pubMed/30499100","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450044284,"resource":"PubMed","resourceId":"30499100","_url":"https://www.ncbi.nlm.nih.gov/pubmed/30499100"},{"@id":"https://pharmgkb.org/crossReference/doi/10.1002/cpt.1319","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450044285,"resource":"DOI","resourceId":"10.1002/cpt.1319","_url":"http://dx.doi.org/10.1002%2Fcpt.1319"}]}, {"@id":"https://pharmgkb.org/literature/15102220","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15102220,"resourceId":"https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/","title":"CPIC® Guideline for Potent Volatile Anesthetic Agents and Succinylcholine and RYR1 and CACNA1S – CPIC","_sameAs":"https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450370704,"resource":"URL","resourceId":"https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/","_url":"https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA164749136",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA164749136",
+      "name" : "desflurane",
+      "version" : 5
+    }, {
+      "@id" : "https://pharmgkb.org/chemical/PA449461",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA449461",
+      "name" : "enflurane",
+      "version" : 5
+    }, {
+      "@id" : "https://pharmgkb.org/chemical/PA449845",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA449845",
+      "name" : "halothane",
+      "version" : 10
+    }, {
+      "@id" : "https://pharmgkb.org/chemical/PA450106",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA450106",
+      "name" : "isoflurane",
+      "version" : 5
+    }, {
+      "@id" : "https://pharmgkb.org/chemical/PA450434",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA450434",
+      "name" : "methoxyflurane",
+      "version" : 5
+    }, {
+      "@id" : "https://pharmgkb.org/chemical/PA451341",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA451341",
+      "name" : "sevoflurane",
+      "version" : 5
+    }, {
+      "@id" : "https://pharmgkb.org/chemical/PA451522",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA451522",
+      "name" : "succinylcholine",
+      "version" : 5
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA85",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA85",
+      "symbol" : "CACNA1S",
+      "name" : "calcium voltage-gated channel subunit alpha1 S",
+      "version" : 19
+    }, {
+      "@id" : "https://pharmgkb.org/gene/PA34896",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA34896",
+      "symbol" : "RYR1",
+      "name" : "ryanodine receptor 1",
+      "version" : 131
+    } ],
+    "source" : "Clinical Pharmacogenetics Implementation Consortium",
+    "summaryMarkdown" : {
+      "id" : 1449732232,
+      "html" : "<p>The CPIC Dosing Guideline recommends that halogenated volatile anesthetics such as desflurane, enflurane, halothane, isoflurane, methoxyflurane, sevoflurane and the depolarizing muscle relaxants succinylcholine are relatively contraindicated in persons with malignant hyperthermia susceptibility (MHS). See full guideline for disclaimers, further details and supporting evidence.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450072940,
+      "html" : "<p>This annotation is based on the CPIC&reg; guideline for <a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/\" target=\"_blank\">potent volatile anesthetic agents and succinylcholine and RYR1 and CACNA1S</a>.</p>\n<h3 id=\"november-2018\">November 2018</h3>\n<p><em>Advance online publication November 2018</em></p>\n<ul>\n<li>The CPIC guidelines regarding the use of potent volatile anesthetic agents and succinylcholine in the context of <em>RYR1</em> or <em>CACNA1S</em> genotypes is published in <em>Clinical Pharmacology and Therapeutics</em> by the Clinical Pharmacogenetics Implementation Consortium (CPIC).</li>\n<li>Excerpts from the 2018 dosing guideline:\n<ul>\n<li>&quot;The diagnosis of malignant hyperthermia susceptibility (MHS) is made by one of two criteria: (a) positive response to an in vitro muscle bioassay, such as the in vitro contracture test (IVCT), or the caffeine-halothane contracture test (CHCT) as it is known in the United States; or (b) the presence of a pathogenic variant in <em>RYR1</em> or <em>CACNA1S</em> found by molecular genetic testing.&quot;</li>\n<li>&quot;MHS is inherited in an autosomal dominant pattern and a heterozygous genotype of a pathogenic variant in <em>RYR1</em> can be considered as diagnostic of the trait.&quot;</li>\n<li>&quot;The guidelines focus on the clinical utility of the identification of variants in these genes in individuals without a personal or family history of a reaction to these drugs or agents.&quot;</li>\n<li>&quot;The literature review focused on 48 <em>RYR1</em> and 2 <em>CACNA1S</em> variants accepted as ‘diagnostic mutations’ by the European Malignant Hyperthermia Group (EMHG).&quot;</li>\n<li>&quot;The lack of inclusion of a variant in this guideline should not be interpreted to mean that we have judged them to be benign.&quot;</li>\n<li>&quot;A result that is negative, or a result that detects a variant that is not among the 50 listed here, is more difficult to interpret....The interpretation of a negative genetic testing result in an at-risk individual who is related to a person with MHS and a pathogenic variant is complex and controversial and is outside the scope of this recommendation.&quot;</li>\n<li>&quot;An individual negative for an <em>RYR1</em>- or <em>CACNA1S</em>-associated malignant hyperthermia ‘diagnostic mutation’ as designated by the EMHG, should be considered to have uncertain susceptibility. A negative result does not eliminate the chance that this patient is susceptible to malignant hyperthermia.&quot;</li>\n<li>&quot;There is less experience with MHS in children as compared to adults, but unpublished observations suggest that the risk of an MH reaction may be higher when an anesthetic is administered in childhood. The identification of a causative variant associated with MHS in a parent should lead to complete evaluation of all at risk family members, including children.&quot;</li>\n</ul>\n</li>\n<li>Download and read:\n<ul>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/2018/30499100.pdf\" target=\"_blank\">Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for the use of potent volatile anesthetic agents and succinylcholine in the context of <em>RYR1</em> or <em>CACNA1S</em> genotypes</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/2018/30499100-supplement.pdf\" target=\"_blank\">2018 supplement</a></li>\n<li><a href=\"https://www.pharmgkb.org/page/ryr1RefMaterials\">Gene-specific Information Tables for RYR1</a></li>\n<li><a href=\"https://www.pharmgkb.org/page/cacna1sRefMaterials\">Gene-specific Information Tables for CACNA1S</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/Desflurane_Drug_Resource_Mappings.xlsx\" target=\"_blank\">Desflurane drug resource mapping</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/Enflurane_Drug_Resource_Mappings.xlsx\" target=\"_blank\">Enflurane drug resource mapping</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/Halothane_Drug_Resource_Mappings.xlsx\" target=\"_blank\">Halothane drug resource mapping</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/Isoflurane_Drug_Resource_Mappings.xlsx\" target=\"_blank\">Isoflurane drug resource mapping</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/Methoxyflurane_Drug_Resource_Mappings.xlsx\" target=\"_blank\">Methoxyflurane drug resource mapping</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/Sevoflurane_Drug_Resource_Mappings.xlsx\" target=\"_blank\">Sevoflurane drug resource mapping</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/Succinylcholine_Drug_Resource_Mappings.xlsx\" target=\"_blank\">Succinylcholine drug resource mapping</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/volatile_anesthetic_succinylcholine/volatile_anesthetic_agents_succinylcholine_pre_and_post_test_alerts_and_flow_chart.xlsx\" target=\"_blank\">Volatile anesthetic agents or succinylcholine pre and post test alerts and flow chart</a></li>\n</ul>\n</li>\n</ul>\n<h3 id=\"table-1-recommendations-for-inhaled-anesthetics-or-succinylcholine-in-the-context-of-ryr1-or-cacna1s-genotypes\">Table 1: Recommendations for inhaled anesthetics or succinylcholine in the context of <em>RYR1</em> or <em>CACNA1S</em> genotypes.</h3>\n<p><em>Adapted from Tables 1 and 2 of the 2018 guideline manuscript.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th><em>RYR1</em> or <em>CACNA1S</em> phenotype</th><th>Genotype</th><th>Example Variants</th><th>Implications for phenotypic measures</th><th>Dosing recommendations for inhaled anesthetics or succinylcholine</th><th>Classification of recommendations<sup>a</sup></th></tr>\n</thead>\n<tbody>\n<tr><td>Malignant Hyperthermia susceptible</td><td>An individual heterozygous<sup>b</sup> for a <em>RYR1</em> or <em>CACNA1S</em> malignant hyperthermia causative variant as designated by the EMHG <sup>c,d,e</sup></td><td><em>RYR1</em> c.103T&gt;C; p.(Cys35Arg), <em>RYR1</em> c.130C&gt;T; p.(Arg44Cys), RYR1 c.487C&gt;T; p.(Arg163Cys), RYR1 c.488G&gt;T; p.(Arg163Leu), RYR1 c.742G&gt;A/C; p.(Gly248Arg), RYR1 c.982C&gt;T; p.(Arg328Trp), RYR1 c.1021G&gt;C ; p.(Gly341Arg), RYR1 c.1021G&gt;A; p.(Gly341Arg), RYR1 c.1201C&gt;T; p.(Arg401Cys), RYR1 c.1209C&gt;G; p.(Ile403Met), RYR1 c.1565A&gt;C; p.(Try522Ser), RYR1 c.1589G&gt;A; p.(Arg530His), RYR1 c.1597C&gt;T; p.(Arg533Cys), RYR1 c.1598G&gt;A; p.(Arg533His), RYR1 c.1654C&gt;T; p.(Arg552Trp), RYR1 c.1840C&gt;T; p.(Arg614Cys), RYR1 c.1841G&gt;T; p.(Arg614Leu), RYR1 c.6487C&gt;T; p.(Arg2163Cys), RYR1 c.6488G&gt;A; p.(Arg2163His), RYR1 c.6502G&gt;A; p.(Val2168Met), RYR1 c.6617C&gt;G; p.(Thr2206Arg), RYR1 c.6617C&gt;T; p.(Thr2206Met), RYR1 c.7007G&gt;A; p.(Arg2336His), RYR1 c.7039_7041delGAG/RYR1 c.7042_7044delGAG; p.(Glu2348del), RYR1 c.7048G&gt;A; p.(Ala2350Thr), RYR1 c.7063C&gt;T; p.(Arg2355Trp), RYR1 c.7124G&gt;C; p.(Gly2375Ala), RYR1 c.7282G&gt;A; p.(Ala2428Thr), RYR1 c.7300G&gt;A; p.(Gly2434Arg), RYR1 c.7304G&gt;A; p.(Arg2435His), RYR1 c.7354C&gt;T; p.(Arg2452Trp), RYR1 c.7360C&gt;T; p.(Arg2454Cys), RYR1 c.7361G&gt;A; p.(Arg2454His), RYR1 c.7372C&gt;T; p.(Arg2458Cys), RYR1 c.7373G&gt;A; p.(Arg2458His), RYR1 c.7522C&gt;G; p.(Arg2508Gly), RYR1 c.7522C&gt;T; p.(Arg2508Cys), RYR1 c.7523G&gt;A; p.(Arg2508His), RYR1 c.9310G&gt;A; p.(Glu3104Lys), RYR1 c.11969G&gt;T; p.(Gly3990Val), RYR1 c.14387A&gt;G; p.(Try4796Cys), RYR1 c.14477C&gt;T; p.(Thr4826Ile), RYR1 c.14497C&gt;T; p.(His4833Tyr), RYR1 c.14512C&gt;G; p.(Leu4838Val), RYR1 c.14545G&gt;A; p.(Val4849Ile), RYR1 c.14582G&gt;A; p.(Arg4861His), RYR1 c.14693T&gt;C; p.(Ile4898Thr), CACNA1S c.520C&gt;T; p.(Arg174Trp), CACNA1S c3257G&gt;A; p. (Arg1086His)</td><td>Individuals are at increased risk of developing malignant hyperthermia if administered halogenated volatile anesthetics or the depolarizing muscle relaxant succinylcholine <sup>f</sup></td><td>Halogenated volatile anesthetics or depolarizing muscle relaxants succinylcholine are relatively contraindicated in persons with MHS. They should not be used, except in extraordinary circumstances where the benefits outweigh the risks. In general, alternative anesthetics are widely available and effective in patients with MHS.</td><td>Strong</td></tr>\n<tr><td>Uncertain susceptibility</td><td>An individual negative for a <em>RYR1</em> or <em>CACNA1S</em> malignant hyperthermia causative variant as designated by the European Malignant Hyperthermia Group (EMHG) <sup>c,d,e</sup></td><td></td><td>These results do not eliminate the chance that this patient is susceptible to Malignant Hyperthermia. The genetic cause of about half of all MH survivors, with MH susceptibility confirmed by contracture test, remains unknown [Article:<a href=\"/pmid/28902675\">28902675</a>].</td><td>Clinical findings, family history, further genetic testing and other laboratory data should guide use of halogenated volatile anesthetics or depolarizing muscle relaxants.</td><td>Strong</td></tr>\n</tbody>\n</table>\n<p><sup>a</sup> Rating scheme described in Supplement.<br />\n<sup>b</sup> Individuals who have biallelic (homozygous or compound heterozygous) pathogenic variants in RYR1 generally will have autosomal recessive myopathies and should be managed according to the standard of care for those disorders. While some may indeed have susceptibility to anesthetic agents, the recommendations described here cannot adequately address such patients and they should be managed by a physician who is knowledgeable regarding those disorders.<br />\n<sup>c</sup> European Malignant Hyperthermia Group https://www.emhg.org/diagnostic-mutations (accessed September 8, 2018)<br />\n<sup>d</sup> A negative or inconclusive genetic test cannot be assumed to indicate normal RYR1-related phenotype and should be interpreted in context of clinical findings, family history and other laboratory data.<br />\n<sup>e</sup> It is recognized that clinical laboratories and treating physicians can make a determination that a variant not evaluated by EMHG is pathogenic.<br />\n<sup>f</sup> A list of unsafe halogenated volatile anesthetics or depolarizing muscle relaxants and alternative anesthetics can be found at http://www.mhaus.org/healthcare-professionals/be-prepared/safe-and-unsafe-anesthetics.</p>\n",
+      "version" : 1
+    },
+    "userId" : "katrin",
+    "version" : 5,
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/url/https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450370704,"resource":"URL","resourceId":"https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/","_url":"https://cpicpgx.org/guidelines/cpic-guideline-for-ryr1-and-cacna1s/"} ]
+  }
+}

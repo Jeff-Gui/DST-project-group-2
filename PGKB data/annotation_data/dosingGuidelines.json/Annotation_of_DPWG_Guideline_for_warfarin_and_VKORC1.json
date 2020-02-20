@@ -1,0 +1,67 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166182841",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166182841",
+    "name" : "Annotation of DPWG Guideline for warfarin and VKORC1",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1450415237,
+      "date" : "2019-05-27T00:00:00-07:00",
+      "description" : "Annotation current with November 2018 DPWG Guideline release",
+      "type" : "Update",
+      "version" : 0
+    }, {
+      "id" : 1450820675,
+      "date" : "2019-10-03T16:20:39.794-07:00",
+      "description" : "No changes based on August 2019 guidelines",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]}, {"@id":"https://pharmgkb.org/literature/15102465","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15102465,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines November 2018","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450415575,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ {
+      "@id" : "https://pharmgkb.org/variant/PA166155091",
+      "@context" : "https://api.pharmgkb.org/jsonld/variant.jsonld",
+      "objCls" : "Variant",
+      "id" : "PA166155091",
+      "symbol" : "rs9923231",
+      "name" : "rs9923231",
+      "version" : 3
+    } ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA451906",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA451906",
+      "name" : "warfarin",
+      "version" : 14
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA133787052",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA133787052",
+      "symbol" : "VKORC1",
+      "name" : "vitamin K epoxide reductase complex subunit 1",
+      "version" : 15
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1450415234,
+      "html" : "<p>Patients with the VKORC1 -1639 (rs9923231) AA genotype should be given 60% of the standard initial dose of warfarin. The genotype-specific initial dose and maintenance dose can be calculated using an algorithm. There are no recommendation for patients with the VKORC1 -1639 AG genotype.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450415235,
+      "html" : "<h3 id=\"november-2018-guideline\">November 2018 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group (DPWG) has evaluated therapeutic dose recommendations for warfarin based on VKORC1 genotype. They recommend that patients with the VKORC1 -1639 (<a href=\"/variant/PA166155091\">rs9923231</a>) AA genotype receive 60% of the standard initial dose.The genotype-specific initial dose and maintenance dose can be calculated using an algorithm. No action is needed for patients with the VKORC1 -1639 AG genotype.</p>\n<p><em>Wording in table taken from the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf\" target=\"_blank\">Dutch guidelines</a>.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th><th>Recommendation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th></tr>\n</thead>\n<tbody>\n<tr><td>VKORC1 -1639 AA</td><td>warfarin</td><td>The genetic variation results in increased sensitivity to warfarin. This results in an increase in the risk of excessively severe inhibition of blood clotting (INR &gt; 4) during the first month of the treatment.</td><td>1. use 60% of the standard initial dose. The genotype-specific initial dose and maintenance dose can be calculated using an algorithm, as used in EU-PACT: see https://www.knmp.nl/patientenzorg/medicatiebewaking/farmacogenetica. From day 6 on the standard algorithm without genotype information can be used to calculate the dose.</td></tr>\n<tr><td>VKORC1 -1639 AG</td><td>warfarin</td><td>The genetic variation results in a reduction in the required dose and an increase in the risk of excessively severe inhibition of blood clotting during the first month of the treatment. However, the effect is small and GA is also the most common genotype, meaning that the standard treatment will primarily be based on patients with this genotype.</td><td>NO action is needed for this gene-drug interaction</td></tr>\n</tbody>\n</table>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0006236.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n",
+      "version" : 1
+    },
+    "userId" : "lgong",
+    "version" : 1,
+    "xrefs" : [ ]
+  }
+}
