@@ -1,0 +1,58 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166182819",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166182819",
+    "name" : "Annotation of DPWG Guideline for pimozide and CYP2D6",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1450415022,
+      "date" : "2019-05-23T00:00:00-07:00",
+      "type" : "Create",
+      "version" : 0
+    }, {
+      "id" : 1450821025,
+      "date" : "2019-10-07T18:19:00.092-07:00",
+      "description" : "No changes based on August 2019 guideline",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]}, {"@id":"https://pharmgkb.org/literature/15102465","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15102465,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines November 2018","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450415575,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA450965",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA450965",
+      "name" : "pimozide",
+      "version" : 10
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA128",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA128",
+      "symbol" : "CYP2D6",
+      "name" : "cytochrome P450 family 2 subfamily D member 6",
+      "version" : 7888
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1450415020,
+      "html" : "<p>Patients who are CYP2D6 intermediate metabolizers should be given no more than 80% of the standard maximum dose of pimozide while patients who are CYP2D6 poor metabolizers should be given no more than 50% of the standard maximum dose.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450415021,
+      "html" : "<h3 id=\"november-2018-guideline\">November 2018 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group has evaluated therapeutic dose recommendations for pimozide based on CYP2D6 genotype. They recommend a dose reduction for patients who are CYP2D6 intermediate metabolizers (IMs) or poor metabolizers (PMs). There are no recommendations for patients who are CYP2D6 ultrarapid metabolizers (UMs).</p>\n<p><em>Wording in table taken from the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf\" target=\"_blank\">Dutch guidelines</a>.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description</th><th>Recommendation</th></tr>\n</thead>\n<tbody>\n<tr><td>CYP2D6 UM</td><td>pimozide</td><td>This gene variation can result in lower pimozide concentrations. However, there is no evidence of reduced effectiveness.</td><td>NO action is required for this gene-drug interaction.</td></tr>\n<tr><td>CYP2D6 IM</td><td>pimozide</td><td>The risk of QT-prolongation – and thereby also the risk of torsade de points – is theoretically increased, because the genetic variation results in an increase in the plasma concentration of pimozide. The risk of an excessively high plasma concentration can be negated by following the dose recommendations provided.</td><td>Use no more than the following doses (80% of the standard maximum dose):<br/>adults 16 mg/day<br/>children 0.08 mg/kg per day to a maximum of 3 mg/day</td></tr>\n<tr><td>CYP2D6 PM</td><td>pimozide</td><td>The risk of QT-prolongation – and thereby also the risk of torsade de points – is theoretically increased, because the genetic variation results in an increase in the plasma concentration of pimozide. The risk of an excessively high plasma concentration can be negated by following the dose recommendations provided.</td><td>Use no more than the following doses (50% of the standard maximum dose):<br/>adults 10 mg/day<br/>children 0.05 mg/kg per day to a maximum of 2 mg/day</td></tr>\n</tbody>\n</table>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0002448.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n",
+      "version" : 1
+    },
+    "userId" : "68efc88f702342198eb4abf8d780c6e9",
+    "version" : 2,
+    "xrefs" : [ ]
+  }
+}

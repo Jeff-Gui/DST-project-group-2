@@ -1,0 +1,27 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+ESR1	UGT1A4	Activation				24879639	UGT1A4, ESR1		
+ESR1	UGT2B7	Activation				24879639	ESR1, UGT2B7		
+NR1I3	UGT2B7	Activation				24879639, 22371261	NR1I3, UGT2B7		
+ESR1	UGT1A3	Activation				24879639	UGT1A3, ESR1		
+NR1I3	UGT1A4	Activation				24879639, 22371261	NR1I3, UGT1A4		
+NR1I3	UGT1A3	Activation				24879639, 22371261	NR1I3, UGT1A3		
+NR1I2	UGT2B7	Activation				24879639, 22371261	NR1I2, UGT2B7		
+NR1I2	UGT1A4	Activation				24879639, 22371261	NR1I2, UGT1A4		
+NR1I2	UGT1A3	Activation				24879639, 22371261	NR1I2, UGT1A3		
+lamotrigine	lamotrigine 2-n-glucuronide	Biochemical Reaction	UGT1A3, UGT1A4, UGT2B7			19845433, 19387891, 16565174, 1795036, 1673389		lamotrigine	
+lamotrigine	N2-methyl lamotrigine	Biochemical Reaction				1795036		lamotrigine	
+lamotrigine	lamotrigine-arene-oxide	Biochemical Reaction	CYP2A6, CYP2D6			19961160		lamotrigine	
+lamotrigine	lamotrigine n2-oxide	Biochemical Reaction				19387891, 1795036		lamotrigine	
+lamotrigine-arene-oxide	lamotrigine glutathione adduct	Biochemical Reaction				19961160			
+lamotrigine	lamotrigine 5-n-glucuronide	Biochemical Reaction	UGT1A3, UGT1A4, UGT2B7			19845433, 19387891, 16565174, 1795036, 1673389		lamotrigine	
+lamotrigine	SCN	Inhibition				24283699, 24096830, 9765515, 9249262, 7491269, 8394919, 7687190		lamotrigine	
+lamotrigine	CACNA1	Inhibition				9778600, 9169293, 8831112, 7687190		lamotrigine	
+lamotrigine	lamotrigine	Transport	SLC22A1			27610747, 22227272		lamotrigine	
+lamotrigine glutathione adduct	lamotrigine glutathione adduct	Transport	ABCC1			19961160			
+N2-methyl lamotrigine	N2-methyl lamotrigine	Transport	ABCC3, ABCC4			1795036			
+lamotrigine n2-oxide	lamotrigine n2-oxide	Transport	ABCC3, ABCC4			11087428			
+lamotrigine	lamotrigine	Transport	SLC22A1			27610747, 22227272		lamotrigine	
+lamotrigine 2-n-glucuronide	lamotrigine 2-n-glucuronide	Transport	ABCC2, ABCC3, ABCC4			24346835, 16472997			
+lamotrigine	lamotrigine	Transport				25645391, 22197850, 19415824, 18824002		lamotrigine	
+lamotrigine 5-n-glucuronide	lamotrigine 5-n-glucuronide	Transport	ABCC2, ABCC3, ABCC4			24346835, 16472997			
+lamotrigine	lamotrigine	Transport	ABCB1, ABCC2, ABCG2			27610747, 25645391, 23588114, 22197850, 19415824, 18824002, 18835265, 16529607		lamotrigine	

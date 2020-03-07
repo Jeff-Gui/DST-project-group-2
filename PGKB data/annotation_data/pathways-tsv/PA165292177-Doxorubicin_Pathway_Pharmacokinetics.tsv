@@ -1,0 +1,12 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+doxorubicin	doxorubicin semiquinone	Biochemical Reaction	NDUFS, NOS1, NOS2, NOS3, NQO1, XDH			15054088, 12688675, 9333325, 1911046, 2850270		doxorubicin	
+doxorubicin semiquinone	doxorubicin, reactive oxygen species	Biochemical Reaction				19442138		doxorubicin	
+doxorubicin hydroxyaglycone	doxorubicinol hydroxyaglycone	Biochemical Reaction				19442138, 10813659			
+doxorubicin	doxorubicin hydroxyaglycone	Biochemical Reaction				19442138		doxorubicin	
+doxorubicin	doxorubicin deoxyaglycone	Biochemical Reaction	NQO1, POR, XDH			19442138, 10860924, 6305277		doxorubicin	
+doxorubicin	doxorubicinol	Biochemical Reaction	AKR1A1, AKR1C3, CBR1, CBR3			20007405, 19442138, 18635746, 18616992, 12963485		doxorubicin	
+SOD1	reactive oxygen species	Inhibition				12751786	SOD1		
+CAT	reactive oxygen species	Inhibition				12751786	CAT		
+GPX1	reactive oxygen species	Inhibition				12751786, 2544260	GPX1		
+doxorubicin	doxorubicin	Transport	ABCB1, ABCC1, ABCC2, ABCG2, RALBP1			17704753, 15164094, 12527936, 12370750, 11172691, 7954421, 1352877, 3180056, 7214365		doxorubicin	
+doxorubicin	doxorubicin	Transport	SLC22A16			17559346		doxorubicin	

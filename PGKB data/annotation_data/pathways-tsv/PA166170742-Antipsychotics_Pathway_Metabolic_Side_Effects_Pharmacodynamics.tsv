@@ -1,0 +1,32 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+INS	CARTPT	Activation				15703762	CARTPT, INS		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+<i>antipsychotics</i>	HTR2C	Activation				28892404, 27217270	HTR2C		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+NPY	NPY1R	Activation				25888224	NPY, NPY1R		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+<i>antipsychotics</i>	DRD2	Activation				20736885, 20194480, 19909227	DRD2		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+LEPR	POMC	Activation				21843067	POMC, LEPR		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+LEP	LEPR	Activation				15703762	LEP, LEPR		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+SNAP25	INS	Activation				29029784, 27217270	SNAP25, INS		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+HTR2C	POMC	Activation				27217270, 26880915, 25152019, 22967772, 20680028, 21835345, 21510767, 19142101, 8301554	POMC, HTR2C		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+<i>antipsychotics</i>	NPY1R	Activation				25888224	NPY1R		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+<i>antipsychotics</i>	NPY	Activation				28336493, 26892184, 25888224, 23953928	NPY		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+GHRL	GHSR	Activation				23953928, 15703762	GHSR, GHRL		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+INS	POMC	Activation				15703762	POMC, INS		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+INS	INSIG2	Activation				24518831	INSIG2, INS		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+ANKK1	PRL	Activation				26872113, 19339912	PRL, ANKK1		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+DRD2	ANKK1	Activation				26872113, 19339912	DRD2, ANKK1		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+dopamine	DRD2	Activation				20736885, 20194480	DRD2	dopamine	Hyperprolactinemia,Metabolic Syndrome,Weight gain
+DRD2	PRL	Activation				28336493	PRL, DRD2		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+INS	NPY	Inhibition				15703762	NPY, INS		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+LEP	AGRP	Inhibition				21843067	LEP, AGRP		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+DRD2	POMC	Inhibition				8301554	POMC, DRD2		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+INS	AGRP	Inhibition				1503762	AGRP, INS		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+<i>antipsychotics</i>	TH	Inhibition				28336493	TH		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+AGRP	MC4R	Inhibition				21843067	MC4R, AGRP		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+PYY	NPY2R	Inhibition				15703762	PYY, NPY2R		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+HTR2C	Weight gain	Leads To				27217270, 22967772, 21121776, 19434072, 17016522, 17632216	HTR2C		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+MC4R	Weight gain	Leads To				27217270, 24518831, 23920449, 22310352, 23277235, 22566560, 15703762	MC4R		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+HTR2C	Metabolic Syndrome	Leads To				25152019, 20680028, 19142101, 17632216	HTR2C		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+TH	dopamine	Leads To				28336493	TH	dopamine	Hyperprolactinemia,Metabolic Syndrome,Weight gain
+INSIG2	Weight gain	Leads To				24518831	INSIG2		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+INSIG2	Metabolic Syndrome	Leads To				20877301	INSIG2		Hyperprolactinemia,Metabolic Syndrome,Weight gain
+PRL	Hyperprolactinemia	Leads To				28336493, 26872113	PRL		Hyperprolactinemia,Metabolic Syndrome,Weight gain

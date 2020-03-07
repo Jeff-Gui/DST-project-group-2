@@ -1,0 +1,7 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+pravastatin	Active & Inactive metabolites	Biochemical Reaction			hepatocyte	15199031,15518608,15998357,16103896		pravastatin	
+pravastatin	pravastatin	Transport	SLCO2B1	Catalysis	enterocyte	12724351,14610227	SLCO2B1	pravastatin	
+pravastatin	pravastatin	Transport	SLC22A6,SLC22A8	Catalysis	renal principal cell	12811365,14729100,14978359	"SLC22A6","SLC22A8"	pravastatin	
+pravastatin	pravastatin	Transport	SLCO1B1,SLCO1B3,SLCO2B1	Catalysis	hepatocyte	12811365,15116054,15226675,15564882,15864131,15970799,16103896	"SLCO1B1","SLCO2B1","SLCO1B3"	pravastatin	
+pravastatin	pravastatin	Transport	ABCB1,ABCB11,ABCC2,ABCG2	Catalysis	hepatocyte	15226675,15616150,15901800	"ABCB1","ABCC2","ABCB11","ABCG2"	pravastatin	
+pravastatin	pravastatin	Transport	ABCB1,ABCC2,ABCG2	Catalysis	renal principal cell		"ABCB1","ABCC2","ABCG2"	pravastatin	

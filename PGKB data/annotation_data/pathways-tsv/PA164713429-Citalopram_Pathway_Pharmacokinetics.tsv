@@ -1,0 +1,7 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+citalopram	citalopram propionic acid	Biochemical Reaction			hepatocyte	16470634,9698084		citalopram	
+citalopram	citalopram- N-oxide	Biochemical Reaction	CYP2D6	Catalysis	hepatocyte	10575324,16470634,9698084	CYP2D6	citalopram	
+citalopram	demethylcitalopram	Biochemical Reaction	CYP2C19,CYP2D6,CYP3A4	Catalysis	hepatocyte	10494454,10507506,12968986,12975335,16418702,17625515,8451774	"CYP2D6","CYP2C19","CYP3A4"	citalopram	
+demethylcitalopram	didesmethylcitalopram	Biochemical Reaction	CYP2D6	Catalysis	hepatocyte	10575324,17722014,7581865,8986013,9110356,9366029	CYP2D6		
+citalopram	citalopram	Transport	ABCB1	Catalysis	neuron	18215618,18382661,18940259,20859246	ABCB1	citalopram	
+citalopram	citalopram	Transport	ABCB1	Catalysis	enterocyte	18215618,18940259,20859246	ABCB1	citalopram	

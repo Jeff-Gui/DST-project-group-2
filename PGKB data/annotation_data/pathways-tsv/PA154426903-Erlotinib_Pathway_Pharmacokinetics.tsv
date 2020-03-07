@@ -1,0 +1,9 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+erlotinib	osi 420	Biochemical Reaction	CYP1A1, CYP1A2, CYP3A4, CYP3A5			24781527, 19733976, 17575239, 16890575, 16381666, 16490804, 16166415, 11432895		erlotinib	Diarrhea,Exanthema
+erlotinib	EGFR	Inhibition				23022519, 22594511, 16166415	EGFR	erlotinib	Diarrhea,Exanthema
+erlotinib	UGT1A1	Inhibition				30105461, 20580994, 19850672	UGT1A1	erlotinib	Diarrhea,Exanthema
+erlotinib	ABCG2	Inhibition				18006847	ABCG2	erlotinib	Diarrhea,Exanthema
+erlotinib	ABCB1	Inhibition				18006847	ABCB1	erlotinib	Diarrhea,Exanthema
+osi 420	Exanthema	Leads To				28444958, 26820683, 24781527			Diarrhea,Exanthema
+osi 420	Diarrhea	Leads To				26820683, 24781527			Diarrhea,Exanthema
+erlotinib	erlotinib	Transport	ABCB1, ABCG2			19493273, 17312388, 15155841		erlotinib	Diarrhea,Exanthema

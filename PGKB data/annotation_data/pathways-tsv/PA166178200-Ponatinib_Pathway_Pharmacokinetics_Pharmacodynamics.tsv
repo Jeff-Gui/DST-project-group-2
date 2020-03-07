@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+ponatinib	n-oxide ponatinib	Biochemical Reaction	CYP3A4			28184964		ponatinib	
+ponatinib	n-desmethyl ponatinib	Biochemical Reaction	CYP2C8, CYP2D6, CYP3A4, CYP3A5			28184964, 24807266, 24265264		ponatinib	
+ponatinib	ponatinib M14	Biochemical Reaction				28184964		ponatinib	
+ponatinib	BCR-ABL	Inhibition				24449310, 24265264, 19878872, 17785585		ponatinib	
+ponatinib	ponatinib	Transport				28880088		ponatinib	
+ponatinib	ponatinib	Transport	ABCB1, ABCG2			28880088		ponatinib	
+ponatinib	ponatinib	Transport				28880088		ponatinib	

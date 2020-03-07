@@ -1,0 +1,19 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+doxorubicin	doxorubicin semiquinone	Biochemical Reaction	NOS3, NQO1, XDH			12688675, 9333325, 1911046		doxorubicin	
+doxorubicin semiquinone	doxorubicin, reactive oxygen species	Biochemical Reaction				2544260		doxorubicin	
+doxorubicin	TOP2A	Inhibition				2551497, 6093249	TOP2A	doxorubicin	
+GPX1	damage	Inhibition				12751786	GPX1		
+CAT	damage	Inhibition				12751786	CAT		
+SOD1	damage	Inhibition				12751786	SOD1		
+GPX1	reactive oxygen species	Inhibition				2544260	GPX1		
+doxorubicin	Doxorubicin Pathway, Pharmacokinetics	Leads To				8469347		doxorubicin	
+doxorubicin	damage	Leads To				10075079, 6093249		doxorubicin	
+reactive oxygen species	damage	Leads To				10075079			
+reactive oxygen species	damage	Leads To				12139490, 10075079			
+Oxidative stress [MESH:D018384]	damage	Leads To				10075079			
+damage	DNA repair [MESH:D004260]	Leads To	ERCC2, MLH1, MSH2, TOP2A, TP53			11790556, 11477562, 9514047			
+reactive oxygen species	apoptosis	Leads To	NFKB1			12139490, 10075079			
+reactive oxygen species	Oxidative stress [MESH:D018384]	Leads To				12139490, 10075079			
+doxorubicin	doxorubicin	Transport				11289116		doxorubicin	
+doxorubicin	doxorubicin	Transport	SLC22A16			17559346		doxorubicin	
+doxorubicin	doxorubicin	Transport	ABCB1, ABCC1, ABCC2, ABCG2, RALBP1			17704753, 15164094, 12527936, 12370750, 11172691, 7954421, 1352877, 3180056, 7214365		doxorubicin	

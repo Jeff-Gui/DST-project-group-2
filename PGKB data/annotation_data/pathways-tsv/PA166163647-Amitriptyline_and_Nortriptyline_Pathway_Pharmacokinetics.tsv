@@ -1,0 +1,11 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+nortriptyline	amitriptyline	Biochemical Reaction				16553509		nortriptyline, amitriptyline	
+nortriptyline	desmethylnortriptyline	Biochemical Reaction	CYP1A2, CYP2C19, CYP2D6			20531370, 15554244		nortriptyline	
+nortriptyline	hydroxynortriptyline	Biochemical Reaction	CYP2D6			20531370, 15554244		nortriptyline	
+amitriptyline	nortriptyline	Biochemical Reaction	CYP2C19, CYP2C8, CYP2C9, CYP3A4			20531370, 15554244		nortriptyline, amitriptyline	
+hydroxyamitriptyline	amitriptyline n-glucuronide	Biochemical Reaction	UGT1A3, UGT1A4, UGT2B10			23611809, 15554244			
+amitriptyline	hydroxyamitriptyline	Biochemical Reaction	CYP2D6			20531370, 15554244		amitriptyline	
+amitriptyline	amitriptylinoxide	Biochemical Reaction	FMO3			15554244		amitriptyline	
+hydroxynortriptyline	oxonortriptyline	Biochemical Reaction	AKR1C1, AKR1C2			15554244			
+nortriptyline	nortriptyline	Transport	ABCB1			12082591		nortriptyline	
+amitriptyline	amitriptyline	Transport	ABCB1			16638956, 12082591		amitriptyline	

@@ -1,0 +1,27 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+fluorodeoxyuridine diphosphate	fluorodeoxyuridine triphosphate	Biochemical Reaction				12724731			
+floxuridine	fluorodeoxyuridine monophosphate	Biochemical Reaction	TK1			12724731			
+fluorouridine diphosphate	fluorodeoxyuridine diphosphate	Biochemical Reaction	RRM1, RRM2			12724731			
+5'-deoxy-5-fluorocytidine	5'-deoxy-5-fluorouridine	Biochemical Reaction	CDA			28827188, 18172246, 9849491			
+tegafur	5'-hydroxytegafur	Biochemical Reaction	CYP2A6			20463005, 18172246		tegafur	
+5'-deoxy-5-fluorouridine	fluorouracil	Biochemical Reaction	TYMP, UPP1, UPP2			18172246, 11956089, 9849491		fluorouracil	
+5'-hydroxytegafur	fluorouracil	Biochemical Reaction				20463005, 18172246		fluorouracil	
+capecitabine	5'-deoxy-5-fluorocytidine	Biochemical Reaction	CES1, CES2			28827188, 28139840, 18172246		capecitabine	
+fluorodeoxyuridine diphosphate	fluorodeoxyuridine monophosphate	Biochemical Reaction				12724731			
+fluorouracil	dihydrofluorouracil	Biochemical Reaction	DPYD			14555507		fluorouracil	
+fluorouracil	floxuridine	Biochemical Reaction	TYMP			12724731, 10741735		fluorouracil	
+fluorouridine	fluorouridine monophosphate	Biochemical Reaction	UCK1, UCK2			12724731			
+fluorouracil	fluorouridine monophosphate	Biochemical Reaction	PPAT, UMPS			12724731		fluorouracil	
+fluorouridine diphosphate	fluorouridine triphosphate	Biochemical Reaction				12724731			
+dihydrofluorouracil	fluoro-beta-ureidopropionate	Biochemical Reaction	DPYS			18075467			
+fluorouridine monophosphate	fluorouridine diphosphate	Biochemical Reaction				12724731			
+fluoro-beta-ureidopropionate	fluoro-beta-alanine	Biochemical Reaction	UPB1			14555507			
+fluorouracil	fluorouridine	Biochemical Reaction	UPP1, UPP2			11956089		fluorouracil	
+fluorodeoxyuridine monophosphate	TYMS	Inhibition				19339911, 12724731	TYMS		
+fluorodeoxyuridine triphosphate	Fluoropyrimidine Pathway, Pharmacodynamics	Leads To				12724731			
+TYMS	Fluoropyrimidine Pathway, Pharmacodynamics	Leads To				12724731	TYMS		
+fluorouridine triphosphate	Fluoropyrimidine Pathway, Pharmacodynamics	Leads To				12724731			
+fluorouracil	fluorouracil	Transport	SLC22A7			15901346		fluorouracil	
+fluorouracil	fluorouracil	Transport	ABCC4, ABCG2			18820913, 19077464, 18837291		fluorouracil	
+fluorouracil	fluorouracil	Transport	ABCC3, ABCC4, ABCC5			19077464		fluorouracil	
+fluorouracil	fluorouracil	Transport	SLC29A1			18992248, 17695509		fluorouracil	

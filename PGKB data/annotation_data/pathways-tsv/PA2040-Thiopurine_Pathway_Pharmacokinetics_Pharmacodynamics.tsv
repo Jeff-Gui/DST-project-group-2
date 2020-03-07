@@ -1,0 +1,44 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+mercaptopurine	thiouric acid	Biochemical Reaction	XDH			24415675, 8857546, 14070377		mercaptopurine	Toxic liver disease
+thioguanine	8-hydroxythioguanine	Biochemical Reaction	AOX1			10525111		thioguanine	Toxic liver disease
+mercaptopurine riboside	mercaptopurine	Biochemical Reaction				7998928		mercaptopurine	Toxic liver disease
+thioguanine	thioxanthine	Biochemical Reaction	GDA			10525111		thioguanine	Toxic liver disease
+thioguanosine monophosphate	methyl-thioguanosine monophosphate	Biochemical Reaction	TPMT			9246020, 9103127, 7603453, 13981612			Toxic liver disease
+thioguanosine monophosphate	thioguanosine diphosphate	Biochemical Reaction				5163075			Toxic liver disease
+s-adenosylmethionine, thioinosine monophosphate	methyl-thioinosine monophosphate, s-adenosylhomocysteine	Biochemical Reaction	TPMT			25303295, 9103127, 7603453, 7802704, 7682415, 597863		s-adenosylmethionine	Toxic liver disease
+thioinosine monophosphate	thioxanthine monophosphate	Biochemical Reaction	IMPDH1			2649979, 14081926			Toxic liver disease
+methyl-thioinosine monophosphate	6-methylmercaptopurine riboside	Biochemical Reaction	ADK			26332308, 8347177, 197600, 5940561			Toxic liver disease
+thioguanosine triphosphate	thioguanosine monophosphate	Biochemical Reaction	NUDT15			26878724			Toxic liver disease
+thioinosine monophosphate	thioinosine triphosphate	Biochemical Reaction	ITPA			18685564			Toxic liver disease
+thioxanthine monophosphate	thioguanosine monophosphate	Biochemical Reaction	GMPS			2649979			Toxic liver disease
+mercaptopurine	methylmercaptopurine	Biochemical Reaction	TPMT			10764140, 7998928, 8347177, 3838480, 5545266		mercaptopurine	Toxic liver disease
+thioguanosine monophosphate	ribosylthioguanine	Biochemical Reaction	NT5C2			15990089			Toxic liver disease
+deoxy-thioguanosine diphosphate	deoxy-thioguanosine triphosphate	Biochemical Reaction				1157053			Toxic liver disease
+thioguanosine diphosphate	thioguanosine triphosphate	Biochemical Reaction	NME1, NME2			20216118, 5163075			Toxic liver disease
+thioxanthine	thiouric acid	Biochemical Reaction	XDH			10525111			Toxic liver disease
+azathioprine	mercaptopurine	Biochemical Reaction	GSTA1, GSTA2, GSTM1			16717136		mercaptopurine, azathioprine	Toxic liver disease
+thioinosine monophosphate	mercaptopurine riboside	Biochemical Reaction	NT5C2			23377281, 15990089			Toxic liver disease
+thioguanine	thioguanosine monophosphate	Biochemical Reaction	HPRT1			9598153, 6175317		thioguanine	Toxic liver disease
+prpp	phosphoribosylamine	Biochemical Reaction	PPAT			3673708, 4348201			Toxic liver disease
+ribose phosphate	prpp	Biochemical Reaction	PRPS1			11783526, 4200723, 4347565			Toxic liver disease
+thioguanosine diphosphate	deoxy-thioguanosine diphosphate	Biochemical Reaction	RRM1, RRM2			22662200, 1157053			Toxic liver disease
+mercaptopurine	thioinosine monophosphate	Biochemical Reaction	HPRT1			2649979, 14392175		mercaptopurine	Toxic liver disease
+deoxy-thioguanosine triphosphate	deoxy-thioguanosine monophosphate	Biochemical Reaction	NUDT15			26878724			Toxic liver disease
+mercaptopurine riboside	6-methylmercaptopurine riboside	Biochemical Reaction	TPMT			7998928			Toxic liver disease
+thioguanosine triphosphate	RAC1	Inhibition				16365460, 12697733	RAC1		Toxic liver disease
+methyl-thioinosine monophosphate	PPAT	Inhibition				8347177, 7683208, 7191632, 5545266, 14342339, 14189894	PPAT		Toxic liver disease
+damage	apoptosis	Leads To				6455192, 4856045			Toxic liver disease
+thioguanosine triphosphate	RNA	Leads To				858143, 1157053			Toxic liver disease
+methyl-thioinosine monophosphate	Toxic liver disease	Leads To				27943397, 25853923			Toxic liver disease
+deoxy-thioguanosine triphosphate	DNA	Leads To				10606189, 7682415			Toxic liver disease
+6-methylmercaptopurine riboside	Toxic liver disease	Leads To				28130685, 22261533			Toxic liver disease
+DNA	damage	Leads To				6204746, 6455192, 4856045			Toxic liver disease
+RNA	damage	Leads To				1157053, 4856045			Toxic liver disease
+thioguanine	thioguanine	Transport	ABCC4, ABCC5			12435799		thioguanine	Toxic liver disease
+methyl-thioinosine monophosphate	methyl-thioinosine monophosphate	Transport	ABCC4, ABCC5			12435799			Toxic liver disease
+thioguanine	thioguanine	Transport	SLC28A2, SLC28A3, SLC29A1, SLC29A2			21723252, 16530731		thioguanine	Toxic liver disease
+thioguanosine monophosphate	thioguanosine monophosphate	Transport	ABCC4, ABCC5			12435799			Toxic liver disease
+thioxanthine monophosphate	thioxanthine monophosphate	Transport	ABCC5			12435799			Toxic liver disease
+mercaptopurine	mercaptopurine	Transport	ABCC4, ABCC5			12435799		mercaptopurine	Toxic liver disease
+mercaptopurine	mercaptopurine	Transport	SLC28A2, SLC28A3, SLC29A1, SLC29A2			21723252, 17996297, 16530731		mercaptopurine	Toxic liver disease
+thioinosine monophosphate	thioinosine monophosphate	Transport	ABCC4, ABCC5			12435799			Toxic liver disease

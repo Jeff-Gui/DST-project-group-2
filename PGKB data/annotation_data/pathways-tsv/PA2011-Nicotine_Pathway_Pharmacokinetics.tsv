@@ -1,0 +1,14 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+cotinine	norcotinine	Biochemical Reaction	CYP2A6			16359169, 9010629			
+nicotine	nicotine iminium ion	Biochemical Reaction	CYP2A13, CYP2A6, CYP2B6			25293881, 16359169, 16272956, 15735609, 15528319, 15592323, 15940289, 15564629, 15475735, 11207029, 11180041, 10999944, 10544257, 10350185, 8937855		nicotine	
+nicotine n-oxide	nicotine	Biochemical Reaction				28290528, 4753093		nicotine	
+cotinine	3-hydroxycotinine	Biochemical Reaction	CYP2A13, CYP2A6			16188955, 16359169, 15528319, 8627511			
+cotinine	cotinine glucuronide	Biochemical Reaction	UGT1A1, UGT1A4, UGT1A9, UGT2B10			17576790, 12433823			
+nicotine iminium ion	cotinine	Biochemical Reaction	AOX1			25293881, 19184652			
+3-hydroxycotinine	3-hydroxycotinine glucuronide	Biochemical Reaction	UGT1A4, UGT1A9, UGT2B15, UGT2B4, UGT2B7			15470160			
+nicotine	nicotine n-oxide	Biochemical Reaction	FMO3			28290528, 1446003, 3380084		nicotine	
+cotinine	5-hydroxycotinine	Biochemical Reaction	CYP2A13, CYP2A6			16359169			
+nornicotine	norcotinine	Biochemical Reaction				9010629			
+cotinine	cotinine n-oxide	Biochemical Reaction				21452992			
+nicotine	nicotine glucuronide	Biochemical Reaction	UGT1A4, UGT2B10, UGT2B7			17576790, 12433823		nicotine	
+nicotine	nornicotine	Biochemical Reaction	CYP2A13, CYP2A6, CYP2B6			16135656		nicotine	

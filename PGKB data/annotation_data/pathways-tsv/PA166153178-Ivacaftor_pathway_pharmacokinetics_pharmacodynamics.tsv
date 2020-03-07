@@ -1,0 +1,15 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+CFTR	Ivacaftor-CFTR	Activation	ivacaftor			24561283, 19846789	CFTR		
+lumacaftor	lumacaftor-CFTR	Activation	CFTR			26581802		lumacaftor	
+CFTR	ivacaftor-CFTR	Activation	ivacaftor			26581802	CFTR		
+ivacaftor	hydroxymethyl ivacaftor, ivacaftor carboxylate	Biochemical Reaction	CYP3A4, CYP3A5			25103957		ivacaftor	
+lumacaftor-CFTR	CFTR	Conversion				26581802	CFTR		
+lumacaftor-CFTR	lumacaftor	Conversion				26581802		lumacaftor	
+ivacaftor	ABCB1	Inhibition				25103957	ABCB1	ivacaftor	
+ivacaftor	CYP3A	Inhibition				25103957	CYP3A	ivacaftor	
+hydroxymethyl ivacaftor	elimination	Leads To				25148205			
+ivacaftor carboxylate	elimination	Leads To	SLCO1B1			25148205			
+lumacaftor	lumacaftor	Transport				26581802		lumacaftor	
+CFTR	CFTR	Transport				26581802	CFTR		
+chloride	chloride	Transport	Ivacaftor-CFTR			23440202			
+chloride	chloride	Transport	ivacaftor-CFTR			26581802			

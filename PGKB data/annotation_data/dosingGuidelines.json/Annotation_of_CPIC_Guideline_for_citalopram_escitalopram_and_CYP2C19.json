@@ -1,0 +1,840 @@
+{
+  "citations" : [ {
+    "@id" : "https://pharmgkb.org/literature/15089021",
+    "@context" : "https://api.pharmgkb.org/jsonld/literature.jsonld",
+    "id" : 15089021,
+    "resourceId" : "25974703",
+    "title" : "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 and CYP2C19 Genotypes and Dosing of Selective Serotonin Reuptake Inhibitors.",
+    "_sameAs" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512908",
+    "authors" : [ "Hicks J K", "Bishop J R", "Sangkuhl K", "Müller D J", "Ji Y", "Leckband S G", "Leeder J S", "Graham R L", "Chiulli D L", "LLerena A", "Skaar T C", "Scott S A", "Stingl J C", "Klein T E", "Caudle K E", "Gaedigk A", "Clinical Pharmacogenetics Implementation Consortium" ],
+    "hasKeyword" : true,
+    "journal" : "Clinical pharmacology and therapeutics",
+    "meshDiseases" : [ ],
+    "meshTerms" : [ "Biotransformation", "Cytochrome P-450 CYP2C19", "Cytochrome P-450 CYP2D6", "Drug Dosage Calculations", "Genotype", "Humans", "Patient Safety", "Pharmacogenetics", "Phenotype", "Polymorphism, Genetic", "Risk Assessment", "Risk Factors", "Serotonin Uptake Inhibitors" ],
+    "month" : 8,
+    "nonHuman" : false,
+    "objCls" : "Literature",
+    "page" : "127-34",
+    "pgkbPublication" : true,
+    "pubDate" : "2015-08-01T00:00:00-07:00",
+    "summary" : "Selective serotonin reuptake inhibitors (SSRIs) are primary treatment options for major depressive and anxiety disorders. CYP2D6 and CYP2C19 polymorphisms can influence the metabolism of SSRIs, thereby affecting drug efficacy and safety. We summarize evidence from the published literature supporting these associations and provide dosing recommendations for fluvoxamine, paroxetine, citalopram, escitalopram, and sertraline based on CYP2D6 and/or CYP2C19 genotype (updates at www.pharmgkb.org).",
+    "type" : "Article",
+    "version" : 5,
+    "volume" : "98",
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/pmc/PMC4512908","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449285932,"resource":"PubMed Central","resourceId":"PMC4512908","_url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512908"}, {"@id":"https://pharmgkb.org/crossReference/pubMed/25974703","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449285931,"resource":"PubMed","resourceId":"25974703","_url":"https://www.ncbi.nlm.nih.gov/pubmed/25974703"}, {"@id":"https://pharmgkb.org/crossReference/doi/10.1002/cpt.147","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449285933,"resource":"DOI","resourceId":"10.1002/cpt.147","_url":"http://dx.doi.org/10.1002%2Fcpt.147"} ],
+    "year" : 2015
+  } ],
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166127638",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166127638",
+    "name" : "Annotation of CPIC Guideline for citalopram,escitalopram and CYP2C19",
+    "cancerGenome" : false,
+    "descriptiveVideoId" : "AkZd9tivN8s",
+    "guidelineGenes" : [ {
+      "id" : 1449561673,
+      "alleles" : [ {
+        "id" : 1449561674,
+        "_label" : "*1",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558335",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558335,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Normal function",
+          "termId" : "haplotypeTags:1445558335",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165980634",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165980634",
+          "symbol" : "CYP2C19*1",
+          "name" : "*1",
+          "version" : 14
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561675,
+        "_label" : "*2",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165980635",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165980635",
+          "symbol" : "CYP2C19*2",
+          "name" : "*2",
+          "version" : 14
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561676,
+        "_label" : "*3",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165980636",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165980636",
+          "symbol" : "CYP2C19*3",
+          "name" : "*3",
+          "version" : 14
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561679,
+        "_label" : "*5",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165980638",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165980638",
+          "symbol" : "CYP2C19*5",
+          "name" : "*5",
+          "version" : 14
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561680,
+        "_label" : "*6",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816522",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816522",
+          "symbol" : "CYP2C19*6",
+          "name" : "*6",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561681,
+        "_label" : "*7",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816523",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816523",
+          "symbol" : "CYP2C19*7",
+          "name" : "*7",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561682,
+        "_label" : "*8",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816524",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816524",
+          "symbol" : "CYP2C19*8",
+          "name" : "*8",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561683,
+        "_label" : "*9",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816525",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816525",
+          "symbol" : "CYP2C19*9",
+          "name" : "*9",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561684,
+        "_label" : "*10",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816526",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816526",
+          "symbol" : "CYP2C19*10",
+          "name" : "*10",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561685,
+        "_label" : "*11",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558335",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558335,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Normal function",
+          "termId" : "haplotypeTags:1445558335",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816527",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816527",
+          "symbol" : "CYP2C19*11",
+          "name" : "*11",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561686,
+        "_label" : "*12",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816528",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816528",
+          "symbol" : "CYP2C19*12",
+          "name" : "*12",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561687,
+        "_label" : "*13",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558335",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558335,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Normal function",
+          "termId" : "haplotypeTags:1445558335",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816529",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816529",
+          "symbol" : "CYP2C19*13",
+          "name" : "*13",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561688,
+        "_label" : "*14",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816530",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816530",
+          "symbol" : "CYP2C19*14",
+          "name" : "*14",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561689,
+        "_label" : "*15",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558335",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558335,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Normal function",
+          "termId" : "haplotypeTags:1445558335",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816531",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816531",
+          "symbol" : "CYP2C19*15",
+          "name" : "*15",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561690,
+        "_label" : "*16",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816532",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816532",
+          "symbol" : "CYP2C19*16",
+          "name" : "*16",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561691,
+        "_label" : "*17",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816533",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816533",
+          "symbol" : "CYP2C19*17",
+          "name" : "*17",
+          "version" : 18
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561692,
+        "_label" : "*18",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558335",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558335,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Normal function",
+          "termId" : "haplotypeTags:1445558335",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816534",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816534",
+          "symbol" : "CYP2C19*18",
+          "name" : "*18",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561693,
+        "_label" : "*19",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816535",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816535",
+          "symbol" : "CYP2C19*19",
+          "name" : "*19",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561694,
+        "_label" : "*22",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816536",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816536",
+          "symbol" : "CYP2C19*22",
+          "name" : "*22",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561695,
+        "_label" : "*23",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816537",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816537",
+          "symbol" : "CYP2C19*23",
+          "name" : "*23",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561696,
+        "_label" : "*24",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816538",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816538",
+          "symbol" : "CYP2C19*24",
+          "name" : "*24",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561697,
+        "_label" : "*25",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816539",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816539",
+          "symbol" : "CYP2C19*25",
+          "name" : "*25",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561698,
+        "_label" : "*26",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165816540",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165816540",
+          "symbol" : "CYP2C19*26",
+          "name" : "*26",
+          "version" : 16
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561700,
+        "_label" : "*28",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558335",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558335,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Normal function",
+          "termId" : "haplotypeTags:1445558335",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115675",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115675",
+          "symbol" : "CYP2C19*28",
+          "name" : "*28",
+          "version" : 9
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561701,
+        "_label" : "*29",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166123292",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166123292",
+          "symbol" : "CYP2C19*29",
+          "name" : "*29",
+          "version" : 8
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561702,
+        "_label" : "*30",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166123293",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166123293",
+          "symbol" : "CYP2C19*30",
+          "name" : "*30",
+          "version" : 8
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561703,
+        "_label" : "*31",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166123294",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166123294",
+          "symbol" : "CYP2C19*31",
+          "name" : "*31",
+          "version" : 8
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561704,
+        "_label" : "*32",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166123295",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166123295",
+          "symbol" : "CYP2C19*32",
+          "name" : "*32",
+          "version" : 8
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561705,
+        "_label" : "*33",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166123296",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166123296",
+          "symbol" : "CYP2C19*33",
+          "name" : "*33",
+          "version" : 8
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561706,
+        "_label" : "*34",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1448531118",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1448531118,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Uncertain function",
+          "termId" : "haplotypeTags:1448531118",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115676",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115676",
+          "symbol" : "CYP2C19*34",
+          "name" : "*34",
+          "version" : 9
+        },
+        "version" : 1
+      }, {
+        "id" : 1449561707,
+        "_label" : "*35",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166128094",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166128094",
+          "symbol" : "CYP2C19*35",
+          "name" : "*35",
+          "version" : 5
+        },
+        "version" : 1
+      }, {
+        "id" : 1450805216,
+        "_label" : "*4",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558515",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558515,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "No function",
+          "termId" : "haplotypeTags:1445558515",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA165980637",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA165980637",
+          "symbol" : "CYP2C19*4",
+          "name" : "*4",
+          "version" : 14
+        },
+        "version" : 0
+      } ],
+      "gene" : {
+        "@id" : "https://pharmgkb.org/gene/PA124",
+        "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+        "objCls" : "Gene",
+        "id" : "PA124",
+        "symbol" : "CYP2C19",
+        "name" : "cytochrome P450 family 2 subfamily C member 19",
+        "version" : 7208
+      },
+      "version" : 1
+    } ],
+    "history" : [ {
+      "id" : 1444708445,
+      "date" : "2015-05-11T14:59:15.789-07:00",
+      "type" : "Update",
+      "version" : 1
+    }, {
+      "id" : 1450043136,
+      "date" : "2018-11-26T10:13:45.031-08:00",
+      "description" : "Added link to guideline video",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15089021","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15089021,"resourceId":"25974703","title":"Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 and CYP2C19 Genotypes and Dosing of Selective Serotonin Reuptake Inhibitors.","_sameAs":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512908","objCls":"Literature","type":"Article","xrefs":[{"@id":"https://pharmgkb.org/crossReference/pmc/PMC4512908","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449285932,"resource":"PubMed Central","resourceId":"PMC4512908","_url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512908"},{"@id":"https://pharmgkb.org/crossReference/pubMed/25974703","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449285931,"resource":"PubMed","resourceId":"25974703","_url":"https://www.ncbi.nlm.nih.gov/pubmed/25974703"},{"@id":"https://pharmgkb.org/crossReference/doi/10.1002/cpt.147","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449285933,"resource":"DOI","resourceId":"10.1002/cpt.147","_url":"http://dx.doi.org/10.1002%2Fcpt.147"}]}, {"@id":"https://pharmgkb.org/literature/15100911","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15100911,"resourceId":"https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/","title":"CPIC® Guideline for Selective Serotonin Reuptake Inhibitors and CYP2D6 and CYP2C19 – CPIC","_sameAs":"https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1447983477,"resource":"URL","resourceId":"https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/","_url":"https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA449015",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA449015",
+      "name" : "citalopram",
+      "version" : 16
+    }, {
+      "@id" : "https://pharmgkb.org/chemical/PA10074",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA10074",
+      "name" : "escitalopram",
+      "version" : 8
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA124",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA124",
+      "symbol" : "CYP2C19",
+      "name" : "cytochrome P450 family 2 subfamily C member 19",
+      "version" : 7208
+    } ],
+    "source" : "Clinical Pharmacogenetics Implementation Consortium",
+    "summaryMarkdown" : {
+      "id" : 1447982401,
+      "html" : "<p>The CPIC Dosing Guideline for the selective serotonin reuptake inhibitors citalopram and escitalopram recommends an alternative drug not predominantly metabolized by CYP2C19 for CYP2C19 ultrarapid metabolizers. For CYP2C19 poor metabolizers, consider a 50% reduction of recommended starting dose and titrate to response or select alternative drug not predominantly metabolized by CYP2C19.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ {"@id":"https://pharmgkb.org/ontologyTerm/cpicStatus/cpicStatus:1183847844","@context":"https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld","id":1183847844,"resource":"CPIC Status","term":"A","termId":"cpicStatus:1183847844"} ],
+    "textMarkdown" : {
+      "id" : 1447982400,
+      "html" : "<p>This annotation is based on the <a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/\" target=\"_blank\">CPIC&reg; guideline for selective serotonin reuptake inhibitors and CYP2D6 and CYP2C19</a>.</p>\n<h3 id=\"august-2015\">August 2015</h3>\n<p><em>Advanced online publication May 2015</em></p>\n<ul>\n<li>Guidelines regarding the use of pharmacogenomic tests in dosing of selective serotonin reuptake inhibitors have been published in Clinical Pharmacology and Therapeutics by the Clinical Pharmacogenetics Implementation Consortium <a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/\" target=\"_blank\">(CPIC)</a>.</li>\n<li>Excerpts from the 2015 selective serotonin reuptake inhibitors dosing guidelines (for citalopram/escitalopram and CYP2C19):\n<ul>\n<li>&quot;CYP2C19 ultrarapid metabolizers have significantly lower exposure to these drugs when compared to extensive metabolizers, and therefore may have an increased probability of failing therapy. Because there are insufficient data to calculate an initial citalopram or escitalopram dose for CYP2C19 ultrarapid metabolizers, an alternative SSRI not extensively metabolized by CYP2C19 may be an option if deemed appropriate given other medications and clinical considerations.&quot;</li>\n<li>&quot;Elevated concentrations of these drugs have been observed in poor metabolizers, which may increase the risk of adverse drug reactions. To potentially prevent an adverse effect, an alternative SSRI not extensively metabolized by CYP2C19 should be considered. If citalopram or escitalopram is warranted an initial dosage decrease of 50% should be considered. For citalopram, the FDA recommends a 50% dose reduction (or a maximum dose of 20 mg/day in adults) for CYP2C19 poor metabolizers due to risk of QT prolongation (the FDA recommendation does not apply to escitalopram).&quot;</li>\n<li>&quot;The recommendations in the guideline and below apply primarily to actions based on genetic tests only; drug interactions and other clinical factors can have a major influence for prescribing decisions for SSRIs and should be taken into consideration before initiating drug therapy.&quot;</li>\n<li>&quot;Data describing the relationship between CYP2D6 or CYP2C19 genotype and SSRI systemic exposure or steady state plasma concentrations in pediatric patients are scarce...CYP2C19 activity may be increased in children relative to adults; therefore, these recommendations should be used with caution in children and accompanied by close monitoring.&quot;</li>\n</ul>\n</li>\n<li>Download and read:\n<ul>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/SSRI/2015/25974703.pdf\" target=\"_blank\">Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 and CYP2C19 Genotypes and Dosing of Selective Serotonin Reuptake Inhibitors</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/SSRI/2015/25974703-supplement.pdf\" target=\"_blank\">2015 Supplement</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/SSRI/2015/25974703_2015%20CYP2C19%20SSRI%20translation%20table.xlsx\" target=\"_blank\">2015 CYP2C19 SSRI translation table</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/SSRI/2015/25974703_CYP2C19%20frequency%20table%20legend.pdf\" target=\"_blank\">CYP2C19 frequency table legend</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/SSRI/2015/25974703_CYP2C19%20frequency%20table.xlsx\" target=\"_blank\">CYP2C19 frequency table</a></li>\n</ul>\n</li>\n</ul>\n<h3 id=\"table-1-dosing-recommendations-for-citalopram-and-escitalopram-based-on-cyp2c19-phenotype\">Table 1: Dosing recommendations for citalopram and escitalopram based on CYP2C19 phenotype:</h3>\n<p><em>Adapted from Tables 1 and 3a of the 2015 guideline manuscript.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Likely phenotype</th><th>Genotypes</th><th>Examples of CYP2C19 diplotypes</th><th>Implications for citalopram/escitalopram metabolism</th><th>Therapeutic Recommendations</th><th>Classification of recommendations <sup>a</sup></th></tr>\n</thead>\n<tbody>\n<tr><td>Ultrarapid metabolizer (~5-30% of patients) <sup>b</sup></td><td>An individual carrying two increased function alleles or one normal function allele and one increased function allele</td><td>*17/*17, *1/*17</td><td>Increased metabolism when compared to extensive metabolizers.  Lower plasma concentrations will increase probability of pharmacotherapy failure.</td><td>Consider an alternative drug not predominantly metabolized by CYP2C19.<sup>c</sup></td><td>Moderate</td></tr>\n<tr><td>Extensive metabolizer (~35-50% of patients)</td><td>An individual carrying two normal function alleles</td><td>*1/*1</td><td>Normal metabolism</td><td>Initiate therapy with recommended starting dose.</td><td>Strong</td></tr>\n<tr><td>Intermediate metabolizer (~18-45% of patients)</td><td>An individual carrying one normal function allele or one increased function allele and one no function allele</td><td>*1/*2, *1/*3, *2/*17 <sup>d</sup></td><td>Reduced metabolism when compared to extensive metabolizers.</td><td>Initiate therapy with recommended starting dose.</td><td>Strong</td></tr>\n<tr><td>Poor metabolizer (~2-15% of patients)</td><td>An individual carrying two no function alleles</td><td>*2/*2, *2/*3, *3/*3</td><td>Greatly reduced metabolism when compared to extensive metabolizers. Higher plasma concentrations may increase the probability of side effects.</td><td>Consider a 50% reduction <sup>e,f</sup> of recommended starting dose and titrate to response or select alternative drug not predominantly metabolized by CYP2C19.<sup>c</sup></td><td>Moderate</td></tr>\n</tbody>\n</table>\n<p><sup>a</sup> Rating scheme described in Supplement.</p>\n<p><sup>b</sup> CYP2C19 metabolizer status frequencies are based on average multi-ethnic frequency.</p>\n<p><sup>c</sup> Drug-drug interactions and other patient characteristics (e.g., age, renal function, liver function) should be considered when selecting an alternative therapy.</p>\n<p><sup>d</sup> The predicted metabolizer phenotype for the*2/*17 genotypes is a provisional classification. The currently available evidence indicates that the CYP2C19*17 increased function allele is unable to completely compensate for the no function CYP2C19*2. See Supplemental Materials for a more comprehensive list of predicted metabolizer phenotypes.</p>\n<p><sup>e</sup> Per the FDA warning, citalopram 20 mg/day is the maximum recommended dose in CYP2C19 poor metabolizers due to the risk of QT prolongation. FDA product labeling additionally cautions that citalopram dose should be limited to 20 mg/day in patients with hepatic impairment, those taking a CYP2C19 inhibitor, and patients greater than 60 years of age.</p>\n<p><sup>f</sup> Percent dose adjustments corresponding to percent difference in oral clearances have been calculated/estimated by Stingl et al. [Article:<a href=\"/pmid/22565785\">22565785</a>].</p>\n",
+      "version" : 13
+    },
+    "userId" : "whaleyr",
+    "version" : 40,
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/url/https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1447983477,"resource":"URL","resourceId":"https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/","_url":"https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/"} ]
+  }
+}

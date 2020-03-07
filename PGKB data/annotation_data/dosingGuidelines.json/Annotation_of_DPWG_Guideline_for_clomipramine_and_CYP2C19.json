@@ -1,0 +1,53 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166184528",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166184528",
+    "name" : "Annotation of DPWG Guideline for clomipramine and CYP2C19",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1450820783,
+      "date" : "2019-10-06T22:47:26.963-07:00",
+      "description" : "August 2019 Guidelines",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA449048",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA449048",
+      "name" : "clomipramine",
+      "version" : 5
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA124",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA124",
+      "symbol" : "CYP2C19",
+      "name" : "cytochrome P450 family 2 subfamily C member 19",
+      "version" : 7208
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1450820780,
+      "html" : "<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group (DPWG) recommends to avoid clomipramine in CYP2D6 ultrarapid metabolizer (UM) for Indication OBSESSIVE COMPULSIVE DISORDER or ANXIETY DISORDERS.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450820781,
+      "html" : "<h3 id=\"august-2019-guideline\">August 2019 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group has evaluated therapeutic dose recommendations for clomipramine based on CYP2C19 genotype. They recommend to avoid clomipramine for CYP2D6 ultrarapid metabolizer (UM) with regards to Indication OBSESSIVE COMPULSIVE DISORDER or ANXIETY DISORDERS.</p>\n<p><em>Wording in table taken from the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf\" target=\"_blank\">Dutch guidelines</a></em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description</th><th>Recommendation</th></tr>\n</thead>\n<tbody>\n<tr><td>CYP2D6 UM</td><td>clomipramine</td><td>The gene variation increases the risk of ineffectiveness for obsessive compulsive disorder and anxiety disorders by reducing the plasma concentration of clomipramine. The gene variation has little to no effect on the plasma concentration of clomipramine+desmethylclomipramine, which determines the efficacy for depression and side effects.</td><td>Indication OBSESSIVE COMPULSIVE DISORDER or ANXIETY DISORDERS: avoid clomipramine. Antidepressants that are not metabolised by CYP2C19 - or to a lesser extent - include, for example, fluoxetine, fluvoxamine and paroxetine. If it is not possible to avoid clomipramine: monitor the effect and side effects or the plasma concentrations of clomipramine and desmethylclomipramine. For obsessive compulsive disorder, the therapeutic plasma concentration of clomipramine is greater than 200 ng/mL in combination with a plasma concentration of desmethylclomipramine that is as low as possible. For anxiety disorders, the therapeutic plasma concentration of clomipramine is approximately 100 ng/mL in combination with a plasma concentration of desmethylclomipramine lower than 200 ng/mL. A sum of the plasma concentrations of clomipramine and desmethylclomipramine exceeding 600 ng/mL is considered toxic. Add a low dose of fluvoxamine if necessary, to inhibit CYP2C19 and CYP1A2 and thereby inhibit the conversion of clomipramine to desmethylclomipramine. Indication DEPRESSION: no action required</td></tr>\n<tr><td>CYP2D6 IM</td><td>clomipramine</td><td>-</td><td>NO action is required for this gene-drug interaction. The gene variation does increase clomipramine plasma concentrations, but not clomipramine+desmethylclomipramine plasma concentrations, which determines side effects and efficacy in depression. The increase in the plasma concentration of clomipramine is favourable for the efficacy in anxiety and obsessive compulsive disorder.</td></tr>\n<tr><td>CYP2D6 PM</td><td>clomipramine</td><td>-</td><td>NO action is required for this gene-drug interaction. The gene variation increases the plasma concentration of clomipramine. However, there is insufficient evidence to substantiate an increase of the plasma concentration of clomipramine+desmethylclomipramine to such an extent that it increases the risk of side effects. The increase in the plasma concentration of clomipramine is favourable for the efficacy in anxiety and obsessive compulsive disorder.</td></tr>\n</tbody>\n</table>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0007028.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n",
+      "version" : 0
+    },
+    "userId" : "katrin",
+    "version" : 0,
+    "xrefs" : [ ]
+  }
+}

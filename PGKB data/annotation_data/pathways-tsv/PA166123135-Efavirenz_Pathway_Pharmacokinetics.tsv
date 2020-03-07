@@ -1,0 +1,17 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+NR1I2	CYP3A4	Activation				20861742, 15496645	NR1I2, CYP3A4		
+NR1I3	CYP2B6	Activation				17041008	CYP2B6, NR1I3		
+efavirenz	NR1I2	Activation				20861742, 15496645	NR1I2	efavirenz	
+NR1I2	CYP2B6	Activation				20861742, 17041008	CYP2B6, NR1I2		
+efavirenz	NR1I3	Activation				17041008	NR1I3	efavirenz	
+efavirenz	8-hydroxyefavirenz	Conversion	CYP1A2, CYP2A6, CYP2B6, CYP3A4, CYP3A5			22252501, 20335270, 17559344, 12676886		efavirenz	
+8-hydroxyefavirenz	8,14-dihydroxyefavirenz	Conversion	CYP2B6			22252501, 20335270, 17559344, 12676886, 10534318			
+8,14-dihydroxyefavirenz	8,14-dihydroxyefavirenz glucuronide	Conversion	UGT			22252501, 21319958, 10534318			
+efavirenz	7-hydroxyefavirenz	Conversion	CYP2A6			22252501, 20335270, 17559344, 12676886, 10534318		efavirenz	
+efavirenz	efavirenz-n-glucuronide	Conversion	UGT2B7			22252501, 21319958, 19487252		efavirenz	
+8-hydroxyefavirenz	8-hydroxyefavirenz glucuronide	Conversion	UGT			22252501, 21319958			
+7-hydroxyefavirenz	7-hydroxyefavirenz glucuronide	Conversion	UGT			22252501, 21319958, 10534318			
+8-hydroxyefavirenz glucuronide	elimination	Leads To				10534318			
+efavirenz-n-glucuronide	elimination	Leads To				21282425, 10534318			
+8,14-dihydroxyefavirenz glucuronide	elimination	Leads To				10534318			
+7-hydroxyefavirenz glucuronide	elimination	Leads To				10534318			

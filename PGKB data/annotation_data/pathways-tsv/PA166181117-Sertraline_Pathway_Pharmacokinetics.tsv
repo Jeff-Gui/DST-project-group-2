@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+sertraline	sertraline carbamoyl-O-glucuronide	Biochemical Reaction	UGT1A3, UGT1A6, UGT2B4, UGT2B7			15547048, 2566471		sertraline carbamoyl-O-glucuronide, sertraline	
+desmethylsertraline	alpha-hydroxy sertraline ketone	Biochemical Reaction	CYP2C19, CYP2E1, CYP3A4, MAOA, MAOB			15547048		alpha-hydroxy sertraline ketone, desmethylsertraline	
+sertraline	alpha-hydroxy sertraline ketone	Biochemical Reaction	CYP2C19, CYP3A4, MAOA, MAOB			15547048		alpha-hydroxy sertraline ketone, sertraline	
+sertraline	desmethylsertraline	Biochemical Reaction	CYP2B6, CYP2C19, CYP2C9, CYP2D6, CYP3A4			28737446, 15547048, 10587282, 10510155, 10383917		desmethylsertraline, sertraline	
+alpha-hydroxy sertraline ketone	alpha-hydroxy sertraline ketone glucuronide	Biochemical Reaction				11420570		alpha-hydroxy sertraline ketone, alpha-hydroxy sertraline ketone glucuronide	
+sertraline	Selective Serotonin Reuptake Inhibitor Pathway, Pharmacodynamics	Leads To				8059336		sertraline	
+sertraline	sertraline	Transport				18239278		sertraline	

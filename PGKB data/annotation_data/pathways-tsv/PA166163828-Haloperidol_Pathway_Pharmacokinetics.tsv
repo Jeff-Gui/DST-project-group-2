@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+Tobacco Use Disorder	CYP1A1	Activation				23106957	CYP1A1		Tobacco Use Disorder
+haloperidol	3-(4-fluorobenzoyl)propionic acid, 4-(4-chlorophenyl)piperidin-4-ol	Biochemical Reaction	CYP1A1, CYP2C19, CYP2C8, CYP2C9, CYP2D6, CYP3A4, CYP3A5			16805946, 11717183		haloperidol	Tobacco Use Disorder
+haloperidol	haloperidol pyridinium	Biochemical Reaction	CYP1A1, CYP3A4, CYP3A5			16805946, 11717183		haloperidol	Tobacco Use Disorder
+haloperidol	reduced haloperidol	Biochemical Reaction	CBR1, CYP3A4			16805946, 11717183, 10628896		haloperidol	Tobacco Use Disorder
+haloperidol	haloperidol b-d-glucuronide	Biochemical Reaction	UGT1A4, UGT1A9, UGT2B7			22028316, 10628896		haloperidol	Tobacco Use Disorder
+reduced haloperidol	CYP2D6	Inhibition				10628896	CYP2D6		Tobacco Use Disorder
+haloperidol	CYP2D6	Inhibition				10628896	CYP2D6	haloperidol	Tobacco Use Disorder

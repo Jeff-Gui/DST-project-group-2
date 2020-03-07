@@ -1,0 +1,5 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+candesartan	o-desethyl candesartan	Biochemical Reaction	CYP2C9			23487168, 17827781, 9331001		candesartan	
+candesartan cilexetil	candesartan	Biochemical Reaction				23487168		candesartan cilexetil, candesartan	
+candesartan	CYP2C9	Inhibition				17827781	CYP2C9	candesartan	
+candesartan	candesartan	Transport	ABCB1			23487168		candesartan	

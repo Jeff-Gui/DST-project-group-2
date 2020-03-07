@@ -1,0 +1,35 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+erythromycin	anhydroerythromycin	Biochemical Reaction				15308279		erythromycin	
+erythromycin	desmethylerythromycin	Biochemical Reaction	CYP3A4			15308279		erythromycin	
+clarithromycin	14-hydroxyclarithromycin, n-desmethyl clarithromycin	Biochemical Reaction	CYP3A4			15308279		clarithromycin	
+ORM1-Erythromycin	ORM1	Comes From				25385446	ORM1		
+ORM1-clarithromycin	clarithromycin	Comes From				25385446		clarithromycin	
+ORM1-Erythromycin	erythromycin	Comes From				25385446		erythromycin	
+ORM1-Erythromycin	erythromycin	Comes From				25385446		erythromycin	
+ORM1-clarithromycin	ORM1	Comes From				25385446	ORM1		
+ORM1-clarithromycin	clarithromycin	Comes From				25385446		clarithromycin	
+erythromycin	CYP3A4	Inhibition				20669013, 11012550	CYP3A4	erythromycin	
+erythromycin	bacteria RNA	Inhibition				24794904		erythromycin	
+azithromycin	bacteria RNA	Inhibition				24794904		azithromycin	
+clarithromycin	bacteria RNA	Inhibition				24794904		clarithromycin	
+clarithromycin	CYP3A4	Inhibition				20669013, 11012550	CYP3A4	clarithromycin	
+azithromycin	elimination	Leads To				15308279		azithromycin	
+desmethylerythromycin	elimination	Leads To				15308279			
+n-desmethyl clarithromycin	elimination	Leads To				15308279			
+14-hydroxyclarithromycin	elimination	Leads To				15308279			
+azithromycin	azithromycin	Transport	ABCB1, ABCC2			15308279, 14982769		azithromycin	
+azithromycin	azithromycin	Transport				16952489, 15308279		azithromycin	
+erythromycin	erythromycin	Transport	SLCO1B1, SLCO1B3			17296622		erythromycin	
+clarithromycin	clarithromycin	Transport	SLCO1B1, SLCO1B3			17296622		clarithromycin	
+azithromycin	azithromycin	Transport				24794904		azithromycin	
+azithromycin	azithromycin	Transport				24631273, 17296622		azithromycin	
+clarithromycin	clarithromycin	Transport				24794904		clarithromycin	
+clarithromycin	clarithromycin	Transport				16952489, 15308279		clarithromycin	
+erythromycin	erythromycin	Transport				24794904		erythromycin	
+erythromycin	erythromycin	Transport	ABCB1			18755851, 16952489		erythromycin	
+clarithromycin	clarithromycin	Transport	ABCB1			18755851, 16952489		clarithromycin	
+azithromycin	azithromycin	Transport	ABCB1			18755851, 16952489		azithromycin	
+desmethylerythromycin	desmethylerythromycin	Transport	ABCB1, ABCC2			15308279			
+erythromycin	erythromycin	Transport				16952489, 15308279		erythromycin	
+14-hydroxyclarithromycin	14-hydroxyclarithromycin	Transport	ABCB1, ABCC2			15308279			
+n-desmethyl clarithromycin	n-desmethyl clarithromycin	Transport	ABCB1, ABCC2			15308279			

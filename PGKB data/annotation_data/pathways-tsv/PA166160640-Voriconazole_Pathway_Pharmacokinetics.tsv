@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+voriconazole	4-hydroxyvoriconazole	Biochemical Reaction	CYP3A4			18362161, 17433262, 12756205		voriconazole	
+voriconazole	voriconazole n-oxide	Biochemical Reaction	CYP2C19, CYP2C9, CYP3A4, FMO1, FMO3, FMO5			18362161, 17433262, 16802848, 12695341		voriconazole	
+voriconazole	hydroxyvoriconazole	Biochemical Reaction	CYP2C19			23766489, 20002085, 12756205		voriconazole	
+dihydroxyvoriconazole	dihydroxyvoriconazole o-glucuronide	Biochemical Reaction	UGT1A4			23766489, 20002085, 12756205			
+hydroxyvoriconazole	hydroxyvoriconazole o-glucuronide	Biochemical Reaction	UGT1A4			23766489, 20304965, 20002085, 12756205			
+hydroxyvoriconazole	dihydroxyvoriconazole	Biochemical Reaction	CYP2C19			23766489, 20002085, 12756205			
+4-hydroxyvoriconazole	4-hydroxyvoriconazole 4-o-glucuronide	Biochemical Reaction	UGT1A4			20304965, 20002085, 12756205			

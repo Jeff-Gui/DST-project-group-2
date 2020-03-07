@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+atomoxetine	4'-hydroxy atomoxetine	Biochemical Reaction	CYP2D6			27052878, 12485958, 11854152		atomoxetine	
+4'-hydroxy atomoxetine	4-hydroxyatomoxetine-O-glucuronide	Biochemical Reaction				12485958			
+atomoxetine	N-desmethyl atomoxetine	Biochemical Reaction	CYP2C19			12485958, 11854152		atomoxetine	
+atomoxetine	2-hydroxymethyl atomoxetine	Biochemical Reaction	CYP2B6, CYP2D6			27052878, 12485958		atomoxetine	
+N-desmethyl-4-hydroxyatomoxetine	N-desmethyl-4-hydroxyatomoxetine glucuronide	Biochemical Reaction				12485958			
+atomoxetine	4'-hydroxy atomoxetine	Biochemical Reaction	CYP1A2, CYP2B6, CYP2C19, CYP2E1, CYP3A4			11854152		atomoxetine	
+N-desmethyl atomoxetine	N-desmethyl-4-hydroxyatomoxetine	Biochemical Reaction	CYP2D6			12485958, 11854152			

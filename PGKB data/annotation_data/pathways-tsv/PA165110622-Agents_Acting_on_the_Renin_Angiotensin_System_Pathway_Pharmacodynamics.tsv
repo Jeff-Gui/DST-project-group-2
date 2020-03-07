@@ -1,0 +1,32 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+ATP6AP2	MAPK1	Activation				18417113	ATP6AP2, MAPK1		
+angiotensin II	AGTR2	Activation				17717300, 18035185, 15134803	AGTR2		
+REN	ATP6AP2	Activation				18417113	ATP6AP2, REN		
+angiotensin 1-7	MAS1	Activation				18449520, 18035185	MAS1		
+MAPK3	TGFB1	Activation				18417113	TGFB1, MAPK3		
+ATP6AP2	MAPK3	Activation				18417113	ATP6AP2, MAPK3		
+angiotensin II	AGTR1	Activation				17717300, 18035185	AGTR1		
+MAPK1	TGFB1	Activation				18417113	TGFB1, MAPK1		
+BDKRB2	NOS3	Activation				20712529, 19082699, 18182246, 12785010, 9207629	NOS3, BDKRB2		
+bradykinin	BDKRB2	Activation				21052031, 18182246, 9535416, 9207629	BDKRB2		
+bradykinin	BDKRB1	Activation				18182246, 9207629	BDKRB1		
+aldosterone	NR3C2	Activation				18729003	NR3C2		
+AGTR1	CYP11B2	Activation				15134803	CYP11B2, AGTR1		
+calcium	CYP11B2	Activation				15134803	CYP11B2		
+AGTR1	calcium	Activation				15134803	AGTR1		
+angiotensin I	angiotensin II	Biochemical Reaction	ACE, CMA1, CTSG			18035185, 9535416			
+angiotensin 1-9	angiotensin 1-7	Biochemical Reaction	MME			21052031			
+AGT	angiotensin I	Biochemical Reaction	REN			18035185	AGT		
+angiotensin 1-7	angiotensin 1-5	Biochemical Reaction	ACE			18035185			
+angiotensin I	angiotensin 1-9	Biochemical Reaction	ACE2			18035185			
+angiotensin II	angiotensin 1-7	Biochemical Reaction	ACE2			18035185			
+KNG1	bradykinin	Biochemical Reaction	ACE			9207629	KNG1		
+CYP11B2	aldosterone	Biochemical Reaction				15134803	CYP11B2		
+aliskiren	REN	Inhibition				19170589, 12927775	REN	aliskiren	
+eplerenone	NR3C2	Inhibition				18729003	NR3C2	eplerenone	
+spironolactone	NR3C2	Inhibition				18729003	NR3C2	spironolactone	
+Angiotensin II Antagonists	AGTR1	Inhibition				19074621, 18035185	AGTR1		
+Ace Inhibitors, Plain	ACE	Inhibition				19082699, 19074621, 18035185	ACE		
+Ace Inhibitors, Plain	ACE	Inhibition				19082699, 19074621, 18035185	ACE		
+Ace Inhibitors, Plain	ACE	Inhibition				19082699, 19074621, 18035185	ACE		
+Angiotensin II Antagonists	Losartan PK pathway	Leads To				16029066			

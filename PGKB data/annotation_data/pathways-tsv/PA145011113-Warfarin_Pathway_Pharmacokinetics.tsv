@@ -1,0 +1,10 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+warfarin	8-hydroxy r-warfarin	Biochemical Reaction	CYP1A1, CYP1A2, CYP2C19			27539372, 9014207, 8723744, 8689941		warfarin	
+warfarin	10-hydroxy r-warfarin	Biochemical Reaction	CYP3A4			16035367, 11353757, 9014207		warfarin	
+warfarin	6-hydroxy r-warfarin	Biochemical Reaction	CYP1A1, CYP1A2, CYP2C19			27539372, 9014207, 8689941		warfarin	
+warfarin	7-hydroxy r-warfarin	Biochemical Reaction	CYP1A1, CYP1A2, CYP2C8			9416970, 9014207		warfarin	
+warfarin	6-hydroxy s-warfarin	Biochemical Reaction	CYP2C9			27539372, 15970795, 12621390, 11926893, 11455026, 10073515, 9014207, 1581537		warfarin	
+warfarin	dehydrowarfarin	Biochemical Reaction				9014207		warfarin	
+warfarin	4-hydroxywarfarin	Biochemical Reaction	CYP2C18, CYP2C9, CYP3A4			11353757, 9014207, 8873220		warfarin	
+warfarin	7-hydroxy s-warfarin	Biochemical Reaction	CYP2C9			27539372, 15970795, 12621390, 11926893, 11455026, 9014207, 1581537		warfarin	
+warfarin	warfarin	Transport	ABCB1			14676821		warfarin	

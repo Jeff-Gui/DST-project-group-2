@@ -1,0 +1,9 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+atazanavir	atazanavir M2	Biochemical Reaction	CYP3A4, CYP3A5			23722954, 21148251, 21148252, 21731578, 19546238, 16176117		atazanavir	
+atazanavir	atazanavir M4	Biochemical Reaction	CYP3A4, CYP3A5			23722954, 21148251, 21148252, 21731578, 19546238, 16176117		atazanavir	
+atazanavir	atazanavir M1	Biochemical Reaction	CYP3A4, CYP3A5			23722954, 21148251, 21148252, 21731578, 19546238, 16176117		atazanavir	
+atazanavir	atazanavir M5	Biochemical Reaction	CYP3A4, CYP3A5			23722954, 21148251, 21148252, 21731578, 19546238, 16176117		atazanavir	
+atazanavir	atazanavir M3	Biochemical Reaction	CYP3A4, CYP3A5			23722954, 21148251, 21148252, 21731578, 19546238, 16176117		atazanavir	
+atazanavir	UGT1A1	Inhibition				24492252	UGT1A1	atazanavir	
+atazanavir	atazanavir	Transport				20551216		atazanavir	
+atazanavir	atazanavir	Transport				24997317, 23224979, 22394315, 20551216, 16355344		atazanavir	

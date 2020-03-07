@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+olanzapine	olanzapine n-oxide	Biochemical Reaction	CYP2D6, CYP3A4, CYP3A5, FMO1, FMO3			26856397, 23147717, 10511917		olanzapine	
+olanzapine	unii-t148r8s95b	Biochemical Reaction	UGT1A4, UGT2B10			26329789, 21750471, 10511917		olanzapine	
+olanzapine	n-demethyl olanzapine	Biochemical Reaction	CYP1A2, CYP2C8, CYP2D6, CYP3A4, CYP3A43			26856397, 26329789, 23930678, 21519338, 10511917		olanzapine	
+olanzapine	2-hydroxymethyl olanzapine	Biochemical Reaction	CYP2D6			26856397, 10511917		olanzapine	
+olanzapine	unii-a432w914yr	Biochemical Reaction	UGT1A4, UGT2B10			26329789, 21750471, 10511917		olanzapine	
+olanzapine	ABCB1	Inhibition				22525746, 21843066, 18834354	ABCB1	olanzapine	
+olanzapine	olanzapine	Transport	ABCB1			22525746, 21843066, 18834354		olanzapine	

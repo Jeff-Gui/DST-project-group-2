@@ -1,0 +1,5 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+metoprolol	N-desisopropyl metoprolol	Biochemical Reaction	CYP2B6, CYP2C9, CYP2D6, CYP3A4			30087611		metoprolol	
+metoprolol	alpha-hydroxymetoprolol	Biochemical Reaction	CYP2B6, CYP2C9, CYP2D6, CYP3A4			30087611, 24648255, 16192109		metoprolol	
+metoprolol	o-demethylmetoprolol	Biochemical Reaction	CYP2B6, CYP2C9, CYP2D6, CYP3A4			30087611, 24648255, 16192109		metoprolol	
+o-demethylmetoprolol	metoprolol acid	Biochemical Reaction	CYP2D6			30087611, 24648255			

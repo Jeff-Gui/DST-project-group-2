@@ -1,0 +1,44 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+5,10-methylenetetrahydrofolate	dihydrofolic acid	Biochemical Reaction	TYMS			19812215, 19902562, 12604405, 12084458, 11986237			
+adenosine monophosphate	adenosine diphosphate	Biochemical Reaction				12106498			
+inosine monophosphate	adenosine monophosphate	Biochemical Reaction				12106498			
+deoxyuridine monophosphate	deoxythymidine monophosphate	Biochemical Reaction	TYMS			16098809			
+inosine	hypoxanthine	Biochemical Reaction				12106498			
+5,10-methylenetetrahydrofolate	5,10-methenyltetrahydrofolate	Biochemical Reaction	MTHFD1			19812215, 14647408			
+methotrexate	methotrexate glutamate	Biochemical Reaction				19902562, 12494465, 10029597		methotrexate	
+adenosine diphosphate	adenosine triphosphate	Biochemical Reaction				12106498			
+adenosine	inosine	Biochemical Reaction	ADA			12106498			
+5,10-methenyltetrahydrofolate	10-formyltetrahydrofolate	Biochemical Reaction	MTHFD1			19812215, 14647408			
+inosine monophosphate	inosine	Biochemical Reaction				12106498			
+proteins	methylated proteins	Biochemical Reaction	methyl transferases			19812215			
+leucovorin	5,10-methenyltetrahydrofolate	Biochemical Reaction	MTHFS			19812215, 3801490			
+methotrexate polyglutamate	methotrexate glutamate	Biochemical Reaction	GGH			18035049, 15284538			
+adenosine monophosphate	adenosine	Biochemical Reaction				12106498			
+tetrahydrofolic acid	5,10-methylenetetrahydrofolate	Biochemical Reaction	SHMT1			19812215, 15797993			
+methotrexate glutamate	methotrexate polyglutamate	Biochemical Reaction	FPGS			19902562, 19131550, 17875718, 12494465, 10029597			
+dihydrofolic acid	tetrahydrofolic acid	Biochemical Reaction	DHFR			19812215, 14529544, 12084458			
+5,10-methylenetetrahydrofolate	levomefolic acid	Biochemical Reaction	MTHFR			19812215, 15797993, 14647408			
+DNA	methylated DNA	Biochemical Reaction	methyl transferases			19812215			
+glycine	l-serine	Biochemical Reaction	SHMT1			19812215			
+homocysteine	cystathionine	Biochemical Reaction	CBS			19812215, 16013960			
+methionine	s-adenosylmethionine	Biochemical Reaction				19812215			
+s-adenosylhomocysteine	homocysteine	Biochemical Reaction				19812215			
+tetrahydrofolic acid	10-formyltetrahydrofolate	Biochemical Reaction	MTHFD1			19812215, 14647408			
+homocysteine	methionine	Biochemical Reaction	MTR, MTRR, cyanocobalamin			19812215, 17611986, 15797993			
+s-adenosylmethionine	s-adenosylhomocysteine	Biochemical Reaction	methyl transferases			19812215			
+levomefolic acid	tetrahydrofolic acid	Biochemical Reaction	MTR, MTRR, cyanocobalamin			19812215			
+methotrexate polyglutamate	TYMS	Inhibition				22571483, 8324932	TYMS		
+methotrexate polyglutamate	DHFR	Inhibition				2465007	DHFR		
+methotrexate polyglutamate	PPAT	Inhibition				10432311	PPAT		
+methotrexate glutamate	DHFR	Inhibition				12084458	DHFR		
+methotrexate	DHFR	Inhibition				14662327, 12084458	DHFR	methotrexate	
+s-adenosylmethionine	MTHFR	Inhibition				29891918	MTHFR		
+ATIC	ADA	Inhibition				12106498	ATIC, ADA		
+methotrexate polyglutamate	ATIC	Inhibition				22571483, 1597445	ATIC		
+methotrexate polyglutamate	GART	Inhibition				1597445	GART		
+10-formyltetrahydrofolate	purine nucleobase calabolic process	Leads To	ATIC, GART, PPAT			28029518, 16947783, 15457444, 14529544			
+purine nucleobase calabolic process	inosine monophosphate	Leads To				28029518			
+DNA damage [MESH:D004249]	apoptosis	Leads To				9096386			
+deoxythymidine monophosphate	pyrimidine biosynthetic pathway	Leads To				16098809			
+methotrexate glutamate	Methotrexate Pathway, Pharmacokinetics	Leads To				18035049			
+deoxyuridine monophosphate	DNA damage [MESH:D004249]	Leads To				9806758, 9096386			

@@ -1,0 +1,8 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+Tobacco Use Disorder	CYP1A2	Activation				11763003	CYP1A2		Tobacco Use Disorder
+clozapine	clozapine n-oxide	Biochemical Reaction	CYP1A2, CYP2C19, CYP2C9, CYP2D6, CYP2E1, CYP3A4, CYP3A5, FMO3			28664816, 28340122, 27320963, 23297297, 18809730, 9107553, 7891353		clozapine	Tobacco Use Disorder
+clozapine	n-desmethylclozapine	Biochemical Reaction	CYP1A2, CYP2C19, CYP2D6, CYP3A4, CYP3A43, CYP3A5			28664816, 28340122, 25150845, 23297297, 19593168, 18809730, 7891353		clozapine	Tobacco Use Disorder
+fluvoxamine	CYP1A2	Inhibition				28688742, 25627831, 23490199, 17214606	CYP1A2	fluvoxamine	Tobacco Use Disorder
+ciprofloxacin	CYP1A2	Inhibition				27872784	CYP1A2	ciprofloxacin	Tobacco Use Disorder
+clozapine	clozapine	Transport	ABCB1, ABCC1, ABCG2			27932669, 28919802, 21843066, 19593168, 15285840		clozapine	Tobacco Use Disorder
+clozapine	clozapine	Transport	SLC22A1, SLC22A2, SLC22A3			22806583		clozapine	Tobacco Use Disorder

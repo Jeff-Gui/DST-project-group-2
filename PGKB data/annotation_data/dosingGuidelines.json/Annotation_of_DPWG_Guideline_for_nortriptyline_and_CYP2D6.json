@@ -1,0 +1,97 @@
+{
+  "citations" : [ {
+    "@id" : "https://pharmgkb.org/literature/7283333",
+    "@context" : "https://api.pharmgkb.org/jsonld/literature.jsonld",
+    "id" : 7283333,
+    "resourceId" : "21412232",
+    "title" : "Pharmacogenetics: from bench to byte--an update of guidelines.",
+    "_sameAs" : "https://www.ncbi.nlm.nih.gov/pubmed/21412232",
+    "authors" : [ "Swen J J", "Nijenhuis M", "de Boer A", "Grandia L", "Maitland-van der Zee A H", "Mulder H", "Rongen G A P J M", "van Schaik R H N", "Schalekamp T", "Touw D J", "van der Weide J", "Wilffert B", "Deneer V H M", "Guchelaar H-J" ],
+    "hasKeyword" : true,
+    "journal" : "Clinical pharmacology and therapeutics",
+    "meshDiseases" : [ ],
+    "meshTerms" : [ "Animals", "Aryl Hydrocarbon Hydroxylases", "Cytochrome P-450 CYP2C9", "Drug Administration Schedule", "Drug-Related Side Effects and Adverse Reactions", "Humans", "Pharmaceutical Preparations", "Pharmacogenetics", "Practice Guidelines as Topic" ],
+    "month" : 5,
+    "nonHuman" : false,
+    "objCls" : "Literature",
+    "page" : "662-73",
+    "pgkbPublication" : false,
+    "pubDate" : "2011-05-01T00:00:00-07:00",
+    "summary" : "Currently, there are very few guidelines linking the results of pharmacogenetic tests to specific therapeutic recommendations. Therefore, the Royal Dutch Association for the Advancement of Pharmacy established the Pharmacogenetics Working Group with the objective of developing pharmacogenetics-based therapeutic (dose) recommendations. After systematic review of the literature, recommendations were developed for 53 drugs associated with genes coding for CYP2D6, CYP2C19, CYP2C9, thiopurine-S-methyltransferase (TPMT), dihydropyrimidine dehydrogenase (DPD), vitamin K epoxide reductase (VKORC1), uridine diphosphate glucuronosyltransferase 1A1 (UGT1A1), HLA-B44, HLA-B*5701, CYP3A5, and factor V Leiden (FVL).",
+    "type" : "Article",
+    "version" : 2,
+    "volume" : "89",
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/pubMed/21412232","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":769250885,"resource":"PubMed","resourceId":"21412232","_url":"https://www.ncbi.nlm.nih.gov/pubmed/21412232"}, {"@id":"https://pharmgkb.org/crossReference/doi/10.1038/clpt.2011.34","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449247827,"resource":"DOI","resourceId":"10.1038/clpt.2011.34","_url":"http://dx.doi.org/10.1038%2Fclpt.2011.34"} ],
+    "year" : 2011
+  } ],
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166104961",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166104961",
+    "name" : "Annotation of DPWG Guideline for nortriptyline and CYP2D6",
+    "cancerGenome" : false,
+    "descriptiveVideoId" : "",
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1183704503,
+      "date" : "2011-08-10T00:00:00-07:00",
+      "type" : "Create",
+      "version" : 0
+    }, {
+      "id" : 1450414979,
+      "date" : "2019-05-23T11:22:02.683-07:00",
+      "description" : "Annotation current with November 2018 DPWG Guideline release",
+      "type" : "Update",
+      "version" : 0
+    }, {
+      "id" : 1450820969,
+      "date" : "2019-10-07T14:32:21.470-07:00",
+      "description" : "No changes based on August 2019 guideline",
+      "type" : "Update",
+      "version" : 0
+    }, {
+      "id" : 1450956388,
+      "date" : "2020-01-31T13:39:56.178-08:00",
+      "description" : "Updated link to 2011 DPWG methods",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/7283333","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":7283333,"resourceId":"21412232","title":"Pharmacogenetics: from bench to byte--an update of guidelines.","_sameAs":"https://www.ncbi.nlm.nih.gov/pubmed/21412232","objCls":"Literature","type":"Article","xrefs":[{"@id":"https://pharmgkb.org/crossReference/pubMed/21412232","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":769250885,"resource":"PubMed","resourceId":"21412232","_url":"https://www.ncbi.nlm.nih.gov/pubmed/21412232"},{"@id":"https://pharmgkb.org/crossReference/doi/10.1038/clpt.2011.34","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449247827,"resource":"DOI","resourceId":"10.1038/clpt.2011.34","_url":"http://dx.doi.org/10.1038%2Fclpt.2011.34"}]}, {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]}, {"@id":"https://pharmgkb.org/literature/15102465","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15102465,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines November 2018","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450415575,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA450657",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA450657",
+      "name" : "nortriptyline",
+      "version" : 5
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA128",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA128",
+      "symbol" : "CYP2D6",
+      "name" : "cytochrome P450 family 2 subfamily D member 6",
+      "version" : 7888
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1447981930,
+      "html" : "<p>The Dutch Pharmacogenetics Working Group Guideline for nortriptyline recommends a dose reduction for CYP2D6 poor or intermediate metabolizer patients. For CYP2D6 ultrarapid metabolizers, select an alternative drug or use 1.7 times the standard dose. Monitoring of nortriptyline and 10-hydroxynortriptyline plasma concentrations is recommended.</p>\n",
+      "version" : 1
+    },
+    "summaryVideoId" : "",
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1447981929,
+      "html" : "<h3 id=\"november-2018-update\">November 2018 Update</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group has evaluated therapeutic dose recommendations for nortriptyline based on CYP2D6 genotype. They recommend a dose increase or use of an alternative antidepressant in CYP2D6 ultrarapid metabolizers (UMs) and a dose reduction in CYP2D6 poor metabolizers (PMs). Monitoring of nortriptyline and Z-10-hydroxynortriptyline plasma concentrations is also recommended.</p>\n<p><em>Wording in table taken from the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf\" target=\"_blank\">Dutch guidelines</a>.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description</th><th>Recommendation</th></tr>\n</thead>\n<tbody>\n<tr><td>CYP2D6 UM</td><td>nortriptyline</td><td>The risk of ineffectiveness and cardiotoxic effects may be increased. The gene variation leads to a decrease in the plasma concentration of nortriptyline and an increase in the plasma concentration of the cardiotoxic metabolite Z-10-hydroxynortriptyline.</td><td>Use 1.7 times the standard dose and monitor the effect and side effects or the plasma concentration of nortriptyline and be alert to an increase in the plasma concentration of the cardiotoxic metabolite Z-10-hydroxynortriptyline. Plasma concentrations of Z-hydroxynortriptyline exceeding 40 ng/mL are considered toxic.<br/>If a dose increase is not wanted due to the cardiotoxic hydroxy metabolite: avoid nortriptyline. Antidepressants that are not metabolised via CYP2D6 - or to a lesser extent - include, for example, citalopram and sertraline.</td></tr>\n<tr><td>CYP2D6 IM</td><td>nortriptyline</td><td>The risk of side effects may be increased, because the gene variation leads to an increased plasma concentration of nortriptyline.</td><td>Use 60% of the standard dose and monitor the effect and side effects or the plasma concentration of nortriptyline in order to set the maintenance dose.<br/>The therapeutic range of nortriptyline is 50-150 ng/mL. Values exceeding 250 ng/mL are considered toxic.</td></tr>\n<tr><td>CYP2D6 PM</td><td>nortriptyline</td><td>The risk of side effects may be increased, because the gene variation leads to an increased plasma concentration of nortriptyline.</td><td>Use 40% of the standard dose and monitor the effect and side effects or the plasma concentration of nortriptyline in order to set the maintenance dose.<br/>The therapeutic range of nortriptyline is 50-150 ng/mL. Values exceeding 250 ng/mL are considered toxic.</td></tr>\n</tbody>\n</table>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0001557.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n<h3 id=\"2011-guideline\">2011 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group has evaluated therapeutic dose recommendations for nortriptyline based on CYP2D6 genotype [Article:<a href=\"/pmid/21412232\">21412232</a>].  They recommend reducing the dose for poor and intermediate metabolizer patients and selecting an alternative drug or increasing the dose for ultra metabolizers.</p>\n<table class=\"table\">\n<thead>\n<tr><th>Phenotype (Genotype)</th><th>Therapeutic Dose Recommendation</th><th>Level of Evidence</th><th>Clinical Relevance</th></tr>\n</thead>\n<tbody>\n<tr><td>PM (2 inactive alleles)</td><td>Reduce dose by 60% and monitor nortriptyline + 10-hydroxynortriptyline plasma concentrations.</td><td>Published controlled studies of moderate quality* relating to phenotyped and/or genotyped patients or healthy volunteers, and having relevant pharmacokinetic or clinical endpoints.</td><td>Clinical effect (S): long-standing discomfort (48-168 hr) without permanent injury e.g. failure of therapy with tricyclic antidepressants, atypical antipsychotic drugs; extrapyramidal side effects; parkinsonism; ADE resulting from increased bioavailability of tricyclic antidepressants, metoprolol, propafenone (central effects e.g. dizziness); INR 4.5-6.0; neutropenia 1.0-1.5x10<sup>9</sup>/l; leucopenia 2.0-3.0x10<sup>9</sup>/l; thrombocytopenia 50-75x10<sup>9</sup>/l.</td></tr>\n<tr><td>IM (2 decreased activity alleles, or 1 active and 1 inactive allele, or 1 decreased activity and 1 inactive allele)</td><td>Reduce dose by 40% and monitor nortriptyline + 10-hydroxynortriptyline plasma concentrations.</td><td>Published controlled studies of good quality* relating to phenotyped and/or genotyped patients or healthy volunteers, and having relevant pharmacokinetic or clinical endpoints.</td><td>Clinical effect (S): long-standing discomfort (48-168 hr) without permanent injury e.g. failure of therapy with tricyclic antidepressants, atypical antipsychotic drugs; extrapyramidal side effects; parkinsonism; ADE resulting from increased bioavailability of tricyclic antidepressants, metoprolol, propafenone (central effects e.g. dizziness); INR 4.5-6.0; neutropenia 1.0-1.5x10<sup>9</sup>/l; leucopenia 2.0-3.0x10<sup>9</sup>/l; thrombocytopenia 50-75x10<sup>9</sup>/l.</td></tr>\n<tr><td>UM (gene duplication in absence of inactive or decreased activity alleles)</td><td>Select alternative drug (e.g., citalopram, sertraline) or increase dose by 60% and monitor nortriptyline + 10-hydroxynortriptyline plasma concentrations.</td><td>Published controlled studies of moderate quality* relating to phenotyped and/or genotyped patients or healthy volunteers, and having relevant pharmacokinetic or clinical endpoints.</td><td>Clinical effect (S): long-standing discomfort (48-168 hr) without permanent injury e.g. failure of therapy with tricyclic antidepressants, atypical antipsychotic drugs; extrapyramidal side effects; parkinsonism; ADE resulting from increased bioavailability of tricyclic antidepressants, metoprolol, propafenone (central effects e.g. dizziness); INR 4.5-6.0; neutropenia 1.0-1.5x10<sup>9</sup>/l; leucopenia 2.0-3.0x10<sup>9</sup>/l; thrombocytopenia 50-75x10<sup>9</sup>/l.</td></tr>\n</tbody>\n</table>\n<table class=\"table\">\n<thead>\n<tr><th>Allele Type</th><th>Alleles</th></tr>\n</thead>\n<tbody>\n<tr><td>active</td><td>*1, *2, *33, *35</td></tr>\n<tr><td>decreased activity</td><td>*9, *10, *17, *29, *36, *41</td></tr>\n<tr><td>inactive</td><td>*3-*8, *11-*16, *19-*21, *38, *40, *42</td></tr>\n</tbody>\n</table>\n<ul>\n<li>*See <a href=\"http://www.pharmgkb.org/page/dpwg\">Methods </a> or [Article:<a href=\"/pmid/18253145\">18253145</a>] for definition of &quot;good&quot; and &quot;moderate&quot; quality.</li>\n<li>S: statistically significant difference.</li>\n<li>Please see attached PDF for detailed information about the evaluated studies: <a href=\"https://api.pharmgkb.org/v1/download/file/attachment/nortiptyline_CYP2D6_271111.pdf\">Nortriptyline CYP2D6 </a></li>\n</ul>\n",
+      "version" : 11
+    },
+    "userId" : "katrin",
+    "version" : 21,
+    "xrefs" : [ ]
+  }
+}

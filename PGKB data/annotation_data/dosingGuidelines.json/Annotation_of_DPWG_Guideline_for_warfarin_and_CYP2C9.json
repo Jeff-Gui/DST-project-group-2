@@ -1,0 +1,75 @@
+{
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166182842",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166182842",
+    "name" : "Annotation of DPWG Guideline for warfarin and CYP2C9",
+    "cancerGenome" : false,
+    "guidelineGenes" : [ ],
+    "history" : [ {
+      "id" : 1450415240,
+      "date" : "2019-05-27T00:00:00-07:00",
+      "description" : "Annotation current with November 2018 DPWG Guideline release",
+      "type" : "Create",
+      "version" : 0
+    }, {
+      "id" : 1450820676,
+      "date" : "2019-10-03T16:23:52.557-07:00",
+      "description" : "No changes based on August 2019 guidelines",
+      "type" : "Update",
+      "version" : 0
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15103288","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15103288,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines August 2019","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450815695,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-august-2019.pdf"}]}, {"@id":"https://pharmgkb.org/literature/15102465","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15102465,"resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","title":"Dutch Pharmacogenetics Working Group Guidelines November 2018","_sameAs":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1450415575,"resource":"URL","resourceId":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf","_url":"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ {
+      "@id" : "https://pharmgkb.org/haplotype/PA165816543",
+      "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+      "objCls" : "Haplotype",
+      "id" : "PA165816543",
+      "symbol" : "CYP2C9*2",
+      "name" : "*2",
+      "version" : 8
+    }, {
+      "@id" : "https://pharmgkb.org/haplotype/PA165816544",
+      "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+      "objCls" : "Haplotype",
+      "id" : "PA165816544",
+      "symbol" : "CYP2C9*3",
+      "name" : "*3",
+      "version" : 8
+    } ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA451906",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA451906",
+      "name" : "warfarin",
+      "version" : 14
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA126",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA126",
+      "symbol" : "CYP2C9",
+      "name" : "cytochrome P450 family 2 subfamily C member 9",
+      "version" : 7875
+    } ],
+    "source" : "Dutch Pharmacogenetics Working Group",
+    "summaryMarkdown" : {
+      "id" : 1450415238,
+      "html" : "<p>Reduce warfarin dose in CYP2C9 poor and intermediate metabolizers (PM and IM) and patients with CYP2C9*1/*3, *2/*3, *2/*2 or *3/*3 genotype. &quot;The genotype-specific initial dose and maintenance dose can be calculated using an algorithm, as used in EU-PACT: see https://www.knmp.nl/producten-en-diensten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-informationpharmacogenetics.&quot;</p>\n",
+      "version" : 0
+    },
+    "terms" : [ ],
+    "textMarkdown" : {
+      "id" : 1450415239,
+      "html" : "<h3 id=\"november-2018-guideline\">November 2018 Guideline</h3>\n<p>The Royal Dutch Pharmacists Association - Pharmacogenetics Working Group has evaluated therapeutic dose recommendations for warfarin based on CYP2C9 genotype/phenotype.  They recommend reducing warfarin dose for CYP2C9 poor and intermediate metabolizers (PM and IM) and patients with CYP2C9*1/*3, *2/*3, *2/*2 or *3/*3 genotype.The genotype-specific initial dose and maintenance dose can be calculated using an algorithm, as used in EU-PACT: see https://www.knmp.nl/producten-en-diensten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-informationpharmacogenetics.</p>\n<p><em>Wording in table taken from the <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/downloads/pharmacogenetic-recommendations-november-2018.pdf\" target=\"_blank\">Dutch guidelines</a>.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Allele/Genotype/Phenotype</th><th>Drug</th><th>Description</th><th>Recommendation</th></tr>\n</thead>\n<tbody>\n<tr><td>CYP2C9 IM</td><td>warfarin</td><td>This gene variation reduces the conversion of warfarin to inactive metabolites. This can increase the risk of bleeding.</td><td>1. use 65% of the standard initial dose. The genotype-specific initial dose and maintenance dose can be calculated using an algorithm. Algorithms for Caucasian patients usually contain only the *2 and *3 allele. If the activity of the reduced-activity alleles is comparable to the activity of *2 or *3, then the algorithm can be completed as if *1/*2 or *1/*3 is present. See https://www.knmp.nl/producten-en-diensten/gebruiksrecht-gstandaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics for Excel files containing calculation modules for oral and equivalent intravenous doses. From day 6 on the standard algorithm without genotype information can be used to calculate the dose. Modified dose algorithms have been developed for patients of African or (East) Asian heritage.</td></tr>\n<tr><td>CYP2C9 PM</td><td>warfarin</td><td>This gene variation reduces the conversion of warfarin to inactive metabolites. This can increase the risk of bleeding.</td><td>1. use 20% of the standard initial dose. The genotype-specific initial dose and maintenance dose can be calculated using an algorithm. Algorithms for Caucasian patients usually contain only the *2 and *3 allele. If the activity of the reduced-activity alleles is comparable to the activity of *2 or *3, then the algorithm can be completed as if *2 or *3 is present. See https://www.knmp.nl/producten-endiensten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics for Excel files containing calculation modules for oral and equivalent intravenous doses. From day 6 on the standard algorithm without genotype information can be used to calculate the dose. Modified dose algorithms have been developed for patients of African or (East) Asian heritage.</td></tr>\n<tr><td>CYP2C9*1/*2</td><td>warfarin</td><td>Genetic variation may lead to a decrease in the required maintenance dose. However, there is insufficient evidence that this causes problems when therapy is initiated as usual.</td><td>NO action is required for this gene-drug interaction.</td></tr>\n<tr><td>CYP2C9*1/*3</td><td>warfarin</td><td>This gene variation reduces the conversion of warfarin to inactive metabolites. This can increase the risk of bleeding.</td><td>1. use 65% of the standard initial dose. The genotype-specific initial dose and maintenance dose can be calculated using an algorithm, as used in EU-PACT: see https://www.knmp.nl/producten-en-diensten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-informationpharmacogenetics. From day 6 on the standard algorithm without genotype information can be used to calculate the dose.</td></tr>\n<tr><td>CYP2C9*2/*2</td><td>warfarin</td><td>This gene variation reduces the conversion of warfarin to inactive metabolites. This can increase the risk of bleeding.</td><td>1. use 65% of the standard initial dose. The genotype-specific initial dose and maintenance dose can be calculated using an algorithm, as used in EU-PACT: see https://www.knmp.nl/producten-en-diensten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-informationpharmacogenetics. From day 6 on the standard algorithm without genotype information can be used to calculate the dose.</td></tr>\n<tr><td>CYP2C9*2/*3</td><td>warfarin</td><td>This gene variation reduces the conversion of warfarin to inactive metabolites. This can increase the risk of bleeding.</td><td>1. use 45% of the standard initial dose. The genotype-specific initial dose and maintenance dose can be calculated using an algorithm, as used in EU-PACT: see https://www.knmp.nl/producten-en-diensten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-informationpharmacogenetics. From day 6 on the standard algorithm without genotype information can be used to calculate the dose.</td></tr>\n<tr><td>CYP2C9*3/*3</td><td>warfarin</td><td>This gene variation reduces the conversion of warfarin to inactive metabolites. This can increase the risk of bleeding.</td><td>1. use 20% of the standard initial dose. The genotype-specific initial dose and maintenance dose can be calculated using an algorithm, as used in EU-PACT: see https://www.knmp.nl/producten-en-diensten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-informationpharmacogenetics. From day 6 on the standard algorithm without genotype information can be used to calculate the dose.</td></tr>\n</tbody>\n</table>\n<p><a rel=\"noopener noreferrer\" href=\"https://www.g-standaard.nl/risicoanalyse/B0006232.PDF\" target=\"_blank\">Read for more information about this recommendation</a>, <a rel=\"noopener noreferrer\" href=\"https://www.knmp.nl/producten/gebruiksrecht-g-standaard/medicatiebewaking-g-standaard/background-information-pharmacogenetics\" target=\"_blank\">Read about gene information from DPWG</a></p>\n",
+      "version" : 1
+    },
+    "userId" : "lgong",
+    "version" : 1,
+    "xrefs" : [ ]
+  }
+}

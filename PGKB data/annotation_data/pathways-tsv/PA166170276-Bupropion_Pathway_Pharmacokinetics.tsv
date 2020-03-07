@@ -1,0 +1,10 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+bupropion	r,s-hydrobupropion	Biochemical Reaction	AKR1C1, AKR1C2, AKR1C3, AKR7A2, AKR7A3, CBR1, HSD11B1			26802129, 25904761, 24088726, 18420781		bupropion	
+bupropion	threohydrobupropion	Biochemical Reaction	AKR1C1, AKR1C2, AKR1C3, AKR7A2, AKR7A3, CBR1, HSD11B1			26802129, 25904761, 24088726, 18420781		bupropion	
+threohydrobupropion	zinc77291522	Biochemical Reaction	UGT1A3, UGT1A4, UGT1A9, UGT2B7			26802129			
+bupropion	4-hydroxybupropion	Biochemical Reaction	CYP2B6			26802129, 24088726, 23344581, 18287571, 17009913, 16368442		bupropion	
+r,s-hydrobupropion	zinc77291520	Biochemical Reaction	UGT1A3, UGT1A4, UGT1A9, UGT2B4, UGT2B7			26802129			
+4-hydroxybupropion	CYP2D6	Inhibition				18420781	CYP2D6		
+threohydrobupropion	CYP2D6	Inhibition				18420781	CYP2D6		
+bupropion	CYP2D6	Inhibition				18420781	CYP2D6	bupropion	
+r,s-hydrobupropion	CYP2D6	Inhibition				18420781	CYP2D6		

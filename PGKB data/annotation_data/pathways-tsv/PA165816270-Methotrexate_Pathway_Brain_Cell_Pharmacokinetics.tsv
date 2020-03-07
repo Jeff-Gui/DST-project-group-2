@@ -1,0 +1,6 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+methotrexate	methotrexate	Transport	SLC22A6, SLC22A8			28566636, 12011098, 7388786		methotrexate	
+methotrexate	methotrexate	Transport	ABCB1			30977678		methotrexate	
+methotrexate	methotrexate	Transport	ABCC1, ABCC4			11139374		methotrexate	
+methotrexate	methotrexate	Transport	ABCB1, ABCC4, ABCG2, SLC22A8			30977678, 28566636, 16146333		methotrexate	
+methotrexate	methotrexate	Transport	SLC22A8, SLCO1A2			16702441, 12011098		methotrexate	

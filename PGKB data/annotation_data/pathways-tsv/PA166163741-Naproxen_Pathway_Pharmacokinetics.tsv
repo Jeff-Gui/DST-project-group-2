@@ -1,0 +1,5 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+naproxen	naproxen glucuronide	Biochemical Reaction	UGT1A6, UGT1A9, UGT2B7			16187975		naproxen	
+naproxen	desmethylnaproxen	Biochemical Reaction	CYP1A2, CYP2C9			8866821		naproxen	
+desmethylnaproxen	6-o-desmethylnaproxen iso acyl glucuronide	Biochemical Reaction	UGT1A1, UGT1A3, UGT1A6, UGT1A9, UGT2B7			16187975			
+desmethylnaproxen	6-o-desmethylnaproxen 6-glucuronide	Biochemical Reaction	UGT1A1, UGT1A9			16187975			

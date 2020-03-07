@@ -1,0 +1,23 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+rifampin	NR1I2	Activation				15319341	NR1I2	rifampin	
+NR1I2	CYP3A4	Activation				15319341, 11723248, 10935643	NR1I2, CYP3A4		
+ergocalciferol	VDR	Activation				12969965	VDR	ergocalciferol	
+NR1I2	ABCB1	Activation				11297522	ABCB1, NR1I2		
+etoposide	NR1I2	Activation				12181418	NR1I2	etoposide	
+<i>xenobiotics</i>	NR1I2	Activation				17279585	NR1I2		
+dexamethasone	NR1I2	Activation				22994453	NR1I2	dexamethasone	
+VDR	CYP3A4	Activation				12969965, 11991950, 11723248, 9145912	VDR, CYP3A4		
+NR1I2	CYP3A5	Activation				22994453	NR1I2, CYP3A5		
+etoposide	etoposide catechol	Biochemical Reaction	CYP3A4, CYP3A5			15319341, 8114683, 2167725		etoposide	
+quinone	glutathione conjugate	Biochemical Reaction	GSTP1, GSTT1			16841962, 10900222, 1315544			
+etoposide catechol	quinone	Biochemical Reaction	MPO			16841962, 15319341, 11691792, 2167725, 2972290, 2854106			
+etoposide	etoposide glucuronide	Biochemical Reaction	UGT1A1			12695347		etoposide	
+etoposide	quinone	Biochemical Reaction	PTGS1, PTGS2			3117357, 3006680		etoposide	
+quinone	TOP2B	Inhibition				24766193	TOP2B		
+etoposide catechol	TOP2A	Inhibition				23863110, 17361331	TOP2A		
+etoposide	TOP2B	Inhibition				30006062	TOP2B	etoposide	
+quinone	TOP2A	Inhibition				27533850, 21595477, 17361331, 17578914, 11531262, 9748598, 2934259	TOP2A		
+etoposide	TOP2A	Inhibition				29514855, 17578914	TOP2A	etoposide	
+etoposide glucuronide	etoposide glucuronide	Transport	ABCC3			20028753, 11581266			
+etoposide	etoposide	Transport	ABCB1, ABCC3			20309692, 20028753, 11581266		etoposide	
+glutathione conjugate	glutathione conjugate	Transport	ABCC1			9685354, 8640791, 7809167, 7954421, 7915193, 7916458, 8275468			

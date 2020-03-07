@@ -1,0 +1,30 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+NR1I3	CYP3A4	Activation				23462807, 19667267	NR1I3, CYP3A4		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+NR1I2	CYP3A4	Activation				23462807	NR1I2, CYP3A4		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+n-desethyl sunitinib	n,n-didesethyl sunitinib	Biochemical Reaction	CYP3A4			17825686			Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	n-desethyl sunitinib	Biochemical Reaction	CYP1A1, CYP1A2, CYP3A4, CYP3A5			25930089, 24566734, 22015057, 21097692, 19667267, 17825686		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	sunitinib n-oxide	Biochemical Reaction				17825686		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	ABCB1	Inhibition				18971320	ABCB1	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	ABCG2	Inhibition				18971320	ABCG2	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	FLT4	Inhibition				23462807, 22015057, 12538485	FLT4	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	KIT	Inhibition				19248971, 12538485	KIT	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	KDR	Inhibition				22015057, 19667267, 12538485	KDR	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	FLT1	Inhibition				23421954, 23511629, 21882181, 12538485	FLT1	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	FLT3	Inhibition				20683446, 19667267, 12538485	FLT3	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	PDGFRB	Inhibition				12538485	PDGFRB	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	PDGFRA	Inhibition				21097692, 12538485	PDGFRA	sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+PDGFRB	VEGF Signaling Pathway	Leads To				12538485	PDGFRB		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	mucositis	Leads To				17825686		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+PDGFRA	VEGF Signaling Pathway	Leads To				21097692, 12538485	PDGFRA		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+KIT	VEGF Signaling Pathway	Leads To				19248971, 12538485	KIT		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	Diarrhea	Leads To				17825686		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	Neutropenia	Leads To				17825686		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	Thrombocytopenia	Leads To				17825686		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	hand-foot syndrome	Leads To				17825686		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+FLT3	VEGF Signaling Pathway	Leads To				20683446, 19667267, 12538485	FLT3		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+KDR	VEGF Signaling Pathway	Leads To				22015057, 19667267, 12538485	KDR		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+FLT4	VEGF Signaling Pathway	Leads To				23462807, 22015057, 12538485	FLT4		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+FLT1	VEGF Signaling Pathway	Leads To				23421954, 23511629, 21882181, 12538485	FLT1		Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	sunitinib	Transport				20345483, 19773380, 18971320		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	sunitinib	Transport				20345483, 19773380, 18971320		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia
+sunitinib	sunitinib	Transport	ABCB1, ABCG2			25930089, 25515134, 24874929, 23462807, 21097692, 20348146, 19773380, 19667267, 19258444, 18971320, 19111841, 17185560, 12479221		sunitinib	Diarrhea,hand-foot syndrome,mucositis,Neutropenia,Thrombocytopenia

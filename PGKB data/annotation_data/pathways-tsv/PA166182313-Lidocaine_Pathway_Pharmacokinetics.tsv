@@ -1,0 +1,10 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+2,6-dimethylxylidine	4-hydroxyxylidine	Biochemical Reaction	CYP2E1			23530020, 14749694, 12019189			Methemoglobinemia
+glycinexylidide	2,6-dimethylxylidine	Biochemical Reaction				14749694			Methemoglobinemia
+monoethylglycinexylidide	glycinexylidide	Biochemical Reaction				14749694, 12019189			Methemoglobinemia
+lidocaine	2,6-dimethylxylidine	Biochemical Reaction	CES1			24751575, 12019189		lidocaine	Methemoglobinemia
+lidocaine	3-hydroxylidocaine	Biochemical Reaction	CYP1A2, CYP3A4			10901707		lidocaine	Methemoglobinemia
+2,6-dimethylxylidine	2,6-dimethylphenylhydroxylamine	Biochemical Reaction	CYP1A2, CYP2A6, CYP2B6, CYP2D6			21925229			Methemoglobinemia
+lidocaine	monoethylglycinexylidide	Biochemical Reaction	CYP1A2, CYP3A4			29263648, 14749694, 12019189, 10901707, 3443650		lidocaine	Methemoglobinemia
+monoethylglycinexylidide	2,6-dimethylxylidine	Biochemical Reaction				12019189			Methemoglobinemia
+4-hydroxyxylidine	Methemoglobinemia	Leads To				23530020			Methemoglobinemia

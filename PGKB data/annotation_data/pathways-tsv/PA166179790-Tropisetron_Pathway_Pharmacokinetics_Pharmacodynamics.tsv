@@ -1,0 +1,13 @@
+From	To	Reaction Type	Controller	Control Type	Cell Type	PMIDs	Genes	Drugs	Diseases
+serotonin	5-HT3 receptor	Activation				13460238			
+serotonin	5-HT3 receptor	Activation	tropisetron			7507039, 13460238			
+7-hydroxytropisetron	tropisetron 7-sulfate	Biochemical Reaction				1356742		7-hydroxytropisetron, tropisetron 7-sulfate	
+tropisetron	6-hydroxytropisetron	Biochemical Reaction	CYP2D6, CYP3A4			8861656, 7598739, 8013282, 1356742		6-hydroxytropisetron, tropisetron	
+5-hydroxytropisetron	tropisetron 5-sulfate	Biochemical Reaction				1356742		5-hydroxytropisetron, tropisetron 5-sulfate	
+6-hydroxytropisetron	tropisetron 6-glucuronide	Biochemical Reaction				1356742		tropisetron 6-glucuronide, 6-hydroxytropisetron	
+5-hydroxytropisetron	tropisetron 5-glucuronide	Biochemical Reaction				1356742		5-hydroxytropisetron, tropisetron 5-glucuronide	
+tropisetron	5-hydroxytropisetron	Biochemical Reaction	CYP2D6, CYP3A4			8861656, 7598739, 8013282, 1356742		5-hydroxytropisetron, tropisetron	
+tropisetron	7-hydroxytropisetron	Biochemical Reaction	CYP2D6, CYP3A4			8861656, 8013282, 1356742		7-hydroxytropisetron, tropisetron	
+7-hydroxytropisetron	tropisetron 7-glucuronide	Biochemical Reaction				1356742		tropisetron 7-glucuronide, 7-hydroxytropisetron	
+6-hydroxytropisetron	tropisetron 6-sulfate	Biochemical Reaction				1356742		6-hydroxytropisetron, tropisetron 6-sulfate	
+tropisetron	tropisetron	Transport	SLC22A1			27988869, 20921968		tropisetron	

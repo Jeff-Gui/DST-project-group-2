@@ -1,0 +1,275 @@
+{
+  "citations" : [ {
+    "@id" : "https://pharmgkb.org/literature/15093021",
+    "@context" : "https://api.pharmgkb.org/jsonld/literature.jsonld",
+    "id" : 15093021,
+    "resourceId" : "26417955",
+    "title" : "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for UGT1A1 and Atazanavir Prescribing.",
+    "_sameAs" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4785051",
+    "authors" : [ "Gammal R S", "Court M H", "Haidar C E", "Iwuchukwu O F", "Gaur A H", "Alvarellos M", "Guillemette C", "Lennox J L", "Whirl-Carrillo M", "Brummel S S", "Ratain M J", "Klein T E", "Schackman B R", "Caudle K E", "Haas D W", "Clinical Pharmacogenetics Implementation Consortium" ],
+    "hasKeyword" : true,
+    "journal" : "Clinical pharmacology and therapeutics",
+    "meshDiseases" : [ "PA444511", "PA444648", "PA446882" ],
+    "meshTerms" : [ "Atazanavir Sulfate", "Genetic Predisposition to Disease", "Genotype", "Glucuronosyltransferase", "HIV Protease Inhibitors", "Humans", "Hyperbilirubinemia", "Jaundice", "Liver", "Pharmacogenetics", "Phenotype", "Risk Assessment", "Risk Factors" ],
+    "month" : 4,
+    "nonHuman" : false,
+    "objCls" : "Literature",
+    "page" : "363-9",
+    "pgkbPublication" : true,
+    "pubDate" : "2016-04-01T00:00:00-07:00",
+    "summary" : "The antiretroviral protease inhibitor atazanavir inhibits hepatic uridine diphosphate glucuronosyltransferase (UGT) 1A1, thereby preventing the glucuronidation and elimination of bilirubin. Resultant indirect hyperbilirubinemia with jaundice can cause premature discontinuation of atazanavir. Risk for bilirubin-related discontinuation is highest among individuals who carry two UGT1A1 decreased function alleles (UGT1A1*28 or *37). We summarize published literature that supports this association and provide recommendations for atazanavir prescribing when UGT1A1 genotype is known (updates at www.pharmgkb.org).",
+    "type" : "Article",
+    "version" : 5,
+    "volume" : "99",
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/pmc/PMC4785051","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449290642,"resource":"PubMed Central","resourceId":"PMC4785051","_url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4785051"}, {"@id":"https://pharmgkb.org/crossReference/pubMed/26417955","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449290641,"resource":"PubMed","resourceId":"26417955","_url":"https://www.ncbi.nlm.nih.gov/pubmed/26417955"}, {"@id":"https://pharmgkb.org/crossReference/doi/10.1002/cpt.269","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449290643,"resource":"DOI","resourceId":"10.1002/cpt.269","_url":"http://dx.doi.org/10.1002%2Fcpt.269"} ],
+    "year" : 2016
+  } ],
+  "guideline" : {
+    "@id" : "https://pharmgkb.org/guidelineAnnotation/PA166128738",
+    "@context" : "https://api.pharmgkb.org/jsonld/guidelineAnnotation.jsonld",
+    "objCls" : "Guideline Annotation",
+    "id" : "PA166128738",
+    "name" : "Annotation of CPIC Guideline for atazanavir and UGT1A1",
+    "cancerGenome" : false,
+    "descriptiveVideoId" : "PPOa3z0wIYo",
+    "guidelineGenes" : [ {
+      "id" : 1449560756,
+      "alleles" : [ {
+        "id" : 1449560757,
+        "_label" : "*1",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558335",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558335,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Normal function",
+          "termId" : "haplotypeTags:1445558335",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115841",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115841",
+          "symbol" : "UGT1A1*1",
+          "name" : "*1",
+          "version" : 6
+        },
+        "version" : 0
+      }, {
+        "id" : 1449560758,
+        "_label" : "*28",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115842",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115842",
+          "symbol" : "UGT1A1*28",
+          "name" : "*28",
+          "version" : 6
+        },
+        "version" : 0
+      }, {
+        "id" : 1449560759,
+        "_label" : "*36",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558332",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558332,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Increased function",
+          "termId" : "haplotypeTags:1445558332",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115843",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115843",
+          "symbol" : "UGT1A1*36",
+          "name" : "*36",
+          "version" : 6
+        },
+        "version" : 0
+      }, {
+        "id" : 1449560760,
+        "_label" : "*37",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115844",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115844",
+          "symbol" : "UGT1A1*37",
+          "name" : "*37",
+          "version" : 6
+        },
+        "version" : 0
+      }, {
+        "id" : 1449560761,
+        "_label" : "*60",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558335",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558335,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Normal function",
+          "termId" : "haplotypeTags:1445558335",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115845",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115845",
+          "symbol" : "UGT1A1*60",
+          "name" : "*60",
+          "version" : 6
+        },
+        "version" : 0
+      }, {
+        "id" : 1449560762,
+        "_label" : "*80",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115850",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115850",
+          "symbol" : "UGT1A1*80",
+          "name" : "*80",
+          "version" : 6
+        },
+        "version" : 0
+      }, {
+        "id" : 1449560763,
+        "_label" : "*6",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115858",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115858",
+          "symbol" : "UGT1A1*6",
+          "name" : "*6",
+          "version" : 6
+        },
+        "version" : 0
+      }, {
+        "id" : 1449560764,
+        "_label" : "*27",
+        "function" : {
+          "@id" : "https://pharmgkb.org/ontologyTerm/alleleFunction/haplotypeTags:1445558331",
+          "@context" : "https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld",
+          "id" : 1445558331,
+          "parents" : [ ],
+          "resource" : "Allele Function",
+          "term" : "Decreased function",
+          "termId" : "haplotypeTags:1445558331",
+          "version" : 1
+        },
+        "haplotype" : {
+          "@id" : "https://pharmgkb.org/haplotype/PA166115865",
+          "@context" : "https://api.pharmgkb.org/jsonld/haplotype.jsonld",
+          "objCls" : "Haplotype",
+          "id" : "PA166115865",
+          "symbol" : "UGT1A1*27",
+          "name" : "*27",
+          "version" : 6
+        },
+        "version" : 0
+      } ],
+      "gene" : {
+        "@id" : "https://pharmgkb.org/gene/PA420",
+        "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+        "objCls" : "Gene",
+        "id" : "PA420",
+        "symbol" : "UGT1A1",
+        "name" : "UDP glucuronosyltransferase 1 family, polypeptide A1",
+        "version" : 6109
+      },
+      "version" : 0
+    } ],
+    "history" : [ {
+      "id" : 1446898242,
+      "date" : "2015-09-18T00:00:00-07:00",
+      "type" : "Create",
+      "version" : 1
+    } ],
+    "literature" : [ {"@id":"https://pharmgkb.org/literature/15093021","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15093021,"resourceId":"26417955","title":"Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for UGT1A1 and Atazanavir Prescribing.","_sameAs":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4785051","objCls":"Literature","type":"Article","xrefs":[{"@id":"https://pharmgkb.org/crossReference/pmc/PMC4785051","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449290642,"resource":"PubMed Central","resourceId":"PMC4785051","_url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4785051"},{"@id":"https://pharmgkb.org/crossReference/pubMed/26417955","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449290641,"resource":"PubMed","resourceId":"26417955","_url":"https://www.ncbi.nlm.nih.gov/pubmed/26417955"},{"@id":"https://pharmgkb.org/crossReference/doi/10.1002/cpt.269","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1449290643,"resource":"DOI","resourceId":"10.1002/cpt.269","_url":"http://dx.doi.org/10.1002%2Fcpt.269"}]}, {"@id":"https://pharmgkb.org/literature/15100914","@context":"https://api.pharmgkb.org/jsonld/literature.jsonld","id":15100914,"resourceId":"https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/","title":"CPIC® Guideline for Atazanavir and UGT1A1 – CPIC","_sameAs":"https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/","objCls":"Literature","type":"Web Page","xrefs":[{"@id":"https://pharmgkb.org/crossReference/url/https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1447983449,"resource":"URL","resourceId":"https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/","_url":"https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/"}]} ],
+    "recommendation" : true,
+    "relatedAlleles" : [ ],
+    "relatedChemicals" : [ {
+      "@id" : "https://pharmgkb.org/chemical/PA10251",
+      "@context" : "https://api.pharmgkb.org/jsonld/chemical.jsonld",
+      "objCls" : "Chemical",
+      "id" : "PA10251",
+      "name" : "atazanavir",
+      "version" : 6
+    } ],
+    "relatedGenes" : [ {
+      "@id" : "https://pharmgkb.org/gene/PA420",
+      "@context" : "https://api.pharmgkb.org/jsonld/gene.jsonld",
+      "objCls" : "Gene",
+      "id" : "PA420",
+      "symbol" : "UGT1A1",
+      "name" : "UDP glucuronosyltransferase 1 family, polypeptide A1",
+      "version" : 6109
+    } ],
+    "source" : "Clinical Pharmacogenetics Implementation Consortium",
+    "summaryMarkdown" : {
+      "id" : 1447982423,
+      "html" : "<p>The CPIC dosing guideline recommends considering advising individuals who carry two decreased function <em>UGT1A1</em> alleles about a substantial likelihood of developing jaundice, which may cause non-adherence. The dosing guideline recommends that alternative agents be considered if the risk of non-adherence due to jaundice is high. The risk of discontinuation is low and very low for individuals carrying one, or no decreased function <em>UGT1A1</em> alleles, respectively.</p>\n",
+      "version" : 0
+    },
+    "terms" : [ {"@id":"https://pharmgkb.org/ontologyTerm/cpicStatus/cpicStatus:1183847844","@context":"https://api.pharmgkb.org/jsonld/ontologyTerm.jsonld","id":1183847844,"resource":"CPIC Status","term":"A","termId":"cpicStatus:1183847844"} ],
+    "textMarkdown" : {
+      "id" : 1447982422,
+      "html" : "<p>This annotation is based on the <a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/\" target=\"_blank\">CPIC&reg; guideline for atazanavir and UGT1A1</a>.</p>\n<h3 id=\"april-2016\">April 2016</h3>\n<p><em>Advance online publication September 2015</em></p>\n<ul>\n<li>\n<p>Guidelines regarding the use of pharmacogenomic tests in determining whether atazanavir treatment should be undertaken have been published in Clinical Pharmacology and Therapeutics by the Clinical Pharmacogenetics Implementation Consortium <a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/\" target=\"_blank\">(CPIC)</a>.</p>\n</li>\n<li>\n<p>These guidelines are applicable to:</p>\n<ul>\n<li>Adults</li>\n<li>At the time of this writing there are no pediatric data regarding associations between <em>UGT1A1</em> genotypes and likelihood of bilirubin-related discontinuation of atazanavir. However, <em>UGT1A1</em> genotypes are expected to affect atazanavir-related hyperbilirubinemia similarly in adults and children. Therefore, recommendations for adults may be directly adapted to pediatric patients.</li>\n</ul>\n</li>\n<li>\n<p>Download and read:</p>\n<ul>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/atazanavir/2015/26417955.pdf\" target=\"_blank\">Clinical Pharmacogenetics Implementation Consortium Guidelines for Atazanavir and <em>UGT1A1</em> Prescribing</a>.</li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/atazanavir/2015/26417955-supplement.pdf\" target=\"_blank\">2015 Supplement</a></li>\n<li><a rel=\"noopener noreferrer\" href=\"https://cpicpgx.org/content/guideline/publication/atazanavir/2015/26417955-UGT1A1_allele_frequency.xlsx\" target=\"_blank\">UGT1A1 Allele Frequencies</a></li>\n</ul>\n</li>\n</ul>\n<h3 id=\"table-1-recommended-therapeutic-use-of-atazanavir-based-on-ugt1a1-genotype\">Table 1: Recommended therapeutic use of atazanavir based on <em>UGT1A1</em> genotype</h3>\n<p><em>Adapted from Tables 1 and 2 of the 2015 guideline manuscript.</em></p>\n<table class=\"table\">\n<thead>\n<tr><th>Likely phenotype</th><th>Genotypes</th><th>Examples of diplotypes</th><th>Implications for phenotypic measures</th><th>Recommendations for atazanavir therapy</th><th>Classification of recommendation for atazanavir therapy</th></tr>\n</thead>\n<tbody>\n<tr><td>Extensive Metabolizer</td><td>An individual carrying 2 reference <sup>b</sup> function and/or increased function alleles; or individuals of genotype CC at <a href=\"/variant/PA166155607\">rs887829</a></td><td>*1/*1; *1/*36; *36/*36; <a href=\"/variant/PA166155607\">rs887829</a> CC</td><td>Reference <sup>c</sup> UGT1A1 activity; very low likelihood of bilirubin-related discontinuation of atazanavir.</td><td>There is no need to avoid prescribing of atazanavir based on <em>UGT1A1</em> genetic test result.</td><td>Strong</td></tr>\n<tr><td>Intermediate Metabolizer</td><td>An individual carrying one reference <sup>b</sup> function (*1) <sup>c</sup> or increased function allele (*36) plus one decreased function allele (*6, *28, *37). Alternatively identified by heterozygosity for <a href=\"/variant/PA166155607\">rs887829</a> C/T.</td><td>*1/*28; *1/*37; *36/*28; *36/*37; <a href=\"/variant/PA166155607\">rs887829</a> C/T, *1/*6</td><td>Somewhat decreased UGT1A1 activity; low likelihood of bilirubin-related discontinuation of atazanavir.</td><td>There is no need to avoid prescribing of atazanavir based on <em>UGT1A1</em> genetic test result. Inform the patient that some patients stop atazanavir because of jaundice (yellow eyes and skin), but that this patient’s genotype makes this unlikely</td><td>Strong</td></tr>\n<tr><td>Poor Metabolizer</td><td>An individual carrying two decreased function alleles (*6, *28, *37). Alternatively identified by homozygosity for <a href=\"/variant/PA166155607\">rs887829</a> T/T (*80/*80)</td><td>*28/*28; *28/*37; *37/*37; <a href=\"/variant/PA166155607\">rs887829</a> T/T (*80/*80), *6/*6 <sup>a</sup></td><td>Markedly decreased UGT1A1 activity; high likelihood of bilirubin-related discontinuation of atazanavir.</td><td>Consider an alternative agent particularly where jaundice would be of concern to the patient.</td><td>Strong</td></tr>\n</tbody>\n</table>\n<p><sup>a</sup> Homozygosity for UGT1A1*6, which occurs almost exclusively in individuals of Asian descent, is associated with Gilbert syndrome. However, at this time, it is unclear if patients with this diplotype are at increased risk of severe atazanavir-associated hyperbilirubinemia.</p>\n<p><sup>b</sup> “reference” function refers to the UGT1A1 alleles to which other alleles are compared.</p>\n<p><sup>c</sup> The reference function *1 allele is a fully functional refers to the <a href=\"/variant/PA166159020\">rs8175347</a> TA6 allele.</p>\n",
+      "version" : 13
+    },
+    "userId" : "whaleyr",
+    "version" : 41,
+    "xrefs" : [ {"@id":"https://pharmgkb.org/crossReference/url/https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/","@context":"https://api.pharmgkb.org/jsonld/crossReference.jsonld","id":1447983449,"resource":"URL","resourceId":"https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/","_url":"https://cpicpgx.org/guidelines/guideline-for-atazanavir-and-ugt1a1/"} ]
+  }
+}
