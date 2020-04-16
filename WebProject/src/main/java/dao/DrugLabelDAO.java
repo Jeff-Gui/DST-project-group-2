@@ -1,4 +1,8 @@
-package DST2.Group2.DAO;
+package dao;
+
+import DBmtd.DBmethods;
+import bean.DrugLabelBean;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,9 +10,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import DST2.Group2.Database.database;
-import DST2.Group2.bean.DrugLabelBean;
 
 public class DrugLabelDAO {
 	
@@ -36,7 +37,7 @@ public class DrugLabelDAO {
 	}
 	
 	public static List<DrugLabelBean> getDrugLabel() {
-		Connection postgres=database.connpostgres();
+		Connection postgres= DBmethods.getConnection();
 		List<DrugLabelBean> allLabels=new ArrayList<>();
 		try {
 			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,alternate_drug_availabel, source, summary_markdown from drugNames");

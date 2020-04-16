@@ -1,16 +1,16 @@
-package DST2.Group2.bean;
+package bean;
 
 import java.util.Date;
 
-public class Sample {
+public class SampleBean {
     private int id;
     private Date createdAt;
     private String uploadedBy;
 
-    public Sample() {
+    public SampleBean() {
     }
 
-    public Sample(int id, Date createdAt, String uploadedBy) {
+    public SampleBean(int id, Date createdAt, String uploadedBy) {
         this.id = id;
         this.createdAt = createdAt;
         this.uploadedBy = uploadedBy;

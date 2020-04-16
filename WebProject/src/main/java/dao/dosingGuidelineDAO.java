@@ -1,4 +1,7 @@
-package DST2.Group2.DAO;
+package dao;
+
+import DBmtd.DBmethods;
+import bean.DosingGuidelineBean;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,9 +10,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import DST2.Group2.Database.database;
-import DST2.Group2.bean.DosingGuidelineBean;
 
 public class dosingGuidelineDAO {
 	public static List<DosingGuidelineBean> searchByDrug(String drugName, List<DosingGuidelineBean> dosingGuidelineBeans) {
@@ -35,7 +35,7 @@ public class dosingGuidelineDAO {
 	}
 	
 	public static List<DosingGuidelineBean> getDosingGuideline() {
-		Connection postgres=database.connpostgres();
+		Connection postgres = DBmethods.getConnection();
 		List<DosingGuidelineBean> allGuidelines=new ArrayList<>();
 		try {
 			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,drug, source,recommendation,summary_markdown from dosing_guideline_name");

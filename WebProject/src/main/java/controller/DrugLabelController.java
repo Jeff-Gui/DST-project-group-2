@@ -1,4 +1,4 @@
-package DST2.Group2.Controller;
+package controller;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,18 +10,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import DST2.Group2.DAO.DrugLabelDAO;
-import DST2.Group2.DAO.VarDrugAnnDAO;
-import DST2.Group2.DAO.VcfDAO;
-import DST2.Group2.DAO.dosingGuidelineDAO;
-import DST2.Group2.DAO.sampleDAO;
-import DST2.Group2.bean.DosingGuidelineBean;
-import DST2.Group2.bean.DrugLabelBean;
-import DST2.Group2.bean.Sample;
-import DST2.Group2.bean.VarDrugAnn;
+import dao.DrugLabelDAO;
+import dao.VarDrugAnnDAO;
+import dao.dosingGuidelineDAO;
+import dao.SampleDAO;
+import bean.DosingGuidelineBean;
+import bean.DrugLabelBean;
+import bean.SampleBean;
+import bean.VarDrugAnnBean;
 import DST2.Group2.servlet.DispatchServlet;
+import dao.VepDAO;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-public class MatchDrugLabel {
+@Controller
+@RequestMapping("/vep/labelAndguideline")
+public class DrugLabelController {
 	public void register(DispatchServlet.Dispatcher dispatcher) {
 		//map urls
         dispatcher.registerPostMapping("/upload", this::uploadVcfOutput);
@@ -36,17 +40,21 @@ public class MatchDrugLabel {
     	System.out.println("matchingindex");
     	request.getRequestDispatcher("/matching_index.jsp").forward(request, response);
     }
+
+    @RequestMapping("/samples")
 	public void samples(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	System.out.println("samples");
-    	List<Sample> samples = sampleDAO.findAll();
+    	List<SampleBean> samples = SampleDAO.findAll();
     	//pass to jsp
         request.setAttribute("samples", samples);
         request.getRequestDispatcher("/samples.jsp").forward(request, response);
     }
 	List<DrugLabelBean> matchedDrugLabelBean =null;
 	List<DosingGuidelineBean> matchedGuidelines =null;
-	List<VarDrugAnn> matchedAnns=null;
-	
+	List<VarDrugAnnBean> matchedAnns=null;
+    private VepDAO vepDAO = new VepDAO();
+
+    @RequestMapping("/matching")
 	public void matching(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         //set in jsp
 		String sampleIdParameter = request.getParameter("sampleId");
@@ -68,16 +76,16 @@ public class MatchDrugLabel {
         }
         List<DrugLabelBean> drugLabelBeans = DrugLabelDAO.getDrugLabel();
         List<DosingGuidelineBean> dosingGuidelineBeans = dosingGuidelineDAO.getDosingGuideline();
-        List<VarDrugAnn> VarDrugAnns=VarDrugAnnDAO.getAnn();
+        List<VarDrugAnnBean> VarDrugAnns=VarDrugAnnDAO.getAnn();
 
         List<DrugLabelBean> matchedDrugLabelBean = doMatchDrugLabel(refGenes, drugLabelBeans);
         List<DosingGuidelineBean> matchedDosingGuidelineBean = doMatchDosingGuideline(refGenes, dosingGuidelineBeans);
-        List<VarDrugAnn> matchedAnn=doMatchVarDrugAnn(refGenes,VarDrugAnns);
+        List<VarDrugAnnBean> matchedAnn=doMatchVarDrugAnn(refGenes,VarDrugAnns);
         //pass to jsp
         request.setAttribute("matchedDrugLabel", matchedDrugLabelBean);
         request.setAttribute("matchedDosingGuideline", matchedDosingGuidelineBean);
         request.setAttribute("matchedVarDrugAnn",matchedAnn);
-        request.setAttribute("sample", sampleDAO.findById(sampleId));
+        request.setAttribute("sample", SampleDAO.findById(sampleId));
         request.getRequestDispatcher("/matching_index_search.jsp").forward(request, response);
     }
 	
@@ -116,9 +124,9 @@ public class MatchDrugLabel {
         return matchedGuidelines;
     }
 	
-	private List<VarDrugAnn> doMatchVarDrugAnn(List<String> refGenes,List<VarDrugAnn> VarDrugAnns) {
-		List<VarDrugAnn> matchedAnns=new ArrayList<>();
-		for (VarDrugAnn ann:VarDrugAnns) {
+	private List<VarDrugAnnBean> doMatchVarDrugAnn(List<String> refGenes,List<VarDrugAnnBean> VarDrugAnns) {
+		List<VarDrugAnnBean> matchedAnns=new ArrayList<>();
+		for (VarDrugAnnBean ann:VarDrugAnns) {
 			boolean matched = false;
 			String Gene=ann.getGene();
             for (String gene: refGenes) {
@@ -132,12 +140,14 @@ public class MatchDrugLabel {
 		}
 		return matchedAnns;
 	}
+
+	@RequestMapping("/searchDrug")
 	public void searchDrug(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	//be consistent with jsp
     	String drug=request.getParameter("drug");
     	List<DrugLabelBean> filteredDrugLabelBean =null;
     	List<DosingGuidelineBean> filteredDosingGuidelineBean =null;
-    	List<VarDrugAnn> filteredVarDrugAnn=null;
+    	List<VarDrugAnnBean> filteredVarDrugAnn=null;
     	filteredDrugLabelBean =DrugLabelDAO.searchByDrug(drug, matchedDrugLabelBean);
     	filteredDosingGuidelineBean =dosingGuidelineDAO.searchByDrug(drug, matchedGuidelines);
     	filteredVarDrugAnn=VarDrugAnnDAO.searchByDrug(drug,matchedAnns);
@@ -146,12 +156,14 @@ public class MatchDrugLabel {
     	request.setAttribute("filteredDosingGuideline", filteredDosingGuidelineBean);
     	request.setAttribute("filteredVarDrugAnn",filteredVarDrugAnn);
     	}
+
+    @RequestMapping("/searchPhen")
 	public void searchPhen(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	//be consistent with jsp
     	String phen=request.getParameter("phenotype");
     	List<DrugLabelBean> filteredDrugLabelBean =null;
     	List<DosingGuidelineBean> filteredDosingGuidelineBean =null;
-    	List<VarDrugAnn> filteredVarDrugAnn=null;
+    	List<VarDrugAnnBean> filteredVarDrugAnn=null;
     	filteredDrugLabelBean =DrugLabelDAO.searchByPhenotype(phen, matchedDrugLabelBean);
     	filteredDosingGuidelineBean =dosingGuidelineDAO.searchByPhenotype(phen, matchedGuidelines);
     	filteredVarDrugAnn=VarDrugAnnDAO.searchByPhen(phen, matchedAnns);
@@ -182,16 +194,9 @@ public class MatchDrugLabel {
         InputStream inputStream = requestPart.getInputStream();
         byte[] bytes = inputStream.readAllBytes();
         String content = new String(bytes);
-        int sampleId = sampleDAO.save(uploadedBy);
-        VcfDAO.save(sampleId, content);
+        int sampleId = SampleDAO.save(uploadedBy);
+        vepDAO.save(sampleId, content);
         response.sendRedirect("matching?sampleId=" + sampleId);
     }
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

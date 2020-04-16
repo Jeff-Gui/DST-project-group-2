@@ -1,4 +1,4 @@
-package DST2.Group2.bean;
+package bean;
 
 public class DrugLabelBean {
 	private String variantGene;
@@ -20,30 +20,37 @@ public class DrugLabelBean {
 	public boolean gethasAlternativeDrug() {
 		return hasAlternativeDrug;
 	}
-	public void sethasAlternativeDrug(boolean hasAlternativeDrug) {
-		this.hasAlternativeDrug = hasAlternativeDrug;
-	}
+
+	public void sethasAlternativeDrug(boolean hasAlternativeDrug) { this.hasAlternativeDrug = hasAlternativeDrug; }
+
 	public String getvariantGene() {
 		return variantGene;
 	}
+
 	public void setvariantGene(String variantGene) {
 		this.variantGene = variantGene;
 	}
+
 	public String getDrugName() {
 		return drugName;
 	}
+
 	public void setDrugName(String drugName) {
 		this.drugName = drugName;
 	}
+
 	public String getSource() {
 		return source;
 	}
+
 	public void setSource(String source) {
 		this.source = source;
 	}
+
 	public String getSummary_markdown() {
 		return summary_markdown;
 	}
+
 	public void setSummary_markdown(String summary_markdown) {
 		this.summary_markdown = summary_markdown;
 	}
