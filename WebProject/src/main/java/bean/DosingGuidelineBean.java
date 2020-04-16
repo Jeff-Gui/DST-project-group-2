@@ -1,14 +1,14 @@
 package DST2.Group2.bean;
 
-public class DosingGuideline {
+public class DosingGuidelineBean {
 	private String variant_gene;
 	private String name;
 	private String drug;
 	private String source;
 	private boolean recommendation;
 	private String summary_markdown;
-	public DosingGuideline(String variant_gene, String name,String drug, String source, boolean recommendation,
-			String summary_markdown) {
+	public DosingGuidelineBean(String variant_gene, String name, String drug, String source, boolean recommendation,
+							   String summary_markdown) {
 		super();
 		this.variant_gene = variant_gene;
 		this.name=name;

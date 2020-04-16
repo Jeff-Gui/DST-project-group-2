@@ -1,6 +1,6 @@
 package DST2.Group2.bean;
 
-public class DrugLabel {
+public class DrugLabelBean {
 	private String variantGene;
 	private String drugName;
 	private String source;
@@ -8,8 +8,8 @@ public class DrugLabel {
 	private String summary_markdown;
 
 	
-	public DrugLabel(String variantGene, String drugName, String source, boolean hasAlternativeDrug,
-			String summary_markdown) {
+	public DrugLabelBean(String variantGene, String drugName, String source, boolean hasAlternativeDrug,
+						 String summary_markdown) {
 		
 		this.variantGene = variantGene;
 		this.drugName = drugName;

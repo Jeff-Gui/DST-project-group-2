@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Controller
-@RequestMapping("/vep")
+@RequestMapping("/vep/clinic_ann")
 public class VepMatchController {
 
     private static final Logger log = LoggerFactory.getLogger(VepMatchController.class);
@@ -51,8 +51,14 @@ public class VepMatchController {
         vepDAO.save(0, content);
     }
 
-    @RequestMapping("/matching")
-    public String matching(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    @RequestMapping("matchingIndex")
+    public String matchingIndex(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("matchingindex");
+        return "Hello";
+    }
+
+    @RequestMapping("/matching_clinic_ann")
+    public String matching_clinic_ann(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         /**
          * To code:
          * 1. handle sample Id error: direct to page to view all samples (add samples.jsp)?

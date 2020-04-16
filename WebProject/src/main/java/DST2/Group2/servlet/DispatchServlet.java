@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DST2.Group2.Controller.IndexController;
-import DST2.Group2.Controller.MatchDrugLabel;
+import controller.DrugLabelController;
 
 public class DispatchServlet extends HttpServlet {
 
@@ -62,7 +62,7 @@ public class DispatchServlet extends HttpServlet {
         //KnowledgeBaseController knowledgeBaseController = new KnowledgeBaseController();
         //knowledgeBaseController.register(dispatcher);
 
-        MatchDrugLabel matchingController = new MatchDrugLabel();
+        DrugLabelController matchingController = new DrugLabelController();
         matchingController.register(dispatcher);
 
     }
