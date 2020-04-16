@@ -1,8 +1,8 @@
 package DBmtd;
 
+import servlet.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import Servlet.AppConfig;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

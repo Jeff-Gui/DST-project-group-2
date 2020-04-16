@@ -12,9 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.sql.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 @Controller
 @RequestMapping("/vep")
@@ -50,33 +56,34 @@ public class VepMatchController {
         /**
          * To code:
          * 1. handle sample Id error: direct to page to view all samples (add samples.jsp)?
+         * (change "hello" below)
          */
         String sampleIdParameter = request.getParameter("sampleId");
         String sampleType = request.getParameter("sampleType");
 
         if (sampleIdParameter == null | sampleType == null) {
             // if sample Id or sample type is not specified, go to sample page (view all samples)
-            return "samples";
+            return "hello";
         }
         Integer sampleId;
         try {
             // if sample Id format is wrong, go to sample page (view all samples)
             sampleId = Integer.valueOf(sampleIdParameter);
         } catch (NumberFormatException e) {
-            return "samples";
+            return "hello";
         }
         ArrayList<ArrayList<String>> sampleVep = new ArrayList<>();
         sampleVep = vepDAO.getsampleGenes(sampleId);
         if (sampleVep.isEmpty()) {
             // if sample is not in the database, go to sample page (view all samples)
-            return "samples";
+            return "hello";
         }
 
         List<Object> matched_clinic_ann_by_gene = doMatch_Gene(sampleVep);
         List<Object> matched_clinic_ann_by_snp = doMatch_SNP(sampleVep);
         request.setAttribute("matched_clinic_ann_by_gene", matched_clinic_ann_by_gene);
         request.setAttribute("matched_clinic_ann_by_snp",matched_clinic_ann_by_snp);
-        return "Hello";
+        return "hello";
     }
 
 
@@ -184,9 +191,6 @@ public class VepMatchController {
         rt.add(matched_sampleInfo); // 185 genes matched from clinic annotation
 
         return rt;
-    }
-
-    private void test_match(List<Object> objects){
     }
 
     private void checkDup(HashMap<String, HashMap<String, String>> matched_sampleInfo, ArrayList<String> row, String gene) {
