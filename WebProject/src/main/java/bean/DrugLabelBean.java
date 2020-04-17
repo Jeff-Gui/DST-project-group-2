@@ -6,17 +6,19 @@ public class DrugLabelBean {
 	private String source;
 	private boolean hasAlternativeDrug;
 	private String summary_markdown;
+	private String id;
 
 	
-	public DrugLabelBean(String variantGene, String drugName, String source, boolean hasAlternativeDrug,
+	public DrugLabelBean(String id, String variantGene, String drugName, String source, boolean hasAlternativeDrug,
 						 String summary_markdown) {
-		
+		this.id = id;
 		this.variantGene = variantGene;
 		this.drugName = drugName;
 		this.source = source;
 		this.hasAlternativeDrug = hasAlternativeDrug;
 		this.summary_markdown = summary_markdown;
 	}
+
 	public boolean gethasAlternativeDrug() {
 		return hasAlternativeDrug;
 	}
@@ -54,7 +56,22 @@ public class DrugLabelBean {
 	public void setSummary_markdown(String summary_markdown) {
 		this.summary_markdown = summary_markdown;
 	}
-	
-	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public boolean equals(Object obj) {
+		try {
+			DrugLabelBean external = (DrugLabelBean) obj;
+			return this.id.equals(external.getId());
+		} catch (Exception e) {
+			return false;
+		}
+	}
 	
 } 

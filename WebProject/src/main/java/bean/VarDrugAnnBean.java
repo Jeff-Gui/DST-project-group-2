@@ -67,7 +67,13 @@ public class VarDrugAnnBean {
 		this.annotation = annotation;
 	}
 
-	
-	
-	
+	public boolean equals(Object obj) {
+		try {
+			VarDrugAnnBean external = (VarDrugAnnBean) obj;
+			return this.variantID.equals(external.getVariantID());
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
 }

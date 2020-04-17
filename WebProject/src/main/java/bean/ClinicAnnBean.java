@@ -109,14 +109,9 @@ public class ClinicAnnBean {
     public boolean equals(Object obj) {
         try {
             ClinicAnnBean external = (ClinicAnnBean) obj;
-            if (this.id.equals(external.getId())){
-                return true;
-            } else {
-                return false;
-            }
+            return this.id.equals(external.getId());
         } catch (Exception e) {
             return false;
         }
-
     }
 }

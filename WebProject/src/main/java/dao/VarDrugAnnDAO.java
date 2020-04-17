@@ -13,7 +13,7 @@ import java.util.List;
 
 public class VarDrugAnnDAO {
 
-	public static List<VarDrugAnnBean> searchByDrug(String drug, List<VarDrugAnnBean> anns) {
+	public List<VarDrugAnnBean> searchByDrug(String drug, List<VarDrugAnnBean> anns) {
 		Iterator<VarDrugAnnBean> iterator=anns.iterator();
 		while(iterator.hasNext()) {
 			VarDrugAnnBean ann=iterator.next();
@@ -24,7 +24,7 @@ public class VarDrugAnnDAO {
 		return anns;
 	}
 	
-	public static List<VarDrugAnnBean> searchByPhen(String phen, List<VarDrugAnnBean> anns) {
+	public List<VarDrugAnnBean> searchByPhen(String phen, List<VarDrugAnnBean> anns) {
 		Iterator<VarDrugAnnBean> iterator=anns.iterator();
 		while(iterator.hasNext()) {
 			VarDrugAnnBean ann=iterator.next();
@@ -34,7 +34,7 @@ public class VarDrugAnnDAO {
 		}
 		return anns;
 	}
-	public static List<VarDrugAnnBean> getAnn() {
+	public List<VarDrugAnnBean> getAnn() {
 		Connection postgres= DBmethods.getConnection();
 		List<VarDrugAnnBean> allAnns=new ArrayList<>();
 		try {

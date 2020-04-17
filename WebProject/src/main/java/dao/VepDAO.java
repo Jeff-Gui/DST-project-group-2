@@ -89,11 +89,11 @@ public class VepDAO {
                     String lc = resultSet.getString(1);
                     // re-format location from Ch... to NC...
                     String lc_trans = lc.substring(lc.indexOf(":")); // constant string after colon
-                    row.add(transDic.get(lc.substring(0, lc.indexOf(":"))) + lc_trans); // location
-                    row.add(resultSet.getString(2)); // allele
+                    row.add(transDic.get(lc.substring(0, lc.indexOf(":"))) + lc_trans); // 1st field: location
+                    row.add(resultSet.getString(2)); // 2nd field: allele
 
                     String ori_gene = resultSet.getString(3);
-                    row.add(ori_gene); // Ensembl ID
+                    row.add(ori_gene); // 3rd field: Ensembl ID
 
                     // transfer Ensembl ID to gene symbol
                     if (!ori_gene.equals("-")) {
@@ -112,7 +112,7 @@ public class VepDAO {
                         row.add("-");
                     }
 
-                    results.add(row);
+                    results.add(row); // 4th field: gene symbol
 
                 }
 

@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class dosingGuidelineDAO {
-	public static List<DosingGuidelineBean> searchByDrug(String drugName, List<DosingGuidelineBean> dosingGuidelineBeans) {
+public class DosingGuidelineDAO {
+	public List<DosingGuidelineBean> searchByDrug(String drugName, List<DosingGuidelineBean> dosingGuidelineBeans) {
 		Iterator<DosingGuidelineBean> iterator= dosingGuidelineBeans.iterator();
 		while(iterator.hasNext()) {
 			DosingGuidelineBean dosingGuidelineBean =iterator.next();
@@ -22,7 +22,7 @@ public class dosingGuidelineDAO {
 		}
 		return dosingGuidelineBeans;
 	}
-	public static List<DosingGuidelineBean> searchByPhenotype(String phenotype, List<DosingGuidelineBean> dosingGuidelineBeans) {
+	public List<DosingGuidelineBean> searchByPhenotype(String phenotype, List<DosingGuidelineBean> dosingGuidelineBeans) {
 		Iterator<DosingGuidelineBean> iterator= dosingGuidelineBeans.iterator();
 		while(iterator.hasNext()) {
 			DosingGuidelineBean dosingGuidelineBean =iterator.next();
@@ -34,20 +34,20 @@ public class dosingGuidelineDAO {
 		return dosingGuidelineBeans;
 	}
 	
-	public static List<DosingGuidelineBean> getDosingGuideline() {
+	public List<DosingGuidelineBean> getDosingGuideline() {
 		Connection postgres = DBmethods.getConnection();
 		List<DosingGuidelineBean> allGuidelines=new ArrayList<>();
 		try {
-			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,drug, source,recommendation,summary_markdown from dosing_guideline_name");
+			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,id,drug, source,recommendation,summary_markdown from dosing_guideline_name");
 			ResultSet rs=preparedStatement.executeQuery();
 			while (rs.next()) {
-				String gene=null;
+				String id = rs.getString("id");
 				String name=rs.getString("name");
 				String drug=rs.getString("drug");
 				String source=rs.getString("source");
 				boolean rec=rs.getBoolean("recommendation");
 				String summary_markdown=rs.getString("summary_markdown");
-				DosingGuidelineBean dosingGuidelineBean =new DosingGuidelineBean(gene,name,drug,source,rec,summary_markdown);
+				DosingGuidelineBean dosingGuidelineBean =new DosingGuidelineBean(id, null,name,drug,source,rec,summary_markdown);
 				allGuidelines.add(dosingGuidelineBean);
 			}
 		

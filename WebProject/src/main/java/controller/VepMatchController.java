@@ -147,7 +147,7 @@ public class VepMatchController {
                                 }
 
                                 String gene = row.get(3);
-                                checkDup(matched_sampleInfo, row, gene);
+                                updateSampleReturn(matched_sampleInfo, row, gene);
                             }
                         }
                     }
@@ -186,7 +186,7 @@ public class VepMatchController {
                         matchedClinicAnnBeans.add(clinicAnnBean);
                     }
 
-                    checkDup(matched_sampleInfo, row, gene);
+                    updateSampleReturn(matched_sampleInfo, row, gene);
                 }
             }
         }
@@ -199,7 +199,7 @@ public class VepMatchController {
         return rt;
     }
 
-    private void checkDup(HashMap<String, HashMap<String, String>> matched_sampleInfo, ArrayList<String> row, String gene) {
+    private void updateSampleReturn(HashMap<String, HashMap<String, String>> matched_sampleInfo, ArrayList<String> row, String gene) {
         // refactored by IDEA automatically
         if (matched_sampleInfo.containsKey(gene)){
             matched_sampleInfo.get(gene).put(row.get(0), row.get(1));

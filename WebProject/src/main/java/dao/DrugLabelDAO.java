@@ -14,7 +14,7 @@ import java.util.List;
 public class DrugLabelDAO {
 	
 	
-	public static List<DrugLabelBean> searchByDrug(String drugName, List<DrugLabelBean> drugLabelBeans) {
+	public List<DrugLabelBean> searchByDrug(String drugName, List<DrugLabelBean> drugLabelBeans) {
 		Iterator<DrugLabelBean> iterator= drugLabelBeans.iterator();
 		while(iterator.hasNext()) {
 			DrugLabelBean drugLabelBean =iterator.next();
@@ -24,7 +24,7 @@ public class DrugLabelDAO {
 		}
 		return drugLabelBeans;
 	}
-	public static List<DrugLabelBean> searchByPhenotype(String phenotype, List<DrugLabelBean> drugLabelBeans) {
+	public List<DrugLabelBean> searchByPhenotype(String phenotype, List<DrugLabelBean> drugLabelBeans) {
 		Iterator<DrugLabelBean> iterator= drugLabelBeans.iterator();
 		while(iterator.hasNext()) {
 			DrugLabelBean drugLabelBean =iterator.next();
@@ -36,7 +36,7 @@ public class DrugLabelDAO {
 		return drugLabelBeans;
 	}
 	
-	public static List<DrugLabelBean> getDrugLabel() {
+	public List<DrugLabelBean> getDrugLabel() {
 		Connection postgres= DBmethods.getConnection();
 		List<DrugLabelBean> allLabels=new ArrayList<>();
 		try {
