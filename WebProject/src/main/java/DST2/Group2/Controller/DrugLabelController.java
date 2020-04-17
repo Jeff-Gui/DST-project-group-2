@@ -97,7 +97,7 @@ public class DrugLabelController {
                 if (drugLabelBean.getSummary_markdown().contains(gene)) {
                     drugLabelBean.setvariantGene(gene);
                     if (!matchedLabels.contains(drugLabelBean)){ matchedLabels.add(drugLabelBean); }
-                    updateSampleout(matched_sampleInfo, row, gene);
+                    updateSampleReturn(matched_sampleInfo, row, gene);
                 }
             }
         }
@@ -106,8 +106,7 @@ public class DrugLabelController {
         rt.add(matched_sampleInfo);
         return rt;
     }
-	
-	
+
 	private ArrayList<Object> doMatchDosingGuideline(ArrayList<ArrayList<String>> refGenes) {
         List<DosingGuidelineBean> dosingGuidelineBeans = dosingGuidelineDAO.getDosingGuideline();
         ArrayList<Object> rt = new ArrayList<>();
@@ -119,7 +118,7 @@ public class DrugLabelController {
                 String gene = row.get(3); // 4st field: gene symbol
                 if (guideline.getSummary_markdown().contains(gene)) {
                     if (!matchedGuidelines.contains(guideline)){ matchedGuidelines.add(guideline); }
-                    updateSampleout(matched_sampleInfo, row, gene);
+                    updateSampleReturn(matched_sampleInfo, row, gene);
                 }
             }
         }
@@ -141,7 +140,7 @@ public class DrugLabelController {
                 String gene = row.get(3);
                 if (Gene.contains(gene)) {
                     if (!matchedAnns.contains(ann)){ matchedAnns.add(ann); }
-                    updateSampleout(matched_sampleInfo, row, gene);
+                    updateSampleReturn(matched_sampleInfo, row, gene);
                 }
             }
 		}
@@ -185,7 +184,7 @@ public class DrugLabelController {
         return "Hello";
     }
 
-    public void updateSampleout(HashMap<String, HashMap<String, String>> matched_sampleInfo, ArrayList<String> row, String gene) {
+    public void updateSampleReturn(HashMap<String, HashMap<String, String>> matched_sampleInfo, ArrayList<String> row, String gene) {
         // refactored by IDEA automatically
         if (matched_sampleInfo.containsKey(gene)){
             matched_sampleInfo.get(gene).put(row.get(0), row.get(1));
