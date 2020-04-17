@@ -1,4 +1,4 @@
-package controller;
+package DST2.Group2.Controller;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,6 +27,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/vep/labelAndguideline")
 public class DrugLabelController {
 
+    List<DrugLabelBean> matchedDrugLabelBean =null;
+    List<DosingGuidelineBean> matchedGuidelines =null;
+    List<VarDrugAnnBean> matchedAnns=null;
+
+    private VepDAO vepDAO = new VepDAO();
+    private DosingGuidelineDAO dosingGuidelineDAO = new DosingGuidelineDAO();
+    private DrugLabelDAO drugLabelDAO = new DrugLabelDAO();
+    private VarDrugAnnDAO varDrugAnnDAO = new VarDrugAnnDAO();
+    private SampleDAO sampleDAO = new SampleDAO();
+
     @RequestMapping("/matchingIndex")
 	public void matchingIndex(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	System.out.println("matchingindex");
@@ -41,14 +51,7 @@ public class DrugLabelController {
         request.setAttribute("samples", samples);
         request.getRequestDispatcher("/samples.jsp").forward(request, response);
     }
-	List<DrugLabelBean> matchedDrugLabelBean =null;
-	List<DosingGuidelineBean> matchedGuidelines =null;
-	List<VarDrugAnnBean> matchedAnns=null;
 
-    private VepDAO vepDAO = new VepDAO();
-    private DosingGuidelineDAO dosingGuidelineDAO = new DosingGuidelineDAO();
-    private DrugLabelDAO drugLabelDAO = new DrugLabelDAO();
-    private VarDrugAnnDAO varDrugAnnDAO = new VarDrugAnnDAO();
 
     @RequestMapping("/matching")
 	public String matching(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -214,7 +217,7 @@ public class DrugLabelController {
         InputStream inputStream = requestPart.getInputStream();
         byte[] bytes = inputStream.readAllBytes();
         String content = new String(bytes);
-        int sampleId = SampleDAO.save(uploadedBy);
+        int sampleId = sampleDAO.save(uploadedBy);
         vepDAO.save(sampleId, content);
         response.sendRedirect("matching?sampleId=" + sampleId);
     }

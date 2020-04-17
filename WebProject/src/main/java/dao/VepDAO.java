@@ -2,7 +2,7 @@ package dao;
 
 import DBmtd.DBmethods;
 import bean.GeneBean;
-import controller.VepMatchController;
+import DST2.Group2.Controller.VepMatchController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

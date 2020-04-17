@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 
 public class SampleDAO {
-	public static int save(String uploadedBy) {
+	public int save(String uploadedBy) {
         AtomicInteger key = new AtomicInteger();
         Connection connection= DBmethods.getConnection();
             try {

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DST2.Group2.Controller.IndexController;
-import controller.DrugLabelController;
+import DST2.Group2.Controller.DrugLabelController;
 
 public class DispatchServlet extends HttpServlet {
 

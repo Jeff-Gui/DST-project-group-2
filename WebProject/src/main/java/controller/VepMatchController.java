@@ -1,9 +1,8 @@
 package controller;
 
 import DBmtd.DBmethods;
-import bean.ClinicAnnBean;
-import dao.ClinicAnnDAO;
-import dao.VepDAO;
+import bean.*;
+import dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -12,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileInputStream;
+import javax.servlet.http.Part;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,35 +29,61 @@ public class VepMatchController {
 
     private VepDAO vepDAO = new VepDAO();
     private ClinicAnnDAO clinicAnnDAO = new ClinicAnnDAO();
+    private DosingGuidelineDAO dosingGuidelineDAO = new DosingGuidelineDAO();
+    private DrugLabelDAO drugLabelDAO = new DrugLabelDAO();
+    private VarDrugAnnDAO varDrugAnnDAO = new VarDrugAnnDAO();
+    private SampleDAO sampleDAO = new SampleDAO();
+
+    List<DrugLabelBean> matchedDrugLabelBean =null;
+    List<DosingGuidelineBean> matchedGuidelines =null;
+    List<VarDrugAnnBean> matchedAnns=null;
 
     @RequestMapping("/upload_vep")
-    public void upload_vep(){
+    public void upload_vep(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         /**
          * To edit: upload user file and sample number
          */
-        File file = new File("/Users/jefft/Software/annovar/SK-HEP-1_vep.vcf");
-//      332009 records
-        Long fileLengthLong = file.length();
-        byte[] fileContent = new byte[fileLengthLong.intValue()];
-        try {
-            FileInputStream inputStream = new FileInputStream(file);
-            inputStream.read(fileContent);
-            inputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+        System.out.println("uploadvcf");
+
+        String uploadedBy = request.getParameter("uploaded_by");
+        if (uploadedBy == null || uploadedBy.isEmpty()) {
+            request.setAttribute("validateError", "Uploaded by can not be blank");
+            request.getRequestDispatcher("/matching_index_error.jsp").forward(request, response);
+            return;
         }
-        String content = new String(fileContent);
-        vepDAO.save(0, content);
+        Part requestPart = request.getPart("vcf");
+        if (requestPart == null) {
+            request.setAttribute("validateError", "vcf output file can not be blank");
+            request.getRequestDispatcher("/matching_index_error.jsp").forward(request, response);
+            return;
+        }
+
+        InputStream inputStream = requestPart.getInputStream();
+        byte[] bytes = inputStream.readAllBytes();
+        String content = new String(bytes);
+        int sampleId = sampleDAO.save(uploadedBy);
+        vepDAO.save(sampleId, content);
+        response.sendRedirect("matching?sampleId=" + sampleId);
+
     }
 
-    @RequestMapping("matchingIndex")
-    public String matchingIndex(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    @RequestMapping("/samples")
+    public void samples(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("samples");
+        List<SampleBean> samples = SampleDAO.findAll();
+        //pass to jsp
+        request.setAttribute("samples", samples);
+        request.getRequestDispatcher("/samples.jsp").forward(request, response);
+    }
+
+    @RequestMapping("/matchingIndex")
+    public String matchingIndex(HttpServletRequest request, HttpServletResponse response) {
         System.out.println("matchingindex");
         return "Hello";
     }
 
-    @RequestMapping("/matching_clinic_ann")
-    public String matching_clinic_ann(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    @RequestMapping("/matching")
+    public String doMatch(HttpServletRequest request, HttpServletResponse response) {
         /**
          * To code:
          * 1. handle sample Id error: direct to page to view all samples (add samples.jsp)?
@@ -71,29 +96,71 @@ public class VepMatchController {
             // if sample Id or sample type is not specified, go to sample page (view all samples)
             return "hello";
         }
-        Integer sampleId;
+        int sampleId;
         try {
             // if sample Id format is wrong, go to sample page (view all samples)
-            sampleId = Integer.valueOf(sampleIdParameter);
+            sampleId = Integer.parseInt(sampleIdParameter);
         } catch (NumberFormatException e) {
             return "hello";
         }
-        ArrayList<ArrayList<String>> sampleVep = new ArrayList<>();
-        sampleVep = vepDAO.getsampleGenes(sampleId);
+
+        ArrayList<ArrayList<String>> sampleVep = vepDAO.getsampleGenes(sampleId);
+
         if (sampleVep.isEmpty()) {
             // if sample is not in the database, go to sample page (view all samples)
             return "hello";
         }
 
-        List<Object> matched_clinic_ann_by_gene = doMatch_Gene(sampleVep);
-        List<Object> matched_clinic_ann_by_snp = doMatch_SNP(sampleVep);
+        List<Object> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(sampleVep);
+        List<Object> matched_clinic_ann_by_snp = doMatchClinic_by_SNP(sampleVep);
+        ArrayList<Object> matched_drugLabel_by_gene = doMatchDrugLabel(sampleVep);
+        ArrayList<Object> matched_dosingGuideline_by_gene = doMatchDosingGuideline(sampleVep);
+        ArrayList<Object> matched_ann_by_gene = doMatchVarDrugAnn(sampleVep);
+
         request.setAttribute("matched_clinic_ann_by_gene", matched_clinic_ann_by_gene);
         request.setAttribute("matched_clinic_ann_by_snp",matched_clinic_ann_by_snp);
+        request.setAttribute("matchedDrugLabel", matched_drugLabel_by_gene);
+        request.setAttribute("matchedDosingGuideline", matched_dosingGuideline_by_gene);
+        request.setAttribute("matchedVarDrugAnn",matched_ann_by_gene);
+        request.setAttribute("sample", SampleDAO.findById(sampleId));
         return "hello";
     }
 
+    @RequestMapping("/searchDrug")
+    public String searchDrug(HttpServletRequest request, HttpServletResponse response) {
+        //be consistent with jsp
+        String drug=request.getParameter("drug");
+        List<DrugLabelBean> filteredDrugLabelBean;
+        List<DosingGuidelineBean> filteredDosingGuidelineBean;
+        List<VarDrugAnnBean> filteredVarDrugAnn;
+        filteredDrugLabelBean =drugLabelDAO.searchByDrug(drug, matchedDrugLabelBean);
+        filteredDosingGuidelineBean = dosingGuidelineDAO.searchByDrug(drug, matchedGuidelines);
+        filteredVarDrugAnn=varDrugAnnDAO.searchByDrug(drug,matchedAnns);
+        //jsp
+        request.setAttribute("filteredDrugLabel", filteredDrugLabelBean);
+        request.setAttribute("filteredDosingGuideline", filteredDosingGuidelineBean);
+        request.setAttribute("filteredVarDrugAnn",filteredVarDrugAnn);
+        return "Hello";
+    }
 
-    private ArrayList<Object> doMatch_SNP(ArrayList<ArrayList<String>> sampleGenes){
+    @RequestMapping("/searchPhen")
+    public String searchPhen(HttpServletRequest request, HttpServletResponse response) {
+        //be consistent with jsp
+        String phen=request.getParameter("phenotype");
+        List<DrugLabelBean> filteredDrugLabelBean;
+        List<DosingGuidelineBean> filteredDosingGuidelineBean;
+        List<VarDrugAnnBean> filteredVarDrugAnn;
+        filteredDrugLabelBean =drugLabelDAO.searchByPhenotype(phen, matchedDrugLabelBean);
+        filteredDosingGuidelineBean = dosingGuidelineDAO.searchByPhenotype(phen, matchedGuidelines);
+        filteredVarDrugAnn=varDrugAnnDAO.searchByPhen(phen, matchedAnns);
+        //jsp
+        request.setAttribute("filteredDrugLabel", filteredDrugLabelBean);
+        request.setAttribute("filteredDosingGuideline", filteredDosingGuidelineBean);
+        request.setAttribute("filteredVarDrugAnn",filteredVarDrugAnn);
+        return "Hello";
+    }
+
+    private ArrayList<Object> doMatchClinic_by_SNP(ArrayList<ArrayList<String>> sampleGenes){
         /**
          * To map sample variant according to its exact genomic location.
          * Usually, this mapping is too strict to yield any positive result.
@@ -165,7 +232,7 @@ public class VepMatchController {
         return rt;
     }
 
-    private ArrayList<Object> doMatch_Gene(ArrayList<ArrayList<String>> sampleGenes){
+    private ArrayList<Object> doMatchClinic_by_Gene(ArrayList<ArrayList<String>> sampleGenes){
         /**
          * Part 2b: match sample mutated genes with clinic annotation, only variants with clinic annotations are considered.
          */
@@ -199,6 +266,71 @@ public class VepMatchController {
         return rt;
     }
 
+    private ArrayList<Object> doMatchDrugLabel(ArrayList<ArrayList<String>> refGenes) {
+        List<DrugLabelBean> drugLabelBeans = drugLabelDAO.getDrugLabel();
+        ArrayList<Object> rt = new ArrayList<>();
+        List<DrugLabelBean> matchedLabels = new ArrayList<>();
+        HashMap< String, HashMap<String, String> > matched_sampleInfo = new HashMap<>();
+
+        for (DrugLabelBean drugLabelBean : drugLabelBeans) {
+            for (ArrayList<String> row: refGenes) {
+                String gene = row.get(3); // 4st field: gene symbol
+                if (drugLabelBean.getSummary_markdown().contains(gene)) {
+                    drugLabelBean.setvariantGene(gene);
+                    if (!matchedLabels.contains(drugLabelBean)){ matchedLabels.add(drugLabelBean); }
+                    updateSampleReturn(matched_sampleInfo, row, gene);
+                }
+            }
+        }
+
+        rt.add(matchedLabels);
+        rt.add(matched_sampleInfo);
+        return rt;
+    }
+
+    private ArrayList<Object> doMatchDosingGuideline(ArrayList<ArrayList<String>> refGenes) {
+        List<DosingGuidelineBean> dosingGuidelineBeans = dosingGuidelineDAO.getDosingGuideline();
+        ArrayList<Object> rt = new ArrayList<>();
+        List<DosingGuidelineBean> matchedGuidelines = new ArrayList<>();
+        HashMap< String, HashMap<String, String> > matched_sampleInfo = new HashMap<>();
+
+        for (DosingGuidelineBean guideline : dosingGuidelineBeans) {
+            for (ArrayList<String> row: refGenes) {
+                String gene = row.get(3); // 4st field: gene symbol
+                if (guideline.getSummary_markdown().contains(gene)) {
+                    if (!matchedGuidelines.contains(guideline)){ matchedGuidelines.add(guideline); }
+                    updateSampleReturn(matched_sampleInfo, row, gene);
+                }
+            }
+        }
+
+        rt.add(matchedGuidelines);
+        rt.add(matched_sampleInfo);
+        return rt;
+    }
+
+    private ArrayList<Object> doMatchVarDrugAnn(ArrayList<ArrayList<String>> refGenes) {
+        List<VarDrugAnnBean> VarDrugAnns = varDrugAnnDAO.getAnn();
+        ArrayList<Object> rt = new ArrayList<>();
+        List<VarDrugAnnBean> matchedAnns=new ArrayList<>();
+        HashMap< String, HashMap<String, String> > matched_sampleInfo = new HashMap<>();
+
+        for (VarDrugAnnBean ann:VarDrugAnns) {
+            String Gene=ann.getGene();
+            for (ArrayList<String> row: refGenes) {
+                String gene = row.get(3);
+                if (Gene.contains(gene)) {
+                    if (!matchedAnns.contains(ann)){ matchedAnns.add(ann); }
+                    updateSampleReturn(matched_sampleInfo, row, gene);
+                }
+            }
+        }
+
+        rt.add(matchedAnns);
+        rt.add(matched_sampleInfo);
+        return rt;
+    }
+
     private void updateSampleReturn(HashMap<String, HashMap<String, String>> matched_sampleInfo, ArrayList<String> row, String gene) {
         // refactored by IDEA automatically
         if (matched_sampleInfo.containsKey(gene)){
@@ -209,14 +341,5 @@ public class VepMatchController {
             matched_sampleInfo.put(gene,submap);
         }
     }
-
-//    public static void main(String[] args){
-//        MatchController mc = new MatchController();
-//
-//        mc.doMatch_Gene(0);
-//        mc.doMatch_SNP(0);
-//
-////        CSVwriter.Array2CSV(mc.getVariant(0, false), "/Users/jefft/Desktop/o.csv");
-//    }
 
 }
