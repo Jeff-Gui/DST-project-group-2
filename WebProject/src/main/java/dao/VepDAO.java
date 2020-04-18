@@ -2,7 +2,6 @@ package dao;
 
 import DBmtd.DBmethods;
 import bean.GeneBean;
-import DST2.Group2.Controller.VepMatchController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +19,7 @@ import java.util.Objects;
 
 public class VepDAO {
 
-    private static final Logger log = LoggerFactory.getLogger(VepMatchController.class);
+    private static final Logger log = LoggerFactory.getLogger(VepDAO.class);
 
     public void save(int sampleId, String content) {
         String[] line = content.split("#");
@@ -123,25 +122,6 @@ public class VepDAO {
             }
         });
         return results;
-    }
-
-
-    public static void main(String[] args){
-////        importing  sample VCF file
-//        VepDAO test = new VepDAO();
-//        File file = new File("/Users/jefft/Software/annovar/SK-HEP-1_vep.vcf");
-////      332009 records
-//        Long fileLengthLong = file.length();
-//        byte[] fileContent = new byte[fileLengthLong.intValue()];
-//        try {
-//            FileInputStream inputStream = new FileInputStream(file);
-//            inputStream.read(fileContent);
-//            inputStream.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        String content = new String(fileContent);
-//        test.save(0, content);
     }
 
 }

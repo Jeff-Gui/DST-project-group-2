@@ -6,7 +6,9 @@ import dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +24,6 @@ import java.util.HashMap;
 import java.util.List;
 
 @Controller
-@RequestMapping("/vep/clinic_ann")
 public class VepMatchController {
 
     private static final Logger log = LoggerFactory.getLogger(VepMatchController.class);
@@ -39,7 +40,7 @@ public class VepMatchController {
     List<VarDrugAnnBean> matchedAnns=null;
 
     @RequestMapping("/upload_vep")
-    public void upload_vep(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public String upload_vep(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         /**
          * To edit: upload user file and sample number
          */
@@ -48,14 +49,12 @@ public class VepMatchController {
         String uploadedBy = request.getParameter("uploaded_by");
         if (uploadedBy == null || uploadedBy.isEmpty()) {
             request.setAttribute("validateError", "Uploaded by can not be blank");
-            request.getRequestDispatcher("/matching_index_error.jsp").forward(request, response);
-            return;
+            return "Hello"; //matching index error page
         }
         Part requestPart = request.getPart("vcf");
         if (requestPart == null) {
             request.setAttribute("validateError", "vcf output file can not be blank");
-            request.getRequestDispatcher("/matching_index_error.jsp").forward(request, response);
-            return;
+            return "Hello"; // matching index error
         }
 
         InputStream inputStream = requestPart.getInputStream();
@@ -63,17 +62,17 @@ public class VepMatchController {
         String content = new String(bytes);
         int sampleId = sampleDAO.save(uploadedBy);
         vepDAO.save(sampleId, content);
-        response.sendRedirect("matching?sampleId=" + sampleId);
-
+        return "forward:/matching/vep/" + sampleId;
     }
 
     @RequestMapping("/samples")
-    public void samples(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("samples");
-        List<SampleBean> samples = SampleDAO.findAll();
+    public ModelAndView samples() {
+//        System.out.println("samples");
+        List<SampleBean> samples = sampleDAO.findAll();
         //pass to jsp
-        request.setAttribute("samples", samples);
-        request.getRequestDispatcher("/samples.jsp").forward(request, response);
+        HashMap<String,Object> data = new HashMap<>();
+        data.put("sample", samples);
+        return new ModelAndView("hello",data); // sample page
     }
 
     @RequestMapping("/matchingIndex")
@@ -82,33 +81,37 @@ public class VepMatchController {
         return "Hello";
     }
 
-    @RequestMapping("/matching")
-    public String doMatch(HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping("/matching/{sampleType}/{sampleId}")
+    public ModelAndView doMatch(@PathVariable("sampleType") String sampleType, @PathVariable("sampleId") String sampleIdParameter) {
         /**
          * To code:
          * 1. handle sample Id error: direct to page to view all samples (add samples.jsp)?
          * (change "hello" below)
          */
-        String sampleIdParameter = request.getParameter("sampleId");
-        String sampleType = request.getParameter("sampleType");
 
         if (sampleIdParameter == null | sampleType == null) {
             // if sample Id or sample type is not specified, go to sample page (view all samples)
-            return "hello";
+            HashMap<String,Object> data = new HashMap<>();
+            data.put("error_message", "sample not specified yet.");
+            return new ModelAndView("hello",data);
         }
         int sampleId;
         try {
             // if sample Id format is wrong, go to sample page (view all samples)
             sampleId = Integer.parseInt(sampleIdParameter);
         } catch (NumberFormatException e) {
-            return "hello";
+            HashMap<String,Object> data = new HashMap<>();
+            data.put("error_message", "sample Id format is wrong.");
+            return new ModelAndView("hello",data);
         }
 
         ArrayList<ArrayList<String>> sampleVep = vepDAO.getsampleGenes(sampleId);
 
         if (sampleVep.isEmpty()) {
             // if sample is not in the database, go to sample page (view all samples)
-            return "hello";
+            HashMap<String,Object> data = new HashMap<>();
+            data.put("error_message", "sample not uploaded yet.");
+            return new ModelAndView("hello",data);
         }
 
         List<Object> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(sampleVep);
@@ -117,17 +120,18 @@ public class VepMatchController {
         ArrayList<Object> matched_dosingGuideline_by_gene = doMatchDosingGuideline(sampleVep);
         ArrayList<Object> matched_ann_by_gene = doMatchVarDrugAnn(sampleVep);
 
-        request.setAttribute("matched_clinic_ann_by_gene", matched_clinic_ann_by_gene);
-        request.setAttribute("matched_clinic_ann_by_snp",matched_clinic_ann_by_snp);
-        request.setAttribute("matchedDrugLabel", matched_drugLabel_by_gene);
-        request.setAttribute("matchedDosingGuideline", matched_dosingGuideline_by_gene);
-        request.setAttribute("matchedVarDrugAnn",matched_ann_by_gene);
-        request.setAttribute("sample", SampleDAO.findById(sampleId));
-        return "hello";
+        HashMap<String,Object> data = new HashMap<>();
+        data.put("matched_clinic_ann_by_gene", matched_clinic_ann_by_gene);
+        data.put("matched_clinic_ann_by_snp",matched_clinic_ann_by_snp);
+        data.put("matchedDrugLabel", matched_drugLabel_by_gene);
+        data.put("matchedDosingGuideline", matched_dosingGuideline_by_gene);
+        data.put("matchedVarDrugAnn",matched_ann_by_gene);
+        data.put("sample", sampleDAO.findById(sampleId));
+        return new ModelAndView("hello", data);
     }
 
     @RequestMapping("/searchDrug")
-    public String searchDrug(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView searchDrug(HttpServletRequest request, HttpServletResponse response) {
         //be consistent with jsp
         String drug=request.getParameter("drug");
         List<DrugLabelBean> filteredDrugLabelBean;
@@ -137,14 +141,16 @@ public class VepMatchController {
         filteredDosingGuidelineBean = dosingGuidelineDAO.searchByDrug(drug, matchedGuidelines);
         filteredVarDrugAnn=varDrugAnnDAO.searchByDrug(drug,matchedAnns);
         //jsp
-        request.setAttribute("filteredDrugLabel", filteredDrugLabelBean);
-        request.setAttribute("filteredDosingGuideline", filteredDosingGuidelineBean);
-        request.setAttribute("filteredVarDrugAnn",filteredVarDrugAnn);
-        return "Hello";
+        HashMap<String,Object> data = new HashMap<>();
+        data.put("error_message", "sample Id format is wrong.");
+        data.put("filteredDrugLabel", filteredDrugLabelBean);
+        data.put("filteredDosingGuideline", filteredDosingGuidelineBean);
+        data.put("filteredVarDrugAnn",filteredVarDrugAnn);
+        return new ModelAndView("hello",data);
     }
 
     @RequestMapping("/searchPhen")
-    public String searchPhen(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView searchPhen(HttpServletRequest request, HttpServletResponse response) {
         //be consistent with jsp
         String phen=request.getParameter("phenotype");
         List<DrugLabelBean> filteredDrugLabelBean;
@@ -154,10 +160,11 @@ public class VepMatchController {
         filteredDosingGuidelineBean = dosingGuidelineDAO.searchByPhenotype(phen, matchedGuidelines);
         filteredVarDrugAnn=varDrugAnnDAO.searchByPhen(phen, matchedAnns);
         //jsp
-        request.setAttribute("filteredDrugLabel", filteredDrugLabelBean);
-        request.setAttribute("filteredDosingGuideline", filteredDosingGuidelineBean);
-        request.setAttribute("filteredVarDrugAnn",filteredVarDrugAnn);
-        return "Hello";
+        HashMap<String, Object> data = new HashMap();
+        data.put("filteredDrugLabel", filteredDrugLabelBean);
+        data.put("filteredDosingGuideline", filteredDosingGuidelineBean);
+        data.put("filteredVarDrugAnn",filteredVarDrugAnn);
+        return new ModelAndView("hello",data);
     }
 
     private ArrayList<Object> doMatchClinic_by_SNP(ArrayList<ArrayList<String>> sampleGenes){
