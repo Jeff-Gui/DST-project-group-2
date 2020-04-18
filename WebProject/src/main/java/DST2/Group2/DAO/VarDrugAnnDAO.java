@@ -45,7 +45,7 @@ public class VarDrugAnnDAO {
 				String variant=rs.getString("variant");
 				String location=rs.getString("location");
 				String gene=rs.getString("gene");
-				String drug=rs.getString("drug");
+				String drug=rs.getString("chemical");
 				String notes=rs.getString("notes");
 				String ann=rs.getString("sentence");
 				VarDrugAnn varDrugAnn= new VarDrugAnn(variant,location,gene,drug,notes,ann); 

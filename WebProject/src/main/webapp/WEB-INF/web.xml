@@ -3,16 +3,25 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>Precision_medicine</display-name>
 
   <servlet>
-    <servlet-name>Test</servlet-name>
-    <jsp-file>/test.jsp</jsp-file>
+    <servlet-name>dispatcher</servlet-name>
+    
+    <servlet-class>DST2.Group2.servlet.DispatchServlet</servlet-class>
   </servlet>
-
+  
   <servlet-mapping>
-    <servlet-name>Test</servlet-name>
-    <url-pattern>/test</url-pattern>
+    <servlet-name>jsp</servlet-name>
+    <url-pattern>/pages/*</url-pattern>
+  </servlet-mapping>
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/static/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/*</url-pattern>
   </servlet-mapping>
 
 </web-app>

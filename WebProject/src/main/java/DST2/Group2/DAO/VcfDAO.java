@@ -4,30 +4,37 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.mysql.cj.protocol.Resultset;
 
 import DST2.Group2.Database.database;
 
 public class VcfDAO {
 	public static void save(int sampleId, String content) {
-		String[] lines = content.split("\\r|\\n");
+		String[] lines = content.split("\n");
         Connection postgres=database.connpostgres();
-        String sql = "INSERT INTO vcf(SampleId,Uploaded_variation,\"Location\",Allele,Gene,Feature,Feature_type,Consequence,cDNA_position,CDS_position,Protein_position,Amino_acids,Codons,Existing_variation,Extra)"
-        		+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String delete="delete from vcf";
+        String sql = "INSERT INTO vcf(SampleId,Uploaded_variation,\"Location\",Allele,Gene,Feature,Feature_type,Consequence,cDNA_position,CDS_position,Protein_position,Amino_acids,Codons,Existing_variation,Extra) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             postgres.setAutoCommit(false);
+            Statement deletestmt=postgres.createStatement();
+            deletestmt.executeQuery(delete);
             PreparedStatement preparedStatement = postgres.prepareStatement(sql);
             for (int i = 0; i < lines.length; i++) {
             	String line=lines[i];
             	if (!line.startsWith("#")) {
+            		System.out.println("yes"+line);
+
                 preparedStatement.setInt(1, sampleId);
                 String[] split = lines[i].split("\\t");
-                for (int j = 1; j <= 15; j++) {
+                for (int j = 1; j <= 14; j++) {
                     preparedStatement.setString(j + 1, split[j - 1]);
                 }
                 preparedStatement.addBatch();
-                if (i % 1000 == 0) {
+                if (i % 100 == 0) {
                     preparedStatement.executeBatch();
                     postgres.commit();
                 }
@@ -39,7 +46,7 @@ public class VcfDAO {
 	}
 	
 	public static List<String> getRefs(int sampleId) {
-		String sql="SELECT DISTINCT Gene from vcf where sampleId=?";
+		String sql= "SELECT DISTINCT Gene from vcf where sampleId=?";
 		List<String> variants = new ArrayList<>();
 		List<String> geneSymbols = new ArrayList<>();
 		Connection postgres=database.connpostgres();

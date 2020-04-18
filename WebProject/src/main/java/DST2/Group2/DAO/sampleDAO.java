@@ -20,6 +20,7 @@ public class sampleDAO {
 	public static int save(String uploadedBy) {
         AtomicInteger key = new AtomicInteger();
         Connection conn=database.connpostgres();
+        System.out.println(key);
             try {
                 PreparedStatement preparedStatement = conn.prepareStatement("insert into sample(created_at, uploaded_by) values (?,?)", Statement.RETURN_GENERATED_KEYS);
                 preparedStatement.setTimestamp(1, new Timestamp(new Date().getTime()));

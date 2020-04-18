@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
@@ -20,38 +21,43 @@ import DST2.Group2.bean.DrugLabel;
 import DST2.Group2.bean.Sample;
 import DST2.Group2.bean.VarDrugAnn;
 import DST2.Group2.servlet.DispatchServlet;
-
+@MultipartConfig
 public class MatchDrugLabel {
+	
 	public void register(DispatchServlet.Dispatcher dispatcher) {
 		//map urls
-        dispatcher.registerPostMapping("/upload", this::uploadVcfOutput);
+        //dispatcher.registerPostMapping("/upload", this::uploadVcfOutput);
         dispatcher.registerGetMapping("/matchingIndex", this::matchingIndex);
         dispatcher.registerGetMapping("/matching", this::matching);
-        dispatcher.registerGetMapping("/searchDrug", this::searchDrug);
+       // dispatcher.registerGetMapping("/searchDrug", this::searchDrug);
         dispatcher.registerGetMapping("/searchPhen", this::searchPhen);
         dispatcher.registerGetMapping("/samples", this::samples);
        
     }
 	public void matchingIndex(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	System.out.println("matchingindex");
-    	request.getRequestDispatcher("/matching_index.jsp").forward(request, response);
+    	request.getRequestDispatcher("/pages/matching_index.jsp").forward(request, response);
     }
 	public void samples(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	System.out.println("samples");
     	List<Sample> samples = sampleDAO.findAll();
     	//pass to jsp
         request.setAttribute("samples", samples);
-        request.getRequestDispatcher("/samples.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/samples.jsp").forward(request, response);
     }
-	List<DrugLabel> matchedDrugLabel =null;
-	List<DosingGuideline> matchedGuidelines =null;
-	List<VarDrugAnn> matchedAnns=null;
+	public static List<DrugLabel> matchedDrugLabel =null;
+	public static List<DosingGuideline> matchedGuidelines =null;
+	public static List<VarDrugAnn> matchedAnns=null;
 	
 	public void matching(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         //set in jsp
+		matchedDrugLabel =null;
+		matchedGuidelines =null;
+		matchedAnns=null;
+		System.out.println("matching");
 		String sampleIdParameter = request.getParameter("sampleId");
         if (sampleIdParameter == null) {
-            request.getRequestDispatcher("/samples.jsp").forward(request, response);
+            request.getRequestDispatcher("/pages/samples.jsp").forward(request, response);
             return;
         }
         Integer sampleId = null;
@@ -66,19 +72,24 @@ public class MatchDrugLabel {
             response.sendRedirect("samples");
             return;
         }
+        System.out.println("getdruglabels");
         List<DrugLabel> drugLabels = DrugLabelDAO.getDrugLabel();
+        System.out.println("getguidelines");
         List<DosingGuideline> dosingGuidelines = dosingGuidelineDAO.getDosingGuideline();
+        System.out.println("getanns");
         List<VarDrugAnn> VarDrugAnns=VarDrugAnnDAO.getAnn();
-
+        System.out.println("matchlabel");
         List<DrugLabel> matchedDrugLabel = doMatchDrugLabel(refGenes, drugLabels);
+        System.out.println("matchguideline");
         List<DosingGuideline> matchedDosingGuideline = doMatchDosingGuideline(refGenes, dosingGuidelines);
+        System.out.println("matchann");
         List<VarDrugAnn> matchedAnn=doMatchVarDrugAnn(refGenes,VarDrugAnns);
         //pass to jsp
         request.setAttribute("matchedDrugLabel", matchedDrugLabel);
         request.setAttribute("matchedDosingGuideline", matchedDosingGuideline);
         request.setAttribute("matchedVarDrugAnn",matchedAnn);
         request.setAttribute("sample", sampleDAO.findById(sampleId));
-        request.getRequestDispatcher("/matching_index_search.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/matching_index_search.jsp").forward(request, response);
     }
 	
 	private List<DrugLabel> doMatchDrugLabel(List<String> refGenes,List<DrugLabel> drugLabels) {
@@ -87,6 +98,7 @@ public class MatchDrugLabel {
             boolean matched = false;
             for (String gene: refGenes) {
                 if (drugLabel.getSummary_markdown().contains(gene)) {
+                	//System.out.println("matched");
                     matched = true;
                     drugLabel.setvariantGene(gene);
                 }
@@ -134,6 +146,7 @@ public class MatchDrugLabel {
 	}
 	public void searchDrug(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	//be consistent with jsp
+		System.out.println("searchDrug");
     	String drug=request.getParameter("drug");
     	List<DrugLabel> filteredDrugLabel =null;
     	List<DosingGuideline> filteredDosingGuideline =null;
@@ -142,9 +155,11 @@ public class MatchDrugLabel {
     	filteredDosingGuideline=dosingGuidelineDAO.searchByDrug(drug, matchedGuidelines);
     	filteredVarDrugAnn=VarDrugAnnDAO.searchByDrug(drug,matchedAnns);
     	//jsp
-    	request.setAttribute("filteredDrugLabel",filteredDrugLabel);
-    	request.setAttribute("filteredDosingGuideline", filteredDosingGuideline);
-    	request.setAttribute("filteredVarDrugAnn",filteredVarDrugAnn);
+    	request.setAttribute("matchedDrugLabel",filteredDrugLabel);
+    	request.setAttribute("matchedDosingGuideline", filteredDosingGuideline);
+    	request.setAttribute("matchedVarDrugAnn",filteredVarDrugAnn);
+        request.getRequestDispatcher("/pages/matching_index_search.jsp").forward(request, response);
+
     	}
 	public void searchPhen(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	//be consistent with jsp
@@ -166,23 +181,32 @@ public class MatchDrugLabel {
 	
 	public void uploadVcfOutput(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     	System.out.println("uploadvcf");
-
+    	
     	String uploadedBy = request.getParameter("uploaded_by");
-        if (uploadedBy == null || uploadedBy.isEmpty()) {
-            request.setAttribute("validateError", "Uploaded by can not be blank");
-            request.getRequestDispatcher("/matching_index_error.jsp").forward(request, response);
-            return;
-        }
+//        if (uploadedBy == null || uploadedBy.isEmpty()) {
+//        	System.out.println("isenpty");
+//            request.setAttribute("validateError", "Uploaded by can not be blank");
+//            request.getRequestDispatcher("/pages/matching_index_error.jsp").forward(request, response);
+//            return;
+//        }
+        System.out.println("getpart");
         Part requestPart = request.getPart("vcf");
         if (requestPart == null) {
             request.setAttribute("validateError", "vcf output file can not be blank");
-            request.getRequestDispatcher("/matching_index_error.jsp").forward(request, response);
+            request.getRequestDispatcher("/pages/matching_index_error.jsp").forward(request, response);
             return;
         }
+        
         InputStream inputStream = requestPart.getInputStream();
+        
         byte[] bytes = inputStream.readAllBytes();
+        //System.out.println(bytes);
+
         String content = new String(bytes);
+        //System.out.println(content);
+
         int sampleId = sampleDAO.save(uploadedBy);
+        //System.out.println(sampleId);
         VcfDAO.save(sampleId, content);
         response.sendRedirect("matching?sampleId=" + sampleId);
     }
