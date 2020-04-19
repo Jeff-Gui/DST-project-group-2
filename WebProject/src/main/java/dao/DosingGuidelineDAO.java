@@ -38,16 +38,15 @@ public class DosingGuidelineDAO {
 		Connection postgres = DBmethods.getConnection();
 		List<DosingGuidelineBean> allGuidelines=new ArrayList<>();
 		try {
-			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,id,drug, source,recommendation,summary_markdown from dosing_guideline_name");
+			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,drug, source,recommendation,summary_markdown from dosing_guideline_name");
 			ResultSet rs=preparedStatement.executeQuery();
 			while (rs.next()) {
-				String id = rs.getString("id");
 				String name=rs.getString("name");
 				String drug=rs.getString("drug");
 				String source=rs.getString("source");
 				boolean rec=rs.getBoolean("recommendation");
 				String summary_markdown=rs.getString("summary_markdown");
-				DosingGuidelineBean dosingGuidelineBean =new DosingGuidelineBean(id, null,name,drug,source,rec,summary_markdown);
+				DosingGuidelineBean dosingGuidelineBean =new DosingGuidelineBean(null,name,drug,source,rec,summary_markdown);
 				allGuidelines.add(dosingGuidelineBean);
 			}
 		

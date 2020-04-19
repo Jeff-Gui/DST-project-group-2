@@ -27,8 +27,7 @@ public class SampleDAO {
         
         return key.get();
     }
-	
-	
+
 	public SampleBean findById(int id) {
         AtomicReference<SampleBean> sample = new AtomicReference<>();
         Connection connection= DBmethods.getConnection();
@@ -48,6 +47,7 @@ public class SampleDAO {
         
         return sample.get();
     }
+
 	public List<SampleBean> findAll() {
         List<SampleBean> samples = new ArrayList<>();
         Connection connection= DBmethods.getConnection();

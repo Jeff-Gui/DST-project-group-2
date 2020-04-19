@@ -1,3 +1,4 @@
+-- vep data
 CREATE TABLE vep(
 	sample_id INT,
 	Uploaded_variation VARCHAR,
@@ -15,18 +16,6 @@ CREATE TABLE vep(
 	Existing_variation VARCHAR,
 	Extra TEXT
 );
-
-INSERT INTO vep(sample_id, Uploaded_variation, Location, Allele, Gene, Feature, Feature_type, Consequence, cDNA_position, CDS_position, Protein_position, Amino_acids, Codons, Existing_variation, Extra)
-VALUES (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);
-
-SELECT * FROM vep 
-WHERE extra LIKE 'IMPACT=MODIFIER%'
-LIMIT 1000;
-
-SELECT location, allele, feature, feature_type, consequence, extra FROM vep
-WHERE gene = 'ENSG00000248527' AND sample_id = 0;
-
-SELECT location, allele, feature, feature_type, consequence, extra FROM vep WHERE gene = '''ENSG00000248527''' AND sample_id = 0
 
 -- clinic metadata.tsv
 CREATE TABLE clinic_meta(
@@ -47,15 +36,6 @@ CREATE TABLE clinic_meta(
 	chromosome VARCHAR
 )
 
-INSERT INTO clinic_meta(ID,location,gene,evidenceLevel,clinical_annotation_types,
-						genotype_phenotype_ids,annotation_text,variant_annotation_ids,
-					   variant_annotations,PMIDs,evidence_count,related_chemicals,
-					   related_diseases,biogeographical_groups,chromosome)
-					   VALUES (1,'2','3','4','5','6','7','8','9','10',11,'12','13','14',15);
-
-SELECT * FROM clinic_meta;
-DELETE FROM clinic_meta;
-
 -- clinic annotation.tsv
 CREATE TABLE clinic_ann(
 	genotype_phenotype_id INT PRIMARY KEY,
@@ -63,19 +43,7 @@ CREATE TABLE clinic_ann(
 	annotation TEXT
 );
 
-INSERT INTO clinic_ann(genotype_phenotype_id, genotype, annotation)
-VALUES (1,'2','3');
-
-SELECT * FROM clinic_ann;
-DELETE FROM clinic_ann;
-
 -- \\copy public.clinic_ann (genotype_phenotype_id, genotype, annotation) FROM '/Users/jefft/Desktop/DST-project-group-2/PGKB data/annotation_data/annotations/clinical_ann.tsv' DELIMITER E'\\t' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';''
-
-SELECT * FROM clinic_ann WHERE genotype_phenotype_id IN (
-	SELECT genotype_phenotype_ids FROM clinic_meta WHERE ID=981755803
-);
-
-SELECT * FROM clinic_ann WHERE genotype_phenotype_id=1450043467;
 
 -- Variant.tsv
 CREATE TABLE variant(
@@ -93,13 +61,6 @@ CREATE TABLE variant(
 );
 
 -- \\copy public.variant (variant_id, variant_name, gene_ids, gene_symbols, location, variant_annotation_count, clinical_annotation_count, high_level_clinical_annotation, guidance_annotation_count, label_annotation_count, synonyms) FROM '/Users/jefft/Desktop/DST-project-group-2/PGKB data/primary_data/variants/variants.tsv' DELIMITER E'\\t' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';"
-
-SELECT * FROM variant LIMIT 100;
-
--- do Match
-SELECT DISTINCT location, allele FROM vep WHERE sample_id=0;
-
-SELECT variant_name FROM variant WHERE location='NC_000004.11:130165464' AND clinical_annotation_count!=0;
 
 -- gene mapping (gene_treated.tsv)
 CREATE TABLE gene(
@@ -122,11 +83,6 @@ CREATE TABLE gene(
 	ch38_stop VARCHAR,
 	ensembl_id VARCHAR
 );
-
-DROP TABLE gene;
-DELETE FROM gene;
-
-SELECT symbol FROM gene WHERE Ensembl_id='ENSG00000128274';
 
 -- Drug
 create table drug
@@ -203,87 +159,17 @@ chemical varchar(2500),
 pmid varchar(250),
 phenotype_category varchar(250),
 significance varchar(250),
-notes varchar(2500),
-sentence varchar(2500),
+notes varchar -- not long enough?,
+sentence varchar, -- not long enough?
 studyparam varchar(250),
 allels varchar(250),
 choromosome varchar(250))
 
-COPY var_drug_ann(annotation_id ,
-variant ,
-gene ,
-chemical ,
-pmid ,
-phenotype_category ,
-significance ,
-notes ,
-sentence ,
-studyparam ,
-allels ,
-choromosome ) from 'C:\var_drug_ann.tsv' DELIMITER '	' NULL AS '\N';
-
--- variants
-create table variants(
-	variantID VARCHAR(250) NOT NULL,
-	variant VARCHAR(250),
-	geneID VARCHAR(250),
-	geneSymbol VARCHAR(500),
-	"location" VARCHAR(500),
-	varAnnCount INT,
-	cliAnnCount INT,
-	LevCliAnnCount INT,
-	GdlAnnCount INT,
-	LabAnnCount INT,
-	synonyms VARCHAR(50000)
-);
-COPY variants(
-variantID,variant,geneID,geneSymbol,"location",varAnnCount,
-	cliAnnCount,
-	LevCliAnnCount,
-	GdlAnnCount,
-	LabAnnCount,
-	synonyms) from 'C:\variants.tsv' DELIMITER '	' NULL AS '\N' ;
-
-
+-- create var_drug_ann table (use my variant table)
 SELECT var_drug_ann.variant, var_drug_ann.gene,
 var_drug_ann.chemical,var_drug_ann.significance,
 var_drug_ann.notes,var_drug_ann.sentence,
-variants.location
-INTO location_annvar FROM variants right outer join var_drug_ann 
-on variants.variant=var_drug_ann.variant;
+variant.location
+INTO location_annvar FROM variant right outer join var_drug_ann 
+on variant.variant_name = var_drug_ann.variant;
 select * from location_annvar;
-
--- symbol
-Create table symbol(
-Gene_id int,
-Symbol varchar(150),
-)
-Create table ensembl(
-Gene_id int,
-Ensemble_id varchar(150),
-)
-
-select symbol.gene_id,symbol.symbol,ensembl.ensemble_id
-into symbol_ensembl
-from ensembl right outer join symbol 
-on symbol.gene_id=ensembl.gene_id
-copy ensembl from 'C:/ensembl.csv' with csv header
-copy symbol from 'C:/symbol.csv' with csv header
-
--- vcf
-create table vcf(
-	sampleID int,
-	Uploaded_variation varchar(100),	
-	"Location" varchar(50),	
-		Allele varchar(50),	
-		Gene varchar(50),
-		Feature	varchar(50),
-		Feature_type varchar(100),	
-		Consequence	varchar(100),
-		cDNA_position varchar(50),	
-		CDS_position varchar(50),
-		Protein_position varchar(50),	
-		Amino_acids	varchar(50),
-		Codons varchar(50),
-		Existing_variation varchar(50),	
-		Extra varchar(100))

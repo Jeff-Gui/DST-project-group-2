@@ -8,11 +8,9 @@ public class DosingGuidelineBean {
 	private String source;
 	private boolean recommendation;
 	private String summary_markdown;
-	private String id;
 
-	public DosingGuidelineBean(String id, String variant_gene, String name, String drug, String source, boolean recommendation,
+	public DosingGuidelineBean(String variant_gene, String name, String drug, String source, boolean recommendation,
 							   String summary_markdown) {
-		this.id = id;
 		this.variant_gene = variant_gene;
 		this.name=name;
 		this.drug = drug;
@@ -69,18 +67,11 @@ public class DosingGuidelineBean {
 		this.summary_markdown = summary_markdown;
 	}
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 
 	public boolean equals(Object obj) {
 		try {
 			DosingGuidelineBean external = (DosingGuidelineBean) obj;
-			return this.id.equals(external.getId());
+			return this.summary_markdown.equals(external.getSummary_markdown());
 		} catch (Exception e) {
 			return false;
 		}

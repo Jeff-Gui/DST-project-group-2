@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -81,7 +82,7 @@ public class VepMatchController {
         return "Hello";
     }
 
-    @RequestMapping("/matching/{sampleType}/{sampleId}")
+    @RequestMapping(value = "/matching/{sampleType}/{sampleId}",method = RequestMethod.GET)
     public ModelAndView doMatch(@PathVariable("sampleType") String sampleType, @PathVariable("sampleId") String sampleIdParameter) {
         /**
          * To code:
@@ -248,8 +249,13 @@ public class VepMatchController {
 
         List<ClinicAnnBean> refClinicAnns = clinicAnnDAO.findAll();
 
+//        int counter=0;
         for (Object obj : sampleGenes){
             for (ClinicAnnBean clinicAnnBean:refClinicAnns){
+//                counter++;
+//                if (counter%100000000==0){
+//                    System.out.println("processed: " + counter);
+//                }
                 ArrayList<String> row = (ArrayList<String>) obj;
                 String gene = row.get(3); // gene symbol
                 if (clinicAnnBean.getGene()==null){ continue; }
@@ -322,18 +328,22 @@ public class VepMatchController {
         HashMap< String, HashMap<String, String> > matched_sampleInfo = new HashMap<>();
 
         for (VarDrugAnnBean ann:VarDrugAnns) {
-            String Gene=ann.getGene();
-            for (ArrayList<String> row: refGenes) {
-                String gene = row.get(3);
-                if (Gene.contains(gene)) {
-                    if (!matchedAnns.contains(ann)){ matchedAnns.add(ann); }
-                    updateSampleReturn(matched_sampleInfo, row, gene);
+            String annGene = ann.getGene();
+            if (!(annGene == null)) {
+                for (ArrayList<String> row : refGenes) {
+                    String gene = row.get(3);
+                    if (annGene.contains(gene)) {
+                        if (!matchedAnns.contains(ann)) {
+                            matchedAnns.add(ann);
+                        }
+                        updateSampleReturn(matched_sampleInfo, row, gene);
+                    }
                 }
             }
         }
 
-        rt.add(matchedAnns);
-        rt.add(matched_sampleInfo);
+        rt.add(matchedAnns); // 536 matched
+        rt.add(matched_sampleInfo); // 191 matched
         return rt;
     }
 
