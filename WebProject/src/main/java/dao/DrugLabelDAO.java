@@ -40,15 +40,15 @@ public class DrugLabelDAO {
 		Connection postgres= DBmethods.getConnection();
 		List<DrugLabelBean> allLabels=new ArrayList<>();
 		try {
-			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,alternate_drug_availabel, source, summary_markdown from drugNames");
+			PreparedStatement preparedStatement = postgres.prepareStatement("Select id, name,alternate_drug_availabel, source, summary_markdown from drugNames");
 			ResultSet rs=preparedStatement.executeQuery();
 			while (rs.next()) {
-				String gene=null;
+				String id=rs.getString("id");
 				String name=rs.getString("name");
-				boolean alternate_drug_availabel=rs.getBoolean("alternate_drug_availabel");
+				boolean alternate_drug_available=rs.getBoolean("alternate_drug_availabel");
 				String source=rs.getString("source");
 				String summary_markdown=rs.getString("summary_markdown");
-				DrugLabelBean druglabel=new DrugLabelBean(gene,name,source,alternate_drug_availabel,summary_markdown);
+				DrugLabelBean druglabel=new DrugLabelBean(id,null,name,source,alternate_drug_available,summary_markdown);
 				allLabels.add(druglabel);
 			}
 		} catch (SQLException e) {

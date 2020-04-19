@@ -142,7 +142,6 @@ public class VepMatchController {
         filteredVarDrugAnn=varDrugAnnDAO.searchByDrug(drug,matchedAnns);
         //jsp
         HashMap<String,Object> data = new HashMap<>();
-        data.put("error_message", "sample Id format is wrong.");
         data.put("filteredDrugLabel", filteredDrugLabelBean);
         data.put("filteredDosingGuideline", filteredDosingGuidelineBean);
         data.put("filteredVarDrugAnn",filteredVarDrugAnn);
