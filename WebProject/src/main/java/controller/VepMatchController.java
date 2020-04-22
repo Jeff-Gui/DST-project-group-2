@@ -43,7 +43,7 @@ public class VepMatchController {
     @RequestMapping("/upload_vep")
     public String upload_vep(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         /**
-         * To edit: upload user file and sample number
+         * To edit: upload directly jump to doMatch?
          */
         System.out.println("uploadvcf");
 
