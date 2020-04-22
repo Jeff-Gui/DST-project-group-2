@@ -165,41 +165,6 @@ studyparam varchar(250),
 allels varchar(250),
 choromosome varchar(250))
 
-COPY var_drug_ann(annotation_id ,
-variant ,
-gene ,
-chemical ,
-pmid ,
-phenotype_category ,
-significance ,
-notes ,
-sentence ,
-studyparam ,
-allels ,
-choromosome ) from 'C:\var_drug_ann.tsv' DELIMITER '	' NULL AS '\N';
-
--- variants
-create table variants(
-	variantID VARCHAR(250) NOT NULL,
-	variant VARCHAR(250),
-	geneID VARCHAR(250),
-	geneSymbol VARCHAR(500),
-	"location" VARCHAR(500),
-	varAnnCount INT,
-	cliAnnCount INT,
-	LevCliAnnCount INT,
-	GdlAnnCount INT,
-	LabAnnCount INT,
-	synonyms VARCHAR(50000)
-);
-COPY variants(
-variantID,variant,geneID,geneSymbol,"location",varAnnCount,
-	cliAnnCount,
-	LevCliAnnCount,
-	GdlAnnCount,
-	LabAnnCount,
-	synonyms) from 'C:\variants.tsv' DELIMITER '	' NULL AS '\N' ;
-
 -- create var_drug_ann table (use my variant table)
 SELECT var_drug_ann.variant, var_drug_ann.gene,
 var_drug_ann.chemical,var_drug_ann.significance,
@@ -208,38 +173,3 @@ variant.location
 INTO location_annvar FROM variant right outer join var_drug_ann 
 on variant.variant_name = var_drug_ann.variant;
 select * from location_annvar;
-
--- symbol
-Create table symbol(
-Gene_id int,
-Symbol varchar(150),
-)
-Create table ensembl(
-Gene_id int,
-Ensemble_id varchar(150),
-)
-
-select symbol.gene_id,symbol.symbol,ensembl.ensemble_id
-into symbol_ensembl
-from ensembl right outer join symbol 
-on symbol.gene_id=ensembl.gene_id
-copy ensembl from 'C:/ensembl.csv' with csv header
-copy symbol from 'C:/symbol.csv' with csv header
-
--- vcf
-create table vcf(
-	sampleID int,
-	Uploaded_variation varchar(100),	
-	"Location" varchar(50),	
-		Allele varchar(50),	
-		Gene varchar(50),
-		Feature	varchar(50),
-		Feature_type varchar(100),	
-		Consequence	varchar(100),
-		cDNA_position varchar(50),	
-		CDS_position varchar(50),
-		Protein_position varchar(50),	
-		Amino_acids	varchar(50),
-		Codons varchar(50),
-		Existing_variation varchar(50),	
-		Extra varchar(100))

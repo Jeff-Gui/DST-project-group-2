@@ -29,6 +29,7 @@ public class VepMatchController {
 
     private static final Logger log = LoggerFactory.getLogger(VepMatchController.class);
 
+    private HashMap<String, String[]> target = new HashMap<>();
     private VepDAO vepDAO = new VepDAO();
     private ClinicAnnDAO clinicAnnDAO = new ClinicAnnDAO();
     private DosingGuidelineDAO dosingGuidelineDAO = new DosingGuidelineDAO();
@@ -83,7 +84,7 @@ public class VepMatchController {
     }
 
     @RequestMapping(value = "/matching/{sampleType}/{sampleId}",method = RequestMethod.GET)
-    public ModelAndView doMatch(@PathVariable("sampleType") String sampleType, @PathVariable("sampleId") String sampleIdParameter) {
+    public ModelAndView doMatch(@PathVariable("sampleType") String sampleType, @PathVariable("sampleId") String sampleIdParameter, HttpServletRequest request) {
         /**
          * To code:
          * 1. handle sample Id error: direct to page to view all samples (add samples.jsp)?
@@ -107,6 +108,12 @@ public class VepMatchController {
         }
 
         ArrayList<ArrayList<String>> sampleVep = vepDAO.getsampleGenes(sampleId);
+//        String search_drug = (String) request.getAttribute("search_drug"); // if no input, will get "".
+//        String search_phen = (String) request.getAttribute("search_phen");
+        String search_drug="ivacaftor"; // test
+        String search_phen="";
+        target.put("drug", search_drug.split(","));
+        target.put("disease", search_phen.split(","));
 
         if (sampleVep.isEmpty()) {
             // if sample is not in the database, go to sample page (view all samples)
@@ -167,7 +174,7 @@ public class VepMatchController {
         return new ModelAndView("hello",data);
     }
 
-    private ArrayList<Object> doMatchClinic_by_SNP(ArrayList<ArrayList<String>> sampleGenes){
+    private ArrayList<Object> doMatchClinic_by_SNP(ArrayList<ArrayList<String>> sampleGenes) {
         /**
          * To map sample variant according to its exact genomic location.
          * Usually, this mapping is too strict to yield any positive result.
@@ -207,7 +214,7 @@ public class VepMatchController {
                 log.info("Processed SNP mapping: " + sampleGenes.size() + ". Found match: " + filtered.size());
 
                 if (filtered.size()>0){ // row number, nothing found in sample VEP???
-                    List<ClinicAnnBean> refClinicAnns = clinicAnnDAO.findAll();
+                    List<ClinicAnnBean> refClinicAnns = clinicAnnDAO.findAll(target);
 
                     for (Object obj : filtered){
                         for (ClinicAnnBean clinicAnnBean:refClinicAnns){
@@ -239,7 +246,7 @@ public class VepMatchController {
         return rt;
     }
 
-    private ArrayList<Object> doMatchClinic_by_Gene(ArrayList<ArrayList<String>> sampleGenes){
+    private ArrayList<Object> doMatchClinic_by_Gene(ArrayList<ArrayList<String>> sampleGenes) {
         /**
          * Part 2b: match sample mutated genes with clinic annotation, only variants with clinic annotations are considered.
          */
@@ -247,7 +254,8 @@ public class VepMatchController {
         List<ClinicAnnBean> matchedClinicAnnBeans = new ArrayList<>(); // e.g. [clinicAnnBean1, clinicAnnBean2,...]
         HashMap< String, HashMap<String, String> > matched_sampleInfo = new HashMap<>(); // e.g. { GENE1 : {s12345:T, s6789:G}, GENE2 : {s123:C},...}
 
-        List<ClinicAnnBean> refClinicAnns = clinicAnnDAO.findAll();
+        List<ClinicAnnBean> refClinicAnns = clinicAnnDAO.findAll(target);
+        log.info("Filtered clinic annotation record total: " + refClinicAnns.size());
 
 //        int counter=0;
         for (Object obj : sampleGenes){
@@ -295,6 +303,7 @@ public class VepMatchController {
             }
         }
 
+        log.info("Found drug label: " + matchedLabels.size());
         rt.add(matchedLabels);
         rt.add(matched_sampleInfo);
         return rt;
@@ -316,6 +325,7 @@ public class VepMatchController {
             }
         }
 
+        log.info("Found dosing guideline: " + matchedGuidelines.size());
         rt.add(matchedGuidelines);
         rt.add(matched_sampleInfo);
         return rt;
@@ -342,6 +352,7 @@ public class VepMatchController {
             }
         }
 
+        log.info("Found variant drug annotation: " + matchedAnns.size());
         rt.add(matchedAnns); // 536 matched
         rt.add(matched_sampleInfo); // 191 matched
         return rt;
