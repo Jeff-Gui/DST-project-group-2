@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class VepMatchController {
@@ -37,7 +38,7 @@ public class VepMatchController {
     private VarDrugAnnDAO varDrugAnnDAO = new VarDrugAnnDAO();
     private SampleDAO sampleDAO = new SampleDAO();
 
-    List<DrugLabelBean> matchedDrugLabelBean =null;
+    List<DrugLabelBean> matchedDrugLabel =null;
     List<DosingGuidelineBean> matchedGuidelines =null;
     List<VarDrugAnnBean> matchedAnns=null;
 
@@ -78,9 +79,9 @@ public class VepMatchController {
     }
 
     @RequestMapping("/matchingIndex")
-    public String matchingIndex(HttpServletRequest request, HttpServletResponse response) {
+    public String matchingIndex(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         System.out.println("matchingindex");
-        return "Hello";
+        return "matching_index";
     }
 
     @RequestMapping(value = "/matching/{sampleType}/{sampleId}",method = RequestMethod.GET)
@@ -139,22 +140,38 @@ public class VepMatchController {
     }
 
     @RequestMapping("/search")
-    public ModelAndView search(HttpServletRequest request, HttpServletResponse response) {
-        //be consistent with jsp
+    public ModelAndView search(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        ModelAndView search=new ModelAndView();
+        //w should be created outside and before match function and is returned by match function
+
+//        Map<String, Object> map=w.getModel();
+//        matchedDrugLabel= (List<DrugLabelBean>) map.get("matchedDrugLabel");
+//        matchedGuidelines= (List<DosingGuidelineBean>) map.get("matchedDosingGuideline");
+//        matchedAnns= (List<VarDrugAnnBean>) map.get("matchedVarDrugAnn");
+        System.out.println("searchDrug");
         String drug=request.getParameter("drug");
         String phen=request.getParameter("Phenotype");
-        List<DrugLabelBean> filteredDrugLabelBean;
-        List<DosingGuidelineBean> filteredDosingGuidelineBean;
-        List<VarDrugAnnBean> filteredVarDrugAnn;
-        filteredDrugLabelBean =drugLabelDAO.search(drug, phen,matchedDrugLabelBean);
-        filteredDosingGuidelineBean = dosingGuidelineDAO.search(drug,phen, matchedGuidelines);
-        filteredVarDrugAnn=varDrugAnnDAO.search(drug,phen,matchedAnns);
+        log.info(drug);
+        log.info(phen);
+
+        List<DrugLabelBean> filteredDrugLabel =null;
+        List<DosingGuidelineBean> filteredDosingGuideline =null;
+        List<VarDrugAnnBean> filteredVarDrugAnn=null;
+        System.out.println(matchedDrugLabel);
+
+        filteredDrugLabel=DrugLabelDAO.search(drug,phen,matchedDrugLabel);
+        filteredDosingGuideline=DosingGuidelineDAO.search(drug,phen, matchedGuidelines);
+        filteredVarDrugAnn=VarDrugAnnDAO.search(drug,phen,matchedAnns);
+        System.out.println(filteredVarDrugAnn);
+
         //jsp
-        HashMap<String,Object> data = new HashMap<>();
-        data.put("filteredDrugLabel", filteredDrugLabelBean);
-        data.put("filteredDosingGuideline", filteredDosingGuidelineBean);
-        data.put("filteredVarDrugAnn",filteredVarDrugAnn);
-        return new ModelAndView("hello",data);
+        search.addObject("filteredDrugLabel",filteredDrugLabel);
+        search.addObject("filteredDosingGuideline", filteredDosingGuideline);
+        search.addObject("filteredVarDrugAnn",filteredVarDrugAnn);
+        //request.getRequestDispatcher("/view/searchDrug.jsp").forward(request, response);
+        search.setViewName("searchDrug");
+        return search;
     }
 
 

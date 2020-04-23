@@ -19,28 +19,7 @@
     <meta name="generator" content="">
     <title>Dashboard Template · Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
-    <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom styles for this template -->
-    <link href="<%=request.getContextPath()%>/static/css/app.css" rel="stylesheet">
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
@@ -50,7 +29,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <jsp:include page="/pages/nav.jsp" >
+        <jsp:include page="/WEB-INF/view/nav.jsp" >
             <jsp:param name="active" value="matching_index" />
         </jsp:include>
 
@@ -66,7 +45,7 @@
 
                 </div>
             </div>
-            
+
             <div class="table-responsive">
                 <h4>Matched Drug Labels</h4>
                 <c:if test="${!matched.isEmpty()}">
@@ -74,22 +53,25 @@
                         <thead>
                         <tr>
                             <th>#</th>
+                            <th>variant id</th>
+                            <th>location</th>
+                            <th>drug</th>
                             <th>gene</th>
-                            <th>drug</th>                        
-                            <th>Source</th>
-                            <th>has alternative drug</th>                            
-                            <th>Summary</th>
+                            <th>notes</th>
+                            <th>annotation</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${filteredDrugLabel}" var="item" varStatus="loop">
+                        <c:forEach items="${filteredVarDrugAnn}" var="item" varStatus="loop">
                             <tr>
                                 <td>${loop.index + 1}</td>
-                                <td>${item.variantGene}</td>
-                                <td>${item.drugName}</td>
-                                <td>${item.source}</td>
-                                <td>${item.hasAlternativeDrug}</td>
-                                <td>${item.summary_markdown}</td>
+                                <td>${item.variantID}</td>
+                                <td>${item.location}</td>
+                                <td>${item.drug}</td>
+                                <td>${item.gene}</td>
+                                <td>${item.notes}</td>
+                                <td>${item.annotation}</td>
+
                             </tr>
                         </c:forEach>
 

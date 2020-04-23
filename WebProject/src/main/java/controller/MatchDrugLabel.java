@@ -1,11 +1,8 @@
-package DST2.Group2.Controller;
+package controller;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -16,102 +13,100 @@ import javax.servlet.http.Part;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import DST2.Group2.DAO.DrugLabelDAO;
-import DST2.Group2.DAO.VarDrugAnnDAO;
-import DST2.Group2.DAO.VcfDAO;
-import DST2.Group2.DAO.dosingGuidelineDAO;
-import DST2.Group2.DAO.sampleDAO;
-import DST2.Group2.bean.ClinicAnnBean;
-import DST2.Group2.bean.DosingGuideline;
-import DST2.Group2.bean.DrugLabel;
-import DST2.Group2.bean.Sample;
-import DST2.Group2.bean.VarDrugAnn;
-import DST2.Group2.servlet.DispatchServlet;
-@MultipartConfig
-public class MatchDrugLabel  {
-	private static final Logger log = LoggerFactory.getLogger(MatchDrugLabel.class);
+import dao.*;
+import bean.*;
 
-	public void register(DispatchServlet.Dispatcher dispatcher) {
-		//map urls
-        //dispatcher.registerPostMapping("/upload", this::uploadVcfOutput);
-        dispatcher.registerGetMapping("/matchingIndex", this::matchingIndex);
-        dispatcher.registerGetMapping("/matching", this::matching);
-       // dispatcher.registerGetMapping("/searchDrug", this::searchDrug);
-        dispatcher.registerGetMapping("/searchPhen", this::searchPhen);
-        dispatcher.registerGetMapping("/samples", this::samples);
-        //dispatcher.registerPostMapping("/searchDrug", search::searchdrug);
-       
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@MultipartConfig
+@Controller
+public class MatchDrugLabel  {
+    private static final Logger log = LoggerFactory.getLogger(MatchDrugLabel.class);
+
+    @RequestMapping("/matchingIndex")
+    public String matchingIndex(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("matchingindex");
+        return "matching_index";
     }
-	public void matchingIndex(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-    	System.out.println("matchingindex");
-    	request.getRequestDispatcher("/pages/matching_index.jsp").forward(request, response);
+    @RequestMapping("/samples")
+    public ModelAndView samples(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("samples");
+        ModelAndView mv=new ModelAndView();
+        mv.setViewName("samples");
+        List<SampleBean> samples = SampleDAO.findAll();
+        //pass to jsp
+        mv.addObject("samples",samples);
+        return mv;
     }
-	public void samples(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-    	System.out.println("samples");
-    	List<Sample> samples = sampleDAO.findAll();
-    	//pass to jsp
-        request.setAttribute("samples", samples);
-        request.getRequestDispatcher("/pages/samples.jsp").forward(request, response);
-    }
-	public static List<DrugLabel> matchedDrugLabel =null;
-	public static List<DosingGuideline> matchedGuidelines =null;
-	public static List<VarDrugAnn> matchedAnns=null;
-	
-	public void matching(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public static List<DrugLabelBean> matchedDrugLabel =null;
+    public static List<DosingGuidelineBean> matchedGuidelines =null;
+    public static List<VarDrugAnnBean> matchedAnns=null;
+    public static ModelAndView w=new ModelAndView();
+
+    @RequestMapping("/matching")
+    public ModelAndView matching(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         //set in jsp
-		matchedDrugLabel =null;
-		matchedGuidelines =null;
-		matchedAnns=null;
-		System.out.println("matching");
-		String sampleIdParameter = request.getParameter("sampleId");
+        matchedDrugLabel =null;
+        matchedGuidelines =null;
+        matchedAnns=null;
+        log.info("matching");
+
+        w.setViewName("matching_index_search");
+        String sampleIdParameter = request.getParameter("sampleId");
         if (sampleIdParameter == null) {
-            request.getRequestDispatcher("/pages/samples.jsp").forward(request, response);
-            return;
+            log.info("sample id parameter is null");
+            ModelAndView s=new ModelAndView();
+            s.setViewName("samples");
+            return s;
         }
         Integer sampleId = null;
         try {
             sampleId = Integer.valueOf(sampleIdParameter);
         } catch (NumberFormatException e) {
-            response.sendRedirect("samples");
-            return;
+            log.info(String.valueOf(e));
+            ModelAndView s=new ModelAndView();
+            s.setViewName("samples");
+            return s;
         }
         List<String> refGenes = VcfDAO.getRefs(sampleId);
         if (refGenes.isEmpty()) {
-            response.sendRedirect("samples");
-            return;
+            log.info("reference gene set is empty");
+            ModelAndView s=new ModelAndView();
+            s.setViewName("samples");
+            return s;
         }
-        System.out.println("getdruglabels");
-        List<DrugLabel> drugLabels = DrugLabelDAO.getDrugLabel();
-        System.out.println("getguidelines");
-        List<DosingGuideline> dosingGuidelines = dosingGuidelineDAO.getDosingGuideline();
-        System.out.println("getanns");
-        List<VarDrugAnn> VarDrugAnns=VarDrugAnnDAO.getAnn();
-        System.out.println("matchlabel");
-        List<DrugLabel> matchedDrugLabel = doMatchDrugLabel(refGenes, drugLabels);
-        System.out.println("matchguideline");
-        final List<DosingGuideline> matchedDosingGuideline = doMatchDosingGuideline(refGenes, dosingGuidelines);
-        System.out.println("matchann");
-        final List<VarDrugAnn> matchedAnn=doMatchVarDrugAnn(refGenes,VarDrugAnns);
+        log.info("getdruglabels");
+        List<DrugLabelBean> drugLabels = DrugLabelDAO.getDrugLabel();
+        log.info("getguidelines");
+        List<DosingGuidelineBean> dosingGuidelines = DosingGuidelineDAO.getDosingGuideline();
+        log.info("getanns");
+        List<VarDrugAnnBean> VarDrugAnns=VarDrugAnnDAO.getAnn();
+        log.info("matchlabel");
+        List<DrugLabelBean> matchedDrugLabel = doMatchDrugLabel(refGenes, drugLabels);
+        log.info("matchguideline");
+        List<DosingGuidelineBean> matchedDosingGuideline = doMatchDosingGuideline(refGenes, dosingGuidelines);
+        log.info("matchann");
+        List<VarDrugAnnBean> matchedAnn=doMatchVarDrugAnn(refGenes,VarDrugAnns);
         log.info("finished");
 
         //pass to jsp
-        
-        request.setAttribute("matchedDrugLabel", matchedDrugLabel);
-        request.setAttribute("matchedDosingGuideline", matchedDosingGuideline);
-        request.setAttribute("matchedVarDrugAnn",matchedAnn);
-        request.setAttribute("sample", sampleDAO.findById(sampleId));
-        request.getRequestDispatcher("/pages/matching_index_search.jsp").forward(request, response);
-       
-	}
-	
-	
-	private List<DrugLabel> doMatchDrugLabel(List<String> refGenes,List<DrugLabel> drugLabels) {
-		List<DrugLabel> matchedLabels = new ArrayList<>();
-        for (DrugLabel drugLabel : drugLabels) {
+        w.addObject("matchedDrugLabel", matchedDrugLabel);
+        w.addObject("matchedDosingGuideline", matchedDosingGuideline);
+        w.addObject("matchedVarDrugAnn",matchedAnn);
+        w.addObject("sample", SampleDAO.findById(sampleId));
+        return w;
+    }
+
+
+    private List<DrugLabelBean> doMatchDrugLabel(List<String> refGenes,List<DrugLabelBean> drugLabels) {
+        List<DrugLabelBean> matchedLabels = new ArrayList<>();
+        for (DrugLabelBean drugLabel : drugLabels) {
             boolean matched = false;
             for (String gene: refGenes) {
                 if (drugLabel.getSummary_markdown().contains(gene)) {
-                	//System.out.println("matched");
+                    //System.out.println("matched");
                     matched = true;
                     drugLabel.setvariantGene(gene);
                 }
@@ -119,14 +114,16 @@ public class MatchDrugLabel  {
             if (matched) {
                 matchedLabels.add(drugLabel);
             }
+
         }
+        log.info("matched labels"+matchedLabels.size());
         return matchedLabels;
     }
-	
-	
-	private List<DosingGuideline> doMatchDosingGuideline(List<String> refGenes, List<DosingGuideline> dosingGuidelines) {
-		List<DosingGuideline> matchedGuidelines = new ArrayList<>();
-        for (DosingGuideline guideline : dosingGuidelines) {
+
+
+    private List<DosingGuidelineBean> doMatchDosingGuideline(List<String> refGenes, List<DosingGuidelineBean> dosingGuidelines) {
+        List<DosingGuidelineBean> matchedGuidelines = new ArrayList<>();
+        for (DosingGuidelineBean guideline : dosingGuidelines) {
             boolean matched = false;
             for (String gene: refGenes) {
                 if (guideline.getSummary_markdown().contains(gene)) {
@@ -135,145 +132,65 @@ public class MatchDrugLabel  {
                 }
             }
             if (matched) {
-            	matchedGuidelines.add(guideline);
+                matchedGuidelines.add(guideline);
             }
+
         }
+        log.info("matched guidelines"+matchedGuidelines.size());
         return matchedGuidelines;
     }
-	
-	private List<VarDrugAnn> doMatchVarDrugAnn(List<String> refGenes,List<VarDrugAnn> VarDrugAnns) {
-		List<VarDrugAnn> matchedAnns=new ArrayList<>();
-		for (VarDrugAnn ann:VarDrugAnns) {
-			boolean matched = false;
-			String Gene=ann.getGene();
+
+    private List<VarDrugAnnBean> doMatchVarDrugAnn(List<String> refGenes,List<VarDrugAnnBean> VarDrugAnns) {
+        List<VarDrugAnnBean> matchedAnns=new ArrayList<>();
+        for (VarDrugAnnBean ann:VarDrugAnns) {
+            boolean matched = false;
+            String Gene=ann.getGene();
             for (String gene: refGenes) {
                 if (Gene.contains(gene)) {
                     matched = true;
-                    
+
                 }
             }
             if (matched) {
-            	
-            	matchedAnns.add(ann);
-            	
+
+                matchedAnns.add(ann);
+
             }
-		}
-		return matchedAnns;
-	}
-	
-	
-//	private ArrayList<Object> doMatchClinic_by_Gene(ArrayList<ArrayList<String>> sampleGenes){
-//        /**
-//         * Part 2b: match sample mutated genes with clinic annotation, only variants with clinic annotations are considered.
-//         */
-//        ArrayList<Object> rt = new ArrayList<>();
-//        List<ClinicAnnBean> matchedClinicAnnBeans = new ArrayList<>(); // e.g. [clinicAnnBean1, clinicAnnBean2,...]
-//        HashMap< String, HashMap<String, String> > matched_sampleInfo = new HashMap<>(); // e.g. { GENE1 : {s12345:T, s6789:G}, GENE2 : {s123:C},...}
-//
-//        List<ClinicAnnBean> refClinicAnns = clinicAnnDAO.findAll();
-//
-////        int counter=0;
-//        for (Object obj : sampleGenes){
-//            for (ClinicAnnBean clinicAnnBean:refClinicAnns){
-////                counter++;
-////                if (counter%100000000==0){
-////                    System.out.println("processed: " + counter);
-////                }
-//                ArrayList<String> row = (ArrayList<String>) obj;
-//                String gene = row.get(3); // gene symbol
-//                if (clinicAnnBean.getGene()==null){ continue; }
-//                if (clinicAnnBean.getGene().contains(gene)){
-//
-//                    if (!matchedClinicAnnBeans.contains(clinicAnnBean)){
-//                        matchedClinicAnnBeans.add(clinicAnnBean);
-//                    }
-//
-//                    updateSampleReturn(matched_sampleInfo, row, gene);
-//                }
-//            }
-//        }
-//
-//        log.info("Matched clinic annotation: " + matchedClinicAnnBeans.size() + " corresponding to " + matched_sampleInfo.size() + " genes from the sample.");
-//
-//        rt.add(matchedClinicAnnBeans); // 787 records matched from sample
-//        rt.add(matched_sampleInfo); // 185 genes matched from clinic annotation
-//
-//        return rt;
-//    }
-	public void searchDrug(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-    	//be consistent with jsp
-		System.out.println("searchDrug");
-    	String drug=request.getParameter("drug");
-    	List<DrugLabel> filteredDrugLabel =null;
-    	List<DosingGuideline> filteredDosingGuideline =null;
-    	List<VarDrugAnn> filteredVarDrugAnn=null;
-    	filteredDrugLabel=DrugLabelDAO.searchByDrug(drug, matchedDrugLabel);
-    	filteredDosingGuideline=dosingGuidelineDAO.searchByDrug(drug, matchedGuidelines);
-    	filteredVarDrugAnn=VarDrugAnnDAO.searchByDrug(drug,matchedAnns);
-    	//jsp
-    	request.setAttribute("matchedDrugLabel",filteredDrugLabel);
-    	request.setAttribute("matchedDosingGuideline", filteredDosingGuideline);
-    	request.setAttribute("matchedVarDrugAnn",filteredVarDrugAnn);
-        request.getRequestDispatcher("/pages/matching_index_search.jsp").forward(request, response);
-
-    	}
-	public void searchPhen(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-    	//be consistent with jsp
-    	String phen=request.getParameter("phenotype");
-    	List<DrugLabel> filteredDrugLabel =null;
-    	List<DosingGuideline> filteredDosingGuideline =null;
-    	List<VarDrugAnn> filteredVarDrugAnn=null;
-    	filteredDrugLabel=DrugLabelDAO.searchByPhenotype(phen, matchedDrugLabel);
-    	filteredDosingGuideline=dosingGuidelineDAO.searchByPhenotype(phen, matchedGuidelines);
-    	filteredVarDrugAnn=VarDrugAnnDAO.searchByPhen(phen, matchedAnns);
-    	//jsp
-    	request.setAttribute("filteredDrugLabel",filteredDrugLabel);
-    	request.setAttribute("filteredDosingGuideline", filteredDosingGuideline);
-    	request.setAttribute("filteredVarDrugAnn",filteredVarDrugAnn);
-    	 	}
-	
-	
-	
-	
-	public void uploadVcfOutput(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-    	System.out.println("uploadvcf");
-    	
-    	String uploadedBy = request.getParameter("uploaded_by");
-//        if (uploadedBy == null || uploadedBy.isEmpty()) {
-//        	System.out.println("isenpty");
-//            request.setAttribute("validateError", "Uploaded by can not be blank");
-//            request.getRequestDispatcher("/pages/matching_index_error.jsp").forward(request, response);
-//            return;
-//        }
-        System.out.println("getpart");
-        Part requestPart = request.getPart("vcf");
-        if (requestPart == null) {
-            request.setAttribute("validateError", "vcf output file can not be blank");
-            request.getRequestDispatcher("/pages/matching_index_error.jsp").forward(request, response);
-            return;
         }
-        
-        InputStream inputStream = requestPart.getInputStream();
-        
-        byte[] bytes = inputStream.readAllBytes();
-        //System.out.println(bytes);
-
-        String content = new String(bytes);
-        //System.out.println(content);
-
-        int sampleId = sampleDAO.save(uploadedBy);
-        Sample s=new Sample(sampleId,new Timestamp(new Date().getTime()),uploadedBy);
-        //System.out.println(sampleId);
-        request.setAttribute("sample",s);
-        VcfDAO.save(sampleId, content);
-        response.sendRedirect("matching?sampleId=" + sampleId);
+        log.info("matched annotations"+matchedAnns.size());
+        return matchedAnns;
     }
-	
-	
-	
-	
-	
-	
-	
-	
+    @RequestMapping("/search")
+    public ModelAndView search(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        ModelAndView search=new ModelAndView();
+        Map<String, Object> map=w.getModel();
+        matchedDrugLabel= (List<DrugLabelBean>) map.get("matchedDrugLabel");
+        matchedGuidelines= (List<DosingGuidelineBean>) map.get("matchedDosingGuideline");
+        matchedAnns= (List<VarDrugAnnBean>) map.get("matchedVarDrugAnn");
+        System.out.println("searchDrug");
+        String drug=request.getParameter("drug");
+        String phen=request.getParameter("Phenotype");
+        log.info(drug);
+        log.info(phen);
+
+        List<DrugLabelBean> filteredDrugLabel =null;
+        List<DosingGuidelineBean> filteredDosingGuideline =null;
+        List<VarDrugAnnBean> filteredVarDrugAnn=null;
+        System.out.println(matchedDrugLabel);
+
+        filteredDrugLabel=DrugLabelDAO.search(drug,phen,matchedDrugLabel);
+        filteredDosingGuideline=DosingGuidelineDAO.search(drug,phen, matchedGuidelines);
+        filteredVarDrugAnn=VarDrugAnnDAO.search(drug,phen,matchedAnns);
+        System.out.println(filteredVarDrugAnn);
+
+        //jsp
+        search.addObject("filteredDrugLabel",filteredDrugLabel);
+        search.addObject("filteredDosingGuideline", filteredDosingGuideline);
+        search.addObject("filteredVarDrugAnn",filteredVarDrugAnn);
+        //request.getRequestDispatcher("/view/searchDrug.jsp").forward(request, response);
+        search.setViewName("searchDrug");
+        return search;
+    }
+
 }

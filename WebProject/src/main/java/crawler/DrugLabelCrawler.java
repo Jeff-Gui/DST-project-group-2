@@ -1,4 +1,4 @@
-package dst.wjx;
+package crawler;
 
 import com.google.gson.Gson;
 
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-
+//please move the crawler files into the sample project to use
 public class DrugLabelCrawler extends BaseCrawler {
 
 

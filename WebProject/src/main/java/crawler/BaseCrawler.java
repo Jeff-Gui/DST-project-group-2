@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
+//please move the crawler files into the sample project to use
 public abstract class BaseCrawler {
 
     private static final Logger log = LoggerFactory.getLogger(BaseCrawler.class);
