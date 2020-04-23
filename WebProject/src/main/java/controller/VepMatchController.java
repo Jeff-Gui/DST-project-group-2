@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -83,7 +82,7 @@ public class VepMatchController {
         return "Hello";
     }
 
-    @RequestMapping(value = "/matching/{sampleType}/{sampleId}",method = RequestMethod.GET)
+    @RequestMapping(value = "/matching/{sampleType}/{sampleId}")
     public ModelAndView doMatch(@PathVariable("sampleType") String sampleType, @PathVariable("sampleId") String sampleIdParameter, HttpServletRequest request) {
         /**
          * To code:

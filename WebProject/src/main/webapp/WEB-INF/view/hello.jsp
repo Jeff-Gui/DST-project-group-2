@@ -1,3 +1,4 @@
+<jsp:useBean id="matched_clinic_ann_by_gene" scope="request" type=""/>
 <%--
   Created by IntelliJ IDEA.
   User: jefft
@@ -12,10 +13,8 @@
 </head>
 <body>
 <p>
-    hello
     <br/>
     ${matched_clinic_ann_by_gene}
-    DrugLabel
     <br/>
     ${matched_drugLabel_by_gene}
     <br/>
