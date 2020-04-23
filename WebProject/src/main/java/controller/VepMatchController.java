@@ -138,16 +138,17 @@ public class VepMatchController {
         return new ModelAndView("hello", data);
     }
 
-    @RequestMapping("/searchDrug")
-    public ModelAndView searchDrug(HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping("/search")
+    public ModelAndView search(HttpServletRequest request, HttpServletResponse response) {
         //be consistent with jsp
         String drug=request.getParameter("drug");
+        String phen=request.getParameter("Phenotype");
         List<DrugLabelBean> filteredDrugLabelBean;
         List<DosingGuidelineBean> filteredDosingGuidelineBean;
         List<VarDrugAnnBean> filteredVarDrugAnn;
-        filteredDrugLabelBean =drugLabelDAO.searchByDrug(drug, matchedDrugLabelBean);
-        filteredDosingGuidelineBean = dosingGuidelineDAO.searchByDrug(drug, matchedGuidelines);
-        filteredVarDrugAnn=varDrugAnnDAO.searchByDrug(drug,matchedAnns);
+        filteredDrugLabelBean =drugLabelDAO.search(drug, phen,matchedDrugLabelBean);
+        filteredDosingGuidelineBean = dosingGuidelineDAO.search(drug,phen, matchedGuidelines);
+        filteredVarDrugAnn=varDrugAnnDAO.search(drug,phen,matchedAnns);
         //jsp
         HashMap<String,Object> data = new HashMap<>();
         data.put("filteredDrugLabel", filteredDrugLabelBean);
@@ -156,23 +157,7 @@ public class VepMatchController {
         return new ModelAndView("hello",data);
     }
 
-    @RequestMapping("/searchPhen")
-    public ModelAndView searchPhen(HttpServletRequest request, HttpServletResponse response) {
-        //be consistent with jsp
-        String phen=request.getParameter("phenotype");
-        List<DrugLabelBean> filteredDrugLabelBean;
-        List<DosingGuidelineBean> filteredDosingGuidelineBean;
-        List<VarDrugAnnBean> filteredVarDrugAnn;
-        filteredDrugLabelBean =drugLabelDAO.searchByPhenotype(phen, matchedDrugLabelBean);
-        filteredDosingGuidelineBean = dosingGuidelineDAO.searchByPhenotype(phen, matchedGuidelines);
-        filteredVarDrugAnn=varDrugAnnDAO.searchByPhen(phen, matchedAnns);
-        //jsp
-        HashMap<String, Object> data = new HashMap();
-        data.put("filteredDrugLabel", filteredDrugLabelBean);
-        data.put("filteredDosingGuideline", filteredDosingGuidelineBean);
-        data.put("filteredVarDrugAnn",filteredVarDrugAnn);
-        return new ModelAndView("hello",data);
-    }
+
 
     private ArrayList<Object> doMatchClinic_by_SNP(ArrayList<ArrayList<String>> sampleGenes) {
         /**

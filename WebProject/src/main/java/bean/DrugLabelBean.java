@@ -9,7 +9,7 @@ public class DrugLabelBean {
 	private String id;
 
 	
-	public DrugLabelBean(String id, String variantGene, String drugName, String source, boolean hasAlternativeDrug,
+	public DrugLabelBean(String variantGene, String drugName, String source, boolean hasAlternativeDrug,
 						 String summary_markdown) {
 		this.id = id;
 		this.variantGene = variantGene;

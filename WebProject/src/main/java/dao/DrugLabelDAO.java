@@ -1,7 +1,7 @@
-package dao;
+package main.java.dao;
 
-import DBmtd.DBmethods;
-import bean.DrugLabelBean;
+import DST2.Group2.Database.database;
+import DST2.Group2.bean.DrugLabel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,41 +14,41 @@ import java.util.List;
 public class DrugLabelDAO {
 	
 	
-	public List<DrugLabelBean> searchByDrug(String drugName, List<DrugLabelBean> drugLabelBeans) {
-		Iterator<DrugLabelBean> iterator= drugLabelBeans.iterator();
+	public static List<DrugLabel> searchByDrug(String drugName,List<DrugLabel> drugLabels) {
+		Iterator<DrugLabel> iterator=drugLabels.iterator();
 		while(iterator.hasNext()) {
-			DrugLabelBean drugLabelBean =iterator.next();
-			if (!drugName.equals(drugLabelBean.getDrugName())) {
+			DrugLabel drugLabel=iterator.next();
+			if (!drugName.equals(drugLabel.getDrugName())) {
 				iterator.remove();
 			}
 		}
-		return drugLabelBeans;
+		return drugLabels;
 	}
-	public List<DrugLabelBean> searchByPhenotype(String phenotype, List<DrugLabelBean> drugLabelBeans) {
-		Iterator<DrugLabelBean> iterator= drugLabelBeans.iterator();
+	public static List<DrugLabel> searchByPhenotype(String phenotype,List<DrugLabel> drugLabels) {
+		Iterator<DrugLabel> iterator=drugLabels.iterator();
 		while(iterator.hasNext()) {
-			DrugLabelBean drugLabelBean =iterator.next();
-			String summary= drugLabelBean.getSummary_markdown();
+			DrugLabel drugLabel=iterator.next();
+			String summary=drugLabel.getSummary_markdown();
 			if (!summary.contains(phenotype)) {
 				iterator.remove();
 			}
 		}
-		return drugLabelBeans;
+		return drugLabels;
 	}
 	
-	public List<DrugLabelBean> getDrugLabel() {
-		Connection postgres= DBmethods.getConnection();
-		List<DrugLabelBean> allLabels=new ArrayList<>();
+	public static List<DrugLabel> getDrugLabel() {
+		Connection postgres=database.connpostgres();
+		List<DrugLabel> allLabels=new ArrayList<>();
 		try {
-			PreparedStatement preparedStatement = postgres.prepareStatement("Select id, name,alternate_drug_available, source, summary_markdown from drugNames");
+			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,alternate_drug_available, source, summary_markdown from drugNames");
 			ResultSet rs=preparedStatement.executeQuery();
 			while (rs.next()) {
-				String id=rs.getString("id");
+				String gene=null;
 				String name=rs.getString("name");
-				boolean alternate_drug_available=rs.getBoolean("alternate_drug_available");
+				boolean alternate_drug_availabel=rs.getBoolean("alternate_drug_available");
 				String source=rs.getString("source");
 				String summary_markdown=rs.getString("summary_markdown");
-				DrugLabelBean druglabel=new DrugLabelBean(id,null,name,source,alternate_drug_available,summary_markdown);
+				DrugLabel druglabel=new DrugLabel(gene,name,source,alternate_drug_availabel,summary_markdown);
 				allLabels.add(druglabel);
 			}
 		} catch (SQLException e) {
