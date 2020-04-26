@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -84,7 +83,7 @@ public class VepMatchController {
         return "matching_index";
     }
 
-    @RequestMapping(value = "/matching/{sampleType}/{sampleId}",method = RequestMethod.GET)
+    @RequestMapping(value = "/matching/{sampleType}/{sampleId}")
     public ModelAndView doMatch(@PathVariable("sampleType") String sampleType, @PathVariable("sampleId") String sampleIdParameter, HttpServletRequest request) {
         /**
          * To code:
@@ -123,8 +122,8 @@ public class VepMatchController {
             return new ModelAndView("hello",data);
         }
 
-        List<Object> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(sampleVep);
-        List<Object> matched_clinic_ann_by_snp = doMatchClinic_by_SNP(sampleVep);
+        ArrayList<Object> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(sampleVep);
+        ArrayList<Object> matched_clinic_ann_by_snp = doMatchClinic_by_SNP(sampleVep);
         ArrayList<Object> matched_drugLabel_by_gene = doMatchDrugLabel(sampleVep);
         ArrayList<Object> matched_dosingGuideline_by_gene = doMatchDosingGuideline(sampleVep);
         ArrayList<Object> matched_ann_by_gene = doMatchVarDrugAnn(sampleVep);
