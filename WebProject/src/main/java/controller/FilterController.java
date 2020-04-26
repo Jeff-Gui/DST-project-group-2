@@ -21,7 +21,7 @@ public class FilterController {
                                  @RequestAttribute("matchedDosingGuideline") List<Object> mdg,
                                  @RequestAttribute("matchedVarDrugAnn") List<Object> mvd,
                                  @RequestAttribute("sample") SampleBean sample,
-                                 @RequestAttribute("condition") HashMap<String, List<String>> condition){
+                                 @RequestAttribute("condition") HashMap<String, String[]> condition){
         /**
          * 用户点击页面上关于过滤的选项，收集在 HashMap<String, List<Object>>， 具体：
          * {"drug":["xxx","xxx"], "phen":["xxx","xxx"]}, 若drug无过滤要求，应为空字符串 {"drug":[""], "phen":["xxx","xxx"]}
@@ -29,8 +29,8 @@ public class FilterController {
          */
 
         HashMap<String, Object> data = new HashMap<>();
-        List<String> drug_target = condition.get("drug");
-        List<String> phen_target = condition.get("phen");
+        String[] drug_target = condition.get("drug");
+        String[] phen_target = condition.get("phen");
         ArrayList<Object> filtered_clinic_ann_by_gene = new ArrayList<>();
         ArrayList<Object> filtered_clinic_ann_by_snp = new ArrayList<>();
         ArrayList<Object> filtered_drugLabel_by_gene = new ArrayList<>();
