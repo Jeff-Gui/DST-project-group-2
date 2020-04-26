@@ -121,8 +121,8 @@ public class VepMatchController {
             return new ModelAndView("hello",data);
         }
 
-        List<Object> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(sampleVep);
-        List<Object> matched_clinic_ann_by_snp = doMatchClinic_by_SNP(sampleVep);
+        ArrayList<Object> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(sampleVep);
+        ArrayList<Object> matched_clinic_ann_by_snp = doMatchClinic_by_SNP(sampleVep);
         ArrayList<Object> matched_drugLabel_by_gene = doMatchDrugLabel(sampleVep);
         ArrayList<Object> matched_dosingGuideline_by_gene = doMatchDosingGuideline(sampleVep);
         ArrayList<Object> matched_ann_by_gene = doMatchVarDrugAnn(sampleVep);
