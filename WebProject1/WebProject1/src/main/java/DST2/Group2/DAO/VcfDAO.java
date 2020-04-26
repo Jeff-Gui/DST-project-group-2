@@ -17,12 +17,12 @@ public class VcfDAO {
 	public static void save(int sampleId, String content) {
 		String[] lines = content.split("\n");
         Connection postgres=database.connpostgres();
-        String delete="delete from vcf";
+        //String delete="delete from vcf";
         String sql = "INSERT INTO vcf(SampleId,Uploaded_variation,\"Location\",Allele,Gene,Feature,Feature_type,Consequence,cDNA_position,CDS_position,Protein_position,Amino_acids,Codons,Existing_variation,Extra) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Statement deletestmt;
 		try {
 			deletestmt = postgres.createStatement();
-			deletestmt.executeQuery(delete);
+			//deletestmt.executeQuery(delete);
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -34,8 +34,6 @@ public class VcfDAO {
             for (int i = 0; i < lines.length; i++) {
             	String line=lines[i];
             	if (!line.startsWith("#")) {
-            		//System.out.println("yes"+line);
-
                 preparedStatement.setInt(1, sampleId);
                 String[] split = lines[i].split("\\t");
                 for (int j = 1; j <= 14; j++) {

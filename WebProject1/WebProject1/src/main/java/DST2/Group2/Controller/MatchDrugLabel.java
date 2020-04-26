@@ -56,6 +56,7 @@ public class MatchDrugLabel  {
 
         w.setViewName("matching_index_search");
 		String sampleIdParameter = request.getParameter("sampleId");
+		log.info(sampleIdParameter+" =sampleparameter");
         if (sampleIdParameter == null) {
                 log.info("sample id parameter is null");
                 ModelAndView s=new ModelAndView();
@@ -98,11 +99,10 @@ public class MatchDrugLabel  {
         log.info("matchedClinicAnn");
         List<ClinicAnnBean> matchedClinicAnns=doMatchClinic_by_Gene(refGenes,ClinicAnns);
         log.info("matched by SNP");
-//        System.out.println(locs);
-//        System.out.println(VarDrugAnns);
-        List<VarDrugAnn> matched_SNP_Anns=doMatchAnn_by_SNP(locs,VarDrugAnns);
+
+        //List<VarDrugAnn> matched_SNP_Anns=doMatchAnn_by_SNP(locs,VarDrugAnns);
         log.info("finished");
-        //System.out.println(matched_SNP_Anns);
+
 
         //pass to jsp
         w.addObject("matchedDrugLabel", matchedDrugLabel);
@@ -110,7 +110,7 @@ public class MatchDrugLabel  {
         w.addObject("matchedVarDrugAnn",matchedAnn);
         w.addObject("sample", SampleDAO.findById(sampleId));
         w.addObject("matchedClinicalAnnotation",matchedClinicAnns);
-        w.addObject("matched_SNP_Anns",matched_SNP_Anns);
+        //w.addObject("matched_SNP_Anns",matched_SNP_Anns);
         return w;
 	}
 	
@@ -121,7 +121,7 @@ public class MatchDrugLabel  {
             boolean matched = false;
             for (String gene: refGenes) {
                 if (drugLabel.getSummary_markdown().contains(gene)) {
-                	//System.out.println("matched");
+
                     matched = true;
                     drugLabel.setvariantGene(gene);
                 }
@@ -206,7 +206,6 @@ public class MatchDrugLabel  {
             if (annlocation!=null ) {
                 if (annlocation!=""){
             String location=annlocation.split(":")[1];
-            //System.out.println(annlocation.split(":")[0]);
             int chromosome= Integer.parseInt(annlocation.split(":")[0].split("_")[1].split("[.]")[0]);
 
             for (String loc: locs) {
@@ -242,6 +241,7 @@ public class MatchDrugLabel  {
         matchedAnns= (List<VarDrugAnn>) map.get("matchedVarDrugAnn");
         matchedClinicAnns= (List<ClinicAnnBean>) map.get("matchedClinicalAnnotation");
         matched_SNP_Anns= (List<VarDrugAnn>) map.get("matched_SNP_Anns");
+        Sample sample= (Sample) map.get("sample");
         log.info("searchDrug");
         String drug=request.getParameter("drug");
         String phen=request.getParameter("Phenotype");
@@ -253,21 +253,24 @@ public class MatchDrugLabel  {
         List<VarDrugAnn> filteredVarDrugAnn=null;
         List<ClinicAnnBean> filteredClinicAnn=null;
         List<VarDrugAnn> filtered_SNP_Ann=null;
-        //System.out.println(matchedDrugLabel);
+
 
         filteredDrugLabel=DrugLabelDAO.search(drug,phen,matchedDrugLabel);
         filteredDosingGuideline=DosingGuidelineDAO.search(drug,phen, matchedGuidelines);
+        System.out.println(matchedAnns+"  matched drug");
         filteredVarDrugAnn=VarDrugAnnDAO.search(drug,phen,matchedAnns);
         filteredClinicAnn=ClinicAnnDAO.search(drug,phen,matchedClinicAnns);
-        filtered_SNP_Ann=VarDrugAnnDAO.search(drug,phen,matched_SNP_Anns);
-        //System.out.println(filteredVarDrugAnn);
+        //filtered_SNP_Ann=VarDrugAnnDAO.search(drug,phen,matched_SNP_Anns);
+
 
         //jsp
         search.addObject("filteredDrugLabel",filteredDrugLabel);
         search.addObject("filteredDosingGuideline", filteredDosingGuideline);
         search.addObject("filteredVarDrugAnn",filteredVarDrugAnn);
         search.addObject("filteredClinicAnn",filteredClinicAnn);
-        search.addObject("filtered_SNP_Anns",filtered_SNP_Ann);
+        search.addObject("sample", sample);
+
+        //search.addObject("filtered_SNP_Anns",filtered_SNP_Ann);
         //request.getRequestDispatcher("/view/searchDrug.jsp").forward(request, response);
         search.setViewName("searchDrug");
         return search;
@@ -298,7 +301,7 @@ public class MatchDrugLabel  {
         LabelMap.put("4","has alternative drug");
         LabelMap.put("5","summary");
 
-        csv.createCSVFile(exportData,LabelMap,"C:/Users/jxm72/","matchedDrugLabel");
+        csv.createCSVFile(exportData,LabelMap,"C:/Users/jxm72/Desktop/","matchedDrugLabel");
 
     }
 

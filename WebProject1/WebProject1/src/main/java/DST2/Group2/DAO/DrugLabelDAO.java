@@ -19,7 +19,7 @@ public class DrugLabelDAO {
 		while(iterator.hasNext()) {
 			DrugLabel drugLabel=iterator.next();
 			String summary=drugLabel.getSummary_markdown();
-			if (!drugLabel.getDrugName().contains(drugName) || !summary.contains(phenotype)) {
+			if (!drugLabel.getDrugName().contains(drugName) && !summary.contains(phenotype)) {
 				iterator.remove();
 			}
 		}

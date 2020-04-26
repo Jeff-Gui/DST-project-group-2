@@ -47,7 +47,7 @@ public class ClinicAnnDAO {
         while(iterator.hasNext()) {
             ClinicAnnBean clinicann=iterator.next();
             String summary=clinicann.getAnnotation_text();
-            if (!clinicann.getRelated_chemicals().contains(drugName) || !summary.contains(phenotype)) {
+            if (!clinicann.getRelated_chemicals().contains(drugName) && !summary.contains(phenotype)) {
                 iterator.remove();
             }
         }

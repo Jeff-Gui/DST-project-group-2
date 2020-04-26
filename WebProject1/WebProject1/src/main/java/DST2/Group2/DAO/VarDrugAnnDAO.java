@@ -15,14 +15,12 @@ import DST2.Group2.bean.VarDrugAnn;
 public class VarDrugAnnDAO {
 
 	public static List<VarDrugAnn> search(String drug, String phen,List<VarDrugAnn> anns) {
+		System.out.println("dao"+anns);
 		Iterator<VarDrugAnn> iterator=anns.iterator();
 		while(iterator.hasNext()) {
 			VarDrugAnn ann=iterator.next();
-			if (!ann.getDrug().contains(drug) || !ann.getAnnotation().contains(phen)) {
+			if (!ann.getDrug().contains(drug) && !ann.getAnnotation().contains(phen)) {
 				iterator.remove();
-			} else {
-				System.out.println(ann.getAnnotation());
-				System.out.println(ann.getDrug());
 			}
 		}
 		return anns;

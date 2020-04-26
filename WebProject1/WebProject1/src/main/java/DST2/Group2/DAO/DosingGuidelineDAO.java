@@ -19,7 +19,7 @@ public class DosingGuidelineDAO {
 			DosingGuideline dosingGuideline=iterator.next();
 			String summary=dosingGuideline.getSummary_markdown();
 
-			if (!dosingGuideline.getName().contains(drugName) || !summary.contains(phenotype)) {
+			if (!dosingGuideline.getName().contains(drugName) && !summary.contains(phenotype)) {
 				iterator.remove();
 			}
 		}

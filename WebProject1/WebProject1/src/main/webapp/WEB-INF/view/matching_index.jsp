@@ -66,7 +66,7 @@
                     </div>
                     <div class="form-group">
                         <label for="uploaded_by">Uploaded By</label>
-                        <input type="number" class="form-control" id="uploaded_by" name="uploaded_by">
+                        <input type="text" class="form-control" id="uploaded_by" name="uploaded_by">
                     </div>
                     <button type="submit" class="btn btn-primary">Upload</button>
                 </form>

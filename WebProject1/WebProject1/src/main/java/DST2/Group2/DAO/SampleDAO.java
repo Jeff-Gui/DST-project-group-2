@@ -12,27 +12,40 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
+import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Database.database;
 import DST2.Group2.bean.Sample;
 
 
 public class SampleDAO {
 	public static int save(String uploadedBy) {
-        AtomicInteger key = new AtomicInteger();
-        Connection conn=database.connpostgres();
-        //System.out.println(key);
+        AtomicInteger key = new AtomicInteger(0);
+        AtomicInteger newid= new AtomicInteger(1);
+        DBmethods.execSQL(connection -> {
             try {
-                PreparedStatement preparedStatement = conn.prepareStatement("insert into sample(created_at, uploaded_by) values (?,?)", Statement.RETURN_GENERATED_KEYS);
+
+                PreparedStatement preparedStatement = connection.prepareStatement("insert into sample(created_at, uploaded_by) values (?,?)", Statement.RETURN_GENERATED_KEYS);
                 preparedStatement.setTimestamp(1, new Timestamp(new Date().getTime()));
                 preparedStatement.setString(2, uploadedBy);
-                key.set(preparedStatement.executeUpdate());
-                System.out.println(key.get());
-
+                System.out.println(key.getAndSet(preparedStatement.executeUpdate()));
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        
-        return key.get();
+            Statement stmt= null;
+            try {
+                stmt = connection.createStatement();
+                String getid="select max(id) from sample";
+                ResultSet rs=stmt.executeQuery(getid);
+                while(rs.next()) {
+                    newid.set(rs.getInt("max")+1);
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+        });
+        System.out.println("decrement and get");
+        return newid.decrementAndGet();
     }
 	
 	

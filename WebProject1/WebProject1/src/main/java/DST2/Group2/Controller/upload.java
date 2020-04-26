@@ -30,16 +30,16 @@ public class upload extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    System.out.println("uploadvcf1111");
+    log.info("upload vcf");
     	
     	String uploadedBy = request.getParameter("uploaded_by");
         if (uploadedBy == null || uploadedBy.isEmpty()) {
-        	System.out.println("isenpty");
+        	log.info("is empty");
             request.setAttribute("validateError", "Uploaded by can not be blank");
             request.getRequestDispatcher("/pages/matching_index_error.jsp").forward(request, response);
             return;
         }
-        System.out.println("getpart");
+
         Part requestPart = request.getPart("vcf");
         if (requestPart == null) {
             request.setAttribute("validateError", "vcf output file can not be blank");
@@ -50,13 +50,13 @@ public class upload extends HttpServlet {
         InputStream inputStream = requestPart.getInputStream();
         
         byte[] bytes =  inputStream.readAllBytes();
-        //System.out.println(bytes);
+
 
         String content = new String(bytes);
-        //System.out.println(content);
+
 
         int sampleId = SampleDAO.save(uploadedBy);
-        System.out.println(sampleId);
+        log.info(sampleId+"  upload sample id");
         VcfDAO.save(sampleId, content);
         response.sendRedirect("matching?sampleId=" + sampleId);
         log.info("read file "+content.length());
