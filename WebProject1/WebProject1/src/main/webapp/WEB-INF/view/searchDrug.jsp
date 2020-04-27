@@ -47,11 +47,23 @@
             </div>
             
             <div class="table-responsive">
+                <form action="search">
+
+                    <label >drug name</label>
+                    <input type="text" name="drug">
+
+                    <label >phenotype name</label>
+                    <input type="text" name="Phenotype">
+
+                    <button type="submit" class="btn btn-primary">submit</button>
+                </form>
                 <ul>
                     <li><a href="#tab1_1">Matched Drug Labels</a></li>
                     <li><a href="#tab1_2">Matched Dosing Guideline</a></li>
-                    <li><a href="#tab1_3">Matched Variant-Drug Annotations</a></li>
-                    <li><a href="#tab1_4">Matched Clinical Annotations</a></li>
+                    <li><a href="#tab1_3">Matched Clinical Annotations By SNP</a></li>
+                    <li><a href="#tab1_4">Matched Clinical Annotations By Gene</a></li>
+                    <li><a href="#tab1_5">Matched Variant-Drug Annotations</a></li>
+
 
                 </ul>
                 <div id="tab1_1">
@@ -123,6 +135,84 @@
                     </c:if>
                 </div>
                 <div id="tab1_3">
+                    <h4>Matched Clinical annotations By SNP</h4>
+                    <c:if test="${!matched.isEmpty()}">
+
+                        <table class="table table-striped table-sm">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>location</th>
+                                <th>gene</th>
+                                <th>chromosome</th>
+                                <th>drug</th>
+                                <th>disease</th>
+                                <th>annotation</th>
+                                <th>evidence level</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${filteredClinicAnnBySNP}" var="item" varStatus="loop">
+                                <tr>
+                                    <td>${loop.index + 1}</td>
+                                    <td>${item.location}</td>
+                                    <td>${item.gene}</td>
+                                    <td>${item.chromosome}</td>
+                                    <td>${item.related_chemicals}</td>
+                                    <td>${item.related_diseases}</td>
+                                    <td>${item.annotation_text}</td>
+                                    <td>${item.evidencelevel}</td>
+
+
+
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+
+                    </c:if>
+                </div>
+                <div id="tab1_4">
+                    <h4>Matched Clinical annotations By Gene</h4>
+                    <c:if test="${!matched.isEmpty()}">
+
+                        <table class="table table-striped table-sm">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>location</th>
+                                <th>gene</th>
+                                <th>chromosome</th>
+                                <th>drug</th>
+                                <th>disease</th>
+                                <th>annotation</th>
+                                <th>evidence level</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${filteredClinicAnnByGene}" var="item" varStatus="loop">
+                                <tr>
+                                    <td>${loop.index + 1}</td>
+                                    <td>${item.location}</td>
+                                    <td>${item.gene}</td>
+                                    <td>${item.chromosome}</td>
+                                    <td>${item.related_chemicals}</td>
+                                    <td>${item.related_diseases}</td>
+                                    <td>${item.annotation_text}</td>
+                                    <td>${item.evidencelevel}</td>
+
+
+
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+
+                    </c:if>
+                </div>
+                <div id="tab1_5">
                     <h4>Matched variant-drug annotations</h4>
                     <c:if test="${!matched.isEmpty()}">
 
@@ -149,45 +239,6 @@
                                     <td>${item.drug}</td>
                                     <td>${item.notes}</td>
                                     <td>${item.annotation}</td>
-
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
-
-                    </c:if>
-                </div>
-                <div id="tab1_4">
-                    <h4>Matched Clinical annotations</h4>
-                    <c:if test="${!matched.isEmpty()}">
-
-                        <table class="table table-striped table-sm">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>location</th>
-                                <th>gene</th>
-                                <th>chromosome</th>
-                                <th>drug</th>
-                                <th>disease</th>
-                                <th>annotation</th>
-                                <th>evidence level</th>
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${filteredClinicAnn}" var="item" varStatus="loop">
-                                <tr>
-                                    <td>${loop.index + 1}</td>
-                                    <td>${item.location}</td>
-                                    <td>${item.gene}</td>
-                                    <td>${item.chromosome}</td>
-                                    <td>${item.related_chemicals}</td>
-                                    <td>${item.related_diseases}</td>
-                                    <td>${item.annotation_text}</td>
-                                    <td>${item.evidencelevel}</td>
-
-
 
                                 </tr>
                             </c:forEach>

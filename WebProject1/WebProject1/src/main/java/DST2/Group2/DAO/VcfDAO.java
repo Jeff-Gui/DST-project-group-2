@@ -6,27 +6,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 //import com.mysql.cj.protocol.Resultset;
 
 import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Database.database;
+import DST2.Group2.bean.GeneBean;
+import DST2.Group2.bean.Sample;
 
 public class VcfDAO {
 	public static void save(int sampleId, String content) {
 		String[] lines = content.split("\n");
         Connection postgres=database.connpostgres();
-        //String delete="delete from vcf";
         String sql = "INSERT INTO vcf(SampleId,Uploaded_variation,\"Location\",Allele,Gene,Feature,Feature_type,Consequence,cDNA_position,CDS_position,Protein_position,Amino_acids,Codons,Existing_variation,Extra) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        Statement deletestmt;
-		try {
-			deletestmt = postgres.createStatement();
-			//deletestmt.executeQuery(delete);
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
         
         try {
             postgres.setAutoCommit(false);
@@ -51,14 +45,14 @@ public class VcfDAO {
         }
 	}
 	
-	public static List<String> getRefs(int sampleId) {
+	public static HashSet<String> getRefs(int sampleId) {
 		String sql= "SELECT DISTINCT Gene from vcf where sampleId=?";
 		List<String> variants = new ArrayList<>();
-		List<String> geneSymbols = new ArrayList<>();
-		Connection postgres=database.connpostgres();
+		HashSet<String> geneSymbols = new HashSet<>();
+        DBmethods.execSQL(connection -> {
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = postgres.prepareStatement(sql);
+            preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, sampleId);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -69,7 +63,7 @@ public class VcfDAO {
         
             PreparedStatement preparedStatement2 = null;
             try {
-                preparedStatement2 = postgres.prepareStatement(sql2);
+                preparedStatement2 = connection.prepareStatement(sql2);
                 for (int i=0;i<variants.size();i++) {
                 preparedStatement2.setString(1, variants.get(i));
                 ResultSet resultSet2 = preparedStatement2.executeQuery();
@@ -81,15 +75,15 @@ public class VcfDAO {
             }
         }catch (SQLException e) {
             e.printStackTrace();
-        }
+        }});
         return geneSymbols;
 		
 	
         }
 
-    public static List<String> getloc(int sampleId) {
-        String sql= "SELECT \"Location\" from vcf where sampleId=?";
-        List<String> locations = new ArrayList<>();
+    public static List<GeneBean> getloc(int sampleId) {
+        String sql= "SELECT distinct \"Location\",allele,gene from vcf where sampleId=?";
+        List<GeneBean> locations = new ArrayList<>();
         DBmethods.execSQL(connection -> {
             PreparedStatement preparedStatement = null;
             try {
@@ -98,11 +92,24 @@ public class VcfDAO {
                 ResultSet resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
                     String location=resultSet.getString("Location");
-
+                    String allele=resultSet.getString("allele");
+                    String g_id=resultSet.getString("gene");
+                    String g_symbol="SELECT distinct symbol from symbol_ensembl where ensemble_id="+"\'"+g_id+"\'";
+                    //System.out.println(g_symbol);
+                    Statement stmt=connection.createStatement();
+                    String g_sym=null;
+                    try {
+                        ResultSet rs=stmt.executeQuery(g_symbol);
+                        while (rs.next()) {
+                            g_sym=rs.getString("symbol");
+                        }
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
                     String loc=location.split(":")[1];
                     String chromosome=location.split(":")[0].split("r")[1];
-
-                    locations.add(chromosome+":"+loc);
+                    GeneBean g=new GeneBean(loc,allele,g_sym,g_id);
+                    locations.add(g);
                 }
             } catch (SQLException throwables) {
                 throwables.printStackTrace();

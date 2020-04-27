@@ -8,30 +8,55 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Database.database;
 import DST2.Group2.bean.DrugLabel;
 import DST2.Group2.bean.VarDrugAnn;
 
 public class VarDrugAnnDAO {
 
-	public static List<VarDrugAnn> search(String drug, String phen,List<VarDrugAnn> anns) {
-		System.out.println("dao"+anns);
-		Iterator<VarDrugAnn> iterator=anns.iterator();
+	public static List<VarDrugAnn> search(String drugName, String phenotype, List<VarDrugAnn> VarDrugAnns) {
+		Iterator<VarDrugAnn> iterator=VarDrugAnns.iterator();
+		String[] drugList=drugName.split(",");
+		String[] phenList=phenotype.split(",");
 		while(iterator.hasNext()) {
-			VarDrugAnn ann=iterator.next();
-			if (!ann.getDrug().contains(drug) && !ann.getAnnotation().contains(phen)) {
+			VarDrugAnn VarDrugAnn=iterator.next();
+			Boolean hasDrug=false;
+			Boolean hasPhen=false;
+			if (drugList[0].equals("")) {
+				hasDrug=true;
+
+			} else {
+				for (String d:drugList) {
+					if (VarDrugAnn.getDrug().contains(d) ) {
+						hasDrug=true;
+					}
+				}}
+
+			if (phenList[0].equals("")) {
+				hasPhen=true;
+			} else {
+				for (String p:phenList) {
+					if (VarDrugAnn.getNotes().contains(p) || VarDrugAnn.getAnnotation().contains(p) ) {
+						hasPhen=true;
+					}
+				}
+			}
+
+			if (hasDrug==false || hasPhen==false) {
 				iterator.remove();
 			}
 		}
-		return anns;
+		return VarDrugAnns;
 	}
-	
+
+
 
 	public static List<VarDrugAnn> getAnn() {
-		Connection postgres=database.connpostgres();
 		List<VarDrugAnn> allAnns=new ArrayList<>();
+		DBmethods.execSQL(connection -> {
 		try {
-			PreparedStatement preparedStatement = postgres.prepareStatement("Select variant,location,gene,chemical,notes,sentence from location_annvar");
+			PreparedStatement preparedStatement = connection.prepareStatement("Select variant,location,gene,chemical,notes,sentence from location_annvar");
 			ResultSet rs=preparedStatement.executeQuery();
 			while (rs.next()) {
 				String variant=rs.getString("variant");
@@ -47,7 +72,7 @@ public class VarDrugAnnDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}});
 		return allAnns;
 	}
 }

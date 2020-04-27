@@ -51,7 +51,7 @@ public class SampleDAO {
 	
 	public static Sample findById(int id) {
         AtomicReference<Sample> sample = new AtomicReference<>();
-        Connection connection=database.connpostgres();
+        DBmethods.execSQL(connection -> {
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement("select id, created_at, uploaded_by from sample where id = ?");
                 preparedStatement.setInt(1, id);
@@ -64,13 +64,13 @@ public class SampleDAO {
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-            }
+            }});
         
         return sample.get();
     }
 	public static List<Sample> findAll() {
         List<Sample> samples = new ArrayList<>();
-        Connection connection=database.connpostgres();
+        DBmethods.execSQL(connection -> {
 
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement("select * from sample");
@@ -84,7 +84,7 @@ public class SampleDAO {
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-            }
+            }});
         
         return samples;
     }

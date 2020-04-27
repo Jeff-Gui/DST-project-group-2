@@ -9,24 +9,49 @@ import java.util.List;
 
 import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Database.database;
+import DST2.Group2.bean.DosingGuideline;
 import DST2.Group2.bean.DrugLabel;
 
 public class DrugLabelDAO {
-	
-	
-	public static List<DrugLabel> search(String drugName,String phenotype,List<DrugLabel> drugLabels) {
-		Iterator<DrugLabel> iterator=drugLabels.iterator();
+
+
+	public static List<DrugLabel> search(String drugName, String phenotype, List<DrugLabel> DrugLabels) {
+		Iterator<DrugLabel> iterator=DrugLabels.iterator();
+		String[] drugList=drugName.split(",");
+		String[] phenList=phenotype.split(",");
 		while(iterator.hasNext()) {
-			DrugLabel drugLabel=iterator.next();
-			String summary=drugLabel.getSummary_markdown();
-			if (!drugLabel.getDrugName().contains(drugName) && !summary.contains(phenotype)) {
+			DrugLabel DrugLabel=iterator.next();
+			Boolean hasDrug=false;
+			Boolean hasPhen=false;
+			if (drugList[0].equals("")) {
+				hasDrug=true;
+
+			} else {
+				for (String d:drugList) {
+					if (DrugLabel.getDrugName().contains(d) ) {
+						hasDrug=true;
+					}
+				}}
+
+			if (phenList[0].equals("")) {
+				hasPhen=true;
+			} else {
+				for (String p:phenList) {
+					if (DrugLabel.getSummary_markdown().contains(p) ) {
+						hasPhen=true;
+					}
+				}
+			}
+
+			if (hasDrug==false || hasPhen==false) {
 				iterator.remove();
 			}
 		}
-		return drugLabels;
+		return DrugLabels;
 	}
 
-	
+
+
 	public static List<DrugLabel> getDrugLabel() {
 		List<DrugLabel> allLabels=new ArrayList<>();
 		DBmethods.execSQL(connection -> {

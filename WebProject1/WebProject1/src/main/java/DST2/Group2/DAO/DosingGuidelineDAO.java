@@ -8,29 +8,54 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Database.database;
+import DST2.Group2.bean.ClinicAnnBean;
 import DST2.Group2.bean.DosingGuideline;
 import DST2.Group2.bean.DrugLabel;
 
 public class DosingGuidelineDAO {
-	public static List<DosingGuideline> search(String drugName,String phenotype,List<DosingGuideline> dosingGuidelines) {
-		Iterator<DosingGuideline> iterator=dosingGuidelines.iterator();
+	public static List<DosingGuideline> search(String drugName, String phenotype, List<DosingGuideline> DosingGuidelines) {
+		Iterator<DosingGuideline> iterator=DosingGuidelines.iterator();
+		String[] drugList=drugName.split(",");
+		String[] phenList=phenotype.split(",");
 		while(iterator.hasNext()) {
-			DosingGuideline dosingGuideline=iterator.next();
-			String summary=dosingGuideline.getSummary_markdown();
+			DosingGuideline DosingGuideline=iterator.next();
+			Boolean hasDrug=false;
+			Boolean hasPhen=false;
+			if (drugList[0].equals("")) {
+				hasDrug=true;
 
-			if (!dosingGuideline.getName().contains(drugName) && !summary.contains(phenotype)) {
+			} else {
+				for (String d:drugList) {
+					if (DosingGuideline.getName().contains(d) ) {
+						hasDrug=true;
+					}
+				}}
+
+			if (phenList[0].equals("")) {
+				hasPhen=true;
+			} else {
+				for (String p:phenList) {
+					if (DosingGuideline.getSummary_markdown().contains(p) ) {
+						hasPhen=true;
+					}
+				}
+			}
+
+			if (hasDrug==false || hasPhen==false) {
 				iterator.remove();
 			}
 		}
-		return dosingGuidelines;
+		return DosingGuidelines;
 	}
-	
+
+
 	public static List<DosingGuideline> getDosingGuideline() {
-		Connection postgres=database.connpostgres();
 		List<DosingGuideline> allGuidelines=new ArrayList<>();
+		DBmethods.execSQL(connection -> {
 		try {
-			PreparedStatement preparedStatement = postgres.prepareStatement("Select name,drug, source,recommendation,summary_markdown from dosing_guideline_name");
+			PreparedStatement preparedStatement = connection.prepareStatement("Select name,drug, source,recommendation,summary_markdown from dosing_guideline_name");
 			ResultSet rs=preparedStatement.executeQuery();
 			while (rs.next()) {
 				String gene=null;
@@ -46,7 +71,7 @@ public class DosingGuidelineDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}});
 		return allGuidelines;
 	}
 }
