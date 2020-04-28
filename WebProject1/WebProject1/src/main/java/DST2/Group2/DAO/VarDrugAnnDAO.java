@@ -10,6 +10,7 @@ import java.util.List;
 
 import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Database.database;
+import DST2.Group2.Utils.ListMatch;
 import DST2.Group2.bean.DrugLabel;
 import DST2.Group2.bean.VarDrugAnn;
 
@@ -21,28 +22,8 @@ public class VarDrugAnnDAO {
 		String[] phenList=phenotype.split(",");
 		while(iterator.hasNext()) {
 			VarDrugAnn VarDrugAnn=iterator.next();
-			Boolean hasDrug=false;
-			Boolean hasPhen=false;
-			if (drugList[0].equals("")) {
-				hasDrug=true;
-
-			} else {
-				for (String d:drugList) {
-					if (VarDrugAnn.getDrug().contains(d) ) {
-						hasDrug=true;
-					}
-				}}
-
-			if (phenList[0].equals("")) {
-				hasPhen=true;
-			} else {
-				for (String p:phenList) {
-					if (VarDrugAnn.getNotes().contains(p) || VarDrugAnn.getAnnotation().contains(p) ) {
-						hasPhen=true;
-					}
-				}
-			}
-
+			Boolean hasDrug= ListMatch.listMatch(VarDrugAnn.getDrug(),drugList);
+			Boolean hasPhen=ListMatch.listMatch2(VarDrugAnn.getNotes(),VarDrugAnn.getAnnotation(),phenList);
 			if (hasDrug==false || hasPhen==false) {
 				iterator.remove();
 			}

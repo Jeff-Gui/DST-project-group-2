@@ -10,6 +10,7 @@ import java.util.List;
 
 import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Database.database;
+import DST2.Group2.Utils.ListMatch;
 import DST2.Group2.bean.ClinicAnnBean;
 import DST2.Group2.bean.DosingGuideline;
 import DST2.Group2.bean.DrugLabel;
@@ -21,28 +22,8 @@ public class DosingGuidelineDAO {
 		String[] phenList=phenotype.split(",");
 		while(iterator.hasNext()) {
 			DosingGuideline DosingGuideline=iterator.next();
-			Boolean hasDrug=false;
-			Boolean hasPhen=false;
-			if (drugList[0].equals("")) {
-				hasDrug=true;
-
-			} else {
-				for (String d:drugList) {
-					if (DosingGuideline.getName().contains(d) ) {
-						hasDrug=true;
-					}
-				}}
-
-			if (phenList[0].equals("")) {
-				hasPhen=true;
-			} else {
-				for (String p:phenList) {
-					if (DosingGuideline.getSummary_markdown().contains(p) ) {
-						hasPhen=true;
-					}
-				}
-			}
-
+			Boolean hasDrug= ListMatch.listMatch(DosingGuideline.getName(),drugList);
+			Boolean hasPhen=ListMatch.listMatch(DosingGuideline.getSummary_markdown(),phenList);
 			if (hasDrug==false || hasPhen==false) {
 				iterator.remove();
 			}

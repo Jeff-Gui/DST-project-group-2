@@ -18,7 +18,28 @@
     <meta name="author" content="">
     <meta name="generator" content="">
     <title>Dashboard Template · Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
+    <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="<%=request.getContextPath()%>/static/css/app.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
 
 </head>
 <body>

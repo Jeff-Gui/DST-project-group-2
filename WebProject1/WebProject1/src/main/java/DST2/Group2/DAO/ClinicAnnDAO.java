@@ -3,7 +3,6 @@ package DST2.Group2.DAO;
 import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Utils.ListMatch;
 import DST2.Group2.bean.ClinicAnnBean;
-import DST2.Group2.bean.DrugLabel;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,26 +19,8 @@ public class ClinicAnnDAO {
         String[] phenList=phenotype.split(",");
         while(iterator.hasNext()) {
             ClinicAnnBean clinicann=iterator.next();
-            Boolean hasDrug=false;
-            Boolean hasPhen=false;
-            if (drugList[0].equals("")) {
-                hasDrug=true;
-
-            } else {
-            for (String d:drugList) {
-                if (clinicann.getRelated_chemicals().contains(d)) {
-                    hasDrug=true;
-                }
-            }}
-            if (phenList[0].equals("")) {
-                hasPhen=true;
-            } else {
-                for (String p:phenList) {
-                    if (clinicann.getRelated_diseases().contains(p) || clinicann.getAnnotation_text().contains(p)) {
-                        hasPhen=true;
-                    }
-                }
-            }
+            Boolean hasDrug=ListMatch.listMatch(clinicann.getRelated_chemicals(),drugList);
+            Boolean hasPhen=ListMatch.listMatch2(clinicann.getAnnotation_text(),clinicann.getRelated_diseases(),phenList);
             if (hasDrug==false || hasPhen==false) {
                 iterator.remove();
             }

@@ -9,6 +9,7 @@ import java.util.List;
 
 import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Database.database;
+import DST2.Group2.Utils.ListMatch;
 import DST2.Group2.bean.DosingGuideline;
 import DST2.Group2.bean.DrugLabel;
 
@@ -21,27 +22,8 @@ public class DrugLabelDAO {
 		String[] phenList=phenotype.split(",");
 		while(iterator.hasNext()) {
 			DrugLabel DrugLabel=iterator.next();
-			Boolean hasDrug=false;
-			Boolean hasPhen=false;
-			if (drugList[0].equals("")) {
-				hasDrug=true;
-
-			} else {
-				for (String d:drugList) {
-					if (DrugLabel.getDrugName().contains(d) ) {
-						hasDrug=true;
-					}
-				}}
-
-			if (phenList[0].equals("")) {
-				hasPhen=true;
-			} else {
-				for (String p:phenList) {
-					if (DrugLabel.getSummary_markdown().contains(p) ) {
-						hasPhen=true;
-					}
-				}
-			}
+			Boolean hasDrug= ListMatch.listMatch(DrugLabel.getDrugName(),drugList);
+			Boolean hasPhen=ListMatch.listMatch(DrugLabel.getSummary_markdown(),phenList);;
 
 			if (hasDrug==false || hasPhen==false) {
 				iterator.remove();
