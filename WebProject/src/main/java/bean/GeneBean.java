@@ -1,8 +1,5 @@
 package bean;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class GeneBean {
     private String symbol;
     private String ensembl_id;

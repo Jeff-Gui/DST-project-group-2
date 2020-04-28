@@ -1,8 +1,5 @@
 package bean;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class ClinicAnnBean {
     private String id;
     private String location;

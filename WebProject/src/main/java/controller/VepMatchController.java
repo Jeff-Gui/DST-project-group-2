@@ -5,6 +5,7 @@ import bean.*;
 import dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,14 +29,20 @@ public class VepMatchController {
 
     private static final Logger log = LoggerFactory.getLogger(VepMatchController.class);
 
-    private HashMap<String, String[]> target = new HashMap<>();
-    private VepDAO vepDAO = new VepDAO();
-    private ClinicAnnDAO clinicAnnDAO = new ClinicAnnDAO();
-    private DosingGuidelineDAO dosingGuidelineDAO = new DosingGuidelineDAO();
-    private DrugLabelDAO drugLabelDAO = new DrugLabelDAO();
-    private VarDrugAnnDAO varDrugAnnDAO = new VarDrugAnnDAO();
-    private SampleDAO sampleDAO = new SampleDAO();
+    @Autowired
+    private ClinicAnnDAO clinicAnnDAO;
+    @Autowired
+    private DosingGuidelineDAO dosingGuidelineDAO;
+    @Autowired
+    private DrugLabelDAO drugLabelDAO;
+    @Autowired
+    private VarDrugAnnDAO varDrugAnnDAO;
+    @Autowired
+    private SampleDAO sampleDAO;
+    @Autowired
+    private VepDAO vepDAO;
 
+    private HashMap<String, String[]> target = new HashMap<>();
     List<DrugLabelBean> matchedDrugLabelBean =null;
     List<DosingGuidelineBean> matchedGuidelines =null;
     List<VarDrugAnnBean> matchedAnns=null;
@@ -238,7 +245,7 @@ public class VepMatchController {
             }
         });
 
-        log.info("Matched clinic annotation: " + matchedClinicAnnBeans.size() + " corresponding to: " + matched_sampleInfo + "sample SNPs.");
+        log.info("Matched clinic annotation: " + matchedClinicAnnBeans.size() + " corresponding to: " + matched_sampleInfo.size() + "sample SNPs.");
 
         rt.add(matchedClinicAnnBeans);
         rt.add(matched_sampleInfo);

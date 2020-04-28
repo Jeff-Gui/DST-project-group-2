@@ -1,8 +1,5 @@
 package bean;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class DosingGuidelineBean {
 
 	private String variant_gene;
