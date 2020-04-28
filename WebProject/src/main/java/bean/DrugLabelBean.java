@@ -1,5 +1,8 @@
 package bean;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class DrugLabelBean {
 	private String variantGene;
 	private String drugName;

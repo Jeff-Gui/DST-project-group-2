@@ -3,6 +3,7 @@ package dao;
 import DBmtd.DBmethods;
 
 import bean.SampleBean;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
-
+@Repository
 public class SampleDAO {
 	public int save(String uploadedBy) {
         AtomicInteger key = new AtomicInteger();

@@ -2,6 +2,7 @@ package dao;
 
 import DBmtd.DBmethods;
 import bean.VarDrugAnnBean;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,27 +12,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+@Repository
 public class VarDrugAnnDAO {
 
 	public List<VarDrugAnnBean> searchByDrug(String drug, List<VarDrugAnnBean> anns) {
-		Iterator<VarDrugAnnBean> iterator=anns.iterator();
-		while(iterator.hasNext()) {
-			VarDrugAnnBean ann=iterator.next();
-			if (!drug.equals(ann.getDrug())) {
-				iterator.remove();
-			}
-		}
+		anns.removeIf(ann -> !drug.equals(ann.getDrug()));
 		return anns;
 	}
 	
 	public List<VarDrugAnnBean> searchByPhen(String phen, List<VarDrugAnnBean> anns) {
-		Iterator<VarDrugAnnBean> iterator=anns.iterator();
-		while(iterator.hasNext()) {
-			VarDrugAnnBean ann=iterator.next();
-			if (!ann.getAnnotation().contains(phen)) {
-				iterator.remove();
-			}
-		}
+		anns.removeIf(ann -> !ann.getAnnotation().contains(phen));
 		return anns;
 	}
 	public List<VarDrugAnnBean> getAnn() {

@@ -2,6 +2,7 @@ package dao;
 
 import DBmtd.DBmethods;
 import bean.DosingGuidelineBean;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+@Repository
 public class DosingGuidelineDAO {
 	public List<DosingGuidelineBean> searchByDrug(String drugName, List<DosingGuidelineBean> dosingGuidelineBeans) {
 		Iterator<DosingGuidelineBean> iterator= dosingGuidelineBeans.iterator();

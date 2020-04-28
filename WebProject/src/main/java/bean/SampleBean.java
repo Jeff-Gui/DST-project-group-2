@@ -1,7 +1,10 @@
 package bean;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
+@Component
 public class SampleBean {
     private int id;
     private Date createdAt;
