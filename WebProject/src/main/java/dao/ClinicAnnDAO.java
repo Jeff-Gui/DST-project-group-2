@@ -2,6 +2,7 @@ package dao;
 
 import DBmtd.DBmethods;
 import bean.ClinicAnnBean;
+import org.springframework.stereotype.Repository;
 import utils.ListMatch;
 
 import java.sql.PreparedStatement;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+@Repository
 public class ClinicAnnDAO {
 
     public List<ClinicAnnBean> findAll(HashMap<String, String[]> target){
