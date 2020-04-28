@@ -14,10 +14,10 @@
 
 
     <!--本项目把静态资源放在了webapp的statics目录下，资源映射如下-->
-<!--    <mvc:resources mapping="/css/**" location="static/css/"/>-->
-<!--    <mvc:resources mapping="/jquery/**" location="static/jquery/"/>-->
-<!--    <mvc:resources mapping="/bootstrap/css/**" location="static/bootstrap/css/"/>-->
-<!--    <mvc:resources mapping="/bootstrap/js/**" location="static/bootstrap/js/"/>-->
+    <mvc:resources mapping="/css/**" location="/static/css/"/>
+    <mvc:resources mapping="/jquery/**" location="/static/jquery/"/>
+    <mvc:resources mapping="/bootstrap/**" location="/static/bootstrap/"/>
+<!--    <mvc:resources mapping="/bootstrap/js/**" location="/WEB-INF/static/bootstrap/js/"/>-->
     <mvc:default-servlet-handler />
 
 

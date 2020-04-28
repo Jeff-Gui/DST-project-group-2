@@ -107,7 +107,7 @@ public class MatchDrugLabel  {
         log.info("matchann");
         List<VarDrugAnn> matchedAnn=doMatchVarDrugAnn(refGenes,VarDrugAnns);
         log.info("match clinic annotation by gene");
-        List<ClinicAnnBean> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(refGenes);
+        List<ClinicAnnBean> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(locs);
         log.info("match clinic annotation by SNP");
         List<ClinicAnnBean> matched_clinic_ann_by_snp = doMatchClinic_by_SNP(locs);
         log.info("finished");
@@ -123,7 +123,7 @@ public class MatchDrugLabel  {
         return w;
 	}
 
-    private List<ClinicAnnBean> doMatchClinic_by_Gene(HashSet<String> sampleGenes) {
+    private List<ClinicAnnBean> doMatchClinic_by_Gene(List<GeneBean> sampleGenes) {
         /**
          * Part 2b: match sample mutated genes with clinic annotation, only variants with clinic annotations are considered.
          */
@@ -135,7 +135,7 @@ public class MatchDrugLabel  {
         log.info("Filtered clinic annotation record total: " + refClinicAnns.size());
 
         int counter=0;
-        for (String obj : sampleGenes){
+        for (GeneBean obj : sampleGenes){
             Boolean match=false;
             for (ClinicAnnBean clinicAnnBean:refClinicAnns){
 //                counter++;
@@ -144,24 +144,26 @@ public class MatchDrugLabel  {
 //                }
 //                ArrayList<String> row = (ArrayList<String>) obj;
 //                String gene = row.get(3); // gene symbol
+                String gene=obj.getSymbol();
                 if (clinicAnnBean.getGene()==null){ continue; }
-                if (clinicAnnBean.getGene().contains(obj)){
+                if (gene!=null && gene.length()!=0) {
+                if (clinicAnnBean.getGene().contains(gene)){
 
                     if (!matchedClinicAnnBeans.contains(clinicAnnBean)){
                         matchedClinicAnnBeans.add(clinicAnnBean);
                         match=true;
                     }
 
-                    //updateSampleReturn(matched_sampleInfo, row, gene);
+                    updateSampleReturn(matched_sampleInfo, obj, gene);
                 }
-            }
+            }}
             if (match==true) {
                 counter++;
             }
         }
 
         log.info("Matched clinic annotation: " + matchedClinicAnnBeans.size() + " corresponding to " + counter + " genes from the sample.");
-
+        log.info("matched sample info"+matched_sampleInfo);
         rt.add(matchedClinicAnnBeans); // 787 records matched from sample
         rt.add(matched_sampleInfo); // 185 genes matched from clinic annotation
 
@@ -205,10 +207,10 @@ public class MatchDrugLabel  {
                 if (filtered.size()>0){ // row number, nothing found in sample VEP???
                     List<ClinicAnnBean> refClinicAnns = clinicAnnDAO.findAll(target);
 
-                    for (Object obj : filtered){
+                    for (GeneBean obj : filtered){
                         for (ClinicAnnBean clinicAnnBean:refClinicAnns){
-                            ArrayList<String> row = (ArrayList<String>) obj;
-                            String location = row.get(4); // SNP name (location in ClinicAnnBean)
+                            //ArrayList<String> row = obj;
+                            String location = obj.getLocation(); // SNP name (location in ClinicAnnBean)
                             if (clinicAnnBean.getLocation()==null){ continue; }
                             if (clinicAnnBean.getLocation().contains(location)){
 
@@ -216,8 +218,8 @@ public class MatchDrugLabel  {
                                     matchedClinicAnnBeans.add(clinicAnnBean);
                                 }
 
-                                String gene = row.get(3);
-                                //updateSampleReturn(matched_sampleInfo, row, gene);
+                                String gene = obj.getSymbol();
+                                updateSampleReturn(matched_sampleInfo, obj, gene);
                             }
                         }
                     }
@@ -501,5 +503,23 @@ public class MatchDrugLabel  {
 
     }
 
+    private void updateSampleReturn(HashMap<String, HashMap<String, String>> matched_sampleInfo, GeneBean row, String gene) {
 
+        // refactored by IDEA automatically
+
+        if (matched_sampleInfo.containsKey(gene)){
+
+            matched_sampleInfo.get(gene).put(row.getLocation(), row.getAllele());
+
+        } else {
+
+            HashMap<String, String> submap = new HashMap<>();
+
+            submap.put(row.getLocation(), row.getAllele());
+
+            matched_sampleInfo.put(gene,submap);
+
+        }
+
+    }
 }

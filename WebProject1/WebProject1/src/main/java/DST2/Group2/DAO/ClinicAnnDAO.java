@@ -14,35 +14,6 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ClinicAnnDAO {
-    public static List<ClinicAnnBean> getClinicAnn() {
-        List<ClinicAnnBean> allClinicAnn=new ArrayList<>();
-        DBmethods.execSQL(connection -> {
-            try{
-                PreparedStatement preparedStatement = connection.prepareStatement("SELECT id, location, gene, evidencelevel, clinical_annotation_types, annotation_text, related_chemicals, related_diseases, biogeographical_groups, chromosome FROM clinic_meta;");
-                ResultSet resultSet = preparedStatement.executeQuery();
-                while (resultSet.next()) {
-                    String id = resultSet.getString("id");
-                    String location = resultSet.getString("location");
-                    String gene = resultSet.getString("gene");
-                    String evidencelevel = resultSet.getString("evidencelevel");
-                    String types = resultSet.getString("clinical_annotation_types");
-                    String annotation_text = resultSet.getString("annotation_text");
-                    String related_chemicals = resultSet.getString("related_chemicals");
-                    if (related_chemicals!=null){ related_chemicals = related_chemicals.toLowerCase(); }
-                    String related_diseases = resultSet.getString("related_diseases");
-                    if (related_diseases!=null){ related_diseases = related_diseases.toLowerCase(); }
-                    String biogeographical_groups = resultSet.getString("biogeographical_groups");
-                    String chromosome = resultSet.getString("chromosome");
-                    ClinicAnnBean clinicAnnBean = new ClinicAnnBean(id,location,gene,evidencelevel,types,annotation_text,related_chemicals,related_diseases,biogeographical_groups,chromosome);
-                    allClinicAnn.add(clinicAnnBean);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
-        });
-        return allClinicAnn;
-    }
     public static List<ClinicAnnBean> search(String drugName, String phenotype, List<ClinicAnnBean> ClinicAnns) {
         Iterator<ClinicAnnBean> iterator=ClinicAnns.iterator();
         String[] drugList=drugName.split(",");
@@ -60,7 +31,6 @@ public class ClinicAnnDAO {
                     hasDrug=true;
                 }
             }}
-
             if (phenList[0].equals("")) {
                 hasPhen=true;
             } else {
@@ -70,7 +40,6 @@ public class ClinicAnnDAO {
                     }
                 }
             }
-
             if (hasDrug==false || hasPhen==false) {
                 iterator.remove();
             }

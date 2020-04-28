@@ -19,12 +19,13 @@
     <meta name="generator" content="">
     <title>Dashboard Template · Bootstrap</title>
 
+
     <!-- Bootstrap core CSS -->
-    <link href="/WEB-INF/static/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <script src="/WEB-INF/static/jquery/jquery-3.4.1.js"></script>
-    <script src="/WEB-INF/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
+    <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Custom styles for this template -->
-    <link href="/WEB-INF/static/css/app.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/static/css/app.css" rel="stylesheet">
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -45,9 +46,7 @@
 <body>
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Precision Medicine Matching System</a>
-	<jsp:include page="nav.jsp" >
-            <jsp:param name="active" value="drugs" />
-    </jsp:include>
+
 </nav>
 
 <div class="container-fluid">
