@@ -17,6 +17,7 @@ import java.util.List;
 public class VarDrugAnnDAO {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static List<VarDrugAnnBean> search(String drug,String phen, List<VarDrugAnnBean> anns) {
 		Iterator<VarDrugAnnBean> iterator=anns.iterator();
 		while(iterator.hasNext()) {
@@ -25,6 +26,10 @@ public class VarDrugAnnDAO {
 				iterator.remove();
 			}
 		}
+=======
+	public List<VarDrugAnnBean> searchByDrug(String drug, List<VarDrugAnnBean> anns) {
+		anns.removeIf(ann -> !drug.equals(ann.getDrug()));
+>>>>>>> master
 		return anns;
 	}
 	

@@ -44,8 +44,11 @@ public class VepMatchController {
     private VepDAO vepDAO;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     List<DrugLabelBean> matchedDrugLabel =null;
 =======
+=======
+>>>>>>> master
     private HashMap<String, String[]> target = new HashMap<>();
     List<DrugLabelBean> matchedDrugLabelBean =null;
 >>>>>>> master

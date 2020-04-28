@@ -15,11 +15,14 @@ import java.util.List;
 @Repository
 public class DrugLabelDAO {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	
 	public static List<DrugLabelBean> search(String drugName,String phenotype,List<DrugLabelBean> drugLabels) {
 		Iterator<DrugLabelBean> iterator=drugLabels.iterator();
 =======
+=======
+>>>>>>> master
 
 	public List<DrugLabelBean> searchByDrug(String drugName, List<DrugLabelBean> drugLabelBeans) {
 		Iterator<DrugLabelBean> iterator= drugLabelBeans.iterator();
