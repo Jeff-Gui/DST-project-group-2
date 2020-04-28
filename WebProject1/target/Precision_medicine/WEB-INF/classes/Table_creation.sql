@@ -84,7 +84,6 @@ create table drug
     constraint drug_id_uindex
         unique (id)
 );
-
 ALTER TABLE drug
     ADD PRIMARY KEY (id);
 
@@ -105,7 +104,6 @@ CREATE TABLE drug_label
     constraint drug_label_id_uindex
         unique (id)
 );
-
 ALTER TABLE drug_label
     ADD PRIMARY KEY (id);
 
@@ -124,7 +122,6 @@ CREATE TABLE dosing_guideline
     constraint dosing_guideline_id_uindex
         unique (id)
 );
-
 ALTER TABLE dosing_guideline
     ADD PRIMARY KEY (id);
 
@@ -152,6 +149,7 @@ copy public.variant (variant_id, variant_name, gene_ids, gene_symbols, location,
 copy public.drug (id, name, obj_cls, drug_url, biomarker) FROM './WebProject1/src/main/resources/Tables/drug.csv' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';
 copy public.drug_label (id, name, obj_cls, alternate_drug_available, dosing_information, prescribing_markdown, source, text_markdown, summary_markdown, \"raw\", drug_id) FROM './WebProject1/src/main/resources/Tables/drug_label.csv' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';
 copy public.var_drug_ann (annotation_id, variant, gene, chemical, pmid, phenotype_category, significance, notes, sentence, studyparam, allels, choromosome) FROM './WebProject1/src/main/resources/Tables/var_drug_ann.tsv' DELIMITER E'\\t' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';
+copy public.dosing_guideline (id, obj_cls, name, recommendation, drug_id, source, summary_markdown, text_markdown, \"raw\") FROM '/Users/jefft/Desktop/WebProject1/src/main/resources/Tables/dosing_guideline.csv' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';
 
 -- location_annvar: created from variant.tsv & variant.tsv
 SELECT var_drug_ann.variant, var_drug_ann.gene,

@@ -55,6 +55,12 @@
                     Dosing Guideline
                 </a>
             </li>
+            <li class="nav-item">
+                <a class='nav-link ${param.active == "clinic_ann" ? "active" : ""}' href="<%=request.getContextPath()%>/clinicAnn">
+                    <span data-feather="file-text"></span>
+                    Clinic Annotations
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

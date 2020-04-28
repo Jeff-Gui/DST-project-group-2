@@ -138,7 +138,7 @@ public class MatchDrugLabelController {
 
     private List<ClinicAnnBean> doMatchClinic_by_Gene(List<RefBean> sampleGenes) {
         /**
-         * Part 2b: match sample mutated genes with clinic annotation, only variants with clinic annotations are considered.
+         * Match sample mutated genes with clinic annotation, only variants with clinic annotations are considered.
          */
         ArrayList<Object> rt = new ArrayList<>();
         List<ClinicAnnBean> matchedClinicAnnBeans = new ArrayList<>(); // e.g. [clinicAnnBean1, clinicAnnBean2,...]
@@ -151,16 +151,11 @@ public class MatchDrugLabelController {
         for (RefBean obj : sampleGenes){
             boolean match=false;
             for (ClinicAnnBean clinicAnnBean:refClinicAnns){
-//                counter++;
-//                if (counter%100000000==0){
-//                    System.out.println("processed: " + counter);
-//                }
-//                ArrayList<String> row = (ArrayList<String>) obj;
-//                String gene = row.get(3); // gene symbol
+
                 String gene=obj.getSym_gene();
                 if (clinicAnnBean.getGene()==null){ continue; }
                 if (gene!=null && gene.length()!=0) {
-                    if (gene!="-" && clinicAnnBean.getGene().contains(gene)){
+                    if (!gene.equals("-") && clinicAnnBean.getGene().contains(gene)){
 
                         if (!matchedClinicAnnBeans.contains(clinicAnnBean)){
                             matchedClinicAnnBeans.add(clinicAnnBean);
@@ -198,7 +193,7 @@ public class MatchDrugLabelController {
             ArrayList<RefBean> filtered = new ArrayList<>();
             try {
                 /**
-                 * Part 2a: match sample variant location with database, only variants with clinic annotations are considered.
+                 * Match sample variant location with database, only variants with clinic annotations are considered.
                  * Query variant name ("rs" ID)
                  */
                 ResultSet resultSet;
@@ -206,12 +201,11 @@ public class MatchDrugLabelController {
                 for (RefBean o : sampleGenes) {
 
                     PreparedStatement preparedStatement2 = connection.prepareStatement(statement2);
-                    //ArrayList<String> oldrow = (ArrayList<String>) o;
+
                     preparedStatement2.setString(1, o.getLocation());
                     resultSet = preparedStatement2.executeQuery();
                     while (resultSet.next()) {
                         RefBean newrow = new RefBean(o.getLocation(),o.getAllele(),o.getOri_gene(),o.getSym_gene());
-                        //newrow.add(resultSet.getString(1)); // SNP name
                         filtered.add(newrow);
                     }
                 }
@@ -223,7 +217,7 @@ public class MatchDrugLabelController {
 
                     for (RefBean obj : filtered){
                         for (ClinicAnnBean clinicAnnBean:refClinicAnns){
-                            //ArrayList<String> row = obj;
+
                             String location = obj.getLocation(); // SNP name (location in ClinicAnnBean)
                             if (clinicAnnBean.getLocation()==null){ continue; }
                             if (clinicAnnBean.getLocation().contains(location)){

@@ -34,7 +34,6 @@ public class ClinicAnnDAO {
         List<ClinicAnnBean> clinicAnnBeans = new ArrayList<>();
 
         DBmethods.execSQL(connection -> {
-
             try{
 
                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT id, location, gene, evidencelevel, clinical_annotation_types, annotation_text, related_chemicals, related_diseases, biogeographical_groups, chromosome FROM clinic_meta;");
@@ -59,12 +58,9 @@ public class ClinicAnnDAO {
                 }
 
             } catch (SQLException e) {
-
                 e.printStackTrace();
-
             }
         });
-
 
         return clinicAnnBeans;
 

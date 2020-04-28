@@ -21,6 +21,8 @@ public class KnowledgeBaseController {
     private DrugLabelDAO drugLabelDao;
     @Autowired
     private DosingGuidelineDAO dosingGuidelineDao;
+    @Autowired
+    private ClinicAnnDAO clinicAnnDAO;
 
     @RequestMapping("/drugs")
     public ModelAndView drugs() {
@@ -30,6 +32,7 @@ public class KnowledgeBaseController {
         drug.addObject("drugs", drugBeans);
         return drug;
     }
+
     @RequestMapping("/drugLabels")
     public ModelAndView drugLabels(){
         ModelAndView d=new ModelAndView();
@@ -38,12 +41,22 @@ public class KnowledgeBaseController {
         d.addObject("drugLabels", drugLabelBeans);
         return d;
     }
+
     @RequestMapping("/dosingGuideline")
     public ModelAndView dosingGuideline(){
         ModelAndView d=new ModelAndView();
         d.setViewName("dosing_guideline");
         List<DosingGuidelineBean> dosingGuidelineBeans = dosingGuidelineDao.getDosingGuideline();
         d.addObject("dosingGuidelines", dosingGuidelineBeans);
+        return d;
+    }
+
+    @RequestMapping("/clinicAnn")
+    public ModelAndView clinicAnn(){
+        ModelAndView d=new ModelAndView();
+        d.setViewName("clinic_ann");
+        List<ClinicAnnBean> clinicAnnBeans = clinicAnnDAO.findAll();
+        d.addObject("clinicAnn", clinicAnnBeans);
         return d;
     }
 }
