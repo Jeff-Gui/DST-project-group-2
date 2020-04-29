@@ -16,7 +16,7 @@ public class IndexController {
     private static final Logger log = LoggerFactory.getLogger(MatchDrugLabelController.class);
 
     @RequestMapping(path="/*")
-    public String index(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String index() {
         log.info("index");
         ModelAndView in=new ModelAndView();
         in.setViewName("index");
