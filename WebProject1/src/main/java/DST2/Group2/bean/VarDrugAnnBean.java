@@ -1,13 +1,13 @@
 package DST2.Group2.bean;
 
-public class VarDrugAnn {
+public class VarDrugAnnBean {
 	private String variantID;
 	private String location;
 	private String gene;
 	private String drug;
 	private String notes;
 	private String annotation;
-	public VarDrugAnn(String variantID, String location, String gene, String drug, String notes, String annotation) {
+	public VarDrugAnnBean(String variantID, String location, String gene, String drug, String notes, String annotation) {
 		super();
 		this.variantID = variantID;
 		this.location = location;
