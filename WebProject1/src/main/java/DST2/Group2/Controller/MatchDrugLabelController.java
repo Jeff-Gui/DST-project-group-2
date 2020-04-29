@@ -40,7 +40,7 @@ public class MatchDrugLabelController {
     public static ModelAndView w = new ModelAndView();
     public static List<DrugLabelBean> matchedDrugLabelBean;
     public static List<DosingGuidelineBean> matchedGuidelines;
-    public static List<VarDrugAnn> matchedAnns=null;
+    public static List<VarDrugAnnBean> matchedAnns=null;
     public static List<ClinicAnnBean> matched_clinic_ann_by_gene ;
     public static List<ClinicAnnBean> matched_clinic_ann_by_snp ;
 
@@ -113,13 +113,13 @@ public class MatchDrugLabelController {
         log.info("getguidelines");
         List<DosingGuidelineBean> dosingGuidelineBeans = dosingGuidelineDAO.getDosingGuideline();
         log.info("getanns");
-        List<VarDrugAnn> VarDrugAnns = varDrugAnnDAO.getAnn();
+        List<VarDrugAnnBean> varDrugAnnBeans = varDrugAnnDAO.getAnn();
         log.info("matchlabel");
         List<DrugLabelBean> matchedDrugLabelBean = doMatchDrugLabel(refBeans, drugLabelBeans);
         log.info("matchguideline");
         List<DosingGuidelineBean> matchedDosingGuidelineBean = doMatchDosingGuideline(refBeans, dosingGuidelineBeans);
         log.info("matchann");
-        List<VarDrugAnn> matchedAnn = doMatchVarDrugAnn(refBeans,VarDrugAnns);
+        List<VarDrugAnnBean> matchedAnn = doMatchVarDrugAnn(refBeans, varDrugAnnBeans);
         log.info("match clinic annotation by gene");
         List<ClinicAnnBean> matched_clinic_ann_by_gene = doMatchClinic_by_Gene(refBeans);
         log.info("match clinic annotation by SNP");
@@ -291,10 +291,10 @@ public class MatchDrugLabelController {
         return matchedGuidelines;
     }
 
-    private List<VarDrugAnn> doMatchVarDrugAnn(List<RefBean> refGenes, List<VarDrugAnn> VarDrugAnns) {
-        List<VarDrugAnn> matchedAnns=new ArrayList<>();
+    private List<VarDrugAnnBean> doMatchVarDrugAnn(List<RefBean> refGenes, List<VarDrugAnnBean> varDrugAnnBeans) {
+        List<VarDrugAnnBean> matchedAnns=new ArrayList<>();
         Set<String> matchedgene=new HashSet<>();
-        for (VarDrugAnn ann:VarDrugAnns) {
+        for (VarDrugAnnBean ann: varDrugAnnBeans) {
             boolean matched = false;
             String Gene=ann.getGene();
             for (RefBean ref: refGenes) {
@@ -320,7 +320,7 @@ public class MatchDrugLabelController {
         Map<String, Object> map=w.getModel();
         matchedDrugLabelBean = (List<DrugLabelBean>) map.get("matchedDrugLabel");
         matchedGuidelines= (List<DosingGuidelineBean>) map.get("matchedDosingGuideline");
-        matchedAnns= (List<VarDrugAnn>) map.get("matchedVarDrugAnn");
+        matchedAnns= (List<VarDrugAnnBean>) map.get("matchedVarDrugAnn");
         matched_clinic_ann_by_gene= (List<ClinicAnnBean>) map.get("matched_clinic_ann_by_gene");
         matched_clinic_ann_by_snp= (List<ClinicAnnBean>) map.get("matched_clinic_ann_by_snp");
 //        matchedClinicAnns= (List<ClinicAnnBean>) map.get("matchedClinicalAnnotation");
@@ -334,21 +334,21 @@ public class MatchDrugLabelController {
 
         List<DrugLabelBean> filteredDrugLabelBean =null;
         List<DosingGuidelineBean> filteredDosingGuidelineBean =null;
-        List<VarDrugAnn> filteredVarDrugAnn=null;
+        List<VarDrugAnnBean> filteredVarDrugAnnBean =null;
         List<ClinicAnnBean> filteredClinicAnnByGene=null;
         List<ClinicAnnBean> filteredClinicAnnBySNP=null;
 
 
         filteredDrugLabelBean = drugLabelDAO.search(drug,phen, matchedDrugLabelBean);
         filteredDosingGuidelineBean = dosingGuidelineDAO.search(drug,phen, matchedGuidelines);
-        filteredVarDrugAnn = varDrugAnnDAO.search(drug,phen,matchedAnns);
+        filteredVarDrugAnnBean = varDrugAnnDAO.search(drug,phen,matchedAnns);
         filteredClinicAnnByGene = clinicAnnDAO.search(drug,phen,matched_clinic_ann_by_gene);
         filteredClinicAnnBySNP = clinicAnnDAO.search(drug,phen,matched_clinic_ann_by_snp);
 
         //jsp
         search.addObject("filteredDrugLabel", filteredDrugLabelBean);
         search.addObject("filteredDosingGuideline", filteredDosingGuidelineBean);
-        search.addObject("filteredVarDrugAnn",filteredVarDrugAnn);
+        search.addObject("filteredVarDrugAnn", filteredVarDrugAnnBean);
         search.addObject("filteredClinicAnnByGene",filteredClinicAnnByGene);
         search.addObject("filteredClinicAnnBySNP",filteredClinicAnnBySNP);
         search.addObject("sample", sampleBean);
@@ -364,7 +364,7 @@ public class MatchDrugLabelController {
         Map<String, Object> map=w.getModel();
         matchedDrugLabelBean = (List<DrugLabelBean>) map.get("matchedDrugLabel");
         matchedGuidelines= (List<DosingGuidelineBean>) map.get("matchedDosingGuideline");
-        matchedAnns= (List<VarDrugAnn>) map.get("matchedVarDrugAnn");
+        matchedAnns= (List<VarDrugAnnBean>) map.get("matchedVarDrugAnn");
         matched_clinic_ann_by_gene= (List<ClinicAnnBean>) map.get("matched_clinic_ann_by_gene");
         matched_clinic_ann_by_snp= (List<ClinicAnnBean>) map.get("matched_clinic_ann_by_snp");
         System.out.println(matchedDrugLabelBean);
@@ -379,7 +379,7 @@ public class MatchDrugLabelController {
         List VarDrugAnn=new ArrayList<Map>();
         LinkedHashMap VarDrugAnnMap=new LinkedHashMap();
 
-        for (VarDrugAnn ann:matchedAnns) {
+        for (VarDrugAnnBean ann:matchedAnns) {
             Map row=new LinkedHashMap<String,String>();
             row.put("1",ann.getVariantID());
             row.put("2",ann.getLocation());
