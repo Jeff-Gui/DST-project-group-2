@@ -1,4 +1,4 @@
-package DST2.Group2.Controller;
+package DST2.Group2.Utils;
 
 
 import java.io.BufferedWriter;
@@ -19,6 +19,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
+import DST2.Group2.Controller.MatchDrugLabelController;
 import org.apache.commons.beanutils.BeanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
