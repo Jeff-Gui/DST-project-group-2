@@ -251,7 +251,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach items="${filteredVarDrugAnn}" var="item" varStatus="loop">
+                            <c:forEach items="${filteredVarDrugAnnBean}" var="item" varStatus="loop">
                                 <tr>
                                     <td>${loop.index + 1}</td>
                                     <td>${item.variantID}</td>
