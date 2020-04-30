@@ -134,8 +134,8 @@ CREATE TABLE var_drug_ann(
     pmid varchar(250),
     phenotype_category varchar(250),
     significance varchar(250),
-    notes varchar -- not long enough?,
-    sentence varchar, -- not long enough?
+    notes varchar,
+    sentence varchar,
     studyparam varchar(250),
     allels varchar(250),
     choromosome varchar(250)
