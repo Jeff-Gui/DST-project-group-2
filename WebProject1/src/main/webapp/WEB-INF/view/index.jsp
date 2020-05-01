@@ -6,61 +6,126 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false" %>
+
 <!doctype html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="generator" content="">
-    <title>Dashboard Template · Bootstrap</title>
+    <title>Layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet"  href="static/layui/css/layui.css"  media="all">
 
-    <!-- Bootstrap core CSS -->
-    <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
-    <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom styles for this template -->
-    <link href="<%=request.getContextPath()%>/static/css/app.css" rel="stylesheet">
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
 </head>
-<body>
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0 " href="*">Precision Medicine Matching System</a>
-	
-</nav>
+<body class="layui-layout-body">
+<%--<jsp:include page="head.jsp" />--%>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
 
-<div class="container-fluid">
-    <div class="row">
-        <jsp:include page="/WEB-INF/view/nav.jsp" >
-            <jsp:param name="active" value="dashboard" />
-        </jsp:include>
+        <div class="layui-logo"> &#12288 &#12288 &#12288 Precision Medicine</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-logo">Matching System &#12288 &#12288 &#12288 &#12288 &#160</li>
+        </ul>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h2>Dashboard</h2>
-            </div>
-            <div class="table-responsive">
-                Welcome to use Precision Medicine Matching System
-            </div>
-        </main>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <% if (session.getAttribute("username") == null) { %>
+                <a href="javascript:;"></a>
+                <% } %>
+                <% if (session.getAttribute("username") != null) { %>
+                <a href="javascript:;">
+                    Hi, <% out.print(session.getAttribute("username")); %>
+                </a>
+                <% } %>
+            </li>
+
+            <li class="layui-nav-item">
+                <% if (session.getAttribute("username") == null) { %>
+                <a href="<%=request.getContextPath()%>/signin">Sign in</a>
+                <% } %>
+                <% if (session.getAttribute("username") != null) { %>
+                <a href="<%=request.getContextPath()%>/logout">Logout</a>
+                <% } %>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">Matching System</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="<%=request.getContextPath()%>/">
+                            <span data-feather="home"></span>
+                            Dashboard <span class="sr-only">(current)</span>
+                        </a></dd>
+                        <dd><a href="<%=request.getContextPath()%>/matchingIndex">
+                            <span data-feather="file"></span>
+                            Matching
+                        </a></dd>
+                        <dd><a href="<%=request.getContextPath()%>/samples">
+                            <span data-feather="file"></span>
+                            Samples
+                        </a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">Knowledge Base</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="<%=request.getContextPath()%>/drugs">
+                            <span data-feather="file-text"></span>
+                            Drugs
+                        </a></dd>
+                        <dd><a href="<%=request.getContextPath()%>/drugLabels">
+                            <span data-feather="file-text"></span>
+                            Drug Labels
+                        </a></dd>
+                        <dd><a href="<%=request.getContextPath()%>/dosingGuideline">
+                            <span data-feather="file-text"></span>
+                            Dosing Guideline
+                        </a></dd>
+                        <dd><a href="<%=request.getContextPath()%>/clinicAnn">
+                            <span data-feather="file-text"></span>
+                            Clinic Annotations
+                        </a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">Reload</a></li>
+                <li class="layui-nav-item"><a href="<%=request.getContextPath()%>/aboutUs">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="row">
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                <legend>Dashboard</legend>
+            </fieldset>
+            <%--      <jsp:include page="head.jsp" >--%>
+            <%--        <jsp:param name="active" value="dashboard" />--%>
+            <%--      </jsp:include>--%>
+
+            <blockquote class="layui-elem-quote">Welcome to use Precision Medicine Matching System.</blockquote>
+        </div>
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        ⭐️ DST Group 2 ⭐️
     </div>
 </div>
+    <script src="static/layui/layui.js"></script>
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function(){
+            var element = layui.element;
+
+        });
+    </script>
 </body>
 </html>

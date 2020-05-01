@@ -34,7 +34,7 @@ CREATE TABLE clinic_meta(
 	related_diseases TEXT,
 	biogeographical_groups VARCHAR,
 	chromosome VARCHAR
-)
+);
 
 -- variant.tsv
 CREATE TABLE variant(
@@ -134,12 +134,18 @@ CREATE TABLE var_drug_ann(
     pmid varchar(250),
     phenotype_category varchar(250),
     significance varchar(250),
-    notes varchar -- not long enough?,
+    notes varchar, -- not long enough?,
     sentence varchar, -- not long enough?
     studyparam varchar(250),
     allels varchar(250),
     choromosome varchar(250)
     );
+
+-- users
+CREATE TABLE Users(
+    username VARCHAR PRIMARY KEY,
+    passwords VARCHAR
+);
 
 -- table import
 copy public.clinic_meta (id, location, gene, evidencelevel, clinical_annotation_types, genotype_phenotype_ids, annotation_text, variant_annotation_ids, variant_annotations, pmids, evidence_count, related_chemicals, related_diseases, biogeographical_groups, chromosome) FROM './WebProject1/src/main/resources/Tables/clinical_ann_metadata.tsv' DELIMITER E'\\t' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';
