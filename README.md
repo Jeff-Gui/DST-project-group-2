@@ -8,9 +8,9 @@ To run prototype:
 4. config /src/main/resources/app.properties by filling the username and password of the database you have created.
 5. config local tomcat server in IDEA (tomcat version 7+ is required).
 
-We are:
-Jeff Gui 　 　 　Email: Yifan.18@intl.zju.edu.cn
-Jixin Wang 　 　 　Email: Jixin.18@intl.zju.edu.cn
-Yuxing Zhou 　 　 　Email: Yuxing.18@intl.zju.edu.cn
-Caiylyn Jiang 　 　 　Email: Anlan.18@intl.zju.edu.cn
-Valerya Wu 　 　 　Email: Xinyu.18@intl.zju.edu.cn
+We are:\n
+Jeff Gui\t Email: Yifan.18@intl.zju.edu.cn\n
+Jixin Wang\t Email: Jixin.18@intl.zju.edu.cn\n
+Yuxing Zhou\t Email: Yuxing.18@intl.zju.edu.cn\n
+Caiylyn Jiang\t Email: Anlan.18@intl.zju.edu.cn\n
+Valerya Wu\t Email: Xinyu.18@intl.zju.edu.cn\n
