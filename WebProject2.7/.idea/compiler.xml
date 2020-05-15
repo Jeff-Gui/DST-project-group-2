@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="WebProject1" />
+        <module name="WebProject2.6" />
+        <module name="WebProject2.5" />
+        <module name="WebProject2.4" />
+        <module name="WebProject2.3" />
+        <module name="WebProject2.2" />
+        <module name="WebProject" />
+        <module name="WebProject_gfy" />
+        <module name="WebProject2.0" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
