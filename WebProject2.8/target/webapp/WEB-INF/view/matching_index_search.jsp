@@ -51,7 +51,7 @@
 <div class="container-fluid">
 
     <main role="main">
-        <a href="index.do">Back to Dashboard</a>
+        <a href="${pageContext.request.contextPath}/matchingIndex">Back to Dashboard</a>
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h2>Matching Result</h2>
         </div>

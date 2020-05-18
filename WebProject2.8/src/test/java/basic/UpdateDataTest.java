@@ -56,7 +56,7 @@ public class UpdateDataTest extends BaseTest {
     }
 
     @Test
-    public void initSystem(){
+    public void initSystem() {
         // Should ONLY RUN ONCE for each system deployment.
         // test passed 6 minutes 14 seconds (Jeff, 12-05-2020)
         SystemInit systemInit = new SystemInit();
