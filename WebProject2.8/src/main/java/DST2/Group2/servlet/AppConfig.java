@@ -7,7 +7,13 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-
+/**
+ * @Description This is the description of class
+ * Config for reading database information. Called by DBmethods to establish database connection.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class AppConfig {
 
     private static final Logger log = LoggerFactory.getLogger(DST2.Group2.servlet.AppConfig.class);

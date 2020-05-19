@@ -6,7 +6,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
+/**
+ * @Description This is the description of class
+ * Base crawler copied from DST2 sample code.
+ * Bulk retrieval of web content given the URL.
+ *
+ * @Date 2020/5/15
+ * @Author DST group 2
+ */
 public abstract class BaseCrawler {
 
 

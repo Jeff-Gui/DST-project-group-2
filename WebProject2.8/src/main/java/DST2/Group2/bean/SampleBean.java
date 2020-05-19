@@ -2,6 +2,13 @@ package DST2.Group2.bean;
 
 import java.util.Date;
 
+/**
+ * @Description This is the description of class
+ * Bean for sample metadata, including automatically allocated ID, upload time (createdAt), user and sample type (annovar or VEP).
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class SampleBean {
     private int id;
     private Date createdAt;

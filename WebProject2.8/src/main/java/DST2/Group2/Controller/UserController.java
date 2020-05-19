@@ -11,7 +11,14 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-
+/**
+ * @Description This is the description of class
+ * Controller for handling user account information
+ * Specific actions include: USECASE_USER: registration, login; USECASE_ADMINISTRATOR: reset user account
+ * Some less-related URL handling is also included in this class TODO separate less-related request mapping into a single controller.
+ * @Date 2020/5/15
+ * @Author DST group 2
+ */
 @Controller
 public class UserController {
 
@@ -25,6 +32,14 @@ public class UserController {
         return "register";
     }
 
+    /**
+     * @Description
+     * According the given registration, determine if it is valid (e.g. duplicate name, email)
+     * @Param username, password, email, request
+     * @Return jsp
+     * @Date 2020/5/16
+     * @author DST group 2
+    **/
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     private String doRegister(@RequestParam("username") String username, @RequestParam("password") String password, @RequestParam("email") String email, HttpServletRequest request){
         log.info(username + "\n" + password);
@@ -54,6 +69,14 @@ public class UserController {
         return "reset_password";
     }
 
+    /**
+     * @Description
+     * For administrator to reset user account information.
+     * @Param email, username, request
+     * @Return jsp
+     * @Date 2020/5/16
+     * @author DST group 2
+    **/
     @RequestMapping(value = "/reset", method = RequestMethod.POST)
     private String doReset(@RequestParam("email") String email, @RequestParam("username") String username, @RequestParam("password") String password, HttpServletRequest request){
         log.info(email + "\n" + username + "\n" + password);
@@ -78,6 +101,14 @@ public class UserController {
         return "signin";
     }
 
+    /**
+     * @Description
+     * According to provided sign in information, check whether the password or acoount is validate.
+     * @Param username, password, request
+     * @Return jsp
+     * @Date 2020/5/16
+     * @author DST group 2
+    **/
     @RequestMapping(value = "/signin",method = RequestMethod.POST) // table uses method POST
     private String doSignin(@RequestParam("username") String username, @RequestParam("password") String password, HttpServletRequest request){
         UserBean user = new UserBean(username,password,"registered");

@@ -1,6 +1,13 @@
 package DST2.Group2.bean;
 
-
+/**
+ * @Description This is the description of class
+ * Bean for drug label, used by two implementations tables in the database (one joined)
+ * name, prescribing markdown, related drug and variant are reported in the matching result.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class DrugLabelBean {
 	private String id;
 	private String name;

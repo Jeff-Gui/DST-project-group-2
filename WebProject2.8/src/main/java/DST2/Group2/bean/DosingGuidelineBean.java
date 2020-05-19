@@ -1,5 +1,13 @@
 package DST2.Group2.bean;
 
+/**
+ * @Description This is the description of class
+ * Bean class for dosing guideline, which is implemented in two tables of the database (on joined table).
+ * name, related drug and summary markdown are reported in the matching result.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class DosingGuidelineBean {
 	private String id;
 	private String obj_cls;

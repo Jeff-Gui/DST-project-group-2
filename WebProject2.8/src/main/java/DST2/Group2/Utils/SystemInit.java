@@ -8,6 +8,7 @@ public class SystemInit {
     /**
      * Run ONLY once when the system is first deployed
      * Insert data, Muted next time
+     * TODO: implement self-muting function (read and store init success information in the app properties file)
      * @Author: DST group 2
      */
 

@@ -21,10 +21,12 @@ import DST2.Group2.Controller.MatchController;
 import org.apache.commons.beanutils.BeanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-
 /**
- * 文件操作
+ * @Description This is the description of class
+ * Class designed for downloading matching result but not implemented.
+ * TODO: implement downloading.
+ * @Date 2020/5/16
+ * @Author DST group 2
  */
 public class CSVUtils {
     private static final Logger log = LoggerFactory.getLogger(MatchController.class);
@@ -39,11 +41,9 @@ public class CSVUtils {
             if (!file.exists()) {
                 file.mkdir();
             }
-            //定义文件名格式并创建
+            //file format
             csvFile = File.createTempFile(fileName, ".csv", new File(outPutPath));
             System.out.println("csvFile：" + csvFile);
-            // UTF-8使正确读取分隔符","
-            //如果生产文件乱码，windows下用gbk，linux用UTF-8
             csvFileOutputStream = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(
                     csvFile), "UTF-8"), 1024);
             System.out.println("csvFileOutputStream：" + csvFileOutputStream);

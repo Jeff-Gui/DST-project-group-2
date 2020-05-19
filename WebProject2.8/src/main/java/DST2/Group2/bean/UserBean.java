@@ -1,5 +1,12 @@
 package DST2.Group2.bean;
 
+/**
+ * @Description This is the description of class
+ * Bean for user account information.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class UserBean {
 
     private String username;

@@ -8,7 +8,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.function.Consumer;
-
+/**
+ * @Description This is the description of class
+ * Class dedicated for establishing the connection with PostgreSQL database.
+ *
+ * @Date 2020/5/17
+ * @Author DST group 2
+ */
 public class DBmethods {
 
     private static final Logger log = LoggerFactory.getLogger(DST2.Group2.Database.DBmethods.class);

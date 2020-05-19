@@ -1,5 +1,13 @@
 package DST2.Group2.bean;
 
+/**
+ * @Description This is the description of class
+ * Bean class for clinical annotation in PharmGKB.
+ * Gene, evidence level, annotatin text and related diseases are reported in the matching result.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class ClinicAnnBean {
     private String id;
     private String location;

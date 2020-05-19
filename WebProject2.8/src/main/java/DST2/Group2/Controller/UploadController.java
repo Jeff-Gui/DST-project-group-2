@@ -19,7 +19,14 @@ import javax.servlet.http.Part;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
+/**
+ * @Description This is the description of class
+ * Controller for reading user-uploaded file; determining its file type; store sample data and metadata into the database.
+ * Redirect to sample view. User may determine to match which sample in sample view.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 @Controller
 public class UploadController extends HttpServlet {
 
@@ -36,11 +43,21 @@ public class UploadController extends HttpServlet {
     public UploadController() {
         super();
     }
-
     @RequestMapping(value = "/upload/{uploadType}", method = RequestMethod.POST)
 	protected String doUpload(HttpServletRequest request,
                               @RequestParam("file") MultipartFile requestPart,
                               @PathVariable String uploadType) throws IOException {
+        /**
+         * @Description
+         * Determine uploader information from the request parameter.
+         * Determine file type via path variable.
+         * According to file type, call specific DAO to store the record into the database.
+         * If file is blank or no user information is provided, will redirect to error page.
+         * @Param request (http request), requestpart (file iteslf), uploadType (path variable)
+         * @Return jsp page
+         * @Date 2020/5/16
+         * @author DST group 2
+         **/
         log.info("upload vcf");
     	String uploadedBy = request.getParameter("uploaded_by");
 

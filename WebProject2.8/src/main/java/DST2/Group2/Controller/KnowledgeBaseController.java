@@ -10,6 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+/**
+ * @Description This is the description of class
+ * Bulk retrieval of information stored in the localized database.
+ * Information includes: drugs, drug labels, dosing guidelines and clinical annotations.
+ * @Date 2020/5/15
+ * @Author DST group 2
+ */
 @Controller
 public class KnowledgeBaseController {
 

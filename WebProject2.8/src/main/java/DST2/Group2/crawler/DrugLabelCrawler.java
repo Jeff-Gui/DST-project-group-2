@@ -13,7 +13,12 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-
+/**
+ * @Description This is the description of class
+ * Crawler for obtaining both drug and drug label information from PGKB web page.
+ * @Date 2020/5/15
+ * @Author DST group 2
+ */
 public class DrugLabelCrawler extends BaseCrawler {
 
     public static final String URL_DRUG_LABEL = "https://api.pharmgkb.org/v1/site/labelsByDrug";

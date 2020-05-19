@@ -1,7 +1,12 @@
 package DST2.Group2.bean;
 
-//import src.main.java.bean.String;
-
+/**
+ * @Description This is the description of class
+ * Bean for drug, only used by internal models.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class DrugBean {
 
     private String id;
@@ -9,9 +14,6 @@ public class DrugBean {
     private boolean biomarker;
     private String drugUrl;
     private String ObjCls;
-
-    public DrugBean() {
-    }
 
     public DrugBean(String id, String name, boolean biomarker, String drugUrl, String objCls) {
         this.id = id;

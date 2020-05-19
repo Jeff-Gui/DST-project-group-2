@@ -5,7 +5,13 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-
+/**
+ * @Description This is the description of class
+ * The filter is not implemented.
+ * TODO implement page-filter according to the login state.
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 //@WebFilter(urlPatterns = {"/dosingGuideline"})
 public class AuthenticationFilter implements Filter {
 

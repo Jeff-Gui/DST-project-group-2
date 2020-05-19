@@ -103,6 +103,12 @@
                             Reset user password
                         </a></dd>
                     </dl>
+                    <dl class="layui-nav-child">
+                        <dd><a href="<%=request.getContextPath()%>/panel">
+                            <span data-feather="file-text"></span>
+                            Update knowledge base
+                        </a></dd>
+                    </dl>
                 </li>
                 <% } %>
                 <li class="layui-nav-item"><a href="">Reload</a></li>

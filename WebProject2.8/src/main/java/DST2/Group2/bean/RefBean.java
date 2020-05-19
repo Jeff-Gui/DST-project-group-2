@@ -1,5 +1,13 @@
 package DST2.Group2.bean;
 
+/**
+ * @Description This is the description of class
+ * Bean describing sample information used for matching.
+ * Support both annovar-annotated or VEP-annotated data since only fields covered by both is required for matching.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class RefBean {
 
     private String location;

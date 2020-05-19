@@ -19,7 +19,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
+/**
+ * @Description This is the description of class
+ * Controller for handling matching request.
+ * Also handle searching functionality of the matching result.
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 @MultipartConfig
 @Controller
 public class MatchController {
@@ -67,6 +73,18 @@ public class MatchController {
 
     @RequestMapping(value = {"/matching","/upload/matching"},method = RequestMethod.GET)
     private ModelAndView matching(@RequestParam("sampleId") String sampleIdParameter, @RequestParam("sampleType") String sampleType) {
+        /**
+         * @Description
+         * Matching is divided into following steps:
+         * 1. validate sample ID and read sample data;
+         * 2. retrieve knowledge base data for matching;
+         * 3. match drug label, dosing guideline, variant drug annotation, clinic annotation (either by gene or SNP);
+         * 4. add matching result into the ModelAndView object.
+         * @Param sampleId (request parameter), sample type (request paramter)
+         * @Return jsp
+         * @Date 2020/5/16
+         * @author DST group 2
+         **/
         //set in jsp
         matchedDrugLabelBean =null;
         matchedGuidelines =null;
@@ -78,7 +96,7 @@ public class MatchController {
         w.setViewName("matching_index_search");
 
         log.info(sampleIdParameter+" =sampleparameter");
-
+        // null check of sample ID
         if (sampleIdParameter == null) {
             log.info("sample id parameter is null");
             ModelAndView s=new ModelAndView();
@@ -96,7 +114,7 @@ public class MatchController {
             return s;
         }
         log.info("get reference genes");
-
+        // read sample from the database according to the sample type.
         List<RefBean> refBeans;
         if (sampleType.equals("annovar")) {refBeans = annovarDAO.getsampleGenes(sampleId);} else {
             if (sampleType.equals("vep")) {refBeans = vepDAO.getsampleGenes(sampleId);} else {
@@ -141,9 +159,15 @@ public class MatchController {
 
     private List<ClinicAnnBean> doMatchClinic_by_Gene(List<RefBean> sampleGenes) {
         /**
+         * @Description
          * Match sample mutated genes with clinic annotation, only variants with clinic annotations are considered.
+         * Match if the corresponding gene of the sample variant is found in gene field in stored clinic annotation table.
+         * @Param sampleGenes
+         * @Return list of clinic annotation beans
+         * @Date 2020/5/16
+         * @author DST group 2
          */
-        ArrayList<Object> rt = new ArrayList<>();
+//        ArrayList<Object> rt = new ArrayList<>(); // TODO: may return corresponding sample information to the matching result
         List<ClinicAnnBean> matchedClinicAnnBeans = new ArrayList<>(); // e.g. [clinicAnnBean1, clinicAnnBean2,...]
         HashMap< String, HashMap<String, String> > matched_sampleInfo = new HashMap<>(); // e.g. { GENE1 : {s12345:T, s6789:G}, GENE2 : {s123:C},...}
 
@@ -175,18 +199,25 @@ public class MatchController {
 
         log.info("Matched clinic annotation: " + matchedClinicAnnBeans.size() + " corresponding to " + counter + " genes from the sample.");
 //        log.info("matched sample info"+matched_sampleInfo);
-        rt.add(matchedClinicAnnBeans); // 787 records matched from sample
-        rt.add(matched_sampleInfo); // 185 genes matched from clinic annotation
+//        rt.add(matchedClinicAnnBeans); // 787 records matched from sample
+//        rt.add(matched_sampleInfo); // 185 genes matched from clinic annotation
 
         return matchedClinicAnnBeans;
     }
 
     private List<ClinicAnnBean> doMatchClinic_by_SNP(List<RefBean> sampleGenes) {
         /**
-         * To map sample variant according to its exact genomic location.
-         * Usually, this mapping is too strict to yield any positive result.
-         * Therefore, mapping by location is not recommended to be used alone.
-         */
+         * @Description
+         *  To map sample variant according to its exact genomic location.
+         *  Usually, this mapping is too strict to yield any positive result.
+         *  Therefore, mapping by location is not recommended to be used alone.
+         *  TODO ask user to decide whether to match by SNP or not
+         *  TODO separate transaction whith database into DAO class.
+         * @Param sampleGenes
+         * @Return list of clinic annotation beans
+         * @Date 2020/5/16
+         * @author DST group 2
+         **/
         ArrayList<Object> rt = new ArrayList<>();
         List<ClinicAnnBean> matchedClinicAnnBeans = new ArrayList<>(); // e.g. [clinicAnnBean1, clinicAnnBean2,...]
         HashMap< String, HashMap<String, String> > matched_sampleInfo = new HashMap<>(); // e.g. { GENE1 : {s12345:T, s6789:G}, GENE2 : {s123:C},...}
@@ -250,6 +281,14 @@ public class MatchController {
     }
 
     private List<DrugLabelBean> doMatchDrugLabel(List<RefBean> refGenes, List<DrugLabelBean> drugLabelBeans) {
+        /**
+         * @Description
+         * Match genes corresponding to variants in the sample with drug label
+         * @Param sampleGenes
+         * @Return list of drug label beans
+         * @Date 2020/5/16
+         * @author DST group 2
+         */
         List<DrugLabelBean> matchedLabels = new ArrayList<>();
         HashSet<String> matchedgene =new HashSet<>();
         for (DrugLabelBean drugLabelBean : drugLabelBeans) {
@@ -275,6 +314,14 @@ public class MatchController {
     }
 
     private List<DosingGuidelineBean> doMatchDosingGuideline(List<RefBean> refGenes, List<DosingGuidelineBean> dosingGuidelineBeans) {
+        /**
+         * @Description
+         * Match genes corresponding to variants in the sample with dosing guideline
+         * @Param sampleGenes
+         * @Return list of dosing guideline beans
+         * @Date 2020/5/16
+         * @author DST group 2
+         */
         List<DosingGuidelineBean> matchedGuidelines = new ArrayList<>();
         Set<String> matchedgene=new HashSet<>();
         for (DosingGuidelineBean guideline : dosingGuidelineBeans) {
@@ -300,6 +347,14 @@ public class MatchController {
     }
 
     private List<VarDrugAnnBean> doMatchVarDrugAnn(List<RefBean> refGenes, List<VarDrugAnnBean> varDrugAnnBeans) {
+        /**
+         * @Description
+         * Match genes corresponding to variants in the sample with variant drug annotation
+         * @Param sampleGenes
+         * @Return list of variant drug annotation beans
+         * @Date 2020/5/16
+         * @author DST group 2
+         */
         List<VarDrugAnnBean> matchedAnns=new ArrayList<>();
         Set<String> matchedgene=new HashSet<>();
         for (VarDrugAnnBean ann: varDrugAnnBeans) {
@@ -326,7 +381,6 @@ public class MatchController {
 
     @RequestMapping({"/search","/upload/search"})
     public ModelAndView search(HttpServletRequest request, HttpServletResponse response) {
-        // TODO Auto-generated method stub
         ModelAndView search=new ModelAndView();
         Map<String, Object> map=w.getModel();
         matchedDrugLabelBean = (List<DrugLabelBean>) map.get("matchedDrugLabel");
@@ -371,7 +425,7 @@ public class MatchController {
     }
 
 //    @RequestMapping("/download")
-//    public ModelAndView download(){
+//    public ModelAndView download(){  // TODO: implement matching result download
 //        Map<String, Object> map=w.getModel();
 //        matchedDrugLabelBean = (List<DrugLabelBean>) map.get("matchedDrugLabel");
 //        matchedGuidelines= (List<DosingGuidelineBean>) map.get("matchedDosingGuideline");

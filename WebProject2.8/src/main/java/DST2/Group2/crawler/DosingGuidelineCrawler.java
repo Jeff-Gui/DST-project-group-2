@@ -8,7 +8,12 @@ import com.google.gson.Gson;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-
+/**
+ * @Description This is the description of class
+ * Crawler to obtain dosing guideline form PharmGKB web page.
+ * @Date 2020/5/14
+ * @Author DST group 2
+ */
 public class DosingGuidelineCrawler extends BaseCrawler {
 
 

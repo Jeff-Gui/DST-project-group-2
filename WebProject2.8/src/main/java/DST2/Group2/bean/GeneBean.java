@@ -1,5 +1,12 @@
 package DST2.Group2.bean;
 
+/**
+ * @Description This is the description of class
+ * Bean for gene, internally used for Ensembl id ~ gene symbol mapping.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class GeneBean {
     private String symbol;
     private String ensembl_id;

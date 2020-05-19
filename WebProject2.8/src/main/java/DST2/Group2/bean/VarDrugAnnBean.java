@@ -1,5 +1,13 @@
 package DST2.Group2.bean;
 
+/**
+ * @Description This is the description of class
+ * Bean for variant~drug annotation.
+ * Related genes, drug, annotation are reported in the matching report.
+ *
+ * @Date 2020/5/16
+ * @Author DST group 2
+ */
 public class VarDrugAnnBean {
 	private String variantID;
 	private String location;
