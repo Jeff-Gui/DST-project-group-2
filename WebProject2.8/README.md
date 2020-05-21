@@ -8,6 +8,10 @@ Run release (current v2.8)
 5. to set up the database, run method initSystem() in src/test/java/basic/UpdateDataTest.java; this should only be operated once.
 6. default administrator is username: zju; password: zju.
 
+Annotation result
+1. HepG2_ann.hg38_multianno.txt
+2. HepG2.vcf
+
 We are:
 Jeff Gui: Email: Yifan.18@intl.zju.edu.cn
 
