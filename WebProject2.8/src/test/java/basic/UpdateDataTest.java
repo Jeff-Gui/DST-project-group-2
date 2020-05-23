@@ -39,6 +39,7 @@ public class UpdateDataTest extends BaseTest {
         DosingGuidelineCrawler dosingGuidelineCrawler = new DosingGuidelineCrawler();
         DrugLabelCrawler drugLabelCrawler = new DrugLabelCrawler();
         dosingGuidelineCrawler.doCrawlerDosingGuidelineList();
+        drugLabelCrawler.doCrawlerDrugLabel();
         drugLabelCrawler.doCrawlerDrug();
         // 2. generic tables after deletion
         dosingGuidelineDAO.doImportGuidelineName(true);

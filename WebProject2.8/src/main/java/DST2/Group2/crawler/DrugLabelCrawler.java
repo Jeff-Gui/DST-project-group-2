@@ -39,7 +39,7 @@ public class DrugLabelCrawler extends BaseCrawler {
             String objCls = (String) drug.get("objCls");
             String drugUrl = (String) x.get("drugUrl");
             boolean biomarker = ((Boolean) x.get("biomarker"));
-            if (drugDAO.existsById(id)){
+            if (!drugDAO.existsById(id)){
                 DrugBean drugBean = new DrugBean(id, name, biomarker, drugUrl, objCls);
                 drugDAO.saveDrug(drugBean);
             }

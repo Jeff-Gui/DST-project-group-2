@@ -31,7 +31,7 @@ CREATE TABLE annovar(
 	"ExonicFunc.refGene" TEXT,
 	"AAChange.refGene" TEXT,
 	cytoband TEXT
-)
+);
 
 -- clinic metadata.tsv
 CREATE TABLE clinic_meta(
@@ -163,6 +163,7 @@ CREATE TABLE users(
     passwords VARCHAR,
     email VARCHAR PRIMARY KEY
 );
+INSERT INTO users(username, passwords, email) VALUES ('zju','zju','*@*');
 
 -- sample
 CREATE TABLE sample(

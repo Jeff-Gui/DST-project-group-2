@@ -53,15 +53,15 @@ public class GeneDAO {
                 if (doDelete){ connection.createStatement().execute("DELETE FROM gene;"); }
                 // 3. Insert new data
                 connection.setAutoCommit(false);
-                PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO gene(pgkb_id,ncbi_id,hgnc_id,es_id_old,name,symbol,alternative_names,alternative_symbols,isvip,hasvariantannotation,cross_reference,hascpicguidline,chromosome,ch37_start,ch38_start,ch38_stop,ensembl_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
+                PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO gene(pgkb_id,ncbi_id,hgnc_id,es_id_old,name,symbol,alternative_names,alternative_symbols,isvip,hasvariantannotation,cross_reference,hascpicguidline,chromosome,ch37_start,ch37_stop,ch38_start,ch38_stop,ensembl_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
                 String line;
                 while ((line = br.readLine()) != null) {
                     String[] field = line.split("\\t");
-                    for (int j=1; j<=17;j++){
-                        preparedStatement.setString(j,field[j-1]); // 17 fields in total will be inserted
+                    for (int j=1; j<=18;j++){
+                        preparedStatement.setString(j,field[j-1]); // 18 fields in total will be inserted
                     }
-                    if (field.length<17){ // if record is less than essential length
-                        for (int j=field.length+1; j<=17;j++){
+                    if (field.length<18){ // if record is less than essential length
+                        for (int j=field.length+1; j<=18;j++){
                             preparedStatement.setString(j, null);
                         }
                     }
