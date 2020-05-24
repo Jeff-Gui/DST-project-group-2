@@ -32,7 +32,7 @@ public class UploadControllerRedirectTest extends BaseWebTest {
     @Test
     public void uploadAnnovarTest() throws Exception {
         //read existing sample number
-        List<SampleBean> samples = sampleDAO.findAll();
+        List<SampleBean> samples = sampleDAO.findAll("admin",true);
         int testSampleId;
         if (samples.size()==0){
             testSampleId = 1;
@@ -43,13 +43,14 @@ public class UploadControllerRedirectTest extends BaseWebTest {
         // do upload and redirect to match
         String url = "/upload/annovar";
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.fileUpload(url).
-                file(new MockMultipartFile("file", "file", "application/annovar-vcf", new FileInputStream(new File("src/test/resources/annovar_test.vcf")))).
-                param("uploaded_by","MockUser"));
+                file(new MockMultipartFile("file", "annovar_test.vcf", "application/annovar-vcf", new FileInputStream(new File("src/test/resources/annovar_test.vcf")))).
+                param("uploaded_by","MockUser").
+                param("publicity","true").
+                param("description","test"));
         MvcResult mvcResult = resultActions.
                 andExpect(MockMvcResultMatchers.view().name("samples")).
                 andDo(MockMvcResultHandlers.print()).
                 andExpect(ResultMatcher.matchAll()).
-                andExpect(MockMvcResultMatchers.status().isFound()). // HttpStatus=302 (transient redirect)
                 andReturn();
 
         // rollback
@@ -59,7 +60,7 @@ public class UploadControllerRedirectTest extends BaseWebTest {
     @Test
     public void uploadVepTest() throws Exception {
         //read existing sample number
-        List<SampleBean> samples = sampleDAO.findAll();
+        List<SampleBean> samples = sampleDAO.findAll("admin",true);
         int testSampleId;
         if (samples.size()==0){
             testSampleId = 1;
@@ -70,13 +71,14 @@ public class UploadControllerRedirectTest extends BaseWebTest {
         // do upload and redirect to match
         String url = "/upload/vep";
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.fileUpload(url).
-                file(new MockMultipartFile("file", "file", "application/vep_test-vcf", new FileInputStream(new File("src/test/resources/blank_test.vcf")))).
-                param("uploaded_by","MockUser"));
+                file(new MockMultipartFile("file", "vep_test.vcf", "application/vep_test-vcf", new FileInputStream(new File("src/test/resources/vep_test.vcf")))).
+                param("uploaded_by","MockUser").
+                param("publicity","true").
+                param("description","test"));
         MvcResult mvcResult = resultActions.
-//                andExpect(MockMvcResultMatchers.view().name("redirect:/matching?sampleId="+testSampleId+"&sampleType=vep")).
+                andExpect(MockMvcResultMatchers.view().name("samples")).
                 andDo(MockMvcResultHandlers.print()).
                 andExpect(ResultMatcher.matchAll()).
-                andExpect(MockMvcResultMatchers.status().isFound()). // HttpStatus=302 (transient redirect)
                 andReturn();
 
         // rollback
@@ -86,7 +88,7 @@ public class UploadControllerRedirectTest extends BaseWebTest {
     @Test
     public void uploadBlankTest() throws Exception {
         //read existing sample number
-        List<SampleBean> samples = sampleDAO.findAll();
+        List<SampleBean> samples = sampleDAO.findAll("admin",true);
         int testSampleId;
         if (samples.size()==0){
             testSampleId = 1;
@@ -97,13 +99,14 @@ public class UploadControllerRedirectTest extends BaseWebTest {
             // do upload and redirect to match
             String url = "/upload/annovar";
             ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.fileUpload(url).
-                    file(new MockMultipartFile("file", "file", "application/annovar-vcf", new FileInputStream(new File("src/test/resources/wrong_test.png")))).
-                    param("uploaded_by","MockUser"));
+                    file(new MockMultipartFile("file", "blank_test.vcf", "application/annovar-vcf", new FileInputStream(new File("src/test/resources/blank_test.vcf")))).
+                    param("uploaded_by","MockUser").
+                    param("publicity","true").
+                    param("description","test"));
             MvcResult mvcResult = resultActions.
-                    andExpect(MockMvcResultMatchers.view().name("samples")).
+                    andExpect(MockMvcResultMatchers.view().name("matching_index_error")).
                     andDo(MockMvcResultHandlers.print()).
                     andExpect(ResultMatcher.matchAll()).
-                    andExpect(MockMvcResultMatchers.status().isFound()). // HttpStatus=302 (transient redirect)
                     andReturn();
         } catch (Exception e) {
             e.printStackTrace();
@@ -113,7 +116,7 @@ public class UploadControllerRedirectTest extends BaseWebTest {
     @Test
     public void uploadWrongTest() throws Exception {
         //read existing sample number
-        List<SampleBean> samples = sampleDAO.findAll();
+        List<SampleBean> samples = sampleDAO.findAll("admin",true);
         int testSampleId;
         if (samples.size()==0){
             testSampleId = 1;
@@ -124,14 +127,14 @@ public class UploadControllerRedirectTest extends BaseWebTest {
         // do upload and redirect to match
         String url = "/upload/annovar";
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.fileUpload(url).
-                file(new MockMultipartFile("file", "file", "application/annovar-vcf", new FileInputStream(new File("src/test/resources/wrong_test.png")))).
-                param("uploaded_by","MockUser"));
+                file(new MockMultipartFile("file", "wrong_test.png", "application/annovar-vcf", new FileInputStream(new File("src/test/resources/wrong_test.png")))).
+                param("uploaded_by","MockUser").
+                param("publicity","true").
+                param("description","test"));
         MvcResult mvcResult = resultActions.
-                andExpect(MockMvcResultMatchers.view().name("samples")).
+                andExpect(MockMvcResultMatchers.view().name("matching_index_error")).
                 andDo(MockMvcResultHandlers.print()).
                 andExpect(ResultMatcher.matchAll()).
-                andExpect(MockMvcResultMatchers.status().isFound()). // HttpStatus=302 (transient redirect)
                 andReturn();
-
     }
 }

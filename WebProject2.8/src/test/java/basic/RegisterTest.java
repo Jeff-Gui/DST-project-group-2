@@ -45,6 +45,7 @@ public class RegisterTest extends BaseTest{
     @Test
     public void searchUserTest_OnlyUserName(){
         UserBean user = new UserBean("Test", null,null);
+        thrown.expect(NullPointerException.class);
         userDAO.searchUser(user);
     }
 

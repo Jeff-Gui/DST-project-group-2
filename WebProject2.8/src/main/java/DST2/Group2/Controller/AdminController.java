@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
+
+import static DST2.Group2.filter.AuthenticationFilter.USERNAME;
+
 @Controller
 public class AdminController {
 
@@ -44,7 +48,7 @@ public class AdminController {
         m.addObject("count_dosing_all",dosingGuidelineDAO.findAll().size());
         m.addObject("count_label_all",drugLabelDAO.findAll().size());
         m.addObject("count_varDrug_all",varDrugAnnDAO.findAll().size());
-        m.addObject("samples",sampleDAO.findAll());
+        m.addObject("samples",sampleDAO.findAll("admin",true));
         m.addObject("users",userDAO.findAll());
         return m;
     }

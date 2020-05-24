@@ -6,6 +6,8 @@ import java.util.*;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import DST2.Group2.DAO.*;
 import DST2.Group2.Database.DBmethods;
 import DST2.Group2.Utils.CSVUtils;
@@ -19,6 +21,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import static DST2.Group2.filter.AuthenticationFilter.USERNAME;
+
 /**
  * @Description This is the description of class
  * Controller for handling matching request.
@@ -61,11 +66,13 @@ public class MatchController {
     }
 
     @RequestMapping("/samples")
-    public ModelAndView samples(){
+    public ModelAndView samples(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        String username = (String) session.getAttribute(USERNAME);
         log.info("samples");
         ModelAndView mv=new ModelAndView();
         mv.setViewName("samples");
-        List<SampleBean> sampleBeans = sampleDAO.findAll();
+        List<SampleBean> sampleBeans = sampleDAO.findAll(username,false);
         //pass to jsp
         mv.addObject("samples", sampleBeans);
         return mv;

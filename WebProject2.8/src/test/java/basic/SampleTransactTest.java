@@ -36,14 +36,14 @@ public class SampleTransactTest extends BaseTest {
     @Test
     public void sampleById() {
         // insert mock sample
-        List<SampleBean> samples = sampleDAO.findAll();
+        List<SampleBean> samples = sampleDAO.findAll("admin",true);
         if (samples.size()==0){ testSampleId = 1; } else {
             testSampleId = samples.get(samples.size() - 1).getId()+1;
         }
         vepDAO.save(testSampleId,MOCK_VEP_STRING);
-        sampleDAO.save("Test_1_vep","vep"); // should automatically generate id = sample number already have + 1
+        sampleDAO.save("Test_1_vep","","vep",true); // should automatically generate id = sample number already have + 1
         annovarDAO.save(testSampleId+1,MOCK_ANNOVAR_STRING);
-        sampleDAO.save("Test_2_annovar","annovar");
+        sampleDAO.save("Test_2_annovar","","annovar",true);
         // sample data
         assertNotEquals(0,vepDAO.getsampleGenes(testSampleId).size());
         assertNotEquals(0,annovarDAO.getsampleGenes(testSampleId+1).size());

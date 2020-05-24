@@ -34,6 +34,6 @@ public class BulkRetrieveDataTest extends BaseTest {
         assertNotNull(drugLabelDAO.findAll());
         assertNotNull(drugDAO.findAll());
         assertNotNull(varDrugAnnDAO.findAll());
-        assertNotNull(sampleDAO.findAll());
+        assertNotNull(sampleDAO.findAll("adimin",true));
     }
 }

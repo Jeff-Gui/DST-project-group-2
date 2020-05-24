@@ -114,7 +114,7 @@ public class UserController {
         UserBean user = new UserBean(username,password,"registered");
         if (userDAO.searchUser(user)[1]) {
             HttpSession session = request.getSession();
-            session.setAttribute(AuthenticationFilter.ROLE_VIEW_DOSING_GUIDELINE, 1);
+            session.setAttribute(AuthenticationFilter.ROLE_MATCHING, 1);
             session.setAttribute(AuthenticationFilter.USERNAME, username);
             return "index";
         } else {

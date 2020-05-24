@@ -44,14 +44,14 @@ public class MatchControllerTest extends BaseWebTest {
     @Test
     public void annovarMatchTest() throws Exception {
         //read existing sample number
-        List<SampleBean> samples = sampleDAO.findAll();
+        List<SampleBean> samples = sampleDAO.findAll("admin",true);
         int testSampleId;
         if (samples.size()==0){
             testSampleId = 1;
         } else {
             testSampleId = samples.get(samples.size() - 1).getId()+1;
         }
-        sampleDAO.save("Test","annovar");
+        sampleDAO.save("Test","","annovar",true);
         annovarDAO.save(testSampleId,MOCK_ANNOVAR_STRING);
 
         //do match
@@ -70,14 +70,14 @@ public class MatchControllerTest extends BaseWebTest {
     @Test
     public void vepMatchTest() throws Exception {
         //read existing sample number
-        List<SampleBean> samples = sampleDAO.findAll();
+        List<SampleBean> samples = sampleDAO.findAll("admin",true);
         int testSampleId;
         if (samples.size()==0){
             testSampleId = 1;
         } else {
             testSampleId = samples.get(samples.size() - 1).getId()+1;
         }
-        sampleDAO.save("Test","vep");
+        sampleDAO.save("Test","","vep",true);
         vepDAO.save(testSampleId,MOCK_VEP_STRING);
 
         //do match

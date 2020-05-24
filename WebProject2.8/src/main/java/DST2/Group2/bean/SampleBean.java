@@ -13,13 +13,17 @@ public class SampleBean {
     private int id;
     private Date createdAt;
     private String uploadedBy;
+    private String description;
     private String sampleType;
+    private boolean publicity;
 
-    public SampleBean(int id, Date createdAt, String uploadedBy, String sampleType) {
+    public SampleBean(int id, Date createdAt, String description, String uploadedBy, String sampleType, boolean publicity) {
         this.id = id;
+        this.description = description;
         this.createdAt = createdAt;
         this.uploadedBy = uploadedBy;
         this.sampleType = sampleType;
+        this.publicity = publicity;
     }
 
     public int getId() {
@@ -46,6 +50,14 @@ public class SampleBean {
         this.uploadedBy = uploadedBy;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.sampleType = description;
+    }
+
     public String getSampleType() {
         return sampleType;
     }
@@ -53,4 +65,10 @@ public class SampleBean {
     public void setSampleType(String sampleType) {
         this.sampleType = sampleType;
     }
+
+    public boolean getPublicity() {
+        return publicity;
+    }
+
+    public void setPublicity(boolean publicity) { this.publicity = publicity; }
 }

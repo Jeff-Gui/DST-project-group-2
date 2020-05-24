@@ -2,6 +2,7 @@ package DST2.Group2.DAO;
 
 import DST2.Group2.Database.DBmethods;
 import DST2.Group2.bean.RefBean;
+import org.postgresql.util.PSQLException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

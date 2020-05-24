@@ -8,14 +8,13 @@ import java.io.IOException;
 /**
  * @Description This is the description of class
  * The filter is not implemented.
- * TODO implement page-filter according to the login state.
  * @Date 2020/5/16
  * @Author DST group 2
  */
-//@WebFilter(urlPatterns = {"/dosingGuideline"})
+@WebFilter(urlPatterns = {"/matchingIndex"})
 public class AuthenticationFilter implements Filter {
 
-    public static final String ROLE_VIEW_DOSING_GUIDELINE = "role_view_dosing_guideline";
+    public static final String ROLE_MATCHING = "role_matching";
     public static final String USERNAME = "username";
 
     @Override
@@ -24,13 +23,13 @@ public class AuthenticationFilter implements Filter {
         HttpSession session = httpServletRequest.getSession();
         Object username = session.getAttribute(USERNAME);
         if (username != null) {
-            Object roleViewDosingGuideline = session.getAttribute(ROLE_VIEW_DOSING_GUIDELINE);
+            Object roleViewDosingGuideline = session.getAttribute(ROLE_MATCHING);
             if (roleViewDosingGuideline != null && ((Integer) roleViewDosingGuideline) == 1) {
                 chain.doFilter(request, response);
             }
         } else {
             response.setContentType("text/html");
-            response.getWriter().write("You are not allowed to view dosing guideline, please <a href='signin'>sign in</a> first.");
+            response.getWriter().write("You are not allowed to use matching function, please <a href='signin'>sign in</a> first.");
         }
     }
 }

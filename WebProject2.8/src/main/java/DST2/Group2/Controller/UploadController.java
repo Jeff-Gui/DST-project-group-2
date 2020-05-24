@@ -15,10 +15,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import static DST2.Group2.filter.AuthenticationFilter.USERNAME;
+
 /**
  * @Description This is the description of class
  * Controller for reading user-uploaded file; determining its file type; store sample data and metadata into the database.
@@ -44,7 +48,9 @@ public class UploadController extends HttpServlet {
         super();
     }
     @RequestMapping(value = "/upload/{uploadType}", method = RequestMethod.POST)
-	protected String doUpload(HttpServletRequest request,
+    protected String doUpload(HttpServletRequest request,
+                              @RequestParam("publicity") String publicityS,
+                              @RequestParam("description") String description,
                               @RequestParam("file") MultipartFile requestPart,
                               @PathVariable String uploadType) throws IOException {
         /**
@@ -59,40 +65,54 @@ public class UploadController extends HttpServlet {
          * @author DST group 2
          **/
         log.info("upload vcf");
-    	String uploadedBy = request.getParameter("uploaded_by");
+        HttpSession session = request.getSession();
+        String uploadedBy = (String) session.getAttribute(USERNAME);
+        boolean publicity;
+        publicity = publicityS.equals("true");
 
-        if (uploadedBy == null || uploadedBy.isEmpty()) {
-        	log.info("is empty");
-            request.setAttribute("validateError", "Uploaded by can not be blank");
+        if (description == null || description.isEmpty()) {
+            log.info("is empty");
+            request.setAttribute("validateError", "Description can not be blank");
             return "matching_index_error";
         }
-        if (requestPart == null) {
+        if (requestPart == null || requestPart.isEmpty()) {
             request.setAttribute("validateError", "vcf output file can not be blank");
             return "matching_index_error";
         }
-        
+        String filename = requestPart.getOriginalFilename();
+        assert filename != null;
+        if (!filename.substring(filename.lastIndexOf(".")+1).equals("vcf")){
+            request.setAttribute("validateError", "wrong file format");
+            return "matching_index_error";
+        }
+
+
         InputStream inputStream = new BufferedInputStream(requestPart.getInputStream());
-        
+
         byte[] bytes =  inputStream.readAllBytes();
         String content = new String(bytes);
-
-        if (uploadType.equals("annovar")){
-            int sampleId = sampleDAO.save(uploadedBy,"annovar");
-            annovarDAO.save(sampleId, content);
-            log.info("read file "+content.length());
-            request.setAttribute("samples",sampleDAO.findAll());
-            return "samples";
-        } else {
-            if (uploadType.equals("vep")){
-                int sampleId = sampleDAO.save(uploadedBy,"vep");
-                vepDAO.save(sampleId, content);
+        try {
+            if (uploadType.equals("annovar")){
+                int sampleId = sampleDAO.save(uploadedBy, description, "annovar", publicity);
+                annovarDAO.save(sampleId, content);
                 log.info("read file "+content.length());
-                request.setAttribute("samples",sampleDAO.findAll());
+                request.setAttribute("samples",sampleDAO.findAll(uploadedBy,false));
                 return "samples";
             } else {
-                return "matching_index_error";
+                if (uploadType.equals("vep")){
+                    int sampleId = sampleDAO.save(uploadedBy, description, "vep", publicity);
+                    vepDAO.save(sampleId, content);
+                    log.info("read file "+content.length());
+                    request.setAttribute("samples",sampleDAO.findAll(uploadedBy,false));
+                    return "samples";
+                } else {
+                    return "matching_index_error";
+                }
             }
+        } catch (Exception e){
+            request.setAttribute("validateError", "wrong vcf file format");
+            return "matching_index_error";
         }
-	}
+    }
 
 }

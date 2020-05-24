@@ -150,8 +150,8 @@ CREATE TABLE var_drug_ann(
     pmid varchar(250),
     phenotype_category varchar(250),
     significance varchar(250),
-    notes varchar, -- not long enough?,
-    sentence varchar, -- not long enough?
+    notes varchar,
+    sentence varchar,
     studyparam varchar(250),
     allels varchar(250),
     choromosome varchar(250)
@@ -170,7 +170,9 @@ CREATE TABLE sample(
     id INT PRIMARY KEY,
     created_at DATE,
     uploaded_by VARCHAR,
-    sample_type VARCHAR
+    sample_type VARCHAR,
+	description VARCHAR,
+	publicity BOOLEAN
 );
 
 -- location_annvar: created from variant.tsv & var_drug_ann.tsv

@@ -13,9 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Author DST group 2
  */
 @Controller
-
 public class IndexController {
-    private static final Logger log = LoggerFactory.getLogger(MatchController.class);
+    private static final Logger log = LoggerFactory.getLogger(IndexController.class);
 
     @RequestMapping(path="/*")
     public String index() {

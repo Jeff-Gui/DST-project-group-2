@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="generator" content="">
-    <title>Dashboard Template · Bootstrap</title>
+    <title>Error</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -58,7 +58,7 @@
             <div class="table-responsive">
                 <div class="alert alert-info" role="alert">
                     <h4 class="alert-heading">Error Info</h4>
-                    <div>Please choose the correct sample type and upload with username</div>
+                    <div>Please choose the correct sample type</div>
                     <c:if test="${validateError != null}">
                         <div><c:out value="${validateError}"/></div>
                     </c:if>

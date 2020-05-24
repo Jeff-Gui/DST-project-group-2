@@ -1,7 +1,6 @@
 package DST2.Group2.DAO;
 
 import DST2.Group2.Database.DBmethods;
-import DST2.Group2.bean.SampleBean;
 import DST2.Group2.bean.UserBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,9 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Pattern;
 
 @Repository

@@ -22,7 +22,7 @@ public class SampleDAO {
 
     private static final Logger log = LoggerFactory.getLogger(SampleDAO.class);
 
-    public int save(String uploadedBy, String sample_type) {
+    public int save(String uploadedBy, String description, String sample_type, boolean publicity) {
         AtomicInteger newid= new AtomicInteger(1);
         DBmethods.execSQL(connection -> {
             try {
@@ -30,11 +30,13 @@ public class SampleDAO {
                 while(rs.next()) {
                     newid.set(rs.getInt("max") + 1);
                 }
-                PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO sample(id,created_at, uploaded_by,sample_type) VALUES (?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+                PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO sample(id,created_at, uploaded_by, description, sample_type, publicity) VALUES (?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
                 preparedStatement.setTimestamp(2, new Timestamp(new Date().getTime()));
                 preparedStatement.setString(3, uploadedBy);
                 preparedStatement.setInt(1,newid.get());
-                preparedStatement.setString(4,sample_type);
+                preparedStatement.setString(4,description);
+                preparedStatement.setString(5,sample_type);
+                preparedStatement.setBoolean(6,publicity);
                 preparedStatement.execute();
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
@@ -48,15 +50,17 @@ public class SampleDAO {
         AtomicReference<SampleBean> sample = new AtomicReference<>();
         DBmethods.execSQL(connection -> {
             try {
-                PreparedStatement preparedStatement = connection.prepareStatement("SELECT id, created_at, uploaded_by,sample_type FROM sample WHERE id = ?");
+                PreparedStatement preparedStatement = connection.prepareStatement("SELECT id, created_at, uploaded_by, description, sample_type, publicity FROM sample WHERE id = ?");
                 preparedStatement.setInt(1, id);
                 ResultSet resultSet = preparedStatement.executeQuery();
                 if (resultSet.next()) {
                     int sampleId = resultSet.getInt("id");
                     Date createdAt = new Date(resultSet.getTimestamp("created_at").getTime());
                     String uploadedBy = resultSet.getString("uploaded_by");
+                    String description = resultSet.getString("description");
                     String sample_type = resultSet.getString("sample_type");
-                    sample.set(new SampleBean(sampleId, createdAt, uploadedBy, sample_type));
+                    boolean publicity = resultSet.getBoolean("publicity");
+                    sample.set(new SampleBean(sampleId, createdAt, description, uploadedBy, sample_type, publicity));
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -65,18 +69,25 @@ public class SampleDAO {
         return sample.get();
     }
 
-    public List<SampleBean> findAll() {
+    public List<SampleBean> findAll(String username, boolean admin) {
         List<SampleBean> sampleBeans = new ArrayList<>();
         DBmethods.execSQL(connection -> {
 
             try {
-                ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM sample;");
+                ResultSet resultSet;
+                if (admin) {
+                    resultSet = connection.createStatement().executeQuery("SELECT * FROM sample;");
+                } else {
+                    resultSet = connection.createStatement().executeQuery("SELECT * FROM sample WHERE uploaded_by = \'"+username+"\' or publicity = true;");
+                }
                 while (resultSet.next()) {
                     int sampleId = resultSet.getInt("id");
                     Date createdAt = new Date(resultSet.getTimestamp("created_at").getTime());
                     String uploadedBy = resultSet.getString("uploaded_by");
+                    String description = resultSet.getString("description");
                     String sample_type = resultSet.getString("sample_type");
-                    SampleBean sampleBean = new SampleBean(sampleId, createdAt, uploadedBy,sample_type);
+                    boolean publicity = resultSet.getBoolean("publicity");
+                    SampleBean sampleBean = new SampleBean(sampleId, createdAt, description, uploadedBy, sample_type, publicity);
                     sampleBeans.add(sampleBean);
                 }
             } catch (SQLException e) {
